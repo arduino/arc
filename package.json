@@ -1,0 +1,75 @@
+{
+  "name": "@bcmi-labs/react-components",
+  "version": "0.0.114",
+  "description": "react-components",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/bcmi-labs/react-components"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "peerDependencies": {},
+  "dependencies": {
+    "@bcmi-labs/react-icons": "^0.0.117",
+    "@popperjs/core": "^2.5.3",
+    "arduino-sass": "git+https://github.com/bcmi-labs/sass.git#3.0.1",
+    "classnames": "^2.2.6",
+    "formik": "^2.1.4",
+    "lodash.once": "^4.1.1",
+    "react-autosize-textarea": "^7.0.0",
+    "react-google-recaptcha-v3": "^1.5.2",
+    "react-popper": "^2.2.3",
+    "react-select": "^3.1.0",
+    "react-stately": "^3.0.1",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.26.3",
+    "update-input-width": "^1.2.1",
+    "uuid": "^3.3.3",
+    "whatwg-fetch": "^3.0.0",
+    "yup": "^0.29.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.12.0",
+    "react-aria": "~3.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-image": "^2.0.4",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-url": "^4.0.2",
+    "@types/classnames": "^2.2.9",
+    "@types/mocha": "^7.0.2",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/react-select": "^3.0.14",
+    "@types/yup": "^0.29.3",
+    "expect.js": "~0.3.1",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^7.1.2",
+    "reflect-metadata": "^0.1.13",
+    "rollup": "^2.3.3",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^2.5.0",
+    "rollup-plugin-sizes": "^1.0.2",
+    "rollup-plugin-terser": "^7.0.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.7"
+  },
+  "gitHead": "e04f62ceb1fdcfc9f1c8411225ecfb1fa5f57f6d"
+}

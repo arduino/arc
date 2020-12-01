@@ -1,0 +1,88 @@
+@import '../ui-controls-variables';
+
+.wrapper {
+  position: relative;
+}
+
+.field {
+  position: relative;
+  box-sizing: border-box;
+
+  input,
+  textarea,
+  :global(.zh-datepicker),
+  :global(.zh-select) {
+    // Shrink and move upwards label when the input is focused or has text
+    &:focus ~ .label,
+    &:global(.hasValue) ~ .label {
+      @extend %arduino-typography-xx-small;
+
+      color: #000;
+      transform: translateY(-14px);
+    }
+
+    &:-webkit-autofill ~ .label,
+    &:-webkit-autofill:hover ~ .label,
+    &:-webkit-autofill:focus ~ .label {
+      @extend %arduino-typography-xx-small;
+
+      color: #000;
+      transform: translateY(-14px);
+    }
+
+    &:global(.disabled) ~ .label,
+    &:disabled ~ .label {
+      opacity: .5;
+    }
+
+    // Display red asterisk next to label when input is required
+    &:required ~ .label::after,
+    &:global(.required) ~ .label::after {
+      @extend %red-asterisk;
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  top: 17px;
+  padding-left: 20px;
+  align-items: center;
+  color: $dust;
+  transition: color .2s ease, font-size .2s ease, transform .2s ease;
+  transform: translateY(0); // Improve perfo when translating later
+  z-index: 1;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.statusWrapper {
+  @include text-config($font-size-xx-small, $letter-spacing-default, $line-height-default);
+
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 4px;
+  min-height: 17px;
+
+  .success {
+    color: $notifysuccess;
+  }
+
+  .error {
+    color: $notifyerror;
+  }
+
+  .info {
+    margin-left: 2px;
+    font-weight: normal;
+    color: $gris;
+
+    @extend %default-link;
+  }
+
+  svg {
+    font-size: 13px;
+    margin-right: 4px;
+  }
+}

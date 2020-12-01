@@ -1,0 +1,84 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/checkbox';
+@import '../ui-controls-variables';
+
+$hoverBorder: #7f8c8d;
+
+$border-radius: 3px;
+
+$silver: #bdc7c7;
+
+@mixin with-error {
+  outline: none;
+  box-shadow: 0 0 0 3px $notifyerror !important;
+  border-color: transparent;
+}
+
+@mixin with-focus {
+  outline: none;
+  box-shadow: 0 0 0 3px $teal0 !important;
+  border-color: transparent;
+}
+
+@mixin feedback-icon {
+  margin-left: 1rem;
+}
+
+.checkbox {
+  @extend %ardu-checkbox;
+  @extend %arduino-typography-x-small;
+  @extend %default-link;
+
+  font-weight: 400;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+  .input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    display: block !important;
+  }
+
+  .input:focus + .custom-checkbox {
+    @include with-focus;
+  }
+
+  .input:checked + .custom-checkbox {
+    border-color: $jet;
+    background-color: $gris;
+  }
+
+  .input.error + .custom-checkbox {
+    @include with-error;
+  }
+
+  .custom-checkbox {
+    border-color: $silver;
+  }
+
+  &:hover {
+    .custom-checkbox {
+      border-color: $hoverBorder;
+    }
+  }
+
+  &.indeterminate {
+    .custom-checkbox {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='3' viewBox='0 0 12 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 1.5H12H0Z' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $gris;
+    }
+  }
+
+  // Display red asterisk next to label when input is required
+  .required::after {
+    @extend %red-asterisk;
+  }
+}

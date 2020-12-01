@@ -1,0 +1,25 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/mixins';
+
+.loader {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loader--spinner {
+    @include spinner( $teal1, white, 64px);
+  }
+}
+
+.tiny-loader {
+  .loader--spinner {
+    @include spinner( white, $teal1, 21px);
+
+    margin: 0 9px 0 -5px;
+  }
+}

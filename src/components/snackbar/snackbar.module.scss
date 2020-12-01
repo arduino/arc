@@ -1,0 +1,164 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/spacing';
+@import '../ui-controls-variables';
+
+$base-snackbar-padding: 30px;
+
+:local(.zh-snackbar) {
+  @extend %arduino-typography-xx-small;
+
+  opacity: 0;
+  visibility: visible;
+  min-width: 250px;
+  background-color: $jet;
+  color: $white;
+  padding: 10px 16px;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.show {
+    /* In Edge (pre chromium), a stacking context is formed for opacity less then 1, and then its removed for 1.
+      It causes a rendering flicker that is visible when css transition is applied. */
+    opacity: .9999;
+    transform: translateY(0);
+
+    /* Entry animations */
+    transition:
+      opacity .25s cubic-bezier(0, 0, .4, 1) .16s,
+      transform .25s cubic-bezier(0, 0, .4, 1) .16s;
+    transition-delay: 0ms;
+  }
+
+  &.bottom-center {
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: $base-snackbar-padding;
+  }
+
+  &.top-center {
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: $base-snackbar-padding;
+  }
+
+  &.bottom-left {
+    left: $base-snackbar-padding;
+    bottom: $base-snackbar-padding;
+  }
+
+  &.bottom-right {
+    right: $base-snackbar-padding;
+    bottom: $base-snackbar-padding;
+  }
+
+  &.top-left {
+    left: $base-snackbar-padding;
+    top: $base-snackbar-padding;
+  }
+
+  &.top-right {
+    right: $base-snackbar-padding;
+    top: $base-snackbar-padding;
+  }
+
+  .close-button {
+    cursor: pointer;
+    margin-left: $space-small;
+    background-color: transparent;
+    padding: $space-xxx-small $space-xx-small;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close {
+    color: $white;
+  }
+
+  .success {
+    @include size(13px);
+
+    color: $notifysuccess;
+    margin-right: $space-x-small;
+  }
+
+  .error {
+    @include size(13px);
+
+    color: $notifyerror;
+    margin-right: $space-x-small;
+  }
+
+  .snackbar-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .snackbar-actions {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .snackbar-action {
+    @extend %arduino-typography-xx-small-strong;
+
+    padding: $space-xxx-small $space-xx-small;
+    text-align: right;
+    margin-left: $space-small;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  // snackbar theme - default - light
+  &.dark {
+    background-color: #b2b2b2;
+    color: #111;
+
+    .close {
+      color: #111;
+    }
+  }
+
+  &.success {
+    background-color: rgba(29, 160, 134, .1);
+    border: 1px solid $notifysuccess;
+    color: $onyx;
+    font-size: 12px;
+
+    .snackbar-action {
+      color: $notifysuccess;
+    }
+
+    .close {
+      color: $onyx;
+    }
+  }
+
+  &.error {
+    background-color: rgba(218, 91, 74, .1);
+    border: 1px solid $notifyerror;
+    color: $onyx;
+    font-size: 12px;
+
+    .snackbar-action {
+      color: $notifyerror;
+    }
+
+    .close {
+      color: $onyx;
+    }
+  }
+}

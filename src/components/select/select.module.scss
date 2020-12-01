@@ -1,0 +1,167 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '../ui-controls-variables';
+
+$border-radius-medium: 3px;
+
+$height-middle-size: 44px;
+$height-small-size: 35px;
+
+:global {
+  .wrapper {
+    &:hover {
+      .zh-select__control:not(.zh-select__control--is-focused) {
+        @extend %field-hover-shadow;
+      }
+    }
+
+    :local(.zh-select) {
+      border-radius: $border-radius-medium;
+
+      // Color input when success or error
+      &.success {
+        @extend %withfocus;
+
+        box-shadow: 0 0 0 2px $notifysuccess !important;
+      }
+
+      &.error {
+        @extend %witherror;
+
+        box-shadow: 0 0 0 2px $notifyerror !important;
+      }
+
+      .zh-select__control {
+        padding: 0 13px 0 17px;
+        cursor: pointer;
+        border: 1px solid $silver;
+        margin-bottom: 0;
+        min-height: $height-middle-size;
+        border-radius: $border-radius-medium;
+        box-sizing: content-box;
+        transition: none;
+
+        &.zh-select__control--is-focused,
+        &:focus {
+          @extend %withfocus;
+
+          border-color: $silver;
+          outline: 0;
+        }
+
+        &.zh-select__control--is-disabled {
+          border-color: $fog;
+          color: $concrete;
+        }
+
+        .zh-select__value-container {
+          padding: 0;
+          margin: 20px 0 0;
+          align-items: flex-start;
+        }
+
+        .zh-select__placeholder {
+          color: $concrete;
+        }
+      }
+
+      .zh-select__menu {
+        background-color: $white;
+        border: 2px solid $teal0;
+        border-top: none;
+        border-radius: 0 0 $border-radius-medium $border-radius-medium;
+        margin: 0;
+        margin-left: -2px;
+        z-index: 2;
+        box-shadow: none;
+        box-sizing: content-box;
+      }
+
+      .zh-select__menu-list {
+        padding: 0;
+        max-height: 200px;
+
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $silver;
+          border-radius: 3px;
+
+          &:hover {
+            background: $silver;
+            border-radius: 3px;
+          }
+        }
+
+        .zh-select__option {
+          cursor: pointer;
+
+          &.zh-select__option--is-selected {
+            background-color: $feather;
+            color: $onyx;
+
+            &:hover {
+              background-color: $clouds;
+            }
+          }
+
+          &.zh-select__option--is-focused {
+            background-color: $clouds;
+          }
+        }
+      }
+
+      .zh-select__indicator-separator {
+        display: none;
+      }
+
+      .zh-select__dropdown-indicator {
+        padding: 0 !important; // used to force no padding in all states
+      }
+
+      .zh-select__multi-value {
+        @extend %arduino-typography-xx-small;
+
+        background: $clouds;
+        border: 1px solid $smoke;
+        border-radius: 2px;
+
+        &__label {
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
+      }
+
+      .zh-select__indicators {
+        margin: 9px 0 9px;
+
+        .custom-close-wrapper {
+          border-right: 1px solid $smoke;
+          padding-right: .6rem;
+          height: 100%;
+          display: flex;
+        }
+
+        .custom-close {
+          @extend %close;
+
+          padding: 0;
+          display: flex;
+          height: unset;
+          position: unset;
+        }
+      }
+
+      .zh-select__control--menu-is-open {
+        border-radius: $border-radius-medium $border-radius-medium 0 0;
+        border-bottom: 1px solid transparent;
+
+        .zh-select__dropdown-indicator {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

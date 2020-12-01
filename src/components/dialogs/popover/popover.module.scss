@@ -1,0 +1,16 @@
+@import '~arduino-sass/src/variables';
+@import '../../ui-controls-variables';
+
+%popover {
+  @extend %tooltip-base;
+
+  padding: 12px 16px;
+  background: $white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+  color: $black;
+  white-space: normal;
+}
+
+.popover {
+  @extend %popover;
+}

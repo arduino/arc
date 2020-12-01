@@ -1,0 +1,101 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/spacing';
+
+// Responsive Design
+$breakpoint-xxl: 1400;
+$breakpoint-xl: 1024;
+$breakpoint-lg: 996;
+$breakpoint-md: 768;
+$breakpoint-sm: 480;
+$breakpoint-xs: 320;
+
+@mixin linked-text($color, $hover, $weight: bold) {
+  a {
+    font-weight: $weight;
+    text-decoration: none;
+    color: $color;
+    transition: color .2s ease;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+
+%noborder {
+  outline: none;
+  border-color: transparent !important;
+}
+
+%witherror {
+  @extend %noborder;
+
+  box-shadow: 0 0 0 2px $notifyerror !important;
+}
+
+%withfocus {
+  @extend %noborder;
+
+  box-shadow: 0 0 0 2px $teal0 !important;
+}
+
+%field-hover-shadow {
+  border-color: $gris;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .1);
+}
+
+%default-link {
+  @include linked-text($teal3, $teal5);
+}
+
+%error-link {
+  @include linked-text($teal3, $teal5);
+}
+
+%close {
+  position: absolute;
+  display: none;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  right: $space-medium;
+  cursor: pointer;
+
+  path {
+    fill: $concrete;
+  }
+}
+
+%tooltip-base {
+  @extend %arduino-typography-xx-small;
+
+  position: absolute;
+  border-radius: 3px;
+  opacity: 0;
+
+  &.is-open {
+    /* In Edge (pre chromium), a stacking context is formed for opacity less then 1, and then its removed for 1.
+      It causes a rendering flicker that is visible when css transition is applied. */
+    opacity: .9999;
+
+    /* Entry animations */
+    transition: opacity .1s cubic-bezier(.76, .05, .86, .06);
+  }
+}
+
+%red-asterisk {
+  content: '*';
+  margin-left: 5px;
+  color: $notifyerror;
+}
+
+%no-selected {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}

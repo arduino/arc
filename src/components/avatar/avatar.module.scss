@@ -1,0 +1,184 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/spacing';
+@import '../ui-controls-variables';
+
+$avatar-size-large: 80px;
+$avatar-size-medium: 40px;
+$avatar-size-small: 32px;
+
+.zh-avatar {
+  @include size($avatar-size-large);
+
+  display: flex;
+  color: $white;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $smoke;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &__medium {
+    @include size($avatar-size-medium);
+  }
+
+  &__small {
+    @include size($avatar-size-small);
+  }
+
+  > * {
+    z-index: 1;
+  }
+
+  &.isString {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.isClickable {
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 3pt 2pt $smoke;
+      outline: none;
+    }
+  }
+
+  & > svg,
+  & > img {
+    @include size(100%);
+
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+
+  &__string {
+    @extend %no-selected;
+
+    cursor: default;
+    position: relative;
+  }
+
+  &__default {
+    @include size(100%);
+  }
+}
+
+body {
+  .zh-avatar-picker {
+    &:hover {
+      .zh-avatar-picker__edit {
+        opacity: .9999;
+        transition:
+          opacity .25s cubic-bezier(0, 0, .4, 1) .16s,
+          transform .25s cubic-bezier(0, 0, .4, 1) .16s;
+        transition-delay: 0ms;
+      }
+    }
+
+    &__edit {
+      display: flex;
+      background-color: $jet;
+      width: 100%;
+      height: 38%;
+      position: absolute;
+      bottom: 0;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    &__edit-icon {
+      @include size(50%);
+
+      color: $white;
+    }
+
+    &__disabled {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: $smoke;
+      opacity: .4;
+    }
+
+    &__modal {
+      max-width: 572px;
+      padding-bottom: 0;
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__avatar-item {
+      margin-bottom: $space-small;
+
+      &:focus,
+      &:hover {
+        .zh-avatar-picker__avatar-hover {
+          display: flex;
+        }
+      }
+
+      &.isSelected {
+        box-shadow: 0 0 0 3px $teal0, 0 4px 20px rgba(0, 0, 0, .25);
+
+        &:hover {
+          .zh-avatar-picker__avatar-selected {
+            display: none;
+          }
+        }
+
+        .zh-avatar-picker__avatar-selected {
+          display: flex;
+        }
+      }
+    }
+
+    &__avatar-selected {
+      @include size(100%);
+
+      display: none;
+      background: rgba(0, 129, 132, .7);
+      justify-content: center;
+      align-items: center;
+      color: $white;
+
+      > svg {
+        @include size(26px);
+      }
+    }
+
+    &__avatar-hover {
+      @include size(100%);
+
+      @extend %no-selected;
+
+      @include text-config($font-size-default, $letter-spacing-default, $line-height-default);
+      @include font(opensans, bold, weight);
+
+      display: none;
+      background: rgba(0, 129, 132, .7);
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}

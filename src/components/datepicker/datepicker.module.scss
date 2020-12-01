@@ -1,0 +1,104 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/spacing';
+@import '../ui-controls-variables';
+
+$border-radius: 3px;
+
+:global(.wrapper) {
+  :local(.zh-datepicker) {
+    @include text-config($font-size-default, $letter-spacing-default, $line-height-default);
+    @include font(opensans, regular);
+
+    padding: 0;
+    padding: $space-large $space-large 0 $space-large;
+    border: 1px solid $smoke;
+    border-radius: $border-radius;
+
+    &:hover {
+      @extend %field-hover-shadow;
+    }
+
+    &.focus {
+      @extend %withfocus;
+    }
+
+    // Color input when success or error
+    &.success {
+      @extend %withfocus;
+
+      box-shadow: 0 0 0 2px $notifysuccess !important;
+    }
+
+    &.error {
+      @extend %witherror;
+
+      box-shadow: 0 0 0 2px $notifyerror !important;
+    }
+
+    &.disabled {
+      opacity: .5;
+    }
+
+    &.clearable {
+      padding-right: $space-xxx-large;
+    }
+
+    &.disabled,
+    &.readOnly {
+      border: 1px solid $smoke;
+      box-shadow: none;
+    }
+
+    &.readOnly {
+      background: $clouds;
+    }
+
+    .datepicker-input {
+      @include text-config($font-size-default, $letter-spacing-default, $line-height-default);
+
+      border: none;
+      padding: 0 $space-medium;
+      background: transparent;
+      -moz-appearance: textfield;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $concrete;
+      }
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .datepicker-divider {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 170%;
+      letter-spacing: .01em;
+    }
+  }
+}
+
+.close {
+  @extend %close;
+}
+
+.datepickerAction {
+  display: flex;
+}
