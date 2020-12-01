@@ -15,7 +15,7 @@
     // Shrink and move upwards label when the input is focused or has text
     &:focus ~ .label,
     &:global(.hasValue) ~ .label {
-      @extend %arduino-typography-xx-small;
+      @include text-config($font-size-xx-small, $letter-spacing-default, $line-height-default);
 
       color: #000;
       transform: translateY(-14px);
@@ -40,6 +40,19 @@
     &:global(.required) ~ .label::after {
       @extend %red-asterisk;
     }
+  }
+}
+
+:global(.zh-select) {
+  ~ .label {
+    @extend %nowrap-ellipsis;
+
+    padding-right: 40px;
+  }
+
+  &:focus ~ .label,
+  &:global(.hasValue) ~ .label {
+    padding-right: 5px;
   }
 }
 

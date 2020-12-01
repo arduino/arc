@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ReactSelect, { components, ValueType } from 'react-select';
 import _uniqueId from 'lodash/uniqueId';
 import classNames from 'classnames';
@@ -25,6 +25,7 @@ export interface SelectProps extends SelecReactSelectType, GenericFieldProps, Wr
   hideSelected?: boolean;
   isMulti?: boolean;
   isSearchable?: boolean;
+  size?: 'normal' | 'small';
   onChange?: (values: string | string[]) => void;
 }
 
@@ -68,6 +69,7 @@ export function Select({
   isMulti = false,
   isSearchable = true,
   placeholder = 'Type to Search',
+  size = 'normal',
   id,
   options,
   value, // remove value prop as it breaks ReactSelect
@@ -86,6 +88,9 @@ export function Select({
 
   const [infoMsg, setInfoMsg] = useState(fieldInfoMsg);
 
+  const [hasValue, setHasValue] = useState(!!defaultValue);
+  const [hasFocus, setHasFocus] = useState(false);
+
   // on component mount check existing selections on options
   useEffect(() => {
     setInfoMsg(getOptionsInfoMsg(defaultValue) || fieldInfoMsg);
@@ -103,11 +108,31 @@ export function Select({
     htmlFor: selectId,
   };
 
-  const selectClasses = classNames('hasValue', 'zh-select', style['zh-select'], { required: required });
-
   const valueFromProps = Array.isArray(value)
     ? options.filter((option) => value.includes(option.value))
     : options.find((option) => value === option.value);
+
+  const selectChanged = useCallback((evt: ValueType<SelectOption>): void => {
+    setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);
+
+    if (!evt) {
+      setHasValue(false);
+      onChange(null);
+      return;
+    }
+
+    const values = Array.isArray(evt) ? (evt as SelectOption[]).map((item) => item.value) : (evt as SelectOption).value;
+
+    setHasValue(true);
+    onChange(values);
+  }, []);
+
+  const selectClasses = classNames('zh-select', style['zh-select'], {
+    required: required,
+    hasValue: placeholder || hasValue || hasFocus,
+    noLabel: !label,
+    small: size === 'small',
+  });
 
   return (
     <Wrapper {...wrapperProps} htmlFor={selectId}>
@@ -119,26 +144,15 @@ export function Select({
         isMulti={isMulti}
         options={options}
         defaultValue={defaultValue}
+        onFocus={() => setHasFocus(true)}
+        onBlur={() => setHasFocus(false)}
         value={valueFromProps}
         isSearchable={isSearchable}
         closeMenuOnSelect={closeMenuOnSelect}
         placeholder={placeholder || null}
         components={{ ClearIndicator, DropdownIndicator }}
         tabSelectsValue={false}
-        onChange={(evt: ValueType<SelectOption>): void => {
-          setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);
-
-          if (!evt) {
-            onChange(null);
-            return;
-          }
-
-          const values = Array.isArray(evt)
-            ? (evt as SelectOption[]).map((item) => item.value)
-            : (evt as SelectOption).value;
-
-          onChange(values);
-        }}
+        onChange={selectChanged}
         className={selectClasses}
         name="ui-selector"
         classNamePrefix="zh-select"

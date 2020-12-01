@@ -4,9 +4,6 @@
 
 $border-radius-medium: 3px;
 
-$height-middle-size: 44px;
-$height-small-size: 35px;
-
 :global {
   .wrapper {
     &:hover {
@@ -31,12 +28,16 @@ $height-small-size: 35px;
         box-shadow: 0 0 0 2px $notifyerror !important;
       }
 
+      &.noLabel .zh-select__control .zh-select__value-container {
+        margin: 3px 0 0;
+      }
+
       .zh-select__control {
         padding: 0 13px 0 17px;
         cursor: pointer;
         border: 1px solid $silver;
         margin-bottom: 0;
-        min-height: $height-middle-size;
+        min-height: 50px;
         border-radius: $border-radius-medium;
         box-sizing: content-box;
         transition: none;
@@ -135,7 +136,7 @@ $height-small-size: 35px;
       }
 
       .zh-select__indicators {
-        margin: 9px 0 9px;
+        margin: 0;
 
         .custom-close-wrapper {
           border-right: 1px solid $smoke;
@@ -151,6 +152,12 @@ $height-small-size: 35px;
           display: flex;
           height: unset;
           position: unset;
+        }
+      }
+
+      &.small {
+        .zh-select__control {
+          min-height: 33px;
         }
       }
 

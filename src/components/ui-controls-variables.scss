@@ -90,6 +90,13 @@ $breakpoint-xs: 320;
   color: $notifyerror;
 }
 
+%nowrap-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
 %no-selected {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

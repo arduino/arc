@@ -45,6 +45,27 @@ Basic.args = {
   defaultValue: null,
 };
 
+export const NoPlaceholder = Template.bind({});
+NoPlaceholder.args = {
+  ...Basic.args,
+  placeholder: null,
+};
+
+export const NoLabel = Template.bind({});
+NoLabel.args = {
+  ...Basic.args,
+  placeholder: 'Select a product',
+  label: null,
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  ...Basic.args,
+  placeholder: 'Select a product',
+  label: null,
+  size: 'small',
+};
+
 export const Multiselect = Template.bind({});
 Multiselect.args = {
   ...Basic.args,
