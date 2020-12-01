@@ -25,8 +25,8 @@
   "peerDependencies": {},
   "dependencies": {
     "@bcmi-labs/react-icons": "^0.0.117",
+    "@bcmi-labs/sass": "^3.0.1",
     "@popperjs/core": "^2.5.3",
-    "arduino-sass": "git+https://github.com/bcmi-labs/sass.git#3.0.1",
     "classnames": "^2.2.6",
     "formik": "^2.1.4",
     "lodash.once": "^4.1.1",
