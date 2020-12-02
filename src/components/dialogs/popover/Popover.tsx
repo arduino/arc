@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import classNames from 'classnames';
-import { useOverlay, OverlayContainer } from '@react-aria/overlays';
-import { useDialog } from '@react-aria/dialog';
-import { FocusScope } from '@react-aria/focus';
+import { useOverlay, OverlayContainer, useDialog, FocusScope } from "react-aria";
+
 import { useOverlayTriggerState } from 'react-stately';
 import { AriaDialogProps } from '@react-types/dialog';
 

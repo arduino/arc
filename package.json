@@ -1,6 +1,6 @@
 {
   "name": "@bcmi-labs/react-components",
-  "version": "0.0.117",
+  "version": "0.0.118",
   "description": "react-components",
   "repository": {
     "type": "git",
@@ -19,11 +19,16 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
-    "prepare": "npm run build"
+    "prepare": "npm run build --production",
+    "preinstall": "npx npm-force-resolutions"
   },
   "keywords": [],
   "license": "MIT",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.12.0",
+    "react-aria": "3.0.0"
+  },
   "dependencies": {
     "@bcmi-labs/react-icons": "^0.0.117",
     "@bcmi-labs/sass": "^3.0.1",
@@ -41,10 +46,7 @@
     "update-input-width": "^1.2.1",
     "uuid": "^3.3.3",
     "whatwg-fetch": "^3.0.0",
-    "yup": "^0.29.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.12.0",
-    "react-aria": "~3.1.0"
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
@@ -61,10 +63,12 @@
     "expect.js": "~0.3.1",
     "ignore-styles": "^5.0.1",
     "mocha": "^7.1.2",
+    "react": "^16.13.1",
+    "react-aria": "3.0.0",
+    "react-dom": "^16.12.0",
     "reflect-metadata": "^0.1.13",
     "rollup": "^2.3.3",
     "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-postcss": "^2.5.0",
     "rollup-plugin-sizes": "^1.0.2",
     "rollup-plugin-terser": "^7.0.0",
@@ -72,5 +76,7 @@
     "ts-node": "^8.10.1",
     "typescript": "^3.9.7"
   },
-  "gitHead": "e04f62ceb1fdcfc9f1c8411225ecfb1fa5f57f6d"
+  "resolutions": {
+    "@react-aria/overlays": "3.4.0"
+  }
 }
