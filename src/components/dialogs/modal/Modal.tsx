@@ -1,18 +1,24 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import classNames from 'classnames';
-import { useOverlay, usePreventScroll, useModal, OverlayProps } from '@react-aria/overlays';
-import { useDialog } from '@react-aria/dialog';
-import { AriaDialogProps } from '@react-types/dialog';
-import { FocusScope } from '@react-aria/focus';
+import {
+  useOverlay,
+  usePreventScroll,
+  useModal,
+  useDialog,
+  OverlayContainer,
+  FocusScope,
+  useButton,
+} from "react-aria";
+import { AriaDialogProps } from "@react-types/dialog";
+import { useOverlayTriggerState } from "react-stately";
+
 import { IconNavigationArrowLeft, IconNavigationCloseNormal } from '@bcmi-labs/react-icons';
 
 import { Underlay } from '../underlay/Underlay';
 import { OpenTransition } from '../../OpenTransition';
 import style from './modal.module.scss';
 import { Button } from '../../button';
-import { OverlayContainer, useButton } from 'react-aria';
-import { useOverlayTriggerState } from 'react-stately';
-import { WithBemClasses } from '../../utils';
+import { WithBemClasses, OverlayProps } from "../../utils";
 
 interface ModalButtonProps {
   label: string;
