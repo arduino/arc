@@ -23,7 +23,11 @@
   },
   "keywords": [],
   "license": "MIT",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.12.0",
+    "react-aria": "~3.1.0"
+  },
   "dependencies": {
     "@bcmi-labs/react-icons": "^0.0.117",
     "@bcmi-labs/sass": "^3.0.1",
@@ -41,10 +45,7 @@
     "update-input-width": "^1.2.1",
     "uuid": "^3.3.3",
     "whatwg-fetch": "^3.0.0",
-    "yup": "^0.29.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.12.0",
-    "react-aria": "~3.1.0"
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
