@@ -5,29 +5,18 @@ This library contains the up-to-date components found on zeroheight
 ## Develop
 
 1. Install dependencies with 
-
-    yarn
+    ```sh
+    npm i
+    ```
 
 2. Build the project with 
 
-    yarn build
+    ```sh
+    npm build
+    ```
 
-To use the components you are developing locally on storybook, follow these instructions:
+3. to test the components locally, run storybook
 
-1. In the libs/packages/components-zeroheight folder, run
-
-    yarn link
-
-2. In the apps/storybook folder, run
-
-    yarn link "@bcmi-labs/components-zeroheight"
-
-3. In the apps/storybook folder, run
-
-    yarn storybook
-
-4. Whenever you make a change , run 
-
-yarn link una volta
-
-yarn build ogni volta che cambia
+    ```sh
+    npm run storybook
+    ```

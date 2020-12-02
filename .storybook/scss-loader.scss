@@ -1,0 +1,7 @@
+@import '@bcmi-labs/sass/src/arduino-sass';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@include import-fonts;
