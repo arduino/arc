@@ -5,7 +5,7 @@
 $disabled-button-background-color: #7bb9ba;
 
 .button {
-  @include ardu-store-button($teal1, white);
+  @include ardu-store-button($teal3, white);
 
   @extend %arduino-typography-x-small;
 
@@ -37,9 +37,9 @@ $disabled-button-background-color: #7bb9ba;
   }
 
   &.invert {
-    @include ardu-store-button(white, $teal1);
+    @include ardu-store-button(white, $teal3);
 
-    border-color: $teal1;
+    border-color: $teal3;
     border-width: 2px;
   }
 
@@ -53,6 +53,7 @@ $disabled-button-background-color: #7bb9ba;
 
   &.tertiary {
     background: none;
+    color: $teal3;
     border: 0;
   }
 }

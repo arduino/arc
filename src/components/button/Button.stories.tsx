@@ -21,6 +21,12 @@ Basic.args = {
   disabled: false,
 };
 
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  ...Basic.args,
+  tertiary: true,
+};
+
 export const Loading = Template.bind({});
 Loading.args = {
   ...Basic.args,
