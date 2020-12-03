@@ -41,8 +41,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.12.0",
-    "react-aria": "3.0.0"
+    "react-dom": "^16.12.0"
   },
   "dependencies": {
     "@bcmi-labs/react-icons": "^0.0.117",
@@ -57,6 +56,7 @@
     "react-select": "^3.1.0",
     "react-stately": "^3.0.1",
     "react-transition-group": "^4.4.1",
+    "react-aria": "3.0.0",
     "sass": "^1.26.3",
     "sass-loader": "^10.0.2",
     "update-input-width": "^1.2.1",

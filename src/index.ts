@@ -28,3 +28,7 @@ export {
   SupportFormPropsInterface,
   FormFieldInterface,
 } from './components/support-form';
+
+// export external components
+
+export { OverlayProvider } from 'react-aria'
