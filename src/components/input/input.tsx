@@ -94,7 +94,7 @@ export function Input({
   };
 
   const renderControls = (): React.ReactElement => {
-    if (!buttons && !(inputValue.length > 0 && clearable)) {
+    if (!buttons && !(inputValue && inputValue.length > 0 && clearable)) {
       return null;
     }
 
