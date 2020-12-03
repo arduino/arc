@@ -33,6 +33,7 @@ export function Input({
   successMsg,
   infoMsg,
   buttons,
+  withoutStatus,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -76,6 +77,7 @@ export function Input({
     successMsg,
     infoMsg,
     htmlFor: id,
+    withoutStatus,
   };
 
   const renderButtons = (): React.ReactElement[] => {
