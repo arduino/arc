@@ -1,0 +1,27 @@
+{
+  "ignoreFiles": [
+    "node_modules",
+    "dist",
+    "*.json",
+    "*.yml",
+    "*.yaml",
+    "*.js",
+    "*.ts",
+    "*.jsx",
+    "*.tsx"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-css-modules"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "number-leading-zero": "never",
+    "no-descending-specificity": null,
+    "declaration-block-single-line-max-declarations": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}
