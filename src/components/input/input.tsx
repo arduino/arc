@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import _uniqueId from 'lodash/uniqueId';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
@@ -33,6 +33,7 @@ export function Input({
   successMsg,
   infoMsg,
   buttons,
+  withoutStatus,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -42,13 +43,18 @@ export function Input({
   const textInput = useRef(null);
 
   const changeValue = useCallback((e) => {
-    setValue(e.currentTarget.value);
+   setValue(e.currentTarget.value);
 
-    // Bubble up event
-    if (onChange) {
-      onChange(e);
-    }
+   // Bubble up event
+   if (onChange) {
+     onChange(e);
+   }
   }, []);
+
+  // Listen for value changes and act accordingly
+  useEffect(() => {
+    setValue(value)
+  }, [value])
 
   const resetValue = (): void => {
     setValue('');
@@ -69,6 +75,7 @@ export function Input({
     successMsg,
     infoMsg,
     htmlFor: id,
+    withoutStatus,
   };
 
   const renderButtons = (): React.ReactElement[] => {
@@ -93,7 +100,7 @@ export function Input({
 
     return (
       <div className={style['input-controls']}>
-        {!restProps.disabled && !restProps.readOnly && renderButtons()}
+        {!restProps.disabled && renderButtons()}
         {inputValue.length > 0 && clearable && !restProps.disabled && !restProps.readOnly && (
           <IconCloseEncapsulated
             className={classNames(style.close, style.inputAction)}

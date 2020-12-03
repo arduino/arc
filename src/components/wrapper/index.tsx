@@ -29,6 +29,10 @@ export interface WrapperProps extends WithChildren, WithBemClasses {
    *  set the `for` to the label element. Ignore if not using custom labels
    */
   htmlFor?: string;
+  /**
+   *  hides the status element. Used when no info messages or errors are wanted
+   */
+  withoutStatus?: boolean;
 }
 
 export function Wrapper({
@@ -38,6 +42,7 @@ export function Wrapper({
   error,
   className,
   infoMsg,
+  withoutStatus,
   ...props
 }: WrapperProps): React.ReactElement {
   const wrapperClasses = classNames('wrapper', style.wrapper, {
@@ -70,26 +75,28 @@ export function Wrapper({
           </label>
         )}
       </div>
-      <div className={style.statusWrapper}>
-        {/* Display error message */}
-        {error && error.length && (
-          <div className={errorClasses}>
-            <IconStatusAttentionErrorOutlineFilled /> {error}
-          </div>
-        )}
-        {/* Display success message */}
-        {!error && successMsg && successMsg.length && (
-          <div className={successClasses}>
-            <IconNavigationCheckmarkOutlineFilled /> {successMsg}
-          </div>
-        )}
-        {/* Display info message */}
-        {!error && !successMsg && infoMsg && infoMsg.length && (
-          <div className={infoClasses}>
-            <TextWithLink text={infoMsg} />
-          </div>
-        )}
-      </div>
+      {!withoutStatus && (
+        <div className={style.statusWrapper}>
+          {/* Display error message */}
+          {error && error.length && (
+            <div className={errorClasses}>
+              <IconStatusAttentionErrorOutlineFilled /> {error}
+            </div>
+          )}
+          {/* Display success message */}
+          {!error && successMsg && successMsg.length && (
+            <div className={successClasses}>
+              <IconNavigationCheckmarkOutlineFilled /> {successMsg}
+            </div>
+          )}
+          {/* Display info message */}
+          {!error && !successMsg && infoMsg && infoMsg.length && (
+            <div className={infoClasses}>
+              <TextWithLink text={infoMsg} />
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

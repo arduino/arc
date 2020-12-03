@@ -1,6 +1,6 @@
 {
   "name": "@bcmi-labs/react-components",
-  "version": "0.0.118",
+  "version": "0.0.119",
   "description": "react-components",
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
     "prepare": "npm run build --production",
-    "preinstall": "npx npm-force-resolutions",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
