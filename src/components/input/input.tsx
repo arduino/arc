@@ -63,6 +63,7 @@ export function Input({
   // Compute css classes
   const inputClasses = classNames(style.input, {
     ['hasValue']: inputValue && inputValue.length > 0,
+    ['withoutStatus']: restProps.withoutStatus,
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
   });
