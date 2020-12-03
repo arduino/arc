@@ -42,12 +42,19 @@ export function Input({
   const textInput = useRef(null);
 
   const changeValue = useCallback((e) => {
-    setValue(e.currentTarget.value);
+    let newVal = e.currentTarget.value;
 
     // Bubble up event
     if (onChange) {
-      onChange(e);
+      const changedVal = onChange(e);
+
+      // Allow the listener to change the internal value
+      if (changedVal !== undefined) {
+        newVal = changedVal;
+      }
     }
+
+    setValue(newVal);
   }, []);
 
   const resetValue = (): void => {
@@ -93,7 +100,7 @@ export function Input({
 
     return (
       <div className={style['input-controls']}>
-        {!restProps.disabled && !restProps.readOnly && renderButtons()}
+        {!restProps.disabled && renderButtons()}
         {inputValue.length > 0 && clearable && !restProps.disabled && !restProps.readOnly && (
           <IconCloseEncapsulated
             className={classNames(style.close, style.inputAction)}
@@ -108,7 +115,7 @@ export function Input({
   return (
     <Wrapper {...wrapperProps}>
       <input
-        value={inputValue}
+        value={restProps.readOnly ? value : inputValue}
         {...restProps}
         id={id}
         ref={textInput}
