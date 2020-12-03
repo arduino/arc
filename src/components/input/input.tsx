@@ -43,19 +43,12 @@ export function Input({
   const textInput = useRef(null);
 
   const changeValue = useCallback((e) => {
-    let newVal = e.currentTarget.value;
+   setValue(e.currentTarget.value);
 
-    // Bubble up event
-    if (onChange) {
-      const changedVal = onChange(e);
-
-      // Allow the listener to change the internal value
-      if (changedVal !== undefined) {
-        newVal = changedVal;
-      }
-    }
-
-    setValue(newVal);
+   // Bubble up event
+   if (onChange) {
+     onChange(e);
+   }
   }, []);
 
   const resetValue = (): void => {
