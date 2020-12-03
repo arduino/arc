@@ -36,6 +36,11 @@ export interface GenericFieldProps extends WithBemClasses {
    * set a custom id for the field element. If omitted a uniqueId is generated
    */
   id?: string;
+
+  /**
+   *  hides the status element. Has no effect if the field is not using a Wrapper
+   */
+  withoutStatus?: boolean;
 }
 
 export interface GenericFieldPropsEvents<T = Element> {
