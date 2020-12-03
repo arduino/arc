@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import _uniqueId from 'lodash/uniqueId';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
@@ -50,6 +50,11 @@ export function Input({
      onChange(e);
    }
   }, []);
+
+  // Listen for value changes and act accordingly
+  useEffect(() => {
+    setValue(value)
+  }, [value])
 
   const resetValue = (): void => {
     setValue('');
@@ -110,7 +115,7 @@ export function Input({
   return (
     <Wrapper {...wrapperProps}>
       <input
-        value={restProps.readOnly ? value : inputValue}
+        value={inputValue}
         {...restProps}
         id={id}
         ref={textInput}
