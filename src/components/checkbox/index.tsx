@@ -33,6 +33,7 @@ export function Checkbox({
   checked = false,
   value = '',
   className = null,
+  withoutStatus,
   ...props
 }: CheckboxProps): React.ReactElement {
   const [id] = useState(props.id || _uniqueId());
@@ -58,6 +59,7 @@ export function Checkbox({
     error: props.error,
     infoMsg,
     className,
+    withoutStatus,
   };
 
   return (
