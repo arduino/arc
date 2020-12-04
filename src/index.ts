@@ -6,16 +6,7 @@ export { Password, PasswordProps } from './components/input/password';
 export { Select, SelectProps } from './components/select';
 export { Button } from './components/button';
 export { Loader } from './components/loader';
-export {
-  Modal,
-  ModalProps,
-  ModalTrigger,
-  ModalTriggerProps,
-  Tooltip,
-  TooltipProps,
-  TooltipTrigger,
-  TooltipTriggerProps,
-} from './components/dialogs';
+export * from './components/dialogs';
 export { DatePicker, DatePickerProps } from './components/datepicker/datepicker';
 export { Snackbar, SnackbarProps } from './components/snackbar';
 export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from './components/avatar';

@@ -41,7 +41,7 @@ export interface PopoverTriggerProps extends PopoverPropsNoStyle {
 
 /**
  *
- * PopoverTrigger shows an arduino-styled popover when the trigger is in focus or hovered.
+ * PopoverTrigger shows an arduino-styled popover when the trigger is clicked.
  *
  * The Trigger can be any valid html or ReactElement.
  *
