@@ -5,15 +5,14 @@ export { Input, InputProps } from './components/input/input';
 export { Password, PasswordProps } from './components/input/password';
 export { Select, SelectProps } from './components/select';
 export { Button } from './components/button';
+export { IconButton } from './components/IconButton';
 export { Loader, LoaderProps } from './components/loader';
 export * from './components/dialogs';
 export { DatePicker, DatePickerProps } from './components/datepicker/datepicker';
 export { Snackbar, SnackbarProps } from './components/snackbar';
 export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from './components/avatar';
 export { PhoneInput, PhoneInputProps, PhoneRegion } from './components/phoneInput';
-
 export { Wrapper } from './components/wrapper';
-
 
 // export derived components
 
