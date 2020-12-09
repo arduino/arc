@@ -10,7 +10,10 @@ export default {
 const Template: Story<LoaderProps> = (args) => <Loader {...args} />;
 
 export const Basic = Template.bind({});
-Basic.args = {};
+Basic.args = {
+  color: '#cccccc',
+  bgcolor: '#fff',
+};
 
 export const Tiny = Template.bind({});
 Tiny.args = {
