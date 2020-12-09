@@ -10,6 +10,15 @@ export type LoaderProps = {
    * If not tiny, the loader is meant to be used as a "global" laoder for the entire page
    */
   tiny?: boolean;
+  /**
+   * hexadecimal color string, used for the line. Ex: #CCCCCC
+   */
+  linecolor?: string;
+  /**
+   * hexadecimal color string, used for the background. Ex: #FFFFFF.
+   * This is particularly usefult when the loader cannot inherit the background color from a parent.
+   */
+  bgcolor?: string;
 };
 
 /**
@@ -22,18 +31,24 @@ export type LoaderProps = {
  * Accessibility provided via [React Aria](https://react-spectrum.adobe.com/react-aria/useProgressBar.html).
  *
  */
-export function Loader({ tiny = false }: LoaderProps): React.ReactElement {
+export function Loader({ tiny = false, linecolor, bgcolor = 'inherit' }: LoaderProps): React.ReactElement {
   const { progressBarProps } = useProgressBar({
     isIndeterminate: true,
     'aria-label': 'Loading...',
   });
 
+  let color = tiny ? '#FFFFFF' : '#008184';
+  if (linecolor) {
+    color = linecolor;
+  }
+
   return (
     <div
       {...progressBarProps}
       className={classnames({ [`${style['tiny-loader']}`]: tiny, [`${style.loader}`]: !tiny })}
+      style={{ backgroundColor: bgcolor }}
     >
-      <div className={style['loader--spinner']} />
+      <div className={style['loader--spinner']} style={{ color }} />
     </div>
   );
 }
