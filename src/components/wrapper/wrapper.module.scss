@@ -10,6 +10,7 @@
 
   input,
   textarea,
+  :global(.phone-input__input),
   :global(.zh-datepicker),
   :global(.zh-select) {
     // Shrink and move upwards label when the input is focused or has text
@@ -72,6 +73,7 @@
 .statusWrapper {
   @include text-config($font-size-xx-small, $letter-spacing-default, $line-height-default);
 
+  display: block;
   margin-top: 4px;
   min-height: 17px;
 
@@ -81,7 +83,7 @@
     align-items: center;
     font-weight: bold;
   }
-
+  
   .success {
     color: $notifysuccess;
   }

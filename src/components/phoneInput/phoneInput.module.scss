@@ -1,0 +1,272 @@
+@import '~@bcmi-labs/sass/src/variables';
+@import '~@bcmi-labs/sass/src/typography';
+@import '~@bcmi-labs/sass/src/spacing';
+@import '../ui-controls-variables';
+
+:global(.phone-input-wrapper) {
+  width: 100%;
+  position: unset;
+
+  :global(.wrapper-status) {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.phone-input {
+  display: flex;
+  border: 1px solid $smoke;
+  border-radius: 3px;
+  position: relative;
+  height: 52px;
+  margin-bottom: 18px;
+
+  &:hover {
+    @extend %field-hover-shadow;
+  }
+
+  &.focus {
+    @extend %withfocus;
+  }
+
+  // Color input when success or error
+  &.success {
+    @extend %withfocus;
+
+    box-shadow: 0 0 0 2px $notifysuccess !important;
+  }
+
+  &.error {
+    @extend %witherror;
+
+    box-shadow: 0 0 0 2px $notifyerror !important;
+  }
+
+  &.disabled,
+  &.readOnly {
+    border: 1px solid $smoke;
+    box-shadow: none;
+
+    .phone-input__flag-selector {
+      outline: none;
+      background: transparent;
+    }
+  }
+
+  &.disabled {
+    .phone-input__flag-selector--flag {
+      > svg {
+        opacity: .5;
+      }
+    }
+  }
+
+  &.readOnly {
+    background: $clouds;
+  }
+
+  &.dropdown {
+    @extend %noborder;
+
+    box-shadow: 0 0 0 2px $teal0 !important;
+    border-radius: 3px 3px 0 0;
+
+    .phone-input__flags-container {
+      border-left: 2px solid $teal0;
+      border-right: 2px solid $teal0;
+      border-bottom: 2px solid $teal0;
+      border-top: 1px solid $smoke;
+      width: calc(100% + 6px);
+      left: -2px; // box-shadow
+      z-index: 50;
+    }
+
+    &.success {
+      @extend %withfocus;
+
+      box-shadow: 0 0 0 2px $notifysuccess !important;
+
+      .phone-input__flags-container {
+        border-left: 2px solid $notifysuccess;
+        border-right: 2px solid $notifysuccess;
+        border-bottom: 2px solid $notifysuccess;
+      }
+    }
+
+    &.error {
+      @extend %witherror;
+
+      box-shadow: 0 0 0 2px $notifyerror !important;
+
+      .phone-input__flags-container {
+        border-left: 2px solid $notifyerror;
+        border-right: 2px solid $notifyerror;
+        border-bottom: 2px solid $notifyerror;
+      }
+    }
+  }
+
+  &__input {
+    @extend %arduino-typography-x-small;
+
+    display: flex;
+    height: 52px;
+    width: 100%;
+    padding: 25px 20px 6px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0 3px 3px 0;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:disabled {
+      opacity: .5;
+    }
+
+    &:disabled,
+    &:read-only {
+      box-shadow: none;
+    }
+
+    &:read-only {
+      background: $clouds;
+    }
+  }
+
+  &__flags {
+    display: flex;
+    align-items: center;
+
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  &__flag-selector {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: $space-small $space-medium;
+    border-right: 1px solid $smoke;
+    border-radius: 3px 0 0 3px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      background: $clouds;
+    }
+
+    &--flag {
+      @include size(33px, 22px);
+
+      box-shadow: 0 0 1px rgba(0, 0, 0, .7);
+
+      > svg {
+        @include size(33px, 22px);
+      }
+    }
+
+    &--arrow {
+      @include size(10px, 6px);
+
+      color: $gris;
+      position: relative;
+      margin-left: $space-small;
+
+      > svg {
+        @include size(2em);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.disabled {
+        > svg {
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  &__flags-container {
+    z-index: 1;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    background-color: $white;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-radius: 0 0 3px 3px;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $silver;
+      border-radius: 3px;
+
+      &:hover {
+        background: $silver;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &__country {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    padding: $space-x-small $space-small;
+
+    &.highlight,
+    &:hover {
+      background: $clouds;
+    }
+
+    &--flag {
+      @include size(33px, 22px);
+
+      box-shadow: 0 0 1px rgba(0, 0, 0, .7);
+
+      > svg {
+        @include size(33px, 22px);
+      }
+    }
+
+    &--name {
+      margin-left: $space-x-small;
+    }
+
+    &--dial-code {
+      margin-left: $space-xx-small;
+      color: $concrete;
+    }
+
+    &--divider {
+      padding-bottom: $space-xx-small;
+      margin-bottom: $space-xx-small;
+      border-bottom: 1px solid $clouds;
+    }
+  }
+}
+
+.close {
+  @extend %close;
+
+  position: absolute;
+  right: $space-medium;
+  display: flex;
+}
