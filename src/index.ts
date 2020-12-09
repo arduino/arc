@@ -5,7 +5,7 @@ export { Input, InputProps } from './components/input/input';
 export { Password, PasswordProps } from './components/input/password';
 export { Select, SelectProps } from './components/select';
 export { Button } from './components/button';
-export { IconButton } from './components/IconButton';
+export { TriggerIcon } from './components/TriggerIcon';
 export { Loader, LoaderProps } from './components/loader';
 export * from './components/dialogs';
 export { DatePicker, DatePickerProps } from './components/datepicker/datepicker';
