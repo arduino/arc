@@ -10,15 +10,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: inherit;
 
   .loader--spinner {
-    @include spinner( $teal3, white, 64px);
+    background-color: inherit;
+
+    @include spinner( inherit, white, 64px);
   }
 }
 
 .tiny-loader {
+  background-color: inherit;
+
   .loader--spinner {
-    @include spinner( white, $teal3, 21px);
+    background-color: inherit;
+
+    @include spinner( white, inherit, 21px);
 
     margin: 0 9px 0 -5px;
   }
