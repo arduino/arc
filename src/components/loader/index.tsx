@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import style from './loader.module.scss';
 
-type LoaderProps = {
+export type LoaderProps = {
   tiny?: boolean;
 };
 
