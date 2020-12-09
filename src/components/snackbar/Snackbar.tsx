@@ -7,14 +7,8 @@ import {
 } from '@bcmi-labs/react-icons';
 
 import { useOverlayTriggerState } from 'react-stately';
-import {
-  useDialog,
-  usePress,
-  useOverlay,
-  FocusScope,
-  OverlayContainer,
-} from "react-aria";
-import { OverlayProps } from "../utils";
+import { useDialog, usePress, useOverlay, FocusScope, OverlayContainer } from 'react-aria';
+import { OverlayProps } from '../utils';
 
 import { OpenTransition } from '../OpenTransition';
 
@@ -33,7 +27,7 @@ interface SnackbarViewProps extends OverlayProps {
   className?: string;
   message: React.ReactNode;
   closeable?: boolean;
-  theme?: "light" | "dark" | "success" | "error";
+  theme?: 'light' | 'dark' | 'success' | 'error';
   setRef?: (ref: React.Ref<HTMLDivElement>) => void;
 }
 
