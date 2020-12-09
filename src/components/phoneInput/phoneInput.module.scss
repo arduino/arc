@@ -110,7 +110,7 @@
     @extend %arduino-typography-x-small;
 
     display: flex;
-    height: 52px;
+    height: inherit;
     width: 100%;
     padding: 25px 20px 6px 20px;
     box-sizing: border-box;
