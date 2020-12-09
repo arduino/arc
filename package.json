@@ -51,6 +51,8 @@
     "classnames": "^2.2.6",
     "formik": "^2.1.4",
     "lodash.once": "^4.1.1",
+    "lodash.reduce": "^4.6.0",
+    "lodash.startswith": "^4.2.1",
     "react-autosize-textarea": "^7.0.0",
     "react-google-recaptcha-v3": "^1.5.2",
     "react-popper": "^2.2.3",

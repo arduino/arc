@@ -46,7 +46,7 @@ export function Wrapper({
   ...props
 }: WrapperProps): React.ReactElement {
   const wrapperClasses = classNames('wrapper', style.wrapper, {
-    [`${className}__wrapper`]: className,
+    [`${className}`]: className,
   });
 
   const fieldClasses = classNames(style.field, {
@@ -65,6 +65,10 @@ export function Wrapper({
     [`${className}__info`]: className,
   });
 
+  const statusClasses = classNames('wrapper-status', style.statusWrapper, {
+    [`${className}__status`]: className,
+  });
+
   return (
     <div className={wrapperClasses}>
       <div className={fieldClasses}>
@@ -76,26 +80,26 @@ export function Wrapper({
         )}
       </div>
       {!withoutStatus && (
-        <div className={style.statusWrapper}>
-          {/* Display error message */}
-          {error && error.length && (
-            <div className={errorClasses}>
-              <IconStatusAttentionErrorOutlineFilled /> {error}
-            </div>
-          )}
-          {/* Display success message */}
-          {!error && successMsg && successMsg.length && (
-            <div className={successClasses}>
-              <IconNavigationCheckmarkOutlineFilled /> {successMsg}
-            </div>
-          )}
-          {/* Display info message */}
-          {!error && !successMsg && infoMsg && infoMsg.length && (
-            <div className={infoClasses}>
-              <TextWithLink text={infoMsg} />
-            </div>
-          )}
-        </div>
+        <div className={statusClasses}>
+        {/* Display error message */}
+        {error && error.length && (
+          <div className={errorClasses}>
+            <IconStatusAttentionErrorOutlineFilled /> {error}
+          </div>
+        )}
+        {/* Display success message */}
+        {!error && successMsg && successMsg.length && (
+          <div className={successClasses}>
+            <IconNavigationCheckmarkOutlineFilled /> {successMsg}
+          </div>
+        )}
+        {/* Display info message */}
+        {!error && !successMsg && infoMsg && infoMsg.length && (
+          <div className={infoClasses}>
+            <TextWithLink text={infoMsg} />
+          </div>
+        )}
+      </div>
       )}
     </div>
   );

@@ -6,7 +6,7 @@ import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
 import DateInput from './DateInput';
 
 import { DateInputBaseProps } from './models/DatePicker.model';
-import { debounce } from './utils/func';
+import { debounce } from '../utils/func';
 import { Wrapper, WrapperProps } from '../wrapper';
 
 // Import css styles and bind the class names
