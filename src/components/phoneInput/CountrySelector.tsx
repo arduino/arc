@@ -237,7 +237,7 @@ export function CountrySelector({
 
       const FlagTag = Flags[country.iso2.toUpperCase()];
       return (
-        <li
+        <div
           ref={(el) => (flagsRefs.current[`flag_no_${index}`] = el)}
           key={`flag_no_${index}`}
           data-flag-key={`flag_no_${index}`}
@@ -266,7 +266,7 @@ export function CountrySelector({
           >
             {country.format ? formatNumber(country.dialCode, country, options) : options.prefix + country.dialCode}
           </span>
-        </li>
+        </div>
       );
     });
 
@@ -282,12 +282,12 @@ export function CountrySelector({
     preferredCountries.length > 0 && countryDropdownList.splice(preferredCountries.length, 0, dashedLi);
 
     return (
-      <ul
+      <div
         ref={dropdownRef}
         className={classNames(style['phone-input__flags-container'], { [`${className}__flags-container`]: className })}
       >
         {countryDropdownList}
-      </ul>
+      </div>
     );
   }, [countryData, highlightCountryIndex, disableDropdown, phoneNumber]);
 
