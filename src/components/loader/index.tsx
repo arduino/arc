@@ -2,6 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 import style from './loader.module.scss';
+import { useProgressBar } from 'react-aria';
 
 export type LoaderProps = {
   /**
@@ -18,10 +19,20 @@ export type LoaderProps = {
  *
  * The background is inherited from the containing div
  *
+ * Accessibility provided via [React Aria](https://react-spectrum.adobe.com/react-aria/useProgressBar.html).
+ *
  */
 export function Loader({ tiny = false }: LoaderProps): React.ReactElement {
+  const { progressBarProps } = useProgressBar({
+    isIndeterminate: true,
+    'aria-label': 'Loading...',
+  });
+
   return (
-    <div className={classnames({ [`${style['tiny-loader']}`]: tiny, [`${style.loader}`]: !tiny })}>
+    <div
+      {...progressBarProps}
+      className={classnames({ [`${style['tiny-loader']}`]: tiny, [`${style.loader}`]: !tiny })}
+    >
       <div className={style['loader--spinner']} />
     </div>
   );
