@@ -10,6 +10,7 @@ export * from './components/dialogs';
 export { DatePicker, DatePickerProps } from './components/datepicker/datepicker';
 export { Snackbar, SnackbarProps } from './components/snackbar';
 export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from './components/avatar';
+export { Wrapper } from './components/wrapper';
 
 // export derived components
 
