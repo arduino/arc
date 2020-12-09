@@ -1,7 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useButton } from 'react-aria';
 import { usePopper } from 'react-popper';
 import { Popover, PopoverProps } from './Popover';
+
+import style from './popover.module.scss';
 
 type Placement =
   | 'auto'
@@ -37,6 +39,9 @@ export interface PopoverTriggerProps extends PopoverPropsNoStyle {
 
   /** Whether the overlay is open by default (controlled). */
   isOpen?: boolean;
+
+  /** Callback called on state change. True = popover is open. False = popover is close */
+  onOpenChange?: (open: boolean) => void;
 }
 
 /**
@@ -55,9 +60,14 @@ export function PopoverTrigger({
   children,
   popoverPlacement = 'right',
   popoverStrategy = 'absolute',
+  onOpenChange,
   ...props
 }: PopoverTriggerProps): React.ReactElement {
   const [isOpen, setIsOpen] = useState(props.isOpen);
+
+  useEffect(() => {
+    setIsOpen(props.isOpen);
+  }, [props.isOpen]);
 
   const [triggerRef, setTriggerRef] = useState(null);
   const [popperRef, setPopperRef] = useState(null);
@@ -68,11 +78,15 @@ export function PopoverTrigger({
   const { buttonProps: openButtonProps } = useButton(
     {
       onPress: () => {
+        let newState = true;
         // toggle the state if the popover is dismissable, otherwise always set it to open
         if (props.isDismissable) {
-          setIsOpen(!isOpen);
-        } else {
-          setIsOpen(true);
+          newState = !isOpen;
+        }
+
+        setIsOpen(newState);
+        if (onOpenChange) {
+          onOpenChange(newState);
         }
       },
     },
@@ -81,26 +95,24 @@ export function PopoverTrigger({
 
   const onClose = () => {
     setIsOpen(false);
+    if (onOpenChange) {
+      onOpenChange(false);
+    }
     if (props.onClose) {
       props.onClose();
     }
   };
-
-  // const popperRef = React.useRef();
 
   const { styles, attributes } = usePopper(triggerRef, popperRef, {
     placement: popoverPlacement,
     strategy: popoverStrategy,
   });
 
-  // extract children and other props from trigger element
-  const { children: triggerChildren, ...otherTriggerProps } = TriggerElement.props;
-
   return (
     <>
-      <TriggerElement.type {...otherTriggerProps} {...openButtonProps} ref={setTriggerRef}>
-        {triggerChildren}
-      </TriggerElement.type>
+      <span {...openButtonProps} ref={setTriggerRef} className={style.triggerwrapper}>
+        {TriggerElement}
+      </span>
       {isOpen && (
         <Popover
           {...attributes.popper}

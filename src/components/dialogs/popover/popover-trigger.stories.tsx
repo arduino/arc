@@ -1,7 +1,9 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 import { PopoverTrigger, PopoverTriggerProps } from './PopoverTrigger';
-import { OverlayProvider } from 'react-aria';
+import { OverlayContainer, OverlayProvider } from 'react-aria';
+import { IconNavigationMenuMoreGrid } from '@bcmi-labs/react-icons';
+import { TriggerIcon } from '../../TriggerIcon';
 
 export default {
   title: 'ZeroHeight/PopoverTrigger',
@@ -10,7 +12,9 @@ export default {
 
 const Template: Story<PopoverTriggerProps> = (args) => (
   <OverlayProvider>
-    <PopoverTrigger {...args} />
+    <OverlayContainer>
+      <PopoverTrigger {...args} />
+    </OverlayContainer>
   </OverlayProvider>
 );
 
@@ -26,6 +30,33 @@ ControlledOpen.args = {
   ...Basic.args,
   isOpen: true,
 };
+
+export const WithTriggerIcon = Template.bind({});
+WithTriggerIcon.args = {
+  TriggerElement: (
+    <TriggerIcon>
+      <IconNavigationMenuMoreGrid />
+    </TriggerIcon>
+  ),
+  isDismissable: true,
+  children: 'Popover content',
+};
+
+const Template2: Story<PopoverTriggerProps> = () => (
+  <OverlayProvider>
+    <p>
+      <PopoverTrigger TriggerElement={<button>open popover A</button>} isDismissable={true}>
+        Content A
+      </PopoverTrigger>
+    </p>
+    <p>
+      <PopoverTrigger TriggerElement={<button>open popover B</button>} isDismissable={true}>
+        Content B
+      </PopoverTrigger>
+    </p>
+  </OverlayProvider>
+);
+export const TwoTriggers = Template2.bind({});
 
 // export const StartOpen = Template.bind({});
 // StartOpen.args = {
