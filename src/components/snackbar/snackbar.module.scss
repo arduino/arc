@@ -16,22 +16,25 @@ $base-snackbar-padding: 30px;
   padding: 10px 16px;
   position: fixed;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  &.inline {
+    position: static;
+    transform: none;
+  }
+
   &.show {
     /* In Edge (pre chromium), a stacking context is formed for opacity less then 1, and then its removed for 1.
       It causes a rendering flicker that is visible when css transition is applied. */
-    opacity: .9999;
+    opacity: 0.9999;
     transform: translateY(0);
 
     /* Entry animations */
-    transition:
-      opacity .25s cubic-bezier(0, 0, .4, 1) .16s,
-      transform .25s cubic-bezier(0, 0, .4, 1) .16s;
+    transition: opacity 0.25s cubic-bezier(0, 0, 0.4, 1) 0.16s, transform 0.25s cubic-bezier(0, 0, 0.4, 1) 0.16s;
     transition-delay: 0ms;
   }
 
@@ -133,7 +136,7 @@ $base-snackbar-padding: 30px;
   }
 
   &.success {
-    background-color: rgba(29, 160, 134, .1);
+    background-color: rgba(29, 160, 134, 0.1);
     border: 1px solid $notifysuccess;
     color: $onyx;
     font-size: 12px;
@@ -148,7 +151,7 @@ $base-snackbar-padding: 30px;
   }
 
   &.error {
-    background-color: rgba(218, 91, 74, .1);
+    background-color: rgba(218, 91, 74, 0.1);
     border: 1px solid $notifyerror;
     color: $onyx;
     font-size: 12px;

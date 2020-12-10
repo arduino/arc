@@ -83,6 +83,13 @@ TopRight.args = {
   isOpen: true,
 };
 
+export const Inline = Template.bind({});
+Inline.args = {
+  message: 'Inline',
+  isOpen: true,
+  inline: true,
+};
+
 export const Closeable = Template.bind({});
 Closeable.args = {
   ...baseProp,

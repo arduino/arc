@@ -22,6 +22,7 @@ interface AnchorOrigin {
 interface SnackbarViewProps extends OverlayProps {
   ActionElement?: React.ReactElement;
   anchorOrigin?: AnchorOrigin;
+  inline?: boolean;
   autoHideDuration?: number;
   turnOffAutoHide?: boolean;
   className?: string;
@@ -42,6 +43,7 @@ function SnackbarView({
   message,
   ActionElement,
   closeable,
+  inline,
   setRef,
   ...otherProps
 }: SnackbarViewProps): React.ReactElement {
@@ -63,9 +65,10 @@ function SnackbarView({
     'zh-snackbar',
     className,
     style['zh-snackbar'],
-    style[`${vertical}-${horizontal}`], // set position
     style[theme],
     {
+      [style[`${vertical}-${horizontal}`]]: !inline,
+      [style['inline']]: inline,
       [style['show']]: isOpen,
     }
   );
