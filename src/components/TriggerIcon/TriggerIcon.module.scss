@@ -1,0 +1,44 @@
+@import '~@bcmi-labs/sass/src/variables';
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: $teal3;
+
+  svg,
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover:not(.disabled) {
+    background-color: $clouds;
+  }
+
+  &.disabled {
+    opacity: .5;
+  }
+
+  &.tiny {
+    width: 16px;
+    height: 16px;
+    background-color: $fog;
+    color: $jet;
+
+    &:hover {
+      background-color: $jet;
+      color: $white;
+    }
+
+    svg,
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
