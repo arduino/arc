@@ -25,6 +25,7 @@ $base-snackbar-padding: 30px;
   &.inline {
     position: static;
     transform: none;
+    box-shadow: none;
   }
 
   &.show {
