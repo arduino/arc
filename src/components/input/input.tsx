@@ -43,18 +43,18 @@ export function Input({
   const textInput = useRef(null);
 
   const changeValue = useCallback((e) => {
-   setValue(e.currentTarget.value);
+    setValue(e.currentTarget.value);
 
-   // Bubble up event
-   if (onChange) {
-     onChange(e);
-   }
+    // Bubble up event
+    if (onChange) {
+      onChange(e);
+    }
   }, []);
 
   // Listen for value changes and act accordingly
   useEffect(() => {
-    setValue(value)
-  }, [value])
+    setValue(value);
+  }, [value]);
 
   const resetValue = (): void => {
     setValue('');
