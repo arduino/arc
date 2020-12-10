@@ -1,59 +1,103 @@
 @import '~@bcmi-labs/sass/src/variables';
-@import '~@bcmi-labs/sass/src/typography-sans';
+@import '~@bcmi-labs/sass/src/typography';
 @import '~@bcmi-labs/sass/src/buttons';
 
-$disabled-button-background-color: #7bb9ba;
-
 .button {
-  @include ardu-store-button($teal3, white);
-
-  @extend %arduino-typography-x-small;
-
   align-items: center;
   display: flex !important;
   font-weight: 700;
   justify-content: center;
-  padding: 7px 18px;
+
+  @include ardu-store-button($teal3, white);
+
+  border-width: 2px;
+  border-color: transparent;
+  border-radius: 32px;
+
+  &:hover {
+    background-color: $teal5;
+  }
 
   &:focus,
   &:active {
-    box-shadow: 0 0 0 3px $teal0;
+    box-shadow: 0 0 0 2px $teal0;
   }
 
   &.disabled {
-    background-color: $disabled-button-background-color;
-    border-color: $disabled-button-background-color;
+    opacity: .5;
     color: white;
     cursor: default;
     pointer-events: none;
 
-    :hover {
+    &:hover {
       transition: none;
     }
   }
 
-  &.full {
-    width: 100%;
-  }
+  // VARIANTS
 
-  &.invert {
-    @include ardu-store-button(white, $teal3);
-
+  &.secondary {
+    color: $teal3;
+    background-color: transparent;
     border-color: $teal3;
-    border-width: 2px;
-  }
 
-  &.grey {
-    @include ardu-store-button($clouds, black);
-  }
-
-  &.warning {
-    @include ardu-store-button($notifyerror, white);
+    &:hover {
+      background-color: transparentize($teal5, .8);
+    }
   }
 
   &.tertiary {
-    background: none;
     color: $teal3;
-    border: 0;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .08);
+    }
+  }
+
+  &.ghost {
+    color: $black;
+    background-color: transparent;
+    border-color: $black;
+
+    &:hover {
+      background-color: transparentize($black, .8);
+    }
+  }
+
+  &.warning {
+    color: $white;
+    background-color: $notifyerror;
+    border-color: transparent;
+
+    &:hover {
+      background-color: darken($notifyerror, 10);
+    }
+  }
+
+  // SIZINGS
+
+  &.big {
+    @extend %arduino-typography-medium-strong;
+
+    height: 50px;
+  }
+
+  &.normal {
+    @extend %arduino-typography-small-strong;
+
+    height: 38px;
+  }
+
+  &.small {
+    @extend %arduino-typography-x-small-strong;
+
+    height: 30px;
+  }
+
+  &.full {
+    width: 100%;
   }
 }

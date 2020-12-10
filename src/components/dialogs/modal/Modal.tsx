@@ -1,16 +1,8 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import classNames from 'classnames';
-import {
-  useOverlay,
-  usePreventScroll,
-  useModal,
-  useDialog,
-  OverlayContainer,
-  FocusScope,
-  useButton,
-} from "react-aria";
-import { AriaDialogProps } from "@react-types/dialog";
-import { useOverlayTriggerState } from "react-stately";
+import { useOverlay, usePreventScroll, useModal, useDialog, OverlayContainer, FocusScope, useButton } from 'react-aria';
+import { AriaDialogProps } from '@react-types/dialog';
+import { useOverlayTriggerState } from 'react-stately';
 
 import { IconNavigationArrowLeft, IconNavigationCloseNormal } from '@bcmi-labs/react-icons';
 
@@ -18,7 +10,7 @@ import { Underlay } from '../underlay/Underlay';
 import { OpenTransition } from '../../OpenTransition';
 import style from './modal.module.scss';
 import { Button } from '../../button';
-import { WithBemClasses, OverlayProps } from "../../utils";
+import { WithBemClasses, OverlayProps } from '../../utils';
 
 interface ModalButtonProps {
   label: string;
@@ -38,7 +30,7 @@ export function ModalButton({
 
   return (
     <Button
-      onButtonClick={(): void => {
+      onPress={(): void => {
         onClick();
         if (closeModalOnClick && typeof closeFn === 'function') {
           closeFn();

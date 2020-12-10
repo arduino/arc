@@ -5,21 +5,13 @@ import classnames from 'classnames';
 import style from './TriggerIcon.module.scss';
 
 export interface TriggerIconProps {
-  /**
-   * Pass an icon (svg or img) here.
-   */
+  /** Pass an icon (svg or img) here. */
   children: React.ReactElement;
-  /**
-   * extra class to add to the component
-   */
+  /** extra class to add to the component */
   className?: string;
-  /**
-   * Whether or not disable the icon
-   */
+  /** Whether or not disable the icon */
   isDisabled?: boolean;
-  /**
-   * Whether or not use the tiny style
-   */
+  /** Whether or not use the tiny style */
   tiny?: boolean;
 }
 
