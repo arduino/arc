@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useButton } from '@react-aria/button';
 import { Modal, ModalWindowProps } from './Modal';
 
@@ -9,6 +9,11 @@ export function ModalTrigger({ TriggerElement, onClose, ...props }: ModalTrigger
   const ref = useRef();
 
   const [isOpen, setIsOpen] = useState(props.isOpen);
+
+  // when isOpen prop changes, reflect it's state to internal state
+  useEffect(() => {
+    setIsOpen(props.isOpen);
+  }, [props.isOpen]);
 
   // useButton ensures that focus management is handled correctly,
   // across all browsers. Focus is restored to the button once the

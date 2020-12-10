@@ -193,6 +193,7 @@ export function Modal({
 
   const state = useOverlayTriggerState({});
 
+  // when isOpen prop changes, reflect it's state to internal state
   useEffect(() => {
     if (!isOpen) {
       state.close();
