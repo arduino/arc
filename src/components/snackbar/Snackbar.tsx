@@ -32,7 +32,7 @@ interface SnackbarViewProps extends OverlayProps {
   setRef?: (ref: React.Ref<HTMLDivElement>) => void;
 }
 
-function SnackbarView({
+export function SnackbarView({
   className,
   anchorOrigin = {
     vertical: 'bottom',

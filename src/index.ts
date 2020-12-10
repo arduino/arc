@@ -8,7 +8,7 @@ export { Button } from './components/button';
 export { Loader, LoaderProps } from './components/loader';
 export * from './components/dialogs';
 export { DatePicker, DatePickerProps } from './components/datepicker/datepicker';
-export { Snackbar, SnackbarProps } from './components/snackbar';
+export { Snackbar, SnackbarView, SnackbarProps } from './components/snackbar';
 export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from './components/avatar';
 export { PhoneInput, PhoneInputProps, PhoneRegion } from './components/phoneInput';
 
