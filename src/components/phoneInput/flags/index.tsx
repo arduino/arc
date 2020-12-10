@@ -1,62 +1,23 @@
-import React from "react"
+import React from 'react';
 
 export function AC({ title, ...rest }): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#0052B4" d="M0 0h513v342H0z" />
-      <path
-        fill="#FFF"
-        d="M440.1 181.1c-.1 39.2-6.4 81.4-57.4 101.5-51.1-20.1-57.3-62.3-57.4-101.5h114.8z"
-      />
-      <path
-        fill="#29DBFF"
-        d="M439.6 197.7c-2.8 34.9-12.4 67.4-57 85-44.4-17.6-54.5-51.2-56.9-84.9"
-      />
-      <path
-        fill="#FFF"
-        d="M437.8 214.1c-3.2 24.3-16.7 53.5-55.1 68.6-38.4-15.1-50.5-42.5-55.1-68.4"
-      />
-      <path
-        fill="#29DBFF"
-        d="M434.2 230.3c-5.7 17.7-19.3 39.4-51.3 52.8-32-12.6-45.2-33.8-51.4-53"
-      />
-      <path
-        fill="#FFF"
-        d="M426.7 246.9c-6.5 11.3-17.7 25.4-44 35.9-27.5-11.5-37.4-25.3-44-36.1"
-      />
-      <path
-        fill="#29DBFF"
-        d="M412.4 265.1c-8.1 7.2-12 11.2-29.6 17.9-20.1-7.9-22.6-11.6-29.2-17.5"
-      />
+      <path fill="#FFF" d="M440.1 181.1c-.1 39.2-6.4 81.4-57.4 101.5-51.1-20.1-57.3-62.3-57.4-101.5h114.8z" />
+      <path fill="#29DBFF" d="M439.6 197.7c-2.8 34.9-12.4 67.4-57 85-44.4-17.6-54.5-51.2-56.9-84.9" />
+      <path fill="#FFF" d="M437.8 214.1c-3.2 24.3-16.7 53.5-55.1 68.6-38.4-15.1-50.5-42.5-55.1-68.4" />
+      <path fill="#29DBFF" d="M434.2 230.3c-5.7 17.7-19.3 39.4-51.3 52.8-32-12.6-45.2-33.8-51.4-53" />
+      <path fill="#FFF" d="M426.7 246.9c-6.5 11.3-17.7 25.4-44 35.9-27.5-11.5-37.4-25.3-44-36.1" />
+      <path fill="#29DBFF" d="M412.4 265.1c-8.1 7.2-12 11.2-29.6 17.9-20.1-7.9-22.6-11.6-29.2-17.5" />
       <path
         fill="#5CC85C"
         d="M383.3 231.6c-.2-.2-27.9 35.7-27.9 35.7-1.8-1.3-10-9.5-13.3-15l41.3-50.1 40.2 49.7c-3.9 6.5-11.4 13.6-13.2 15M382.6 85.3l-26.5 45h53z"
       />
-      <ellipse
-        transform="rotate(-82.3 291.431 225.686)"
-        fill="#F7A226"
-        cx={291.4}
-        cy={225.7}
-        rx={48.7}
-        ry={15.7}
-      />
-      <ellipse
-        transform="rotate(-68.099 303.087 164.67)"
-        fill="#DDC7AB"
-        cx={303.1}
-        cy={164.7}
-        rx={11.7}
-        ry={7.2}
-      />
-      <ellipse
-        transform="rotate(-81.738 291.697 271.697)"
-        fill="#DDC7AB"
-        cx={291.7}
-        cy={271.7}
-        rx={11.4}
-        ry={3.3}
-      />
+      <ellipse transform="rotate(-82.3 291.431 225.686)" fill="#F7A226" cx={291.4} cy={225.7} rx={48.7} ry={15.7} />
+      <ellipse transform="rotate(-68.099 303.087 164.67)" fill="#DDC7AB" cx={303.1} cy={164.7} rx={11.7} ry={7.2} />
+      <ellipse transform="rotate(-81.738 291.697 271.697)" fill="#DDC7AB" cx={291.7} cy={271.7} rx={11.4} ry={3.3} />
       <ellipse
         transform="matrix(.9986 -.05353 .05353 .9986 -13.992 16.424)"
         fill="#DDC7AB"
@@ -65,46 +26,11 @@ export function AC({ title, ...rest }): React.ReactElement {
         rx={3.3}
         ry={11}
       />
-      <ellipse
-        transform="rotate(-21.518 314.54 201.06)"
-        fill="#DDC7AB"
-        cx={314.5}
-        cy={201.1}
-        rx={4.1}
-        ry={13.7}
-      />
-      <ellipse
-        transform="rotate(-21.518 317.511 178.077)"
-        fill="#DDC7AB"
-        cx={317.5}
-        cy={178.1}
-        rx={13.7}
-        ry={4.1}
-      />
-      <ellipse
-        transform="rotate(-7.7 473.781 225.857)"
-        fill="#F7A226"
-        cx={473.6}
-        cy={225.9}
-        rx={15.7}
-        ry={48.7}
-      />
-      <ellipse
-        transform="rotate(-21.901 462.057 164.866)"
-        fill="#DDC7AB"
-        cx={462}
-        cy={164.9}
-        rx={7.2}
-        ry={11.7}
-      />
-      <ellipse
-        transform="rotate(-8.27 473.27 271.908)"
-        fill="#DDC7AB"
-        cx={473.4}
-        cy={271.9}
-        rx={3.3}
-        ry={11.4}
-      />
+      <ellipse transform="rotate(-21.518 314.54 201.06)" fill="#DDC7AB" cx={314.5} cy={201.1} rx={4.1} ry={13.7} />
+      <ellipse transform="rotate(-21.518 317.511 178.077)" fill="#DDC7AB" cx={317.5} cy={178.1} rx={13.7} ry={4.1} />
+      <ellipse transform="rotate(-7.7 473.781 225.857)" fill="#F7A226" cx={473.6} cy={225.9} rx={15.7} ry={48.7} />
+      <ellipse transform="rotate(-21.901 462.057 164.866)" fill="#DDC7AB" cx={462} cy={164.9} rx={7.2} ry={11.7} />
+      <ellipse transform="rotate(-8.27 473.27 271.908)" fill="#DDC7AB" cx={473.4} cy={271.9} rx={3.3} ry={11.4} />
       <ellipse
         transform="matrix(.05353 -.9986 .9986 .05353 171.34 719.998)"
         fill="#DDC7AB"
@@ -113,34 +39,14 @@ export function AC({ title, ...rest }): React.ReactElement {
         rx={11}
         ry={3.3}
       />
-      <ellipse
-        transform="rotate(-68.482 450.552 201.247)"
-        fill="#DDC7AB"
-        cx={450.6}
-        cy={201.2}
-        rx={13.7}
-        ry={4.1}
-      />
-      <ellipse
-        transform="rotate(-68.482 447.58 178.265)"
-        fill="#DDC7AB"
-        cx={447.6}
-        cy={178.3}
-        rx={4.1}
-        ry={13.7}
-      />
-      <path
-        fill="#B0C6CC"
-        d="M373.3 130.3L356.1 155l17.8 26.1H396l4.7-25.4-5.4-25.4z"
-      />
+      <ellipse transform="rotate(-68.482 450.552 201.247)" fill="#DDC7AB" cx={450.6} cy={201.2} rx={13.7} ry={4.1} />
+      <ellipse transform="rotate(-68.482 447.58 178.265)" fill="#DDC7AB" cx={447.6} cy={178.3} rx={4.1} ry={13.7} />
+      <path fill="#B0C6CC" d="M373.3 130.3L356.1 155l17.8 26.1H396l4.7-25.4-5.4-25.4z" />
       <path
         fill="#FFF"
         d="M256 0v117.4h-46.1l46.1 30.7v22.6h-22.6L160 121.8v48.9H96v-48.9l-73.4 48.9H0v-22.6l46.1-30.7H0v-64h46.1L0 22.7V0h22.6L96 48.9V0h64v48.9L233.4 0z"
       />
-      <path
-        fill="#D80027"
-        d="M144 0h-32v69.4H0v32h112v69.3h32v-69.3h112v-32H144z"
-      />
+      <path fill="#D80027" d="M144 0h-32v69.4H0v32h112v69.3h32v-69.3h112v-32H144z" />
       <path fill="#2E52B2" d="M256 22.7v30.7h-46.1z" />
       <g>
         <path fill="#D80027" d="M0 170.7v-11l62.5-42.3h22.6L7.3 170.7z" />
@@ -150,7 +56,7 @@ export function AC({ title, ...rest }): React.ReactElement {
         d="M7.3.1l77.8 53.2H62.5L0 11.1V.1zM256 .1v11l-62.5 42.3h-22.6L248.7.1zM248.7 170.7l-77.8-53.3h22.6l62.5 42.3v11z"
       />
     </svg>
-  )
+  );
 }
 
 export function AD({ title, ...rest }): React.ReactElement {
@@ -168,7 +74,7 @@ export function AD({ title, ...rest }): React.ReactElement {
         d="M182.24 95.92v92.2c0 34.32 27.26 54.17 48.63 64.46-.8 1.37 25.13 8.26 25.13 8.26s25.93-6.9 25.13-8.26c21.38-10.29 48.63-30.14 48.63-64.46v-92.2H182.24zm129.86 92.2c0 16.88-10 29.43-32.76 43.9-8.62 5.48-17.54 9.03-23.34 11.01-5.8-1.98-14.72-5.53-23.34-11.01-22.76-14.47-32.76-28.02-32.76-43.9v-74.54h112.2v74.54z"
       />
     </svg>
-  )
+  );
 }
 
 export function AE({ title, ...rest }): React.ReactElement {
@@ -180,7 +86,7 @@ export function AE({ title, ...rest }): React.ReactElement {
       <path d="M0 228h513v114H0z" />
       <path fill="#dd0d12" d="M0 0h171v342H0z" />
     </svg>
-  )
+  );
 }
 
 export function AF({ title, ...rest }): React.ReactElement {
@@ -190,16 +96,13 @@ export function AF({ title, ...rest }): React.ReactElement {
       <path fill="#DB3E00" d="M0 0h513v342H0z" />
       <path fill="#479900" d="M331 0h182v342H331z" />
       <path d="M0 0h181.8v342H0z" />
-      <path
-        fill="#FFF"
-        d="M256 126.7c-19.4 0-35.2 15.8-35.2 35.2v52.8h70.4v-52.8c0-19.5-15.8-35.2-35.2-35.2z"
-      />
+      <path fill="#FFF" d="M256 126.7c-19.4 0-35.2 15.8-35.2 35.2v52.8h70.4v-52.8c0-19.5-15.8-35.2-35.2-35.2z" />
       <path
         fill="#FFF"
         d="M256 84.3c-47.7 0-86.4 38.7-86.4 86.4S208.3 257 256 257s86.4-38.7 86.4-86.4-38.7-86.3-86.4-86.3zm0 157.7c-39.4 0-71.4-32-71.4-71.4 0-39.4 32-71.4 71.4-71.4 39.4 0 71.4 32 71.4 71.4 0 39.5-32 71.4-71.4 71.4z"
       />
     </svg>
-  )
+  );
 }
 
 export function AG({ title, ...rest }): React.ReactElement {
@@ -211,10 +114,7 @@ export function AG({ title, ...rest }): React.ReactElement {
         fill="#186DD2"
         d="M88.8 136.5c-2.2 12.9-3.4 26.2-3.4 39.8 0 13.6 1.2 27 3.4 39.8L256 228.3l167.2-12.1c2.2-12.9 3.4-26.2 3.4-39.8s-1.2-27-3.4-39.8"
       />
-      <path
-        fill="#FFF"
-        d="M423.2 219H88.8c15.8 69.8 84.7 122.3 167.2 122.3S407.4 288.8 423.2 219z"
-      />
+      <path fill="#FFF" d="M423.2 219H88.8c15.8 69.8 84.7 122.3 167.2 122.3S407.4 288.8 423.2 219z" />
       <path
         fill="#FFDA44"
         d="M365.9 136.5H146.1l44.9-21.1-23.9-43.5 48.8 9.4L222 32l34 36.2L290 32l6.1 49.3 48.8-9.4-23.9 43.5z"
@@ -224,7 +124,7 @@ export function AG({ title, ...rest }): React.ReactElement {
         <path d="M513 342V0L256 342z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function AI({ title, ...rest }): React.ReactElement {
@@ -236,10 +136,7 @@ export function AI({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M454.8 265.38c7.94-10.93 13.24-24.27 13.24-40.42V104.89a59.754 59.754 0 01-36.02 12.01c-19.64 0-37.07-9.43-48.03-24.01-10.95 14.58-28.39 24.01-48.03 24.01-13.52 0-25.99-4.47-36.02-12v120.06c0 16.16 5.3 29.5 13.24 40.42H454.8z"
       />
-      <path
-        fill="#8DCCFF"
-        d="M310.23 260.98C332.65 296.96 384 309 384 309s51.35-12.04 73.77-48.02H310.23z"
-      />
+      <path fill="#8DCCFF" d="M310.23 260.98C332.65 296.96 384 309 384 309s51.35-12.04 73.77-48.02H310.23z" />
       <path
         fill="#D87B00"
         d="M396.66 172.21c.32 1.42 8.72 10.17 17.56 20.15 1.39 1.57-8.74 12.63-6.91 12.59 4.75-.12 19.27-17.26 19.34 6.65.05 15.94-30 27.51-30 27.51h17.47l.65 14.96s4.97-13.34 7.59-16.57c8.1-9.97 20.18-30.07 34.59-27.1 14.41 2.97-13.66-13.92-13.66-13.92s-5.2-15.19-16.63-16.97c-10.06-1.57-14.29-2.51-26.64-7.3-1.68-.65-3.88-2.32-3.36 0z"
@@ -256,16 +153,13 @@ export function AI({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256.5 0h-23.1L160 48.9V0H96v48.9L22.6 0H0v22.7l46.1 30.7H0v64h46.1L0 148.1V171h22.6L96 121.8V171h64v-49.2l73.4 49.2h23.1v-22.9l-46.6-30.7h46.6v-64h-46.6l46.6-30.7z"
       />
-      <path
-        fill="#D80027"
-        d="M144 0h-32v69.4H0v32h112V171h32v-69.6h112.5v-32H144z"
-      />
+      <path fill="#D80027" d="M144 0h-32v69.4H0v32h112V171h32v-69.6h112.5v-32H144z" />
       <path
         fill="#D80027"
         d="M0 171v-11.3l62.5-42.3h22.6L7.3 171zM7.3.1l77.8 53.2H62.5L0 11.1V.1zM256.5.1v11l-63 42.3h-22.6L248.7.1zM248.7 171l-77.8-53.6h22.6l63 42.3V171z"
       />
     </svg>
-  )
+  );
 }
 
 export function AL({ title, ...rest }): React.ReactElement {
@@ -285,7 +179,7 @@ export function AL({ title, ...rest }): React.ReactElement {
       </g>
       <path fill="#212121" d="M53.4 36.1h6.4V38h-6.4zM30.2 36.1h6.4V38h-6.4z" />
     </svg>
-  )
+  );
 }
 
 export function AM({ title, ...rest }): React.ReactElement {
@@ -296,7 +190,7 @@ export function AM({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 0h513v114H0z" />
       <path fill="#FF9811" d="M0 228h513v114H0z" />
     </svg>
-  )
+  );
 }
 
 export function AO({ title, ...rest }): React.ReactElement {
@@ -310,7 +204,7 @@ export function AO({ title, ...rest }): React.ReactElement {
         <path d="M268.67 39.2l-3.2 22.04c51.81 3.9 92.64 47.18 92.64 99.99 0 55.38-44.9 100.28-100.28 100.28-40.82 0-75.94-24.39-91.59-59.4l-18.4 13.11c19.96 40.59 61.71 68.52 110 68.52 67.66 0 122.51-54.85 122.51-122.51-.01-64.01-49.1-116.54-111.68-122.03z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function AQ({ title, ...rest }): React.ReactElement {
@@ -323,7 +217,7 @@ export function AQ({ title, ...rest }): React.ReactElement {
         d="M120 125l90 63 54-14 23-81 61-36 92 14 105 55 6 90 34 12v92l-65 115-78 24-72-17 18-30-8-32-10 9-162-25-49-85 20-46-49-62z"
       />
     </svg>
-  )
+  );
 }
 
 export function AR({ title, ...rest }): React.ReactElement {
@@ -332,16 +226,9 @@ export function AR({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 0h512v342H0z" />
       <path fill="#338AF3" d="M0 0h512v114H0zM0 228h512v114H0z" />
-      <circle
-        fill="#FFDA44"
-        stroke="#d6ab00"
-        strokeWidth={5}
-        cx={256.5}
-        cy={171}
-        r={40}
-      />
+      <circle fill="#FFDA44" stroke="#d6ab00" strokeWidth={5} cx={256.5} cy={171} r={40} />
     </svg>
-  )
+  );
 }
 
 export function AS({ title, ...rest }): React.ReactElement {
@@ -362,7 +249,7 @@ export function AS({ title, ...rest }): React.ReactElement {
         d="M317.89 238.41l-22.24-11.11 22.24-11.11h144.46v22.22z"
       />
     </svg>
-  )
+  );
 }
 
 export function AT({ title, ...rest }): React.ReactElement {
@@ -372,7 +259,7 @@ export function AT({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M0 114h513v114H0z" />
       <path fill="#D80027" d="M0 0h513v114H0zM0 228h513v114H0z" />
     </svg>
-  )
+  );
 }
 
 export function AU({ title, ...rest }): React.ReactElement {
@@ -384,10 +271,7 @@ export function AU({ title, ...rest }): React.ReactElement {
         <path d="M222.2 170.7c.3-.3.5-.6.8-.9-.2.3-.5.6-.8.9zM188 212.6l11 22.9 24.7-5.7-11 22.8 19.9 15.8-24.8 5.6.1 25.4-19.9-15.9-19.8 15.9.1-25.4-24.8-5.6 19.9-15.8-11.1-22.8 24.8 5.7zM385.9 241.1l5.2 10.9 11.8-2.7-5.3 10.9 9.5 7.5-11.8 2.6v12.2l-9.4-7.6-9.5 7.6.1-12.2-11.8-2.6 9.5-7.5-5.3-10.9 11.8 2.7zM337.3 125.1l5.2 10.9 11.8-2.7-5.3 10.9 9.5 7.5-11.8 2.7v12.1l-9.4-7.6-9.5 7.6.1-12.1-11.9-2.7 9.5-7.5-5.3-10.9L332 136zM385.9 58.9l5.2 10.9 11.8-2.7-5.3 10.9 9.5 7.5-11.8 2.7v12.1l-9.4-7.6-9.5 7.6.1-12.1-11.8-2.7 9.5-7.5-5.3-10.9 11.8 2.7zM428.4 108.6l5.2 10.9 11.8-2.7-5.3 10.9 9.5 7.5-11.8 2.6V150l-9.4-7.6-9.5 7.6v-12.2l-11.8-2.6 9.5-7.5-5.3-10.9 11.8 2.7zM398 166.5l4.1 12.7h13.3l-10.8 7.8 4.2 12.7-10.8-7.9-10.8 7.9 4.1-12.7-10.7-7.8h13.3z" />
         <path d="M254.8 0v30.6l-45.1 25.1h45.1V115h-59.1l59.1 32.8v22.9h-26.7l-73.5-40.9v40.9H99v-48.6l-87.4 48.6H-1.2v-30.6L44 115H-1.2V55.7h59.1L-1.2 22.8V0h26.7L99 40.8V0h55.6v48.6L242.1 0z" />
       </g>
-      <path
-        fill="#D80027"
-        d="M142.8 0h-32v69.3h-112v32h112v69.4h32v-69.4h112v-32h-112z"
-      />
+      <path fill="#D80027" d="M142.8 0h-32v69.3h-112v32h112v69.4h32v-69.4h112v-32h-112z" />
       <path fill="#0052B4" d="M154.6 115l100.2 55.7v-15.8L183 115z" />
       <path fill="#FFF" d="M154.6 115l100.2 55.7v-15.8L183 115z" />
       <g fill="#D80027">
@@ -399,7 +283,7 @@ export function AU({ title, ...rest }): React.ReactElement {
         <path d="M99 55.7L-1.2 0v15.7l71.9 40zM183 55.7l71.8-40V0L154.6 55.7z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function AW({ title, ...rest }): React.ReactElement {
@@ -407,19 +291,13 @@ export function AW({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 0 363 242" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#338AF3" d="M0 0h363v242H0z" />
-      <path
-        fill="#FFF"
-        d="M57 96.9L14.7 78.2 57 59.6l18.6-42.2 18.6 42.2 42.3 18.6-42.3 18.7-18.6 42.2z"
-      />
-      <path
-        fill="#D80027"
-        d="M75.6 40.6l11.5 26.1 26.1 11.5-26.1 11.5-11.5 26.1-11.5-26.1L38 78.2l26.1-11.5z"
-      />
+      <path fill="#FFF" d="M57 96.9L14.7 78.2 57 59.6l18.6-42.2 18.6 42.2 42.3 18.6-42.3 18.7-18.6 42.2z" />
+      <path fill="#D80027" d="M75.6 40.6l11.5 26.1 26.1 11.5-26.1 11.5-11.5 26.1-11.5-26.1L38 78.2l26.1-11.5z" />
       <g fill="#FFDA44">
         <path d="M0 152.2h363v15.7H0zM0 183.6h363v15.7H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function AX({ title, ...rest }): React.ReactElement {
@@ -427,16 +305,10 @@ export function AX({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#0052B4" d="M0 0h513v342H0z" />
-      <path
-        fill="#FFDA44"
-        d="M513 210.9H202.2V342h-79.8V210.9H0V131.1h122.4V0h79.8v131.1H513v61.2z"
-      />
-      <path
-        fill="#D80027"
-        d="M513 149.7v42.6H183.7V342H141V192.3H0v-42.6h141V0h42.7v149.7z"
-      />
+      <path fill="#FFDA44" d="M513 210.9H202.2V342h-79.8V210.9H0V131.1h122.4V0h79.8v131.1H513v61.2z" />
+      <path fill="#D80027" d="M513 149.7v42.6H183.7V342H141V192.3H0v-42.6h141V0h42.7v149.7z" />
     </svg>
-  )
+  );
 }
 
 export function AZ({ title, ...rest }): React.ReactElement {
@@ -451,7 +323,7 @@ export function AZ({ title, ...rest }): React.ReactElement {
         <path d="M297.6 142.2l5.5 15.5 14.9-7.1-7.1 14.9 15.5 5.5-15.5 5.5 7.1 14.9-14.9-7.1-5.5 15.5-5.5-15.5-14.9 7.1 7.1-14.9-15.5-5.5 15.5-5.5-7.1-14.9 14.9 7.1z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function BA({ title, ...rest }): React.ReactElement {
@@ -475,7 +347,7 @@ export function BA({ title, ...rest }): React.ReactElement {
         <path d="M395.216 398.727l-5.672 17.472-18.365.012 14.394 10.453h19.278l14.414-10.476-18.366.011z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function BB({ title, ...rest }): React.ReactElement {
@@ -488,7 +360,7 @@ export function BB({ title, ...rest }): React.ReactElement {
       </g>
       <path d="M325.74 101.02l-31.97 12.4c-.68 1.35-5.79 7.54-8.18 53.06h-17.05v-60.42L256 78.68l-12.54 27v60.8H226.4c-2.39-45.53-7.8-52.48-8.47-53.84l-31.68-11.63c.15.31 15.4 31.34 15.4 78.01v12.54h41.81v71.07h25.08v-71.07h41.81v-12.54c0-24.13 4.17-44.02 7.68-56.46 3.82-13.57 7.7-21.49 7.74-21.57l-.03.03z" />
     </svg>
-  )
+  );
 }
 
 export function BD({ title, ...rest }): React.ReactElement {
@@ -498,7 +370,7 @@ export function BD({ title, ...rest }): React.ReactElement {
       <path fill="#496E2D" d="M0 85.331h512v341.337H0z" />
       <circle fill="#F40B32" cx={218.902} cy={255.994} r={115} />
     </svg>
-  )
+  );
 }
 
 export function BE({ title, ...rest }): React.ReactElement {
@@ -509,7 +381,7 @@ export function BE({ title, ...rest }): React.ReactElement {
       <path d="M0 85.331h170.663v341.337H0z" />
       <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function BF({ title, ...rest }): React.ReactElement {
@@ -518,12 +390,9 @@ export function BF({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#6DA544" d="M0 0h512v341.3H0z" />
       <path fill="#D80027" d="M0 0h512v170.7H0z" />
-      <path
-        fill="#FFDA44"
-        d="M256 66.9l25.8 79.3h83.3l-67.4 49 25.7 79.3-67.4-49-67.4 49 25.7-79.3-67.4-49h83.3z"
-      />
+      <path fill="#FFDA44" d="M256 66.9l25.8 79.3h83.3l-67.4 49 25.7 79.3-67.4-49-67.4 49 25.7-79.3-67.4-49h83.3z" />
     </svg>
-  )
+  );
 }
 
 export function BG({ title, ...rest }): React.ReactElement {
@@ -534,7 +403,7 @@ export function BG({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M0 85.337h512v113.775H0z" />
       <path fill="#D80027" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function BH({ title, ...rest }): React.ReactElement {
@@ -547,7 +416,7 @@ export function BH({ title, ...rest }): React.ReactElement {
         d="M209.455 154.969l-50.236 25.267 50.236 25.257-50.236 25.267 50.236 25.257-50.236 25.266 50.236 25.257-50.236 25.268 50.236 25.257-50.236 25.267 50.236 25.268-36.45 18.33H0V86.07h172.939l36.516 18.364-50.236 25.267z"
       />
     </svg>
-  )
+  );
 }
 
 export function BI({ title, ...rest }): React.ReactElement {
@@ -571,7 +440,7 @@ export function BI({ title, ...rest }): React.ReactElement {
         <path d="M251.6 93.3l10.1 17.5h20.2l-10.1 17.5 10.1 17.5h-20.2l-10.1 17.5-10.1-17.5h-20.2l10.1-17.5-10.1-17.5h20.2zM210.3 163.4l10.1 17.5h20.3l-10.1 17.5 10.1 17.5h-20.3l-10.1 17.5-10.1-17.5H180l10.1-17.5-10.1-17.5h20.2zM292.8 163.4l10.1 17.5h20.2L313 198.4l10.1 17.5h-20.2l-10.1 17.5-10.1-17.5h-20.2l10.1-17.5-10.1-17.5h20.2z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function BJ({ title, ...rest }): React.ReactElement {
@@ -582,7 +451,7 @@ export function BJ({ title, ...rest }): React.ReactElement {
       <path fill="#FFDA44" d="M196.641 85.337H512V256H196.641z" />
       <path fill="#D80027" d="M196.641 256H512v170.663H196.641z" />
     </svg>
-  )
+  );
 }
 
 export function BL({ title, ...rest }): React.ReactElement {
@@ -625,7 +494,7 @@ export function BL({ title, ...rest }): React.ReactElement {
       />
       <circle fill="#FFF" cx={258.2} cy={204.19} r={16.93} />
     </svg>
-  )
+  );
 }
 
 export function BM({ title, ...rest }): React.ReactElement {
@@ -638,30 +507,21 @@ export function BM({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256 0h-22.6L160 48.9V0H96v48.9L22.6 0H0v22.7l46.1 30.7H0v64h46.1L0 148.1v22.6h22.6L96 121.8v48.9h64v-48.9l73.4 48.9H256v-22.6l-46.1-30.7H256v-64h-46.1L256 22.7z"
       />
-      <path
-        fill="#D80027"
-        d="M144 0h-32v69.4H0v32h112v69.3h32v-69.3h112v-32H144z"
-      />
+      <path fill="#D80027" d="M144 0h-32v69.4H0v32h112v69.3h32v-69.3h112v-32H144z" />
       <path
         fill="#D80027"
         d="M0 170.7v-11l62.5-42.3h22.6L7.3 170.7zM7.3.1l77.8 53.2H62.5L0 11.1V.1zM256 .1v11l-62.5 42.3h-22.6L248.7.1zM248.7 170.7l-77.8-53.3h22.6l62.5 42.3v11z"
       />
       <g transform="translate(13 5)">
-        <path
-          fill="#fff"
-          d="M303.9 94.94v99.69c0 59.81 79.75 99.69 79.75 99.69s79.75-39.88 79.75-99.69V94.94H303.9z"
-        />
-        <path
-          fill="#2F8F22"
-          d="M436.37 254.44H330.93c23.13 25.08 52.72 39.88 52.72 39.88s29.59-14.8 52.72-39.88z"
-        />
+        <path fill="#fff" d="M303.9 94.94v99.69c0 59.81 79.75 99.69 79.75 99.69s79.75-39.88 79.75-99.69V94.94H303.9z" />
+        <path fill="#2F8F22" d="M436.37 254.44H330.93c23.13 25.08 52.72 39.88 52.72 39.88s29.59-14.8 52.72-39.88z" />
         <circle fill="#65B5D2" cx={383.65} cy={214.56} r={39.88} />
         <circle fill="#D80027" cx={343.77} cy={194.63} r={19.94} />
         <circle fill="#D80027" cx={423.52} cy={194.63} r={19.94} />
         <circle fill="#D80027" cx={383.65} cy={154.75} r={19.94} />
       </g>
     </svg>
-  )
+  );
 }
 
 export function BN({ title, ...rest }): React.ReactElement {
@@ -676,7 +536,7 @@ export function BN({ title, ...rest }): React.ReactElement {
         <path d="M198.46 226.81s20.69 27.71 66.5 27.71 66.5-27.71 66.5-27.71l13.47 28.37s-21.03 27.71-79.97 27.71-79.97-27.71-79.97-27.71l13.47-28.37zM129.24 133.18h20.88l24.93 27.26v73.45h-26.28v-68.37zM400 133.18h-20.88l-24.93 27.26v73.45h26.27v-68.37z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function BO({ title, ...rest }): React.ReactElement {
@@ -687,7 +547,7 @@ export function BO({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 85.337h512v113.775H0z" />
       <path fill="#6DA544" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function BQ({ title, ...rest }): React.ReactElement {
@@ -701,17 +561,9 @@ export function BQ({ title, ...rest }): React.ReactElement {
         fill="#D80027"
         d="M140.4 118.3l12.2 21.2h24.5l-12.3 21.1 12.3 21.2h-24.5L140.4 203l-12.2-21.2h-24.5l12.3-21.2-12.3-21.1h24.5z"
       />
-      <circle
-        fill="none"
-        stroke="#000"
-        strokeWidth={9}
-        strokeMiterlimit={10}
-        cx={140.4}
-        cy={160.6}
-        r={57.7}
-      />
+      <circle fill="none" stroke="#000" strokeWidth={9} strokeMiterlimit={10} cx={140.4} cy={160.6} r={57.7} />
     </svg>
-  )
+  );
 }
 
 export function BR({ title, ...rest }): React.ReactElement {
@@ -725,7 +577,7 @@ export function BR({ title, ...rest }): React.ReactElement {
         <path d="M212.8 165.3c-15 0-29.5 2.3-43.2 6.5.6 47.2 39.1 85.3 86.4 85.3 29.3 0 55.2-14.6 70.8-36.9-26.7-33.4-67.9-54.9-114-54.9zM340.9 187.2c1-5.4 1.6-10.9 1.6-16.6 0-47.8-38.7-86.5-86.5-86.5-35.6 0-66.2 21.6-79.5 52.3 11.7-2.4 23.8-3.7 36.2-3.7 50.3.1 95.7 21 128.2 54.5z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function BS({ title, ...rest }): React.ReactElement {
@@ -738,7 +590,7 @@ export function BS({ title, ...rest }): React.ReactElement {
       </g>
       <path d="M256 256.006L0 426.668V85.331z" />
     </svg>
-  )
+  );
 }
 
 export function BT({ title, ...rest }): React.ReactElement {
@@ -755,7 +607,7 @@ export function BT({ title, ...rest }): React.ReactElement {
         d="M128.7 255.5s35 54 67.3 32.4c56.9-37.9-68.9-108.6-2.9-152.6 58.3-38.8 76.6 103.5 137.6 62.8 59-39.3-64.7-111.4-9.2-148.4 33.4-22.2 67.1 32.6 67.1 32.6"
       />
     </svg>
-  )
+  );
 }
 
 export function BV({ title, ...rest }): React.ReactElement {
@@ -768,7 +620,7 @@ export function BV({ title, ...rest }): React.ReactElement {
       <path fill="#002868" d="M350 0h100v800H350z" />
       <path fill="#002868" d="M0 350h1100v100H0z" />
     </svg>
-  )
+  );
 }
 
 export function BW({ title, ...rest }): React.ReactElement {
@@ -781,7 +633,7 @@ export function BW({ title, ...rest }): React.ReactElement {
       </g>
       <path d="M0 210.877h512v89.656H0z" />
     </svg>
-  )
+  );
 }
 
 export function BY({ title, ...rest }): React.ReactElement {
@@ -796,7 +648,7 @@ export function BY({ title, ...rest }): React.ReactElement {
         d="M51.6 218l-38-47.7 38-46.9 38 46.9zM51.6 113.4l-38-47.7 38-46.9 38 46.9zM51.6 322.6l-38-47.7 38-46.9 38 46.9z"
       />
     </svg>
-  )
+  );
 }
 
 export function BZ({ title, ...rest }): React.ReactElement {
@@ -805,15 +657,7 @@ export function BZ({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#0052B4" d="M0 0h512v341.3H0z" />
       <circle fill="#FFF" cx={260.9} cy={170.9} r={118.9} />
-      <circle
-        fill="none"
-        stroke="#6DA544"
-        strokeWidth={18}
-        strokeMiterlimit={10}
-        cx={261.9}
-        cy={173.1}
-        r={94.5}
-      />
+      <circle fill="none" stroke="#6DA544" strokeWidth={18} strokeMiterlimit={10} cx={261.9} cy={173.1} r={94.5} />
       <g stroke="#000">
         <path
           fill="#0052B4"
@@ -825,7 +669,7 @@ export function BZ({ title, ...rest }): React.ReactElement {
         <path d="M0 0h512v35H0zM0 306h512v35H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CA({ title, ...rest }): React.ReactElement {
@@ -837,7 +681,7 @@ export function CA({ title, ...rest }): React.ReactElement {
         <path d="M0 0h142v341.3H0zM370 0h142v341.3H370zM306.5 206l50.4-25.2-25.2-12.6V143l-50.4 25.2 25.2-50.4h-25.2L256.1 80l-25.2 37.8h-25.2l25.2 50.4-50.4-25.2v25.2l-25.2 12.6 50.4 25.2-12.6 25.2h50.4V269h25.2v-37.8h50.4z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CC({ title, ...rest }): React.ReactElement {
@@ -852,12 +696,9 @@ export function CC({ title, ...rest }): React.ReactElement {
         fill="#FFDA44"
         d="M306.8 254.7c-49.2 0-89.1-39.9-89.1-89.1s39.9-89.1 89.1-89.1c15.3 0 29.8 3.9 42.4 10.7C329.4 67.9 302.3 56 272.5 56c-60.5 0-109.6 49.1-109.6 109.6S212 275.3 272.5 275.3c29.8 0 56.9-11.9 76.6-31.3-12.6 6.8-27 10.7-42.3 10.7zM140.4 59.5C129.7 41 109.7 28.6 86.8 28.6S44 41 33.3 59.5h107.1zM140.6 59.9l-53.8 53.8-53.7-53.8C28 68.9 25 79.3 25 90.5c0 34.2 27.7 61.9 61.9 61.9s61.9-27.7 61.9-61.9c-.1-11.2-3.1-21.6-8.2-30.6z"
       />
-      <path
-        fill="#A2001D"
-        d="M71.4 98.2v52.2c4.9 1.3 10.1 1.9 15.5 1.9s10.5-.7 15.5-1.9V98.2h-31z"
-      />
+      <path fill="#A2001D" d="M71.4 98.2v52.2c4.9 1.3 10.1 1.9 15.5 1.9s10.5-.7 15.5-1.9V98.2h-31z" />
     </svg>
-  )
+  );
 }
 
 export function CD({ title, ...rest }): React.ReactElement {
@@ -872,7 +713,7 @@ export function CD({ title, ...rest }): React.ReactElement {
         d="M93.6 31.2l16.3 50.4H163l-42.9 31.2 16.4 50.5-42.9-31.2-43 31.2L67 112.8 24.1 81.6h53.1z"
       />
     </svg>
-  )
+  );
 }
 
 export function CF({ title, ...rest }): React.ReactElement {
@@ -891,7 +732,7 @@ export function CF({ title, ...rest }): React.ReactElement {
         <path d="M300.5 341.3h-89V256H0v85.3h512V256H300.5zM105.7 8.6l8.6 26.2h27.5L119.5 51l8.6 26.2L105.7 61 83.4 77.2 91.9 51 69.6 34.8h27.6z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CG({ title, ...rest }): React.ReactElement {
@@ -900,12 +741,9 @@ export function CG({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#D80027" d="M0 85.331h512v341.337H0z" />
       <path fill="#6DA544" d="M443.726 85.331L102.4 426.657H0V85.331z" />
-      <path
-        fill="#FFDA44"
-        d="M500.124 85.331L158.798 426.657H11.876L353.202 85.331z"
-      />
+      <path fill="#FFDA44" d="M500.124 85.331L158.798 426.657H11.876L353.202 85.331z" />
     </svg>
-  )
+  );
 }
 
 export function CH({ title, ...rest }): React.ReactElement {
@@ -918,7 +756,7 @@ export function CH({ title, ...rest }): React.ReactElement {
         d="M356.174 222.609h-66.783v-66.783h-66.782v66.783h-66.783v66.782h66.783v66.783h66.782v-66.783h66.783z"
       />
     </svg>
-  )
+  );
 }
 
 export function CI({ title, ...rest }): React.ReactElement {
@@ -929,7 +767,7 @@ export function CI({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M330.207 85.331H512v341.337H330.207z" />
       <path fill="#FF9811" d="M0 85.331h181.793v341.337H0z" />
     </svg>
-  )
+  );
 }
 
 export function CK({ title, ...rest }): React.ReactElement {
@@ -945,7 +783,7 @@ export function CK({ title, ...rest }): React.ReactElement {
         <path d="M80 138.665L0 85.331v15.082l57.377 38.252zM176 138.665h22.623L256 100.413V85.331zM57.377 202.665L0 240.917v15.081l80-53.333zM176 202.665l80 53.333v-15.081l-57.377-38.252z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CL({ title, ...rest }): React.ReactElement {
@@ -960,7 +798,7 @@ export function CL({ title, ...rest }): React.ReactElement {
         d="M128 109.801l15.108 46.498H192l-39.554 28.739 15.108 46.498L128 202.799l-39.554 28.737 15.108-46.498L64 156.299h48.892z"
       />
     </svg>
-  )
+  );
 }
 
 export function CM({ title, ...rest }): React.ReactElement {
@@ -973,7 +811,7 @@ export function CM({ title, ...rest }): React.ReactElement {
         <path d="M341.3 0H512v341.3H341.3zM256 102.2l17.2 53H329L283.9 188l17.2 53-45.1-32.7-45.1 32.7 17.2-53-45.1-32.8h55.8z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CN({ title, ...rest }): React.ReactElement {
@@ -989,7 +827,7 @@ export function CN({ title, ...rest }): React.ReactElement {
         d="M167.6 64.4l26 80.3h84.5l-68.3 49.6 26.1 80.4-68.3-49.7-68.4 49.7 26.1-80.4L57 144.7h84.5z"
       />
     </svg>
-  )
+  );
 }
 
 export function CO({ title, ...rest }): React.ReactElement {
@@ -1000,7 +838,7 @@ export function CO({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 343.096h512v83.567H0z" />
       <path fill="#0052B4" d="M0 256h512v87.096H0z" />
     </svg>
-  )
+  );
 }
 
 export function CR({ title, ...rest }): React.ReactElement {
@@ -1013,7 +851,7 @@ export function CR({ title, ...rest }): React.ReactElement {
         <path d="M0 352.462h512v74.207H0zM0 85.331h512v74.207H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CU({ title, ...rest }): React.ReactElement {
@@ -1026,12 +864,9 @@ export function CU({ title, ...rest }): React.ReactElement {
         <path d="M0 0h512v68.3H0zM0 136.5h512v68.3H0zM0 273.1h512v68.3H0z" />
       </g>
       <path fill="#D80027" d="M256 170.7L0 341.3V0z" />
-      <path
-        fill="#FFF"
-        d="M81.5 94.8l16.9 51.9H153l-44.2 32.1 16.9 52-44.2-32.1-44.2 32.1 16.9-52L10 146.7h54.6z"
-      />
+      <path fill="#FFF" d="M81.5 94.8l16.9 51.9H153l-44.2 32.1 16.9 52-44.2-32.1-44.2 32.1 16.9-52L10 146.7h54.6z" />
     </svg>
-  )
+  );
 }
 
 export function CV({ title, ...rest }): React.ReactElement {
@@ -1045,7 +880,7 @@ export function CV({ title, ...rest }): React.ReactElement {
         <path d="M150.4 70l6.9 21.1h22.2l-18 13.1 6.9 21.1-18-13.1-17.9 13.1 6.8-21.1-17.9-13.1h22.2zM150.4 279.7l6.9 21.1h22.2l-18 13 6.9 21.2-18-13.1-17.9 13.1 6.8-21.2-17.9-13h22.2zM52.8 208.8l6.9 21.1h22.2l-18 13 6.9 21.2-18-13.1-17.9 13.1 6.8-21.2-17.9-13H46zM90.1 91l6.9 21.1h22.2l-18 13 6.9 21.2-18-13.1-17.9 13.1 6.8-21.2-18-13h22.3zM23.8 162H46l6.8-21.1 6.9 21.1h22.2l-18 13.1 6.9 21.1-18-13-17.9 13 6.8-21.1zM72.2 310.9l6.8-21.1-18-13h22.3l6.8-21.2 6.9 21.2h22.2l-18 13 6.9 21.1-18-13zM248 208.8l-6.9 21.1h-22.2l18 13-6.9 21.2 18-13.1 18 13.1-6.9-21.2 18-13h-22.2zM210.7 91l-6.8 21.1h-22.2l17.9 13-6.8 21.2 17.9-13.1 18 13.1-6.9-21.2 18-13h-22.2zM277.1 162h-22.2l-6.9-21.1-6.9 21.1h-22.2l18 13.1-6.9 21.1 18-13 18 13-6.9-21.1zM228.7 310.9l-6.9-21.1 18-13h-22.2l-6.9-21.2-6.8 21.2h-22.2l17.9 13-6.8 21.1 17.9-13z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CW({ title, ...rest }): React.ReactElement {
@@ -1058,7 +893,7 @@ export function CW({ title, ...rest }): React.ReactElement {
         <path d="M168.7 86.5l12.9 39.8h41.8l-33.8 24.5 12.9 39.7-33.8-24.5-33.8 24.5 12.9-39.7-33.8-24.5h41.8zM85.4 32.5l7.8 23.9h25L97.9 71.1l7.8 23.8-20.3-14.7-20.3 14.7 7.8-23.8-20.3-14.7h25.1z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function CX({ title, ...rest }): React.ReactElement {
@@ -1080,7 +915,7 @@ export function CX({ title, ...rest }): React.ReactElement {
         d="M464.4 92.2c.6-2.9-.2-17.6-.2-20.7 0-21.3-13.9-39.4-33.2-45.7 5.9 12 9.2 25.4 9.2 39.7 0 4.8-.4 9.5-1.1 14.1-2.9-4.7-6.6-8.9-11.2-12.6-17.1-13.6-40.6-14-57.9-2.5 13.4 2.9 26.3 8.9 37.7 18 9 7.1 16.2 16.8 21.7 26.1 0 0-17.8 10.9-31 15.1s-42.3 7.9-42.3 7.9c72 12 132-36 132-36-6.5-13.4-15.8-4-23.7-3.4z"
       />
     </svg>
-  )
+  );
 }
 
 export function CY({ title, ...rest }): React.ReactElement {
@@ -1097,7 +932,7 @@ export function CY({ title, ...rest }): React.ReactElement {
         d="M113.7 168.7s.2 79.9 89 77.8L208 263h10.6s-8.9-49 71.7-49.4c0 0 0-32.9 32.9-32.9h49.4S294 119 442.8 40.1l2.2-15.6s-154.8 84.6-237 68.1c0 0 12.7 50.7-12.9 50.7-12.8 0-11.6-9.6-38.4-9.6-22.3 0-20.6 23.5-31.3 23.2S103 142.3 102 144.8s11.7 23.9 11.7 23.9z"
       />
     </svg>
-  )
+  );
 }
 
 export function CZ({ title, ...rest }): React.ReactElement {
@@ -1108,7 +943,7 @@ export function CZ({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M512 256v170.663H0L215.185 256z" />
       <path fill="#FFF" d="M512 85.337V256H215.185L0 85.337z" />
     </svg>
-  )
+  );
 }
 
 export function DE({ title, ...rest }): React.ReactElement {
@@ -1119,7 +954,7 @@ export function DE({ title, ...rest }): React.ReactElement {
       <path d="M0 85.331h512v113.775H0z" />
       <path fill="#FFDA44" d="M0 312.882h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function DJ({ title, ...rest }): React.ReactElement {
@@ -1129,12 +964,9 @@ export function DJ({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 0h512v341.3H0z" />
       <path fill="#338AF3" d="M512 0v166.7L0 170.8V0z" />
       <path fill="#FFF" d="M256 170.7L0 341.3V0z" />
-      <path
-        fill="#D80027"
-        d="M89.8 92.5l17 52.4H162l-44.6 32.5 17 52.4-44.6-32.4-44.6 32.4 17-52.4-44.6-32.5h55.2z"
-      />
+      <path fill="#D80027" d="M89.8 92.5l17 52.4H162l-44.6 32.5 17 52.4-44.6-32.4-44.6 32.4 17-52.4-44.6-32.5h55.2z" />
     </svg>
-  )
+  );
 }
 
 export function DK({ title, ...rest }): React.ReactElement {
@@ -1144,7 +976,7 @@ export function DK({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 0h513v342H0z" />
       <path fill="#FFF" d="M190 0h-60v140H0v60h130v142h60V200h323v-60H190z" />
     </svg>
-  )
+  );
 }
 
 export function DM({ title, ...rest }): React.ReactElement {
@@ -1167,7 +999,7 @@ export function DM({ title, ...rest }): React.ReactElement {
         d="M279.3 168.7c-11-21.1-14.5-25.1-14.5-25.1s.4-9.7.4-15.6c0-8.8-7.4-15.8-16.5-15.8-8.6 0-15.7 2.9-16.5 11-4.2.9-8.6 4.1-8.6 10.7 0 4.8 1 7.3 5.2 9.3 2.1-4.6 4.3-4.8 9.3-6.4.8.6 1.7 3 2.6 3.4l.3 1s-13.3 6.6-13.3 30.9c0 29.5 22 45.4 22 45.4l-1.8.3-1.9 7.1h22v-7.2l11 17.5c.3-.3 10.2-47.6.3-66.5z"
       />
     </svg>
-  )
+  );
 }
 
 export function DO({ title, ...rest }): React.ReactElement {
@@ -1181,18 +1013,12 @@ export function DO({ title, ...rest }): React.ReactElement {
       <path fill="#0052B4" d="M300.5 215.2H512v126.1H300.5z" />
       <g stroke="#FFF" strokeWidth={5} strokeMiterlimit={10}>
         <path fill="#0052B4" d="M256 130h-49.9v49.4s19.5 6 49.9 6V130z" />
-        <path
-          fill="#D80027"
-          d="M206.1 179.4v6c0 27.5 22.3 49.9 49.9 49.9v-49.9c-30.4 0-49.9-6-49.9-6z"
-        />
-        <path
-          fill="#0052B4"
-          d="M256 235.3c27.5 0 49.9-22.3 49.9-49.9v-6s-19.5 6-49.9 6v49.9z"
-        />
+        <path fill="#D80027" d="M206.1 179.4v6c0 27.5 22.3 49.9 49.9 49.9v-49.9c-30.4 0-49.9-6-49.9-6z" />
+        <path fill="#0052B4" d="M256 235.3c27.5 0 49.9-22.3 49.9-49.9v-6s-19.5 6-49.9 6v49.9z" />
         <path fill="#D80027" d="M256 130v55.4c30.4 0 49.9-6 49.9-6V130H256z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function DZ({ title, ...rest }): React.ReactElement {
@@ -1206,7 +1032,7 @@ export function DZ({ title, ...rest }): React.ReactElement {
         <path d="M309.9 276.7c-58.5 0-106-47.5-106-106s47.5-106 106-106c18.3 0 35.4 4.6 50.4 12.7-23.5-23-55.7-37.2-91.2-37.2-72 0-130.4 58.4-130.4 130.4S197.1 301 269.1 301c35.5 0 67.7-14.2 91.2-37.2-14.9 8.2-32.1 12.9-50.4 12.9z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function EC({ title, ...rest }): React.ReactElement {
@@ -1221,16 +1047,10 @@ export function EC({ title, ...rest }): React.ReactElement {
         fill="#4C1F00"
         d="M369.2 79.9s-27.2-13.8-33.9-16c-6.7-2.2-49.1-13.2-49.1-7 0 10.3-13.5 12-15.5 12s-2-5.3-14.8-5.3-13.7 4.8-15.8 4.8c-2.2 0-14.5-1-14.5-11.5 0-5.2-42.9 4-49.1 7-6.1 3.1-33.9 16-33.9 16s45.8 2.7 53.9 6.2 43.8 16.5 43.8 16.5l-2.8 13.3h37.8l-3.8-13.3s35.1-12.7 43.8-16.5 53.9-6.2 53.9-6.2z"
       />
-      <path
-        fill="#57BA17"
-        d="M217.7 171.7c0 21.1 17.2 38.3 38.3 38.3 21.1 0 38.3-17.2 38.3-38.3v-11.5h-76.5v11.5z"
-      />
-      <path
-        fill="#338AF3"
-        d="M256 110.5c-21.1 0-38.3 17.2-38.3 38.3v11.5h76.5v-11.5c.1-21.1-17.1-38.3-38.2-38.3z"
-      />
+      <path fill="#57BA17" d="M217.7 171.7c0 21.1 17.2 38.3 38.3 38.3 21.1 0 38.3-17.2 38.3-38.3v-11.5h-76.5v11.5z" />
+      <path fill="#338AF3" d="M256 110.5c-21.1 0-38.3 17.2-38.3 38.3v11.5h76.5v-11.5c.1-21.1-17.1-38.3-38.2-38.3z" />
     </svg>
-  )
+  );
 }
 
 export function EE({ title, ...rest }): React.ReactElement {
@@ -1241,7 +1061,7 @@ export function EE({ title, ...rest }): React.ReactElement {
       <path fill="#368FD8" d="M0 85.337h512v113.775H0z" />
       <path fill="#FFF" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function EG({ title, ...rest }): React.ReactElement {
@@ -1256,7 +1076,7 @@ export function EG({ title, ...rest }): React.ReactElement {
         d="M220.3 204.4s0-58.4 4.5-64.7c3.1-4.3 16.8 5.2 22.7 4.5 0 0 4.2-7.5 4.5-12 .3-4.6-1.1-7.6-4.9-6.2 0 0-1.2-2.1.5-3.3 1.6-1.2 5.6.1 5.6.1s-.5-1 1.6-.9c2.9.2 7.2 1.4 7.4 5.6.2 3.1.3 7.7.4 8.7.7 6.8 2.7 8.7 2.7 8.7s18.4-9.2 22-5.2c3.3 3.8 4.5 64.7 4.5 64.7l-18.1-16.8 12.1 29.5s-14.4 2.4-28.9 2.4c-14.5 0-31.1-4.2-31.1-4.2l13.8-28.2-19.3 17.3z"
       />
     </svg>
-  )
+  );
 }
 
 export function EH({ title, ...rest }): React.ReactElement {
@@ -1271,7 +1091,7 @@ export function EH({ title, ...rest }): React.ReactElement {
         <path d="M365 129.2l10.3 31.7h33.3l-27 19.6 10.3 31.7-26.9-19.6-27 19.6 10.3-31.7-27-19.6h33.4z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function ER({ title, ...rest }): React.ReactElement {
@@ -1292,7 +1112,7 @@ export function ER({ title, ...rest }): React.ReactElement {
         <circle cx={145.9} cy={205.2} r={17.5} />
       </g>
     </svg>
-  )
+  );
 }
 
 export function ES({ title, ...rest }): React.ReactElement {
@@ -1304,7 +1124,7 @@ export function ES({ title, ...rest }): React.ReactElement {
         <path d="M0 85.331h512v113.775H0zM0 312.882h512v113.775H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function ET({ title, ...rest }): React.ReactElement {
@@ -1320,7 +1140,7 @@ export function ET({ title, ...rest }): React.ReactElement {
         d="M11.2 9.2L8.8 11l.9-2.9-2.4-1.8h3l1-2.8 1 2.9h3l-2.4 1.8.9 2.9-2.6-1.9zm0-1l.9.6-.3-1.1.9-.7h-1.1l-.4-1.1-.4 1.1H9.7l.9.7-.3 1.1c0 .1.9-.6.9-.6z"
       />
     </svg>
-  )
+  );
 }
 
 export function FI({ title, ...rest }): React.ReactElement {
@@ -1328,12 +1148,9 @@ export function FI({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 0h512v341.3H0z" />
-      <path
-        fill="#2E52B2"
-        d="M512 129.3V212H203.7v129.3H121V212H0v-82.7h121V0h82.7v129.3z"
-      />
+      <path fill="#2E52B2" d="M512 129.3V212H203.7v129.3H121V212H0v-82.7h121V0h82.7v129.3z" />
     </svg>
-  )
+  );
 }
 
 export function FJ({ title, ...rest }): React.ReactElement {
@@ -1350,16 +1167,13 @@ export function FJ({ title, ...rest }): React.ReactElement {
         <path d="M0 0v15.1l57.4 38.2H80zM256 0v15.1l-57.4 38.2H176z" />
         <path d="M0 0v15.1l57.4 38.2H80zM256 0v15.1l-57.4 38.2H176zM0 170.7v-15.1l57.4-38.3H80zM256 170.7v-15.1l-57.4-38.3H176z" />
       </g>
-      <path
-        fill="#F3F3F3"
-        d="M307.1 127.1v92c0 61.6 80.5 80.5 80.5 80.5s80.4-19 80.4-80.6v-92l-80.5-23-80.4 23.1z"
-      />
+      <path fill="#F3F3F3" d="M307.1 127.1v92c0 61.6 80.5 80.5 80.5 80.5s80.4-19 80.4-80.6v-92l-80.5-23-80.4 23.1z" />
       <path
         fill="#D80027"
         d="M468 132.8V98.3H307.1v34.5h69v69h-69v23h69V296c6.9 2.5 11.5 3.5 11.5 3.5s4.6-1.1 11.5-3.5v-71.2h69v-23h-69v-69H468z"
       />
     </svg>
-  )
+  );
 }
 
 export function FK({ title, ...rest }): React.ReactElement {
@@ -1371,10 +1185,7 @@ export function FK({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256 0v30.6l-45.2 25.1H256V115h-59.1l59.1 32.8v22.9h-26.7l-73.5-40.9v40.9h-55.6v-48.6l-87.5 48.6H0v-30.6L45.2 115H0V55.7h59.1L0 22.8V0h26.7l73.5 40.8V0h55.6v48.6L243.3 0z"
       />
-      <path
-        fill="#D80027"
-        d="M144 0h-32v69.3H0v32h112v69.4h32v-69.4h112v-32H144z"
-      />
+      <path fill="#D80027" d="M144 0h-32v69.3H0v32h112v69.4h32v-69.4h112v-32H144z" />
       <path fill="#0052B4" d="M155.8 115L256 170.7v-15.8L184.2 115z" />
       <path fill="#FFF" d="M155.8 115L256 170.7v-15.8L184.2 115z" />
       <g fill="#D80027">
@@ -1402,7 +1213,7 @@ export function FK({ title, ...rest }): React.ReactElement {
         d="M357.4 179.1c8.1 1.6 17.8-15 30.1-15 13.1 0 21.8 17.1 30.1 15 7.4-1.8 15-22.2 15-30.1 0-16.6-20.2-30.1-45.1-30.1-24.9 0-45.1 13.5-45.1 30.1-.1 8.5 6.6 28.5 15 30.1zM356 270.7c6.2.4 12.5-1.8 17.2-6.5l9-9c2.9-2.9 7.5-2.9 10.4 0l9 9c4.7 4.7 11 6.9 17.1 6.5 5.3-.3 32.5-33.5 25.7-32.6-4.6.6-9.1 2.8-12.7 6.3l-.1.1-9 9c-2.9 2.9-7.5 2.9-10.4 0l-9-9c-8.7-8.8-22.9-8.8-31.7-.1l-.1.1-9 9c-2.9 2.9-7.5 2.9-10.4 0l-9-9c-3.5-3.5-7.8-5.6-12.3-6.3-6.7-1.1 20.1 32.2 25.3 32.5zM322.1 210c2.9-2.9 7.5-2.9 10.4 0l9 9c8.8 8.7 22.9 8.7 31.7 0l9-9c2.9-2.9 7.5-2.9 10.4 0l9 9c8.8 8.7 22.9 8.7 31.7 0l9-9c2.9-2.9 7.5-2.9 10.4 0 0 0 5.5-14.8 2.5-15.9-7.9-2.9-17.2-1.2-23.5 5.2l-.1.1-9 9c-2.9 2.9-7.5 2.9-10.4 0l-9-9c-8.7-8.8-22.9-8.8-31.7-.1l-.1.1-9 9c-2.9 2.9-7.5 2.9-10.4 0l-9-9c-6.2-6.2-15.1-8-22.8-5.5-3.1 1.1 1.9 16.1 1.9 16.1z"
       />
     </svg>
-  )
+  );
 }
 
 export function FM({ title, ...rest }): React.ReactElement {
@@ -1414,7 +1225,7 @@ export function FM({ title, ...rest }): React.ReactElement {
         <path d="M256 37.9l10.1 31.2H299l-26.6 19.3 10.2 31.2-26.6-19.3-26.6 19.3 10.2-31.2L213 69.1h32.9zM123.2 170.7l31.2-10.2v-32.8l19.3 26.6 31.2-10.2-19.3 26.6 19.3 26.5-31.2-10.1-19.3 26.5v-32.8zM256 303.5l-10.1-31.2H213l26.6-19.3-10.2-31.3L256 241l26.6-19.3-10.2 31.3 26.6 19.3h-32.9zM388.8 170.7l-31.2 10.1v32.8l-19.3-26.5-31.2 10.1 19.3-26.5-19.3-26.6 31.2 10.2 19.3-26.6v32.8z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function FO({ title, ...rest }): React.ReactElement {
@@ -1422,16 +1233,10 @@ export function FO({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 0h512v341.3H0z" />
-      <path
-        fill="#0F61A5"
-        d="M512 214.5H206.2v126.8H118.4V214.5H0v-87.7h118.4V0H206.2v126.8H512V192z"
-      />
-      <path
-        fill="#E50E3D"
-        d="M512 149.3V192H183.7v149.3H141V192H0v-42.7h141V0h42.7v149.3z"
-      />
+      <path fill="#0F61A5" d="M512 214.5H206.2v126.8H118.4V214.5H0v-87.7h118.4V0H206.2v126.8H512V192z" />
+      <path fill="#E50E3D" d="M512 149.3V192H183.7v149.3H141V192H0v-42.7h141V0h42.7v149.3z" />
     </svg>
-  )
+  );
 }
 
 export function FR({ title, ...rest }): React.ReactElement {
@@ -1442,7 +1247,7 @@ export function FR({ title, ...rest }): React.ReactElement {
       <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z" />
       <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function GA({ title, ...rest }): React.ReactElement {
@@ -1453,7 +1258,7 @@ export function GA({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 85.337h512v113.775H0z" />
       <path fill="#0052B4" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function GB({ title, ...rest }): React.ReactElement {
@@ -1461,28 +1266,16 @@ export function GB({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 85.333h512V426.67H0z" />
-      <path
-        fill="#D80027"
-        d="M288 85.33h-64v138.666H0v64h224v138.666h64V287.996h224v-64H288z"
-      />
+      <path fill="#D80027" d="M288 85.33h-64v138.666H0v64h224v138.666h64V287.996h224v-64H288z" />
       <g fill="#0052B4">
         <path d="M393.785 315.358L512 381.034v-65.676zM311.652 315.358L512 426.662v-31.474l-143.693-79.83zM458.634 426.662l-146.982-81.664v81.664z" />
       </g>
-      <path
-        fill="#FFF"
-        d="M311.652 315.358L512 426.662v-31.474l-143.693-79.83z"
-      />
-      <path
-        fill="#D80027"
-        d="M311.652 315.358L512 426.662v-31.474l-143.693-79.83z"
-      />
+      <path fill="#FFF" d="M311.652 315.358L512 426.662v-31.474l-143.693-79.83z" />
+      <path fill="#D80027" d="M311.652 315.358L512 426.662v-31.474l-143.693-79.83z" />
       <g fill="#0052B4">
         <path d="M90.341 315.356L0 365.546v-50.19zM200.348 329.51v97.151H25.491z" />
       </g>
-      <path
-        fill="#D80027"
-        d="M143.693 315.358L0 395.188v31.474l200.348-111.304z"
-      />
+      <path fill="#D80027" d="M143.693 315.358L0 395.188v31.474l200.348-111.304z" />
       <g fill="#0052B4">
         <path d="M118.215 196.634L0 130.958v65.676zM200.348 196.634L0 85.33v31.474l143.693 79.83zM53.366 85.33l146.982 81.664V85.33z" />
       </g>
@@ -1491,12 +1284,9 @@ export function GB({ title, ...rest }): React.ReactElement {
       <g fill="#0052B4">
         <path d="M421.659 196.636L512 146.446v50.19zM311.652 182.482V85.331h174.857z" />
       </g>
-      <path
-        fill="#D80027"
-        d="M368.307 196.634L512 116.804V85.33L311.652 196.634z"
-      />
+      <path fill="#D80027" d="M368.307 196.634L512 116.804V85.33L311.652 196.634z" />
     </svg>
-  )
+  );
 }
 
 export function GD({ title, ...rest }): React.ReactElement {
@@ -1519,7 +1309,7 @@ export function GD({ title, ...rest }): React.ReactElement {
       />
       <circle fill="#A2001D" cx={99.1} cy={182.1} r={7.4} />
     </svg>
-  )
+  );
 }
 
 export function GE({ title, ...rest }): React.ReactElement {
@@ -1533,7 +1323,7 @@ export function GE({ title, ...rest }): React.ReactElement {
         d="M17.3 2.7l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2zm-12.7 0l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2zm0 9l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2zm12.7 0l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2z"
       />
     </svg>
-  )
+  );
 }
 
 export function GF({ title, ...rest }): React.ReactElement {
@@ -1549,7 +1339,7 @@ export function GF({ title, ...rest }): React.ReactElement {
         d="M54.1 35.3l14.7-10.7H50.6L45 7.3l-5.6 17.3H21.2l14.7 10.7-5.6 17.4L45 42l14.7 10.7z"
       />
     </svg>
-  )
+  );
 }
 
 export function GG({ title, ...rest }): React.ReactElement {
@@ -1557,16 +1347,13 @@ export function GG({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 0h513v342H0z" />
-      <path
-        fill="#D80027"
-        d="M308 0H204v118.7H0v104h204V342h104V222.7h205v-104H308z"
-      />
+      <path fill="#D80027" d="M308 0H204v118.7H0v104h204V342h104V222.7h205v-104H308z" />
       <path
         fill="#FFDA44"
         d="M368.6 188l26 17.3V136l-26 17.3h-95.3V58.1l17.3-26h-69.2l17.3 26v95.2h-95.3l-26-17.3v69.3l26-17.3h95.3v95.2l-17.3 26h69.2l-17.3-26V188z"
       />
     </svg>
-  )
+  );
 }
 
 export function GH({ title, ...rest }): React.ReactElement {
@@ -1578,7 +1365,7 @@ export function GH({ title, ...rest }): React.ReactElement {
       <path fill="#496E2D" d="M0 312.888h512v113.775H0z" />
       <path d="M255.883 199.111l14.119 43.458 40.366 3.2-36.969 26.861 19.453 40.259-36.969-26.859-36.97 26.859 14.123-43.459-36.969-26.861h45.696z" />
     </svg>
-  )
+  );
 }
 
 export function GI({ title, ...rest }): React.ReactElement {
@@ -1602,7 +1389,7 @@ export function GI({ title, ...rest }): React.ReactElement {
       <path d="M239.6 209.7v-27.9s.1-22.3 25-22.3c24.8 0 25.7 22 25.7 22v28.2h-50.7zM170.5 209.7v-24.3s.1-18.7 19.6-18.7 20.2 18.4 20.2 18.4v24.5h-39.8z" />
       <path d="M169.1 209.7v-24.3s.1-18.7 19.6-18.7 20.2 18.4 20.2 18.4v24.5h-39.8zM320.9 209.7v-24.3s.1-18.7 19.6-18.7 20.2 18.4 20.2 18.4v24.5h-39.8zM329.3 132v-15.7s.1-12.1 11.3-12.1c11.3 0 11.7 11.9 11.7 11.9V132h-23zM250.5 132v-23.7s.1-18.3 14.3-18.3c14.2 0 14.7 18 14.7 18v24h-29zM177.5 132v-15.7s.1-12.1 11.3-12.1 11.7 11.9 11.7 11.9V132h-23z" />
     </svg>
-  )
+  );
 }
 
 export function GL({ title, ...rest }): React.ReactElement {
@@ -1612,12 +1399,9 @@ export function GL({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 0h513v342H0z" />
       <path fill="#FFF" d="M513 0v171H0V0z" />
       <circle fill="#FFF" cx={185.8} cy={171.2} r={117.8} />
-      <path
-        fill="#D80027"
-        d="M68 171c0-65.1 52.8-117.8 117.8-117.8 65.1 0 117.8 52.8 117.8 117.8"
-      />
+      <path fill="#D80027" d="M68 171c0-65.1 52.8-117.8 117.8-117.8 65.1 0 117.8 52.8 117.8 117.8" />
     </svg>
-  )
+  );
 }
 
 export function GM({ title, ...rest }): React.ReactElement {
@@ -1629,7 +1413,7 @@ export function GM({ title, ...rest }): React.ReactElement {
       <path fill="#cf0d19" d="M0 85.337h512v104.515H0z" />
       <path fill="#0052B4" d="M0 210.877h512v89.656H0z" />
     </svg>
-  )
+  );
 }
 
 export function GN({ title, ...rest }): React.ReactElement {
@@ -1640,7 +1424,7 @@ export function GN({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M342 0h171v342H342z" />
       <path fill="#D80027" d="M0 0h171v342H0z" />
     </svg>
-  )
+  );
 }
 
 export function GP({ title, ...rest }): React.ReactElement {
@@ -1651,7 +1435,7 @@ export function GP({ title, ...rest }): React.ReactElement {
       <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z" />
       <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function GQ({ title, ...rest }): React.ReactElement {
@@ -1677,7 +1461,7 @@ export function GQ({ title, ...rest }): React.ReactElement {
         <path d="M230.7 120l1.9 3.3h3.8l-1.9 3.3 1.9 3.2h-3.8l-1.9 3.3-1.9-3.3H225l1.9-3.2-1.9-3.3h3.8zM246 120l1.9 3.3h3.7l-1.9 3.3 1.9 3.2h-3.7l-1.9 3.3-1.9-3.3h-3.8l1.9-3.2-1.9-3.3h3.8zM261.3 120l1.9 3.3h3.7l-1.9 3.3 1.9 3.2h-3.7l-1.9 3.3-1.9-3.3h-3.8l1.9-3.2-1.9-3.3h3.8zM277.1 120l1.9 3.3h3.8l-1.9 3.3 1.9 3.2H279l-1.9 3.3-1.9-3.3h-3.7l1.8-3.2-1.8-3.3h3.7zM293.1 120l1.9 3.3h3.8l-1.9 3.3 1.9 3.2H295l-1.9 3.3-1.9-3.3h-3.7l1.8-3.2-1.8-3.3h3.7zM308.1 120l1.9 3.3h3.7l-1.9 3.3 1.9 3.2H310l-1.9 3.3-1.9-3.3h-3.8l1.9-3.2-1.9-3.3h3.8z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function GR({ title, ...rest }): React.ReactElement {
@@ -1694,7 +1478,7 @@ export function GR({ title, ...rest }): React.ReactElement {
         <path d="M76 0h38v190H76z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function GS({ title, ...rest }): React.ReactElement {
@@ -1706,10 +1490,7 @@ export function GS({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256 0v117.4h-46.1l46.1 30.7v22.6h-22.6L160 121.8v48.9H96v-48.9l-73.4 48.9H0v-22.6l46.1-30.7H0v-64h46.1L0 22.7V0h22.6L96 48.9V0h64v48.9L233.4 0z"
       />
-      <path
-        fill="#D80027"
-        d="M144 0h-32v69.4H0v32h112v69.3h32v-69.3h112v-32H144z"
-      />
+      <path fill="#D80027" d="M144 0h-32v69.4H0v32h112v69.3h32v-69.3h112v-32H144z" />
       <path fill="#2E52B2" d="M256 22.7v30.7h-46.1z" />
       <path
         fill="#D80027"
@@ -1721,10 +1502,7 @@ export function GS({ title, ...rest }): React.ReactElement {
         <ellipse fill="#FFCE00" cx={364} cy={317.7} rx={22} ry={9.3} />
         <path fill="#39B200" d="M342 190.1l43.4 86.9 43.5-86.9z" />
         <ellipse fill="#9B9B9B" cx={327.5} cy={233.6} rx={29} ry={43.5} />
-        <path
-          fill="#757575"
-          d="M371 175.6l-14.5 14.5h57.9l-14.5-14.5 14.5-43.5s-13-29-29-29-29 29-29 29l14.6 43.5z"
-        />
+        <path fill="#757575" d="M371 175.6l-14.5 14.5h57.9l-14.5-14.5 14.5-43.5s-13-29-29-29-29 29-29 29l14.6 43.5z" />
         <circle fill="#C6B56F" cx={385.4} cy={67} r={29} />
         <circle fill="#A54A00" cx={386} cy={88.7} r={29} />
         <circle fill="#FFF" cx={443.4} cy={117.7} r={29} />
@@ -1733,14 +1511,11 @@ export function GS({ title, ...rest }): React.ReactElement {
         <circle fill="#F7D71E" cx={386} cy={233.6} r={29} />
         <circle fill="#CEC851" cx={457.9} cy={190.1} r={29} />
         <circle fill="#FFF" cx={385.4} cy={289.5} r={29} />
-        <path
-          fill="#7C0B29"
-          d="M371 135.7l14.5-3.5 14.5 3.5c0 7.5-14.5 11-14.5 11s-14.5-3.5-14.5-11z"
-        />
+        <path fill="#7C0B29" d="M371 135.7l14.5-3.5 14.5 3.5c0 7.5-14.5 11-14.5 11s-14.5-3.5-14.5-11z" />
         <circle fill="#FFF" cx={327.5} cy={117.4} r={29} />
       </g>
     </svg>
-  )
+  );
 }
 
 export function GT({ title, ...rest }): React.ReactElement {
@@ -1757,7 +1532,7 @@ export function GT({ title, ...rest }): React.ReactElement {
         d="M194.2 155.9c0 22.1 11.8 42.5 30.8 53.5 5.9 3.4 13.5 1.4 16.9-4.5 3.4-5.9 1.4-13.5-4.5-16.9-11.5-6.6-18.5-18.9-18.5-32.1 0-6.8-5.5-12.4-12.4-12.4s-12.3 5.5-12.3 12.4zm95.1 52.1c17.8-11.4 28.6-31 28.5-52.1 0-6.8-5.5-12.4-12.4-12.4-6.8 0-12.4 5.5-12.4 12.4 0 12.7-6.5 24.5-17.1 31.3-5.8 3.6-7.7 11.2-4.1 17 3.6 5.8 11.2 7.7 17 4.1.2-.1.3-.2.5-.3z"
       />
     </svg>
-  )
+  );
 }
 
 export function GU({ title, ...rest }): React.ReactElement {
@@ -1792,7 +1567,7 @@ export function GU({ title, ...rest }): React.ReactElement {
         d="M256 285.3s76.4-51.3 76.4-114.6S256 56 256 56s-76.4 51.3-76.4 114.6S256 285.3 256 285.3z"
       />
     </svg>
-  )
+  );
 }
 
 export function GW({ title, ...rest }): React.ReactElement {
@@ -1804,7 +1579,7 @@ export function GW({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 85.331h181.793v341.337H0z" />
       <path d="M98.32 195.127l15.107 46.497h48.894l-39.555 28.74 15.108 46.498-39.554-28.737-39.556 28.737 15.111-46.498-39.554-28.74h48.891z" />
     </svg>
-  )
+  );
 }
 
 export function GY({ title, ...rest }): React.ReactElement {
@@ -1817,7 +1592,7 @@ export function GY({ title, ...rest }): React.ReactElement {
       <path fill="#2D2D2D" d="M0 0l450 300L0 600V0z" />
       <path fill="#D3132F" d="M0 35l397.5 265L0 565V35z" />
     </svg>
-  )
+  );
 }
 
 export function HK({ title, ...rest }): React.ReactElement {
@@ -1829,7 +1604,7 @@ export function HK({ title, ...rest }): React.ReactElement {
         <path d="M274.2 119.8c-5.1 21.1-14.1 17.1-18.5 35.5-26.1-6.3-42.1-32.5-35.9-58.6 6.3-26.1 32.5-42.1 58.5-35.9-8.7 36.9.5 40.1-4.1 59zM206.6 135.4c18.5 11.3 11.9 18.7 28 28.6-14 22.9-43.9 30-66.8 16s-30-43.9-16-66.8c32.3 19.8 38.2 12.1 54.8 22.2zM200.6 204.6c16.5-14.1 21.4-5.5 35.8-17.8 17.4 20.4 15 51-5.4 68.4-20.4 17.4-51 15-68.4-5.4 28.7-24.6 23.2-32.6 38-45.2zM264.5 231.7c-8.3-20.1 1.4-22.1-5.9-39.6 24.8-10.3 53.2 1.5 63.4 26.3 10.3 24.8-1.5 53.2-26.3 63.4-14.5-35-23.8-32.2-31.2-50.1zM310 179.3c-21.6 1.7-20.6-8.1-39.5-6.6-2.1-26.7 17.9-50.1 44.6-52.2 26.7-2.1 50.1 17.9 52.2 44.6-37.7 2.9-37.9 12.7-57.3 14.2z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function HM({ title, ...rest }): React.ReactElement {
@@ -1841,18 +1616,9 @@ export function HM({ title, ...rest }): React.ReactElement {
         <path d="M223.397 255.996c.273-.304.543-.609.813-.916-.27.308-.546.61-.82.916h.007zM189.217 297.923l10.958 22.913 24.747-5.718-11.083 22.853 19.9 15.781-24.776 5.585.069 25.398-19.815-15.89-19.814 15.89.069-25.398-24.776-5.585 19.9-15.781-11.083-22.853 24.746 5.718zM387.076 326.387l5.227 10.929 11.803-2.728-5.286 10.9 9.492 7.528-11.818 2.663.032 12.114-9.45-7.578-9.45 7.578.032-12.114-11.817-2.663 9.491-7.528-5.285-10.9 11.803 2.728zM338.453 210.448l5.227 10.93 11.803-2.729-5.286 10.901 9.491 7.528-11.817 2.663.032 12.115-9.45-7.58-9.451 7.58.033-12.115-11.818-2.663 9.491-7.528-5.284-10.901 11.802 2.729zM387.076 144.198l5.227 10.93 11.803-2.73-5.286 10.902 9.491 7.527-11.817 2.664.032 12.114-9.45-7.58-9.45 7.58.032-12.114-11.817-2.664 9.491-7.527-5.285-10.902 11.803 2.73zM429.547 193.886l5.227 10.929 11.802-2.728-5.284 10.9 9.491 7.527-11.818 2.664.033 12.114-9.451-7.578-9.45 7.578.032-12.114-11.817-2.664 9.491-7.527-5.286-10.9 11.803 2.728zM399.179 251.856l4.11 12.652h13.304l-10.763 7.82 4.112 12.652-10.763-7.819-10.765 7.819 4.112-12.652-10.763-7.82h13.304z" />
         <path d="M256 85.333v30.553l-45.167 25.099H256v59.359h-59.103L256 233.179v22.817h-26.68l-73.494-40.826v40.826h-55.652v-48.573l-87.43 48.573H0v-30.553l45.167-25.099H0v-59.359h59.103L0 108.139V85.333h26.68l73.494 40.827V85.333h55.652v48.573l87.43-48.573z" />
       </g>
-      <path
-        fill="#D80027"
-        d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z"
-      />
-      <path
-        fill="#0052B4"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
-      <path
-        fill="#FFF"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
+      <path fill="#D80027" d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z" />
+      <path fill="#0052B4" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
+      <path fill="#FFF" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
       <g fill="#D80027">
         <path d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915zM71.846 200.344L0 240.259v15.737l100.174-55.652z" />
       </g>
@@ -1862,7 +1628,7 @@ export function HM({ title, ...rest }): React.ReactElement {
         <path d="M100.174 140.982L0 85.33v15.737l71.847 39.915zM184.154 140.982L256 101.067V85.33l-100.174 55.652z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function HN({ title, ...rest }): React.ReactElement {
@@ -1874,7 +1640,7 @@ export function HN({ title, ...rest }): React.ReactElement {
         <path d="M0 0h513v114H0zM0 228h513v114H0zM203.5 117.9l6.7 16.6 17.6 1-14 10.9 4.7 17.7-15-9.9-15 9.9 4.7-17.7-14-10.9 17.6-1zM308.5 117.9l6.7 16.6 17.6 1-14 10.9 4.7 17.7-15-9.9-15 9.9 4.7-17.7-14-10.9 17.6-1zM256 147.6l6.7 16.6 17.6 1-14 10.9 4.7 17.7-15-9.9-15 9.9 4.7-17.7-14-10.9 17.6-1zM203.5 177.3l6.7 16.6 17.6 1-14 10.9 4.7 17.6-15-9.9-15 9.9 4.7-17.6-14-10.9 17.6-1zM308.5 177.3l6.7 16.6 17.6 1-14 10.9 4.7 17.6-15-9.9-15 9.9 4.7-17.6-14-10.9 17.6-1z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function HR({ title, ...rest }): React.ReactElement {
@@ -1899,7 +1665,7 @@ export function HR({ title, ...rest }): React.ReactElement {
         <path d="M168.5 113.2h35.2v35.2h-35.2zM238.9 113.2h35.2v35.2h-35.2zM309.3 113.2h35.2v35.2h-35.2zM203.7 148.4h35.2v35.2h-35.2zM274.1 148.4h35.2v35.2h-35.2zM168.5 183.6h35.2v35.2h-35.2zM203.7 218.8h35.2V254h-35.2zM238.9 183.6h35.2v35.2h-35.2zM309.3 183.6h35.2v35.2h-35.2zM274.1 218.8h35.2V254h-35.2zM309.3 274.3c8.6-5.4 16.2-12.3 22-20.3h-22v20.3zM181.7 254c5.8 8 13.3 14.9 22 20.4V254h-22zM238.9 254v33.7c7.2 1.2 13.3 1.5 17.6 1.5 4.3 0 10.4-.3 17.6-1.6V254h-35.2z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function HT({ title, ...rest }): React.ReactElement {
@@ -1915,7 +1681,7 @@ export function HT({ title, ...rest }): React.ReactElement {
       <path fill="#FFDA44" d="M256.8 140.8h27.7v83h-27.7z" />
       <path fill="#6DA544" d="M314.9 215.5h-88.5l-66.5 36h221.5z" />
     </svg>
-  )
+  );
 }
 
 export function HU({ title, ...rest }): React.ReactElement {
@@ -1926,7 +1692,7 @@ export function HU({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 85.337h512v113.775H0z" />
       <path fill="#6DA544" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function ID({ title, ...rest }): React.ReactElement {
@@ -1936,7 +1702,7 @@ export function ID({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M0 85.337h512v341.326H0z" />
       <path fill="#A2001D" d="M0 85.337h512V256H0z" />
     </svg>
-  )
+  );
 }
 
 export function IE({ title, ...rest }): React.ReactElement {
@@ -1947,7 +1713,7 @@ export function IE({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 85.331h170.663v341.337H0z" />
       <path fill="#FF9811" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function IL({ title, ...rest }): React.ReactElement {
@@ -1959,7 +1725,7 @@ export function IL({ title, ...rest }): React.ReactElement {
         <path d="M340.6 122.4h-56.1l-28-48.6-28 48.6h-56.1l28 48.6-28 48.6h56.1l28 48.6 28-48.6h56.1l-28-48.6 28-48.6zM293.2 171L276 204.2h-38.9L219.8 171l17.2-33.2h38.9l17.3 33.2zm-36.7-71.8l11.9 23.3h-23.9l12-23.3zm-58.3 38.6h23.9l-10.8 21-13.1-21zm0 66.4l13-22.1 11.9 22.1h-24.9zm58.3 37.5l-11.9-22.1h23.9l-12 22.1zm59.4-37.5h-25l11.9-22.1 13.1 22.1zm-26.1-66.4h26.1l-13 22.1-13.1-22.1zM0 21.3h512V64H0zM0 277.3h512V320H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function IM({ title, ...rest }): React.ReactElement {
@@ -1976,7 +1742,7 @@ export function IM({ title, ...rest }): React.ReactElement {
         d="M279.3 262.4c-6 0-11.5-4.8-11.5-11.5s4.8-11.5 11.5-11.5c6 0 11.5 4.8 11.5 11.5s-5.5 11.5-11.5 11.5zm45.8-182.8c-6 0-11.5-4.8-11.5-11.5s4.8-11.5 11.5-11.5c6 0 11.5 4.8 11.5 11.5s-5.5 11.5-11.5 11.5zm0 91.1c-6 0-11.5-4.8-11.5-11.5 0-6 4.8-11.5 11.5-11.5 6 0 11.5 4.8 11.5 11.5-.6 6.7-5.5 11.5-11.5 11.5zm-136.9 45.8c-6 0-11.5-4.8-11.5-11.5 0-6 4.8-11.5 11.5-11.5 6.6 0 11.5 4.8 11.5 11.5s-5.5 11.5-11.5 11.5zm45.2-136.9c-6 0-11.5-4.8-11.5-11.5s4.8-11.5 11.5-11.5c6 0 11.5 4.8 11.5 11.5s-4.8 11.5-11.5 11.5zm22.9 91.1c-6 0-11.5-10.3-11.5-22.9s4.8-22.9 11.5-22.9c6 0 11.5 10.3 11.5 22.9s-4.8 22.9-11.5 22.9zm-114-45.2c-6 0-11.5-4.8-11.5-11.5 0-6.6 4.8-11.5 11.5-11.5 6.6 0 11.5 4.8 11.5 11.5 0 6.6-4.8 11.5-11.5 11.5z"
       />
     </svg>
-  )
+  );
 }
 
 export function IN({ title, ...rest }): React.ReactElement {
@@ -1994,7 +1760,7 @@ export function IN({ title, ...rest }): React.ReactElement {
       />
       <circle fill="#181A93" cx={256.5} cy={171} r={22.8} />
     </svg>
-  )
+  );
 }
 
 export function IO({ title, ...rest }): React.ReactElement {
@@ -2007,10 +1773,7 @@ export function IO({ title, ...rest }): React.ReactElement {
         d="M462.9 198.1c-4 0-14-5-21-9-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-16 9-20 9s-14-5-20-9c-11-6-22-12-32.1-12-9 0-20 6-31.1 12-7 4-16 9-20 9s-13-5-20-9c-11-6-22-12-31.1-12-10 0-21 6-32.1 12-6 4-16 9-20 9s-13-5-20-9c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-17 9-21 9s-13-5-20-9c-10-6-20-12-30.1-12v22l19 10c11 6 21 12 31.1 12s21-6 32.1-12c6-4 16-10 20-10s13 6 20 10c11 6 21 12 31.1 12s20-6 31.1-12c7-4 17-10 21-10s13 6 20 10c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-10 20-10s14 6 21 10c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-10 20-10s14 6 20 10c11 6 22 12 32.1 12s20-6 31.1-12l19-10v-22c-10 0-20 6-30.1 12-7 4-16 9-20 9zM0 31.7l19 10c11 6 21 12 31.1 12s21-6 32.1-12c6-4 16-10 20-10s13 6 20 10c11 6 21 12 31.1 12s20-6 31.1-12c7-4 17-10 21-10s13 6 20 10c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-10 20-10s14 6 21 10c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-10 20-10s14 6 20 10c11 6 22 12 32.1 12s20-6 31.1-12l19-10v-22c-10 1-20 6-30.1 12-7 4-16 9-20 9s-14-5-21-9c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-16 9-20 9s-14-5-20-9c-11-6-22-12-32.1-12s-20 6-31.1 12c-7 4-16 9-20 9s-13-5-20-9c-11-6-22-12-31.1-12s-21 6-32.1 12c-6 4-16 9-20 9s-13-5-20-9c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-17 9-21 9s-13-5-20-9c-10-6-20-11-30.1-12v22zm462.9 55.2c-4 0-14-5-21-9-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-16 9-20 9s-14-5-20-9c-11-6-22-12-32.1-12-9 0-20 6-31.1 12-7 4-16 9-20 9s-13-5-20-9c-11-6-22-12-31.1-12-10 0-21 6-32.1 12-6 4-16 9-20 9s-13-5-20-9c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-17 9-21 9s-13-5-20-9c-10-6-20-12-30.1-12v22l19 9c11 6 21 12 31.1 12s21-6 32.1-12c6-4 16-9 20-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 17-9 21-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 21 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 20 9c11 6 22 12 32.1 12s20-6 31.1-12l19-9v-22c-10 0-20 6-30.1 12-7 3.9-16 9-20 9zm50.1 34c-10 1-20 6-30.1 12-7 4-16 10-20 10s-14-6-21-10c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-16 10-20 10s-14-6-20-10c-11-6-22-12-32.1-12s-20 6-31.1 12c-7 4-16 10-20 10s-13-6-20-10c-11-6-22-12-31.1-12s-21 6-32.1 12c-6 4-16 10-20 10s-13-6-20-10c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-17 10-21 10s-13-6-20-10c-10-6-20-11-30.1-12v23c4 1 13 5 19 9 11 6 21 12 31.1 12s21-6 32.1-12c6-4 16-9 20-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 17-9 21-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 21 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 20 9c11 6 22 12 32.1 12s20-6 31.1-12c6-4 15-8 19-9v-23zm-50.1 133.3c-4 0-14-5-21-9-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-16 9-20 9s-14-5-20-9c-11-6-22-12-32.1-12-9 0-20 6-31.1 12-7 4-16 9-20 9s-13-5-20-9c-11-6-22-12-31.1-12-10 0-21 6-32.1 12-6 4-16 9-20 9s-13-5-20-9c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-17 9-21 9s-13-5-20-9c-10-6-20-12-30.1-12v22l19 9c11 6 21 12 31.1 12s21-6 32.1-12c6-4 16-9 20-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 17-9 21-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 21 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 20 9c11 6 22 12 32.1 12s20-6 31.1-12l19-9v-22c-10 0-20 6-30.1 12-7 4-16 9-20 9zm50.1 34c-10 1-20 6-30.1 12-7 4-16 10-20 10s-14-6-21-10c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-16 10-20 10s-14-6-20-10c-11-6-22-12-32.1-12s-20 6-31.1 12c-7 4-16 10-20 10s-13-6-20-10c-11-6-22-12-31.1-12s-21 6-32.1 12c-6 4-16 10-20 10s-13-6-20-10c-11-6-21-12-31.1-12s-20 6-31.1 12c-7 4-17 10-21 10s-13-6-20-10c-10-6-20-11-30.1-12v23c4 0 13 5 19 9 11 6 21 12 31.1 12s21-6 32.1-12c6-4 16-9 20-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 17-9 21-9s13 5 20 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 21 9c11 6 21 12 31.1 12s20-6 31.1-12c7-4 16-9 20-9s14 5 20 9c11 6 22 12 32.1 12s20-6 31.1-12c6-4 15-9 19-9v-23z"
       />
       <path fill="#FFF" d="M0-.3h256v171H0V-.3z" />
-      <path
-        d="M389.8 119.9H408v78.8h-18.3l.1-78.8zm0 117.8H408v75.1h-18.3l.1-75.1z"
-        fill="#A2001D"
-      />
+      <path d="M389.8 119.9H408v78.8h-18.3l.1-78.8zm0 117.8H408v75.1h-18.3l.1-75.1z" fill="#A2001D" />
       <g fill="#D80027">
         <path d="M144-.3h-32v70H0v32h112v69h32v-69h112v-32H144v-70z" />
         <path d="M0-.3v15l57 39h23L0-.3zM256-.3v15l-57 39h-23l80-54z" />
@@ -2035,7 +1798,7 @@ export function IO({ title, ...rest }): React.ReactElement {
         d="M439.2 249.1h-79.8s-.9-13.4-6-21.8c-6.2-10.4-13.9-28.1-1.4-36.7 15.9-10.9 33.7.8 48.2.8 11.8.1 26.9-14 45-.8 12.2 8.9 3.9 28.2-1.3 36.7-7 11.5-4.7 21.8-4.7 21.8z"
       />
     </svg>
-  )
+  );
 }
 
 export function IQ({ title, ...rest }): React.ReactElement {
@@ -2049,7 +1812,7 @@ export function IQ({ title, ...rest }): React.ReactElement {
         <path d="M219.2 160.7h-29.3c1.5-5.7 6.6-9.9 12.8-9.9v-19.9c-18.3 0-33.1 14.9-33.1 33.1v16.5h49.6c1.8 0 3.3 1.5 3.3 3.3v6.6h-66.2v19.9h86.1v-26.5c0-12.7-10.4-23.1-23.2-23.1zM268.8 190.5v-59.6H249v79.5h33.1v-19.9zM335 190.5v-59.6h-19.8v59.6h-6.6v-19.8h-19.9v39.7h59.6v-19.9z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function IR({ title, ...rest }): React.ReactElement {
@@ -2065,7 +1828,7 @@ export function IR({ title, ...rest }): React.ReactElement {
         <path d="M44.6 98.9h22.3v24.4H44.6zM0 98.9h22.3v24.4H0zM89.2 98.9h22.3v24.4H89.2zM133.8 98.9h22.3v24.4h-22.3zM178.4 98.9h22.3v24.4h-22.3zM223 98.9h22.3v24.4H223zM267.7 98.9H290v24.4h-22.3zM312.3 98.9h22.3v24.4h-22.3zM356.9 98.9h22.3v24.4h-22.3zM401.5 98.9h22.3v24.4h-22.3zM446.1 98.9h22.3v24.4h-22.3zM490.7 98.9H513v24.4h-22.3zM44.6 216.9h22.3v25.5H44.6zM0 216.9h22.3v25.5H0zM89.2 216.9h22.3v25.5H89.2zM133.8 216.9h22.3v25.5h-22.3zM178.4 216.9h22.3v25.5h-22.3zM223 216.9h22.3v25.5H223zM267.7 216.9H290v25.5h-22.3zM312.3 216.9h22.3v25.5h-22.3zM356.9 216.9h22.3v25.5h-22.3zM401.5 216.9h22.3v25.5h-22.3zM446.1 216.9h22.3v25.5h-22.3zM490.7 216.9H513v25.5h-22.3z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function IS({ title, ...rest }): React.ReactElement {
@@ -2082,7 +1845,7 @@ export function IS({ title, ...rest }): React.ReactElement {
         d="M512 234.666v42.663H183.652v149.337h-42.674V277.329H0v-42.663h140.978V85.329h42.674v149.337z"
       />
     </svg>
-  )
+  );
 }
 
 export function IT({ title, ...rest }): React.ReactElement {
@@ -2093,7 +1856,7 @@ export function IT({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 85.333h170.663V426.67H0z" />
       <path fill="#D80027" d="M341.337 85.333H512V426.67H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function JE({ title, ...rest }): React.ReactElement {
@@ -2105,16 +1868,13 @@ export function JE({ title, ...rest }): React.ReactElement {
         fill="#D80027"
         d="M301.8 171L513 30.2V0h-45.3L256.5 140.8 45.3 0H0v30.2L211.2 171 0 311.8V342h45.3l211.2-140.8L467.7 342H513v-30.2z"
       />
-      <path
-        fill="#FFDA44"
-        d="M233.7 44.6l22.3 5.6 22.3-5.6 4-20.9-14.9 6.5L256 14.8l-11.4 15.4-14.9-6.5z"
-      />
+      <path fill="#FFDA44" d="M233.7 44.6l22.3 5.6 22.3-5.6 4-20.9-14.9 6.5L256 14.8l-11.4 15.4-14.9-6.5z" />
       <path
         fill="#D80027"
         d="M233.7 44.6s-4 12.9-4 29.9c0 27.9 26.3 41.3 26.3 41.3s26.3-15.5 26.3-41.3c0-15.4-4-29.9-4-29.9s-8.1-5-22.3-5-22.3 5-22.3 5z"
       />
     </svg>
-  )
+  );
 }
 
 export function JM({ title, ...rest }): React.ReactElement {
@@ -2132,7 +1892,7 @@ export function JM({ title, ...rest }): React.ReactElement {
         d="M512 112.089L296.136 256.006 512 399.911v26.757h-40.125L256 282.752 40.125 426.668H0v-26.757l215.864-143.905L0 112.089V85.331h40.125L256 229.248 471.875 85.331H512z"
       />
     </svg>
-  )
+  );
 }
 
 export function JO({ title, ...rest }): React.ReactElement {
@@ -2148,7 +1908,7 @@ export function JO({ title, ...rest }): React.ReactElement {
         d="M77.913 224.802l7.876 16.469 17.786-4.11-7.965 16.426 14.303 11.343-17.808 4.014.049 18.255-14.241-11.421-14.241 11.421.05-18.255-17.809-4.014 14.303-11.343-7.965-16.426 17.786 4.11z"
       />
     </svg>
-  )
+  );
 }
 
 export function JP({ title, ...rest }): React.ReactElement {
@@ -2158,7 +1918,7 @@ export function JP({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M0 85.331h512v341.337H0z" />
       <circle fill="#D80027" cx={256} cy={255.994} r={96} />
     </svg>
-  )
+  );
 }
 
 export function KE({ title, ...rest }): React.ReactElement {
@@ -2178,7 +1938,7 @@ export function KE({ title, ...rest }): React.ReactElement {
       </g>
       <path d="M302.96 191.226v129.535c10.594-18.774 18.784-40.973 18.784-64.767s-8.19-45.993-18.784-64.768zM209.04 191.226v129.535c-10.594-18.774-18.784-40.973-18.784-64.767s8.19-45.993 18.784-64.768z" />
     </svg>
-  )
+  );
 }
 
 export function KG({ title, ...rest }): React.ReactElement {
@@ -2198,7 +1958,7 @@ export function KG({ title, ...rest }): React.ReactElement {
         <path d="M214.2 170.7c-2.1 0-4.1.1-6.2.3.1 12 4.4 22.9 11.6 31.5 3.8-10.3 9.5-19.6 16.7-27.7-6.9-2.7-14.3-4.1-22.1-4.1zM240.8 217.2c5.2 1.9 10.8 2.9 16.6 2.9 5.8 0 11.4-1 16.6-2.9-2.8-11.1-8.7-21-16.6-28.8-7.9 7.8-13.8 17.7-16.6 28.8zM300.2 146c-8.5-14.8-24.5-24.7-42.8-24.7-18.3 0-34.2 9.9-42.8 24.7 15.6.1 30.2 4.3 42.8 11.6 12.6-7.3 27.2-11.6 42.8-11.6zM278.5 174.8c7.2 8 12.9 17.4 16.7 27.7 7.2-8.5 11.5-19.5 11.6-31.5-2-.2-4.1-.3-6.2-.3-7.7 0-15.2 1.4-22.1 4.1z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function KH({ title, ...rest }): React.ReactElement {
@@ -2214,7 +1974,7 @@ export function KH({ title, ...rest }): React.ReactElement {
         d="M303.49 281.971v-17.809h-11.873v-23.745l-11.872-11.872-11.872 11.872v-23.744L256 204.8l-11.873 11.873v23.744l-11.872-11.872-11.872 11.872v23.745H208.51v17.809h-11.872v17.808h118.724v-17.808z"
       />
     </svg>
-  )
+  );
 }
 
 export function KI({ title, ...rest }): React.ReactElement {
@@ -2238,7 +1998,7 @@ export function KI({ title, ...rest }): React.ReactElement {
         d="M183.2 48.3l-1.1-5.3 22.4-3.7s-30.1-7.1-40-10.7c-14.3-5.1-16.3-12.1-16.3-12.1s44.7 11 64.8 11c4.3 0 12.8 10.7 12.8 10.7s14.8-14.9 21.9-15.4c32.1-2.3 66.6-6.4 66.6-6.4s-10 6.7-16 8.5c-16.2 4.9-50.6 11.7-50.6 11.7l-4.8 7.5H277l-14.4 4.3 7.4 6.9s-7.8-4.1-18.1-2.1c-7.1 1.3-15.4 6-22.9 8-18.7 4.8-29.9-12.8-29.9-12.8l-15.9-.1z"
       />
     </svg>
-  )
+  );
 }
 
 export function KM({ title, ...rest }): React.ReactElement {
@@ -2255,7 +2015,7 @@ export function KM({ title, ...rest }): React.ReactElement {
         <path d="M108.877 211.478l2.762 8.503h8.94l-7.232 5.256 2.762 8.502-7.232-5.255-7.234 5.255 2.764-8.502-7.234-5.256h8.94zM108.877 233.739l2.762 8.503h8.94l-7.232 5.255 2.762 8.503-7.232-5.255-7.234 5.255 2.764-8.503-7.234-5.255h8.94zM108.877 256l2.762 8.503h8.94l-7.232 5.255 2.762 8.503-7.232-5.255-7.234 5.255 2.764-8.503-7.234-5.255h8.94zM108.877 278.261l2.762 8.502h8.94l-7.232 5.256 2.762 8.503-7.232-5.255-7.234 5.255 2.764-8.503-7.234-5.256h8.94z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function KN({ title, ...rest }): React.ReactElement {
@@ -2270,7 +2030,7 @@ export function KN({ title, ...rest }): React.ReactElement {
         <path d="M141.1 187l31.2 24 32.3-22.2-13.1 37 31.1 23.9-39.2-1.1-13.2 37-11.1-37.6-39.2-1.1 32.3-22.2zM310.6 70.8l31.2 23.9 32.3-22.2-13.1 37 31.1 23.9-39.2-1.1-13.2 37-11.1-37.6-39.2-1.1 32.4-22.2z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function KP({ title, ...rest }): React.ReactElement {
@@ -2289,7 +2049,7 @@ export function KP({ title, ...rest }): React.ReactElement {
         d="M190.332 190.332l14.734 45.346h47.757l-38.65 28.028 14.849 45.481-38.69-28.16-38.631 28.107 14.79-45.428-38.616-28.028h47.722z"
       />
     </svg>
-  )
+  );
 }
 
 export function KR({ title, ...rest }): React.ReactElement {
@@ -2304,7 +2064,7 @@ export function KR({ title, ...rest }): React.ReactElement {
         d="M317.7 178.3c-9.6-25.4-44.3-25-61.8 1.3-17.6 26.3-43.8 16.9-61.6.7 4.6 29.9 30.4 52.7 61.6 52.7 31.8 0 58-23.9 61.8-54.7z"
       />
     </svg>
-  )
+  );
 }
 
 export function KW({ title, ...rest }): React.ReactElement {
@@ -2316,7 +2076,7 @@ export function KW({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 312.888h512v113.775H0z" />
       <path d="M166.957 312.889L0 426.663V85.337l166.957 113.774z" />
     </svg>
-  )
+  );
 }
 
 export function KY({ title, ...rest }): React.ReactElement {
@@ -2348,7 +2108,7 @@ export function KY({ title, ...rest }): React.ReactElement {
         <path d="M0 85.329v15.082l57.377 38.252H80zM256 85.329v15.082l-57.377 38.252H176zM0 255.997v-15.082l57.377-38.252H80zM256 255.997v-15.082l-57.377-38.252H176z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function KZ({ title, ...rest }): React.ReactElement {
@@ -2362,7 +2122,7 @@ export function KZ({ title, ...rest }): React.ReactElement {
         d="M256.5 251.5l-27.9 41.7-7.1-49.7-43.2 25.5 15.2-47.8-50 4.2 34.4-36.5-46.9-18 46.8-18-34.4-36.5 50 4.2-15.2-47.8 43.2 25.4 7.1-49.7 27.9 41.7 27.9-41.7 7.1 49.7 43.2-25.4-15.2 47.8 50-4.2-34.3 36.6 46.8 17.9-46.8 18 34.4 36.5-50-4.2 15.2 47.8-43.2-25.4-7.1 49.7c0-.1-27.9-41.8-27.9-41.8zm0-.8c44.1 0 79.9-35.8 79.9-79.9S300.6 91 256.5 91s-79.9 35.8-79.9 79.9 35.8 79.8 79.9 79.8zM22.8 28.3c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6v-.1-11.3zm0 45.7c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6V74zm0 45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6v-.1-11.3zm0 45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6v-.1-11.3zm0 45.7c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6v-11.4zm0 45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6v-11.4zm0 45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H28.5c-3.1 0-5.7-2.5-5.7-5.6v-11.4zm22.8-22.8c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H51.3c-3.1 0-5.7-2.5-5.7-5.6v-11.4zm0-45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7V245c.1 3.1-2.4 5.7-5.6 5.7H51.3c-3.1 0-5.7-2.5-5.7-5.6v-11.4zm0-45.7c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H51.3c-3.1 0-5.7-2.5-5.7-5.6V188zm0-45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H51.3c-3.1 0-5.7-2.5-5.7-5.6v-.1-11.3zm0-45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H51.3c-3.1 0-5.7-2.5-5.7-5.6v-.1-11.3zm0-45.6c0-3.2 2.4-5.7 5.7-5.7h11.3c3.2 0 5.7 2.4 5.7 5.7v11.3c.1 3.1-2.4 5.7-5.6 5.7H51.3c-3.1 0-5.7-2.5-5.7-5.6V51.2z"
       />
     </svg>
-  )
+  );
 }
 
 export function LA({ title, ...rest }): React.ReactElement {
@@ -2375,7 +2135,7 @@ export function LA({ title, ...rest }): React.ReactElement {
       </g>
       <circle fill="#FFF" cx={256.5} cy={171} r={65.9} />
     </svg>
-  )
+  );
 }
 
 export function LB({ title, ...rest }): React.ReactElement {
@@ -2386,16 +2146,13 @@ export function LB({ title, ...rest }): React.ReactElement {
       <g fill="#D80027">
         <path d="M0 .2h513v90.7H0zM.5 251.3H513V342H.5z" />
       </g>
-      <path
-        fill="#6DA544"
-        d="M290.3 193.5L256 130.7l-34.3 62.8h25.7v17.2h17.2v-17.2z"
-      />
+      <path fill="#6DA544" d="M290.3 193.5L256 130.7l-34.3 62.8h25.7v17.2h17.2v-17.2z" />
       <path
         fill="#14AF5A"
         d="M241.3 213.1c4.4-4.4 4.4-11.6-.1-16l4.7 4.7c-5.2-4.7-12.2-6.6-19.1-5.3l-23.5 5.9c-6.1 1.5-6.8-.4-1.8-4.2l27.1-20.3c5.1-3.8 4.2-6.9-2.3-6.9h-11c-6.4 0-7-2.3-1.5-5.1l25.3-12.7c5.6-2.8 5.1-5.1-1.5-5.1h-11c-6.4 0-7.4-3.1-2.3-6.9l27.1-20.3c5.6-3.8 12.9-3.8 18.5 0l27.1 20.3c5.1 3.8 4.2 6.9-2.3 6.9h-11c-6.4 0-7 2.3-1.5 5.1l25.3 12.7c5.6 2.8 5.1 5.1-1.5 5.1h-11c-6.4 0-7.4 3.1-2.3 6.9l27.1 20.3c5.1 3.8 4.4 5.7-1.8 4.2l-23.5-5.9c-6.8-1.3-13.9.6-19.1 5.3l4.7-4.7c-4.4 4.4-4.5 11.5-.1 16l6.8 6.8c4.4 4.4 3.1 8-3.3 8h-45.8c-6.2 0-7.7-3.6-3.3-8 .1.1 6.9-6.8 6.9-6.8z"
       />
     </svg>
-  )
+  );
 }
 
 export function LC({ title, ...rest }): React.ReactElement {
@@ -2407,7 +2164,7 @@ export function LC({ title, ...rest }): React.ReactElement {
       <path fill="#333" d="M186 272.7l70.5-160.3L327 272.7z" />
       <path fill="#FFDA44" d="M148.5 298.1h216l-108-101.7z" />
     </svg>
-  )
+  );
 }
 
 export function LI({ title, ...rest }): React.ReactElement {
@@ -2421,17 +2178,14 @@ export function LI({ title, ...rest }): React.ReactElement {
         d="M149.3 98.1c0-14-11.3-25.3-25.3-25.3-6.5 0-12.4 2.4-16.9 6.4V64.4h8.4V47.5h-8.4v-8.4H90.3v8.4h-8.4v16.9h8.4v14.9c-4.5-4-10.4-6.4-16.9-6.4-14 0-25.3 11.3-25.3 25.3 0 7.5 3.3 14.2 8.4 18.8v14.9h84.3V117c5.3-4.7 8.5-11.5 8.5-18.9z"
       />
     </svg>
-  )
+  );
 }
 
 export function LK({ title, ...rest }): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
-      <path
-        fill="#FFDA44"
-        d="M0 85.329v341.337h512V85.329H0zm489.739 319.076h-267.13V107.59h267.13v296.815z"
-      />
+      <path fill="#FFDA44" d="M0 85.329v341.337h512V85.329H0zm489.739 319.076h-267.13V107.59h267.13v296.815z" />
       <path fill="#A2001D" d="M222.609 107.595h267.13V404.41h-267.13z" />
       <path fill="#D80027" d="M22.261 107.595h200.348V404.41H22.261z" />
       <path fill="#FFDA44" d="M200.348 85.334h22.261v341.337h-22.261z" />
@@ -2442,7 +2196,7 @@ export function LK({ title, ...rest }): React.ReactElement {
         <path d="M370.551 211.844v25.229h71.513v13.365h4.452v-17.817h-71.513v-16.325h75.965v-4.452zM222.609 107.595h22.261v22.261h-22.261zM467.478 107.595h22.261v22.261h-22.261zM222.609 382.138h22.261v22.261h-22.261zM467.478 382.138h22.261v22.261h-22.261z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function LR({ title, ...rest }): React.ReactElement {
@@ -2459,7 +2213,7 @@ export function LR({ title, ...rest }): React.ReactElement {
         d="M127.999 118.382l11.05 34.01h35.764l-28.932 21.021 11.05 34.012-28.932-21.021-28.933 21.021 11.053-34.012-28.932-21.021h35.762z"
       />
     </svg>
-  )
+  );
 }
 
 export function LS({ title, ...rest }): React.ReactElement {
@@ -2472,7 +2226,7 @@ export function LS({ title, ...rest }): React.ReactElement {
       <path d="M245.2 171l7.7-23.1c2-5.9 5.1-6 7.1 0l7.7 23.1 19.4 29.1c1.7 2.6 1.3 6.3-1.2 8 0 0-6.9 8-29.5 8s-29.5-8-29.5-8c-2.4-2-2.9-5.4-1.2-8l19.5-29.1z" />
       <path d="M256.5 171c-12.5 0-22.6-10.1-22.6-22.6 0-12.5 10.1-22.6 22.6-22.6s22.6 10.1 22.6 22.6c0 12.5-10.2 22.6-22.6 22.6zm0 0c6.2 0 11.3-16.3 11.3-22.6 0-6.2-5.1-11.3-11.3-11.3-6.2 0-11.3 5.1-11.3 11.3 0 6.3 5 22.6 11.3 22.6z" />
     </svg>
-  )
+  );
 }
 
 export function LT({ title, ...rest }): React.ReactElement {
@@ -2483,7 +2237,7 @@ export function LT({ title, ...rest }): React.ReactElement {
       <path fill="#FFDA44" d="M0 85.337h512v113.775H0z" />
       <path fill="#D80027" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function LU({ title, ...rest }): React.ReactElement {
@@ -2494,7 +2248,7 @@ export function LU({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 85.337h512v113.775H0z" />
       <path fill="#338AF3" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function LV({ title, ...rest }): React.ReactElement {
@@ -2506,7 +2260,7 @@ export function LV({ title, ...rest }): React.ReactElement {
         <path className="prefix__st1" d="M0 0h513v127.6H0zM0 214.4h513V342H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function LY({ title, ...rest }): React.ReactElement {
@@ -2521,7 +2275,7 @@ export function LY({ title, ...rest }): React.ReactElement {
         <path d="M256.965 286.868c-17.048 0-30.868-13.821-30.868-30.868s13.821-30.868 30.868-30.868a30.742 30.742 0 0114.684 3.71c-6.851-6.698-16.218-10.833-26.556-10.833-20.982 0-37.992 17.01-37.992 37.992s17.01 37.992 37.992 37.992c10.338 0 19.706-4.135 26.556-10.833a30.738 30.738 0 01-14.684 3.708z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MA({ title, ...rest }): React.ReactElement {
@@ -2534,7 +2288,7 @@ export function MA({ title, ...rest }): React.ReactElement {
         d="M352 226.484h-73.337L256 156.738l-22.663 69.748H160l59.331 43.107-22.663 69.749L256 296.232l59.332 43.107-22.663-69.749L352 226.484zm-116.063 37.711l7.663-23.585h24.8l7.663 23.585v.001L256 278.772l-20.063-14.577zm27.873-37.711h-15.619L256 202.447l7.81 24.037zm24.269 28.982l-4.827-14.856h25.274l-20.447 14.856zm-59.331-14.856l-4.827 14.856-20.447-14.856h25.274zm-5.211 61.748l7.81-24.036 12.636 9.181-20.446 14.855zm44.479-14.856l12.636-9.181 7.81 24.036-20.446-14.855z"
       />
     </svg>
-  )
+  );
 }
 
 export function MC({ title, ...rest }): React.ReactElement {
@@ -2544,7 +2298,7 @@ export function MC({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M0 85.34h512v341.326H0z" />
       <path fill="#D80027" d="M512 85.334v166.69L0 256.175V85.334z" />
     </svg>
-  )
+  );
 }
 
 export function MD({ title, ...rest }): React.ReactElement {
@@ -2559,7 +2313,7 @@ export function MD({ title, ...rest }): React.ReactElement {
         d="M206.2 129.1h33.2L256 79.3l16.6 49.8h33.2v99.6L256 262l-49.8-33.2v-99.7zm33.2 33.3v49.8h33.2v-49.8h-33.2z"
       />
     </svg>
-  )
+  );
 }
 
 export function ME({ title, ...rest }): React.ReactElement {
@@ -2571,13 +2325,10 @@ export function ME({ title, ...rest }): React.ReactElement {
       <g fill="#FFDA44">
         <path d="M218.899 211.478h74.202v-29.681l-14.84 7.42L256 166.957l-22.261 22.26-14.84-7.42zM322.783 256h-37.088a17 17 0 002.3-8.543c0-9.458-7.668-17.124-17.124-17.124-6.534 0-12.209 3.661-15.096 9.041-2.887-5.38-8.562-9.041-15.096-9.041-9.456 0-17.124 7.666-17.124 17.124 0 3.114.846 6.026 2.3 8.543h-36.636c0 11.349 9.885 20.549 21.232 20.549h-.685c0 9.31 6.192 17.168 14.68 19.694l-16.678 16.678 15.741 15.741 22.329-22.329c.875.321 1.78.577 2.714.752l-13.492 30.464c6.466 2.629 13.531 4.088 20.941 4.088s14.475-1.46 20.941-4.088l-13.492-30.464a17.108 17.108 0 002.714-.752l22.329 22.329 15.741-15.741-16.678-16.678c8.488-2.526 14.68-10.385 14.68-19.694h-.685c11.347 0 21.232-9.2 21.232-20.549z" />
       </g>
-      <path
-        fill="#6DA544"
-        d="M256 267.13l-24.116 11.131v22.261L256 315.362l24.116-14.84v-22.261z"
-      />
+      <path fill="#6DA544" d="M256 267.13l-24.116 11.131v22.261L256 315.362l24.116-14.84v-22.261z" />
       <path fill="#0052B4" d="M231.88 256h48.228v29.682H231.88z" />
     </svg>
-  )
+  );
 }
 
 export function MF({ title, ...rest }): React.ReactElement {
@@ -2590,7 +2341,7 @@ export function MF({ title, ...rest }): React.ReactElement {
       <path d="M44 30h20L54 48z" fill="#fff" />
       <path d="M54 48L38 33h32z" fill="#cf142b" />
     </svg>
-  )
+  );
 }
 
 export function MG({ title, ...rest }): React.ReactElement {
@@ -2601,7 +2352,7 @@ export function MG({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M512 85.331H0v170.666h512V85.331z" />
       <path fill="#FFF" d="M0 85.334h181.793v341.337H0z" />
     </svg>
-  )
+  );
 }
 
 export function MH({ title, ...rest }): React.ReactElement {
@@ -2612,12 +2363,9 @@ export function MH({ title, ...rest }): React.ReactElement {
       <g fill="#FFF">
         <path d="M233.839 185.115l-20.844 9.803 11.1 20.187-22.633-4.33-2.868 22.864-15.765-16.816-15.766 16.816-2.867-22.864-22.634 4.33 11.1-20.187-20.843-9.803 20.843-9.805-11.1-20.185 22.633 4.328 2.869-22.864 15.765 16.816 15.765-16.816 2.868 22.864 22.634-4.328-11.1 20.186zM426.917 85.337L0 421.52v3.762L503.756 85.337z" />
       </g>
-      <path
-        fill="#FF9811"
-        d="M512 85.337h-8.244L0 425.282v1.381h3.723L512 136.998z"
-      />
+      <path fill="#FF9811" d="M512 85.337h-8.244L0 425.282v1.381h3.723L512 136.998z" />
     </svg>
-  )
+  );
 }
 
 export function MK({ title, ...rest }): React.ReactElement {
@@ -2631,7 +2379,7 @@ export function MK({ title, ...rest }): React.ReactElement {
       </g>
       <circle fill="#FFDA44" cx={256} cy={252.29} r={44.522} />
     </svg>
-  )
+  );
 }
 
 export function ML({ title, ...rest }): React.ReactElement {
@@ -2642,7 +2390,7 @@ export function ML({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 85.331h170.663v341.337H0z" />
       <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function MM({ title, ...rest }): React.ReactElement {
@@ -2657,7 +2405,7 @@ export function MM({ title, ...rest }): React.ReactElement {
         d="M384 227.261h-97.783L256 134.265l-30.217 92.997H128l79.108 57.475-30.217 92.998L256 320.925l79.108 56.81-30.217-92.998L384 227.261z"
       />
     </svg>
-  )
+  );
 }
 
 export function MN({ title, ...rest }): React.ReactElement {
@@ -2675,7 +2423,7 @@ export function MN({ title, ...rest }): React.ReactElement {
         <path d="M76.054 311.647h29.682v14.84H76.054zM76.054 252.288h29.682v14.84H76.054zM90.897 185.502l5.255 16.173h17.006l-13.757 9.996 5.252 16.173-13.756-9.996-13.756 9.996 5.251-16.173-13.756-9.996h17.005z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MO({ title, ...rest }): React.ReactElement {
@@ -2694,7 +2442,7 @@ export function MO({ title, ...rest }): React.ReactElement {
         <path d="M256 350.642c16.84 0 32.363-5.619 44.816-15.073h-89.63c12.451 9.454 27.974 15.073 44.814 15.073zM187.977 306.12a74.138 74.138 0 008.85 15.073h118.345a74.13 74.13 0 008.85-15.073H187.977z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MP({ title, ...rest }): React.ReactElement {
@@ -2720,7 +2468,7 @@ export function MP({ title, ...rest }): React.ReactElement {
         />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MQ({ title, ...rest }): React.ReactElement {
@@ -2733,7 +2481,7 @@ export function MQ({ title, ...rest }): React.ReactElement {
         <path d="M386.607 175.885a4.119 4.119 0 014.115-4.114h8.816c13.936 0 25.274-11.337 25.274-25.273 0-13.935-11.337-25.273-25.274-25.273h-8.372c-2.733-2.052-6.399-3.318-10.443-3.318-8.436 0-15.273 5.471-15.273 12.219 0 6.683 6.707 12.104 15.029 12.209l-.003.049h19.062c2.27 0 4.115 1.845 4.115 4.115s-1.845 4.114-4.115 4.114h-8.816c-13.936 0-25.273 11.337-25.273 25.273 0 13.935 11.336 25.273 25.273 25.273h34.09V180h-34.09a4.12 4.12 0 01-4.115-4.115zM108.346 175.885a4.119 4.119 0 014.115-4.114h8.816c13.936 0 25.274-11.337 25.274-25.273 0-13.935-11.337-25.273-25.274-25.273h-8.372c-2.733-2.052-6.399-3.318-10.443-3.318-8.436 0-15.273 5.471-15.273 12.219 0 6.683 6.707 12.104 15.029 12.209l-.003.049h19.062c2.27 0 4.115 1.845 4.115 4.115s-1.845 4.114-4.115 4.114h-8.816c-13.936 0-25.273 11.337-25.273 25.273 0 13.935 11.336 25.273 25.273 25.273h34.09V180h-34.09a4.12 4.12 0 01-4.115-4.115zM386.607 368.809a4.119 4.119 0 014.115-4.114h8.816c13.936 0 25.274-11.337 25.274-25.273 0-13.935-11.337-25.273-25.274-25.273h-8.372c-2.733-2.052-6.399-3.318-10.443-3.318-8.436 0-15.273 5.471-15.273 12.219 0 6.683 6.707 12.104 15.029 12.209l-.003.049h19.062c2.27 0 4.115 1.845 4.115 4.115s-1.845 4.114-4.115 4.114h-8.816c-13.936 0-25.273 11.337-25.273 25.273 0 13.935 11.336 25.273 25.273 25.273h34.09v-21.159h-34.09a4.119 4.119 0 01-4.115-4.115zM108.346 368.809a4.119 4.119 0 014.115-4.114h8.816c13.936 0 25.274-11.337 25.274-25.273 0-13.935-11.337-25.273-25.274-25.273h-8.372c-2.733-2.052-6.399-3.318-10.443-3.318-8.436 0-15.273 5.471-15.273 12.219 0 6.683 6.707 12.104 15.029 12.209l-.003.049h19.062c2.27 0 4.115 1.845 4.115 4.115s-1.845 4.114-4.115 4.114h-8.816c-13.936 0-25.273 11.337-25.273 25.273 0 13.935 11.336 25.273 25.273 25.273h34.09v-21.159h-34.09a4.119 4.119 0 01-4.115-4.115z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MR({ title, ...rest }): React.ReactElement {
@@ -2746,7 +2494,7 @@ export function MR({ title, ...rest }): React.ReactElement {
         <path d="M255.999 171.994l8.935 27.502h28.918l-23.394 16.996 8.936 27.503-23.395-16.998-23.394 16.998 8.937-27.503-23.394-16.996h28.915z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MS({ title, ...rest }): React.ReactElement {
@@ -2767,18 +2515,9 @@ export function MS({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256 85.333v30.553l-45.167 25.099H256v59.359h-59.103L256 233.179v22.817h-26.68l-73.494-40.826v40.826h-55.652v-48.573l-87.43 48.573H0v-30.554l45.167-25.098H0v-59.359h59.103L0 108.139V85.333h26.68l73.494 40.825V85.333h55.652v48.572l87.43-48.572z"
       />
-      <path
-        fill="#D80027"
-        d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z"
-      />
-      <path
-        fill="#0052B4"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
-      <path
-        fill="#FFF"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
+      <path fill="#D80027" d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z" />
+      <path fill="#0052B4" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
+      <path fill="#FFF" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
       <g fill="#D80027">
         <path d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915zM71.846 200.344L0 240.259v15.737l100.174-55.652z" />
       </g>
@@ -2788,7 +2527,7 @@ export function MS({ title, ...rest }): React.ReactElement {
         <path d="M100.174 140.982L0 85.33v15.737l71.847 39.915zM184.154 140.982L256 101.067V85.33l-100.174 55.652z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MT({ title, ...rest }): React.ReactElement {
@@ -2802,7 +2541,7 @@ export function MT({ title, ...rest }): React.ReactElement {
         d="M208.231 138.671v-21.334h-21.332v21.334h-21.334v21.332h21.334v21.334h21.332v-21.334h21.334v-21.332z"
       />
     </svg>
-  )
+  );
 }
 
 export function MU({ title, ...rest }): React.ReactElement {
@@ -2814,7 +2553,7 @@ export function MU({ title, ...rest }): React.ReactElement {
       <path fill="#0052B4" d="M0 170.657h512v85.337H0z" />
       <path fill="#6DA544" d="M0 341.331h512v85.337H0z" />
     </svg>
-  )
+  );
 }
 
 export function MV({ title, ...rest }): React.ReactElement {
@@ -2828,7 +2567,7 @@ export function MV({ title, ...rest }): React.ReactElement {
         d="M283.484 304.226c-26.637 0-48.232-21.594-48.232-48.232s21.594-48.232 48.232-48.232c8.306 0 16.12 2.1 22.943 5.797-10.703-10.467-25.341-16.927-41.494-16.927-32.784 0-59.362 26.577-59.362 59.362s26.578 59.362 59.362 59.362c16.154 0 30.791-6.461 41.494-16.927-6.822 3.698-14.636 5.797-22.943 5.797z"
       />
     </svg>
-  )
+  );
 }
 
 export function MW({ title, ...rest }): React.ReactElement {
@@ -2843,7 +2582,7 @@ export function MW({ title, ...rest }): React.ReactElement {
         d="M307.01 166.957l-20.842-9.804 11.099-20.186-22.634 4.329-2.868-22.864L256 135.248l-15.764-16.816-2.869 22.864-22.633-4.329 11.099 20.186-20.843 9.804z"
       />
     </svg>
-  )
+  );
 }
 
 export function MX({ title, ...rest }): React.ReactElement {
@@ -2853,16 +2592,13 @@ export function MX({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M341.334 85.33H0v341.332h512V85.33z" />
       <path fill="#6DA544" d="M0 85.333h170.663V426.67H0z" />
       <path fill="#FFF" d="M170.663 85.333h170.663V426.67H170.663z" />
-      <path
-        fill="#6DA544"
-        d="M208 255.996c0 26.509 21.491 48 48 48s48-21.491 48-48v-16h-96v16z"
-      />
+      <path fill="#6DA544" d="M208 255.996c0 26.509 21.491 48 48 48s48-21.491 48-48v-16h-96v16z" />
       <path
         fill="#FF9811"
         d="M320 223.996h-48c0-8.836-7.164-16-16-16s-16 7.164-16 16h-48c0 8.836 7.697 16 16.533 16H208c0 8.836 7.164 16 16 16 0 8.836 7.164 16 16 16h32c8.836 0 16-7.164 16-16 8.836 0 16-7.164 16-16h-.533c8.836 0 16.533-7.163 16.533-16z"
       />
     </svg>
-  )
+  );
 }
 
 export function MY({ title, ...rest }): React.ReactElement {
@@ -2879,7 +2615,7 @@ export function MY({ title, ...rest }): React.ReactElement {
         <path d="M171 49.7l9 18.8 20.3-4.7-9.1 18.8 16.4 12.9-20.4 4.6.1 20.9-16.3-13.1-16.2 13.1v-20.9l-20.3-4.6 16.3-12.9-9.1-18.8 20.3 4.7z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function MZ({ title, ...rest }): React.ReactElement {
@@ -2898,7 +2634,7 @@ export function MZ({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M39.268 256h88.42v40.578h-88.42z" />
       <path d="M144.443 209.479l-14.347-14.347-46.618 46.618-46.617-46.618-14.347 14.347 46.658 46.577-46.658 46.658 14.347 14.154 46.617-46.534 46.618 46.534 14.347-14.154-46.659-46.658z" />
     </svg>
-  )
+  );
 }
 
 export function NA({ title, ...rest }): React.ReactElement {
@@ -2908,16 +2644,13 @@ export function NA({ title, ...rest }): React.ReactElement {
       <path fill="#496E2D" d="M0 85.337h512v341.326H0z" />
       <path fill="#0052B4" d="M0 426.663V85.337h512" />
       <path fill="#FFF" d="M512 152.222V85.337H411.67L0 359.778v66.885h100.33z" />
-      <path
-        fill="#A2001D"
-        d="M512 85.337v40.125L60.193 426.663H0v-40.125L451.807 85.337z"
-      />
+      <path fill="#A2001D" d="M512 85.337v40.125L60.193 426.663H0v-40.125L451.807 85.337z" />
       <path
         fill="#FFDA44"
         d="M187.737 189.212l-22.741 10.696 12.11 22.024-24.693-4.724-3.129 24.945-17.199-18.347-17.2 18.347-3.129-24.945-24.693 4.723 12.109-22.023-22.739-10.696 22.74-10.697-12.11-22.022 24.693 4.722 3.13-24.944 17.199 18.347 17.2-18.347 3.128 24.944 24.693-4.722-12.108 22.024z"
       />
     </svg>
-  )
+  );
 }
 
 export function NC({ title, ...rest }): React.ReactElement {
@@ -2927,14 +2660,7 @@ export function NC({ title, ...rest }): React.ReactElement {
       <path fill="#009543" d="M0 293h640v133.7H0V293z" />
       <path fill="#ED4135" d="M0 132h640v161.3H0V132z" />
       <path fill="#0035AD" d="M0 0h640v133.3H0V0z" />
-      <circle
-        fill="#FAE600"
-        stroke="#000"
-        strokeWidth={5.3}
-        cx={240}
-        cy={213.3}
-        r={157.3}
-      />
+      <circle fill="#FAE600" stroke="#000" strokeWidth={5.3} cx={240} cy={213.3} r={157.3} />
       <path d="M307.9 354.5l-31.8 12-36.1 4.2-37.8-2.4-35.9-15.5s28.6-29.3 40.7-33.5c8.6-3 22.4-3.7 22.4-3.7V122l-.3-66H246l-.5 67.5v191.7s15.3 1.2 22.1 4.1c11.3 4.9 40.3 35.2 40.3 35.2z" />
       <path d="M212.727 102.375l42.955-21.418 5.577 11.187-42.955 21.417z" />
       <ellipse cx={237.8} cy={280.5} rx={16.8} ry={26.5} />
@@ -2942,7 +2668,7 @@ export function NC({ title, ...rest }): React.ReactElement {
       <ellipse cx={238.4} cy={211.1} rx={19.9} ry={12.1} />
       <path d="M213.8 177h47v10h-47zM213.8 234h47v10h-47z" />
     </svg>
-  )
+  );
 }
 
 export function NE({ title, ...rest }): React.ReactElement {
@@ -2954,7 +2680,7 @@ export function NE({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 312.888h512v113.775H0z" />
       <circle fill="#FF9811" cx={256} cy={256} r={32} />
     </svg>
-  )
+  );
 }
 
 export function NF({ title, ...rest }): React.ReactElement {
@@ -2966,7 +2692,7 @@ export function NF({ title, ...rest }): React.ReactElement {
         <path d="M0 85.331h170.663v341.337H0zM341.337 85.331H512v341.337H341.337zM304 311.995l-48-152.001-48 152.001h36v39.999h24v-39.999z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function NG({ title, ...rest }): React.ReactElement {
@@ -2978,7 +2704,7 @@ export function NG({ title, ...rest }): React.ReactElement {
         <path d="M0 85.331h170.663v341.337H0zM341.337 85.331H512v341.337H341.337z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function NI({ title, ...rest }): React.ReactElement {
@@ -2993,14 +2719,11 @@ export function NI({ title, ...rest }): React.ReactElement {
         fill="#FFDA44"
         d="M256 214.447c-22.949 0-41.553 18.603-41.553 41.553S233.05 297.553 256 297.553c22.949 0 41.553-18.603 41.553-41.553S278.949 214.447 256 214.447zm0 65.298c-13.114 0-23.745-10.631-23.745-23.745s10.631-23.745 23.745-23.745 23.745 10.631 23.745 23.745-10.631 23.745-23.745 23.745z"
       />
-      <path
-        fill="#0052B4"
-        d="M276.563 261.936L256 256l-20.563 5.936-6.855 11.873h54.836z"
-      />
+      <path fill="#0052B4" d="M276.563 261.936L256 256l-20.563 5.936-6.855 11.873h54.836z" />
       <path fill="#338AF3" d="M256 226.32l-13.709 23.744L256 256l13.709-5.936z" />
       <path fill="#6DA544" d="M235.437 261.936h41.126l-6.854-11.872h-27.418z" />
     </svg>
-  )
+  );
 }
 
 export function NL({ title, ...rest }): React.ReactElement {
@@ -3011,7 +2734,7 @@ export function NL({ title, ...rest }): React.ReactElement {
       <path fill="#A2001D" d="M0 85.337h512v113.775H0z" />
       <path fill="#0052B4" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function NO({ title, ...rest }): React.ReactElement {
@@ -3028,7 +2751,7 @@ export function NO({ title, ...rest }): React.ReactElement {
         d="M512 234.666v42.663H183.652v149.337h-42.674V277.329H0v-42.663h140.978V85.329h42.674v149.337z"
       />
     </svg>
-  )
+  );
 }
 
 export function NP({ title, ...rest }): React.ReactElement {
@@ -3036,20 +2759,14 @@ export function NP({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 85.337h512v341.326H0z" />
-      <path
-        fill="#0052B4"
-        d="M0 426.663V85.337l280.419 174.75H87.61l183.576 166.576z"
-      />
-      <path
-        fill="#D80027"
-        d="M244.769 249.888L10.199 103.71v312.754h234.57L61.193 249.888z"
-      />
+      <path fill="#0052B4" d="M0 426.663V85.337l280.419 174.75H87.61l183.576 166.576z" />
+      <path fill="#D80027" d="M244.769 249.888L10.199 103.71v312.754h234.57L61.193 249.888z" />
       <g fill="#FFF">
         <path d="M98.003 324.433l-14.589-6.863 7.77-14.13-15.844 3.03-2.008-16.005-11.035 11.772-11.036-11.772-2.008 16.005-15.843-3.031 7.77 14.131-14.591 6.863 14.591 6.862-7.77 14.13 15.844-3.029 2.007 16.004 11.036-11.772L73.332 358.4l2.008-16.004 15.843 3.03-7.769-14.13zM88.268 191.662l-10.612-4.991 5.651-10.278-11.523 2.205-1.461-11.641-8.026 8.561-8.026-8.561-1.46 11.641-11.525-2.205 5.652 10.278-10.613 4.991 25.972 5.194z" />
         <path d="M93.462 191.662c0 17.212-13.953 31.165-31.165 31.165s-31.165-13.953-31.165-31.165" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function NR({ title, ...rest }): React.ReactElement {
@@ -3063,7 +2780,7 @@ export function NR({ title, ...rest }): React.ReactElement {
         d="M174.802 341.329l-19.124 8.996 10.184 18.521-20.767-3.973-2.631 20.978L128 370.422l-14.465 15.429-2.63-20.978-20.767 3.973 10.183-18.521-19.123-8.996 19.124-8.995-10.184-18.52 20.766 3.971 2.632-20.978L128 312.236l14.465-15.429 2.63 20.978 20.767-3.971-10.183 18.521z"
       />
     </svg>
-  )
+  );
 }
 
 export function NU({ title, ...rest }): React.ReactElement {
@@ -3104,7 +2821,7 @@ export function NU({ title, ...rest }): React.ReactElement {
         <path d="M128 154.663l3.97 12.222h12.854l-10.398 7.556 3.971 12.222L128 179.109l-10.398 7.554 3.972-12.222-10.398-7.556h12.853zM128 219.803l2.364 7.278h7.653l-6.19 4.498 2.364 7.278-6.191-4.498-6.191 4.498 2.364-7.278-6.19-4.498h7.652zM128 102.469l2.364 7.278h7.653l-6.19 4.498 2.364 7.278-6.191-4.498-6.191 4.498 2.364-7.278-6.19-4.498h7.652zM197.931 161.136l2.365 7.277h7.653l-6.192 4.499 2.365 7.279-6.191-4.498-6.191 4.498 2.365-7.279-6.191-4.499h7.652zM58.069 161.136l2.364 7.277h7.653l-6.191 4.499 2.364 7.279-6.19-4.498-6.191 4.498 2.365-7.279-6.192-4.499h7.653z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function NZ({ title, ...rest }): React.ReactElement {
@@ -3119,18 +2836,9 @@ export function NZ({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256.003 85.329v30.564l-45.178 25.088h45.178v59.359H196.89l59.113 32.846v22.806h-26.69l-73.484-40.826v40.826h-55.652v-48.573l-87.429 48.573H.003v-30.553l45.168-25.099H.003v-59.359h59.103L.003 108.147V85.329h26.68l73.494 40.838V85.329h55.652v48.573l87.43-48.573z"
       />
-      <path
-        fill="#D80027"
-        d="M144 85.33h-32v69.334H0v32h112v69.334h32v-69.334h112v-32H144z"
-      />
-      <path
-        fill="#0052B4"
-        d="M155.826 200.344L256 255.998v-15.739l-71.847-39.915z"
-      />
-      <path
-        fill="#FFF"
-        d="M155.826 200.344L256 255.998v-15.739l-71.847-39.915z"
-      />
+      <path fill="#D80027" d="M144 85.33h-32v69.334H0v32h112v69.334h32v-69.334h112v-32H144z" />
+      <path fill="#0052B4" d="M155.826 200.344L256 255.998v-15.739l-71.847-39.915z" />
+      <path fill="#FFF" d="M155.826 200.344L256 255.998v-15.739l-71.847-39.915z" />
       <g fill="#D80027">
         <path d="M155.826 200.344L256 255.998v-15.739l-71.847-39.915zM71.846 200.344L0 240.259v15.739l100.174-55.654z" />
       </g>
@@ -3140,7 +2848,7 @@ export function NZ({ title, ...rest }): React.ReactElement {
         <path d="M100.174 140.983L0 85.33v15.738l71.847 39.915zM184.154 140.983L256 101.068V85.33l-100.174 55.653z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function OM({ title, ...rest }): React.ReactElement {
@@ -3156,7 +2864,7 @@ export function OM({ title, ...rest }): React.ReactElement {
       </g>
       <path fill="#6DA544" d="M211.478 315.353H512v111.304H211.478z" />
     </svg>
-  )
+  );
 }
 
 export function PA({ title, ...rest }): React.ReactElement {
@@ -3175,7 +2883,7 @@ export function PA({ title, ...rest }): React.ReactElement {
         d="M384 293.697l11.824 36.389h38.263l-30.955 22.491 11.823 36.389L384 366.476l-30.955 22.49 11.823-36.389-30.955-22.491h38.263z"
       />
     </svg>
-  )
+  );
 }
 
 export function PE({ title, ...rest }): React.ReactElement {
@@ -3187,7 +2895,7 @@ export function PE({ title, ...rest }): React.ReactElement {
         <path d="M0 85.331h170.663v341.337H0zM341.337 85.331H512v341.337H341.337z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function PF({ title, ...rest }): React.ReactElement {
@@ -3202,15 +2910,12 @@ export function PF({ title, ...rest }): React.ReactElement {
         fill="#FFDA44"
         d="M293.991 256c0 20.982-17.01 33.243-37.992 33.243S218.008 276.982 218.008 256s17.01-37.992 37.992-37.992 37.991 17.01 37.991 37.992z"
       />
-      <path
-        fill="#0052B4"
-        d="M293.991 256c0 20.982-17.01 37.992-37.992 37.992s-37.992-17.01-37.992-37.992"
-      />
+      <path fill="#0052B4" d="M293.991 256c0 20.982-17.01 37.992-37.992 37.992s-37.992-17.01-37.992-37.992" />
       <g fill="#D80027">
         <path d="M232.259 246.506h9.498v19h-9.498zM270.247 246.506h9.498v19h-9.498zM251.247 232.259h9.498v33.243h-9.498z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function PG({ title, ...rest }): React.ReactElement {
@@ -3227,7 +2932,7 @@ export function PG({ title, ...rest }): React.ReactElement {
         d="M376.526 204.163c-7.628-7.628-17.538-12.133-28.189-12.908l31.88-24.795c-12.698-12.698-29.714-18.431-46.319-17.218a44.31 44.31 0 00-11.396-19.511l-12.593 25.186a18.47 18.47 0 00-3.148-4.197c-7.245-7.245-18.991-7.244-26.234 0s-7.245 18.99 0 26.234a18.536 18.536 0 004.197 3.148l-25.186 12.593a44.303 44.303 0 0019.519 11.399c-1.217 16.606 4.511 33.619 17.209 46.317L324.12 214.6a11.053 11.053 0 017.807-3.202c2.973 0 5.768 1.158 7.87 3.26a11.055 11.055 0 013.26 7.87c0 2.974-1.158 5.768-3.26 7.87l10.494 10.494c4.905-4.905 7.607-11.428 7.607-18.364 0-5.675-1.81-11.071-5.153-15.534a29.492 29.492 0 0113.288 7.662c11.573 11.572 11.573 30.403 0 41.975l10.494 10.494c8.409-8.409 13.039-19.59 13.039-31.481-.001-11.892-4.632-23.072-13.04-31.481z"
       />
     </svg>
-  )
+  );
 }
 
 export function PH({ title, ...rest }): React.ReactElement {
@@ -3241,7 +2946,7 @@ export function PH({ title, ...rest }): React.ReactElement {
         <path d="M161.908 256l-27.288-12.835 14.532-26.428-29.632 5.668-3.755-29.933-20.64 22.015-20.639-22.015-3.755 29.933-29.631-5.669 14.531 26.428L28.343 256l27.288 12.835L41.1 295.263l29.633-5.668 3.753 29.933 20.639-22.015 20.64 22.015 3.755-29.933 29.631 5.669-14.532-26.427zM21.789 117.607l9.081 12.696 14.879-4.714-9.268 12.56 9.081 12.694-14.809-4.932-9.268 12.559.117-15.608-14.809-4.934 14.88-4.712zM21.789 353.53l9.081 12.696 14.879-4.714-9.268 12.56 9.081 12.695-14.809-4.933-9.268 12.558.117-15.607-14.809-4.934 14.88-4.712zM210.395 235.569l-9.081 12.695-14.879-4.713 9.268 12.559-9.081 12.696 14.809-4.933 9.268 12.558-.117-15.607 14.809-4.934-14.88-4.713z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function PK({ title, ...rest }): React.ReactElement {
@@ -3257,7 +2962,7 @@ export function PK({ title, ...rest }): React.ReactElement {
         <path d="M361.909 298.793c-31.037 22.426-74.378 15.446-96.804-15.592-22.427-31.038-15.446-74.379 15.593-96.804 9.677-6.992 20.55-11.125 31.613-12.563-21.283-3.183-43.777 1.613-62.598 15.211-38.2 27.602-46.792 80.944-19.191 119.145 27.601 38.199 80.944 46.792 119.145 19.189 18.82-13.598 30.436-33.448 34.096-54.655-4.839 10.05-12.176 19.076-21.854 26.069zM360.58 172.889l17.484 18.842 23.322-10.802-12.519 22.447 17.483 18.844-25.219-4.968-12.519 22.45-3.067-25.521-25.22-4.969 23.323-10.802z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function PL({ title, ...rest }): React.ReactElement {
@@ -3270,7 +2975,7 @@ export function PL({ title, ...rest }): React.ReactElement {
       </g>
       <path fill="#D80027" d="M0 256h512v170.663H0z" />
     </svg>
-  )
+  );
 }
 
 export function PM({ title, ...rest }): React.ReactElement {
@@ -3283,7 +2988,7 @@ export function PM({ title, ...rest }): React.ReactElement {
         <path fill="#f31830" d="M426.7 0H640v480H426.7z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function PN({ title, ...rest }): React.ReactElement {
@@ -3311,18 +3016,9 @@ export function PN({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256 85.333v30.553l-45.167 25.099H256v59.359h-59.103L256 233.179v22.817h-26.68l-73.494-40.826v40.826h-55.652v-48.573l-87.43 48.573H0v-30.554l45.167-25.098H0v-59.359h59.103L0 108.139V85.333h26.68l73.494 40.825V85.333h55.652v48.572l87.43-48.572z"
       />
-      <path
-        fill="#D80027"
-        d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z"
-      />
-      <path
-        fill="#0052B4"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
-      <path
-        fill="#FFF"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
+      <path fill="#D80027" d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z" />
+      <path fill="#0052B4" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
+      <path fill="#FFF" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
       <g fill="#D80027">
         <path d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915zM71.846 200.344L0 240.259v15.737l100.174-55.652z" />
       </g>
@@ -3332,7 +3028,7 @@ export function PN({ title, ...rest }): React.ReactElement {
         <path d="M100.174 140.982L0 85.33v15.737l71.847 39.915zM184.154 140.982L256 101.067V85.33l-100.174 55.652z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function PR({ title, ...rest }): React.ReactElement {
@@ -3349,7 +3045,7 @@ export function PR({ title, ...rest }): React.ReactElement {
         d="M83.477 195.132l15.107 46.498h48.894l-39.554 28.739 15.107 46.499-39.554-28.738-39.555 28.738 15.11-46.499-39.554-28.739H68.37z"
       />
     </svg>
-  )
+  );
 }
 
 export function PS({ title, ...rest }): React.ReactElement {
@@ -3361,7 +3057,7 @@ export function PS({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 312.888h512v113.775H0z" />
       <path fill="#D80027" d="M256 256.006L0 426.668V85.331z" />
     </svg>
-  )
+  );
 }
 
 export function PT({ title, ...rest }): React.ReactElement {
@@ -3371,16 +3067,10 @@ export function PT({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 85.337h512v341.326H0z" />
       <path fill="#6DA544" d="M196.641 85.337v341.326H0V85.337z" />
       <circle fill="#FFDA44" cx={196.641} cy={256} r={64} />
-      <path
-        fill="#D80027"
-        d="M160.638 224v40.001c0 19.882 16.118 36 36 36s36-16.118 36-36V224h-72z"
-      />
-      <path
-        fill="#FFF"
-        d="M196.638 276c-6.617 0-12-5.383-12-12v-16h24.001v16c-.001 6.616-5.385 12-12.001 12z"
-      />
+      <path fill="#D80027" d="M160.638 224v40.001c0 19.882 16.118 36 36 36s36-16.118 36-36V224h-72z" />
+      <path fill="#FFF" d="M196.638 276c-6.617 0-12-5.383-12-12v-16h24.001v16c-.001 6.616-5.385 12-12.001 12z" />
     </svg>
-  )
+  );
 }
 
 export function PW({ title, ...rest }): React.ReactElement {
@@ -3390,7 +3080,7 @@ export function PW({ title, ...rest }): React.ReactElement {
       <path fill="#338AF3" d="M0 85.331h512v341.337H0z" />
       <circle fill="#FFDA44" cx={218.902} cy={255.994} r={74.207} />
     </svg>
-  )
+  );
 }
 
 export function PY({ title, ...rest }): React.ReactElement {
@@ -3409,7 +3099,7 @@ export function PY({ title, ...rest }): React.ReactElement {
         d="M256 232.51l4.421 13.605h14.304l-11.573 8.408 4.421 13.604L256 259.719l-11.573 8.408 4.421-13.604-11.573-8.408h14.304z"
       />
     </svg>
-  )
+  );
 }
 
 export function QA({ title, ...rest }): React.ReactElement {
@@ -3422,7 +3112,7 @@ export function QA({ title, ...rest }): React.ReactElement {
         d="M209.455 154.969l-50.236 25.267 50.236 25.257-50.236 25.267 50.236 25.257-50.236 25.266 50.236 25.257-50.236 25.268 50.236 25.257-50.236 25.267 50.236 25.268-36.45 18.33H0V86.07h172.939l36.516 18.364-50.236 25.267z"
       />
     </svg>
-  )
+  );
 }
 
 export function RE({ title, ...rest }): React.ReactElement {
@@ -3435,7 +3125,7 @@ export function RE({ title, ...rest }): React.ReactElement {
         <path fill="#f31830" d="M426.7 0H640v480H426.7z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function RO({ title, ...rest }): React.ReactElement {
@@ -3446,7 +3136,7 @@ export function RO({ title, ...rest }): React.ReactElement {
       <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z" />
       <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function RS({ title, ...rest }): React.ReactElement {
@@ -3468,7 +3158,7 @@ export function RS({ title, ...rest }): React.ReactElement {
         d="M241.16 233.734h-22.504a14.74 14.74 0 002.001-7.418c0-8.196-6.645-14.84-14.84-14.84-5.663 0-10.581 3.172-13.083 7.836-2.502-4.663-7.421-7.836-13.083-7.836-8.195 0-14.84 6.644-14.84 14.84 0 2.706.736 5.235 2.001 7.418h-22.114c0 8.196 7.139 14.84 15.334 14.84h-.494c0 8.196 6.644 14.84 14.84 14.84 0 7.257 5.211 13.286 12.094 14.576l-11.694 26.401a48.075 48.075 0 0018.149 3.544 48.079 48.079 0 0018.149-3.544l-11.694-26.401c6.883-1.29 12.094-7.319 12.094-14.576 8.196 0 14.84-6.644 14.84-14.84h-.494c8.199 0 15.338-6.644 15.338-14.84z"
       />
     </svg>
-  )
+  );
 }
 
 export function RU({ title, ...rest }): React.ReactElement {
@@ -3480,7 +3170,7 @@ export function RU({ title, ...rest }): React.ReactElement {
       <path fill="#FFF" d="M0 85.333h512v113.775H0z" />
       <path fill="#D80027" d="M0 312.884h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function RW({ title, ...rest }): React.ReactElement {
@@ -3495,7 +3185,7 @@ export function RW({ title, ...rest }): React.ReactElement {
         d="M278.261 185.209l20.844 9.804-11.099 20.186 22.632-4.33 2.868 22.865 15.765-16.816 15.766 16.816 2.867-22.865 22.633 4.33-11.099-20.186 20.843-9.804-20.844-9.805 11.1-20.185-22.633 4.329-2.868-22.864-15.765 16.816-15.766-16.816-2.867 22.864-22.634-4.329 11.1 20.187z"
       />
     </svg>
-  )
+  );
 }
 
 export function SA({ title, ...rest }): React.ReactElement {
@@ -3509,7 +3199,7 @@ export function SA({ title, ...rest }): React.ReactElement {
         <path d="M207.093 248.57h32.601v22.261h-32.601z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function SB({ title, ...rest }): React.ReactElement {
@@ -3518,15 +3208,12 @@ export function SB({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#496E2D" d="M0 85.334h512v341.337H0z" />
       <path fill="#0052B4" d="M0 426.663V85.329h512" />
-      <path
-        fill="#FFDA44"
-        d="M0 396.494v30.169h45.255L512 115.499v-30.17h-45.255z"
-      />
+      <path fill="#FFDA44" d="M0 396.494v30.169h45.255L512 115.499v-30.17h-45.255z" />
       <g fill="#FFF">
         <path d="M85.688 108.787l5.12 15.756h16.566l-13.403 9.737 5.12 15.757-13.403-9.738-13.405 9.738 5.12-15.757L64 124.543h16.567zM170.312 108.787l5.121 15.756H192l-13.403 9.737 5.12 15.757-13.405-9.738-13.403 9.738 5.12-15.757-13.403-9.737h16.566zM85.688 191.289l5.12 15.756h16.566l-13.403 9.738 5.12 15.757-13.403-9.739-13.405 9.739 5.12-15.757L64 207.045h16.567zM170.312 191.289l5.121 15.756H192l-13.403 9.738 5.12 15.757-13.405-9.739-13.403 9.739 5.12-15.757-13.403-9.738h16.566zM128 150.037l5.12 15.756h16.568l-13.405 9.738 5.12 15.758L128 181.55l-13.403 9.739 5.12-15.758-13.405-9.738h16.568z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function SC({ title, ...rest }): React.ReactElement {
@@ -3539,7 +3226,7 @@ export function SC({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M512 85.337h-84.655L0 426.663l512-204.512z" />
       <path fill="#0052B4" d="M0 85.337v341.326L235.454 85.337z" />
     </svg>
-  )
+  );
 }
 
 export function SD({ title, ...rest }): React.ReactElement {
@@ -3551,7 +3238,7 @@ export function SD({ title, ...rest }): React.ReactElement {
       <path d="M0 312.888h512v113.775H0z" />
       <path fill="#496E2D" d="M0 426.668V85.331l256 170.675z" />
     </svg>
-  )
+  );
 }
 
 export function SE({ title, ...rest }): React.ReactElement {
@@ -3559,12 +3246,9 @@ export function SE({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#0052B4" d="M0 85.333h512V426.67H0z" />
-      <path
-        fill="#FFDA44"
-        d="M192 85.33h-64v138.666H0v64h128v138.666h64V287.996h320v-64H192z"
-      />
+      <path fill="#FFDA44" d="M192 85.33h-64v138.666H0v64h128v138.666h64V287.996h320v-64H192z" />
     </svg>
-  )
+  );
 }
 
 export function SG({ title, ...rest }): React.ReactElement {
@@ -3578,7 +3262,7 @@ export function SG({ title, ...rest }): React.ReactElement {
         <path d="M121.344 144.696l3.683 11.337h11.921l-9.645 7.007 3.684 11.337-9.643-7.006-9.645 7.006 3.685-11.337-9.645-7.007h11.921zM179.178 144.696l3.684 11.337h11.921l-9.645 7.007 3.684 11.337-9.644-7.006-9.644 7.006 3.685-11.337-9.645-7.007h11.921zM168.047 178.087l3.684 11.337h11.921l-9.644 7.007 3.684 11.337-9.645-7.006-9.643 7.006 3.684-11.337-9.644-7.007h11.92zM132.474 178.087l3.683 11.337h11.921l-9.644 7.007 3.684 11.337-9.644-7.006-9.644 7.006 3.684-11.337-9.644-7.007h11.92z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function SH({ title, ...rest }): React.ReactElement {
@@ -3602,10 +3286,7 @@ export function SH({ title, ...rest }): React.ReactElement {
       <g fill="#D80027">
         <path d="M0 170.7v-15.1l57.4-38.2H80zM256 170.7v-15.1l-57.4-38.2H176z" />
       </g>
-      <path
-        fill="#29DBFF"
-        d="M449 139.7c-.1 44.4-7.2 92.1-65 114.9-57.8-22.8-64.9-70.5-65-114.9h130z"
-      />
+      <path fill="#29DBFF" d="M449 139.7c-.1 44.4-7.2 92.1-65 114.9-57.8-22.8-64.9-70.5-65-114.9h130z" />
       <path
         fill="#ffda44"
         d="M449 139.7c0-16.7-.9-32.9-.5-47.1C426.9 83 398.4 81 383.9 81s-42.9 2-64.6 11.6c.4 14.2-.5 30.4-.5 47.1H449z"
@@ -3614,12 +3295,9 @@ export function SH({ title, ...rest }): React.ReactElement {
         fill="#BF521B"
         d="M369.5 204.5l.3 10.3-12.8.2 4.9 13.2h-17.3c-18-20.2-23.4-42.4-24.9-68.1l9.1-9.7 8.3 14.3 10.8-12.8 7 7.8.8 15.7 13.8 29.1z"
       />
-      <path
-        fill="#474747"
-        d="M436.6 192.5l-8.6 18.3h-47l-29.2-19.5 25.7 10.5h25.1l3.7-6.5 7.2.2 2-3z"
-      />
+      <path fill="#474747" d="M436.6 192.5l-8.6 18.3h-47l-29.2-19.5 25.7 10.5h25.1l3.7-6.5 7.2.2 2-3z" />
     </svg>
-  )
+  );
 }
 
 export function SI({ title, ...rest }): React.ReactElement {
@@ -3642,7 +3320,7 @@ export function SI({ title, ...rest }): React.ReactElement {
         d="M233.606 196.639v14.837c0 34.081-44.522 44.522-44.522 44.522s-44.522-10.44-44.522-44.522v-14.837l14.848 14.837 29.674-22.261 29.685 22.261 14.837-14.837z"
       />
     </svg>
-  )
+  );
 }
 
 export function SJ({ title, ...rest }): React.ReactElement {
@@ -3659,7 +3337,7 @@ export function SJ({ title, ...rest }): React.ReactElement {
         d="M512 234.666v42.663H183.652v149.337h-42.674V277.329H0v-42.663h140.978V85.329h42.674v149.337z"
       />
     </svg>
-  )
+  );
 }
 
 export function SK({ title, ...rest }): React.ReactElement {
@@ -3686,7 +3364,7 @@ export function SK({ title, ...rest }): React.ReactElement {
         d="M169.232 301.658c9.204 5.783 18.66 9.143 23.502 10.636 4.842-1.494 14.298-4.852 23.502-10.636 9.282-5.833 15.79-12.506 19.484-19.939a24.878 24.878 0 00-14.418-4.583c-1.956 0-3.856.232-5.682.657-3.871-8.796-12.658-14.94-22.884-14.94-10.227 0-19.013 6.144-22.884 14.94a25.048 25.048 0 00-5.682-.657 24.88 24.88 0 00-14.418 4.583c3.691 7.433 10.198 14.106 19.48 19.939z"
       />
     </svg>
-  )
+  );
 }
 
 export function SL({ title, ...rest }): React.ReactElement {
@@ -3697,7 +3375,7 @@ export function SL({ title, ...rest }): React.ReactElement {
       <path fill="#6DA544" d="M0 85.337h512v113.775H0z" />
       <path fill="#338AF3" d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function SM({ title, ...rest }): React.ReactElement {
@@ -3727,7 +3405,7 @@ export function SM({ title, ...rest }): React.ReactElement {
         d="M300.522 189.22c0-12.295-9.966-22.261-22.261-22.261a22.173 22.173 0 00-14.84 5.672v-13.093h7.421v-14.84h-7.421v-7.421h-14.84v7.421h-7.421v14.84h7.421v13.093a22.177 22.177 0 00-14.841-5.672c-12.295 0-22.261 9.966-22.261 22.261 0 6.591 2.867 12.512 7.421 16.589v13.093h74.203v-13.093c4.552-4.077 7.419-9.997 7.419-16.589z"
       />
     </svg>
-  )
+  );
 }
 
 export function SN({ title, ...rest }): React.ReactElement {
@@ -3740,7 +3418,7 @@ export function SN({ title, ...rest }): React.ReactElement {
         <path d="M0 85.331h181.793v341.337H0zM255.999 196.632l14.733 45.347h47.685l-38.576 28.029 14.734 45.348-38.576-28.026-38.577 28.026 14.737-45.348-38.576-28.029h47.681z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function SO({ title, ...rest }): React.ReactElement {
@@ -3753,7 +3431,7 @@ export function SO({ title, ...rest }): React.ReactElement {
         d="M256 157.273l22.663 69.748H352l-59.332 43.106 22.664 69.749L256 296.769l-59.332 43.107 22.664-69.749L160 227.021h73.337z"
       />
     </svg>
-  )
+  );
 }
 
 export function SR({ title, ...rest }): React.ReactElement {
@@ -3770,7 +3448,7 @@ export function SR({ title, ...rest }): React.ReactElement {
         d="M256.742 218.003l9.43 29.021h30.518L272 264.963l9.431 29.023-24.689-17.937-24.689 17.937 9.431-29.023-24.69-17.939h30.518z"
       />
     </svg>
-  )
+  );
 }
 
 export function SS({ title, ...rest }): React.ReactElement {
@@ -3787,7 +3465,7 @@ export function SS({ title, ...rest }): React.ReactElement {
         d="M73.178 209.188l20.831 29.067 34.084-10.83-21.207 28.795 20.83 29.069-33.939-11.271-21.208 28.794.234-35.762-33.94-11.273 34.083-10.83z"
       />
     </svg>
-  )
+  );
 }
 
 export function ST({ title, ...rest }): React.ReactElement {
@@ -3801,7 +3479,7 @@ export function ST({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M256 256.006L0 426.668V85.331z" />
       <path d="M302.049 226.318l7.368 22.674h23.842l-19.288 14.016 7.366 22.674-19.288-14.015-19.287 14.015 7.366-22.674-19.288-14.016h23.842zM376.252 226.318l7.367 22.674h23.842l-19.288 14.016 7.367 22.674-19.288-14.015-19.288 14.015 7.367-22.674-19.288-14.016h23.842z" />
     </svg>
-  )
+  );
 }
 
 export function SV({ title, ...rest }): React.ReactElement {
@@ -3813,16 +3491,13 @@ export function SV({ title, ...rest }): React.ReactElement {
         <path d="M0 85.337h512v113.775H0zM0 312.888h512v113.775H0z" />
       </g>
       <path fill="#FFDA44" d="M228.582 261.936L256 214.447l27.418 47.489z" />
-      <path
-        fill="#6DA544"
-        d="M291.616 277.616L256 295.425l-35.616-17.809v-23.744h71.232z"
-      />
+      <path fill="#6DA544" d="M291.616 277.616L256 295.425l-35.616-17.809v-23.744h71.232z" />
       <path
         fill="#FFDA44"
         d="M289.579 216.485l-12.592 12.592c5.37 5.372 8.693 12.791 8.693 20.988 0 16.392-13.289 29.68-29.68 29.68-16.392 0-29.68-13.289-29.68-29.68 0-8.195 3.322-15.616 8.693-20.988l-12.592-12.592c-8.594 8.594-13.91 20.466-13.91 33.579 0 26.228 21.261 47.489 47.489 47.489s47.489-21.261 47.489-47.489c0-13.114-5.316-24.987-13.91-33.579z"
       />
     </svg>
-  )
+  );
 }
 
 export function SX({ title, ...rest }): React.ReactElement {
@@ -3849,7 +3524,7 @@ export function SX({ title, ...rest }): React.ReactElement {
         d="M128.001 246.856v-9.142l-9.144-4.571-9.142 4.571v9.142l-4.571 4.573v18.285h27.428v-18.285z"
       />
     </svg>
-  )
+  );
 }
 
 export function SY({ title, ...rest }): React.ReactElement {
@@ -3863,7 +3538,7 @@ export function SY({ title, ...rest }): React.ReactElement {
         <path d="M187.31 215.184l9.208 28.341h29.802l-24.11 17.518 9.209 28.342-24.109-17.516-24.11 17.516 9.209-28.342-24.109-17.518h29.801zM324.69 215.184l9.209 28.341H363.7l-24.109 17.518 9.209 28.342-24.11-17.516-24.109 17.516 9.209-28.342-24.11-17.518h29.802z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function SZ({ title, ...rest }): React.ReactElement {
@@ -3873,15 +3548,12 @@ export function SZ({ title, ...rest }): React.ReactElement {
       <path fill="#2B5DEA" d="M0 0h900v600H0V0z" />
       <path fill="#FFDF29" d="M0 100h900v400H0V100z" />
       <path fill="#D70000" d="M0 150h900v300H0V150z" />
-      <path
-        fill="#FFF"
-        d="M450 171.4v257.2c114.3 0 171.4-85.7 214.3-128.6-42.9-42.9-100-128.6-214.3-128.6z"
-      />
+      <path fill="#FFF" d="M450 171.4v257.2c114.3 0 171.4-85.7 214.3-128.6-42.9-42.9-100-128.6-214.3-128.6z" />
       <path d="M450 171.4c-100 0-171.4 85.7-214.3 128.6C278.6 342.9 350 428.6 450 428.6V171.4z" />
       <path fill="#FFF" d="M346.3 254.3h21v91.3h-21zM398.2 254.3h21v91.3h-21z" />
       <path d="M477.8 254.3h21v91.3h-21zM529.7 254.3h21v91.3h-21z" />
     </svg>
-  )
+  );
 }
 
 export function TA({ title, ...rest }): React.ReactElement {
@@ -3923,7 +3595,7 @@ export function TA({ title, ...rest }): React.ReactElement {
       />
       <ellipse fill="#A5A5A5" cx={386.3} cy={104.3} rx={34.3} ry={23.3} />
     </svg>
-  )
+  );
 }
 
 export function TC({ title, ...rest }): React.ReactElement {
@@ -3955,18 +3627,9 @@ export function TC({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M256 85.333v30.553l-45.167 25.099H256v59.359h-59.103L256 233.179v22.817h-26.68l-73.494-40.826v40.826h-55.652v-48.573l-87.43 48.573H0v-30.554l45.167-25.098H0v-59.359h59.103L0 108.139V85.333h26.68l73.494 40.825V85.333h55.652v48.572l87.43-48.572z"
       />
-      <path
-        fill="#D80027"
-        d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z"
-      />
-      <path
-        fill="#0052B4"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
-      <path
-        fill="#FFF"
-        d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z"
-      />
+      <path fill="#D80027" d="M144 85.33h-32v69.332H0v32h112v69.334h32v-69.334h112v-32H144z" />
+      <path fill="#0052B4" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
+      <path fill="#FFF" d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915z" />
       <g fill="#D80027">
         <path d="M155.826 200.344L256 255.996v-15.737l-71.847-39.915zM71.846 200.344L0 240.259v15.737l100.174-55.652z" />
       </g>
@@ -3976,7 +3639,7 @@ export function TC({ title, ...rest }): React.ReactElement {
         <path d="M100.174 140.982L0 85.33v15.737l71.847 39.915zM184.154 140.982L256 101.067V85.33l-100.174 55.652z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function TD({ title, ...rest }): React.ReactElement {
@@ -3987,7 +3650,7 @@ export function TD({ title, ...rest }): React.ReactElement {
       <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z" />
       <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z" />
     </svg>
-  )
+  );
 }
 
 export function TF({ title, ...rest }): React.ReactElement {
@@ -4004,7 +3667,7 @@ export function TF({ title, ...rest }): React.ReactElement {
         d="M3.6 0h3.6v7H3.6V0zM14.5 6h5L19 7h-1.5v.5h1l-.5 1h-.5V10h-1V7H15l-.5-1zm4 2.5l1 1.5h-2l1-1.5zm-3 0l1 1.5h-2l1-1.5zm1.5 3L16 10h2l-1 1.5zM20 8c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5-.2.5-.5.5zm-6 0c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5-.2.5-.5.5zm1 4c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5-.2.5-.5.5zm4 0c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5-.2.5-.5.5zm-2 1c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5-.2.5-.5.5z"
       />
     </svg>
-  )
+  );
 }
 
 export function TG({ title, ...rest }): React.ReactElement {
@@ -4021,7 +3684,7 @@ export function TG({ title, ...rest }): React.ReactElement {
         d="M102.026 133.938l13.26 40.812h42.916l-34.718 25.226 13.26 40.814-34.718-25.224-34.719 25.224 13.263-40.814-34.718-25.226h42.913z"
       />
     </svg>
-  )
+  );
 }
 
 export function TH({ title, ...rest }): React.ReactElement {
@@ -4034,7 +3697,7 @@ export function TH({ title, ...rest }): React.ReactElement {
         <path d="M0 85.334h512v54.522H0zM0 372.143h512v54.522H0z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function TJ({ title, ...rest }): React.ReactElement {
@@ -4048,7 +3711,7 @@ export function TJ({ title, ...rest }): React.ReactElement {
         <path d="M226.318 300.522h59.364v-25.23l-11.873 5.937L256 263.421l-17.809 17.808-11.873-5.937zM192.355 270.84l2.763 8.504h8.94l-7.233 5.255 2.763 8.502-7.233-5.255-7.234 5.255 2.763-8.502-7.233-5.255h8.94zM200.921 241.16l2.763 8.502h8.94l-7.233 5.255 2.763 8.504-7.233-5.256-7.234 5.256 2.763-8.504-7.233-5.255h8.94zM225.409 218.899l2.763 8.502h8.94l-7.233 5.255 2.763 8.504-7.233-5.256-7.234 5.256 2.763-8.504-7.233-5.255h8.94zM319.645 270.84l-2.763 8.504h-8.94l7.233 5.255-2.763 8.502 7.233-5.255 7.234 5.255-2.763-8.502 7.233-5.255h-8.94zM311.079 241.16l-2.763 8.502h-8.94l7.233 5.255-2.763 8.504 7.233-5.256 7.234 5.256-2.763-8.504 7.233-5.255h-8.94zM286.591 218.899l-2.763 8.502h-8.94l7.233 5.255-2.763 8.504 7.233-5.256 7.234 5.256-2.763-8.504 7.233-5.255h-8.94zM256 207.767l2.763 8.503h8.941l-7.234 5.256 2.763 8.502-7.233-5.254-7.233 5.254 2.763-8.502-7.234-5.256h8.941z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function TK({ title, ...rest }): React.ReactElement {
@@ -4063,7 +3726,7 @@ export function TK({ title, ...rest }): React.ReactElement {
         <path d="M483.386 354.503H117.801s109.234-88.562 310.593-220.938c.001 0-88.443 128.935 54.992 220.938zM117.801 366.089c-11.177 0-11.195 17.37 0 17.37h365.585c11.177 0 11.195-17.37 0-17.37H117.801z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function TL({ title, ...rest }): React.ReactElement {
@@ -4071,17 +3734,14 @@ export function TL({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#D80027" d="M0 85.337h512v341.326H0z" />
-      <path
-        fill="#FFDA44"
-        d="M256 256L0 90.691v44.242L155.826 256 0 377.067v44.242z"
-      />
+      <path fill="#FFDA44" d="M256 256L0 90.691v44.242L155.826 256 0 377.067v44.242z" />
       <path d="M0 90.691v330.618L189.217 256z" />
       <path
         fill="#FFF"
         d="M44.184 213.36l24.912 23.577 30.121-16.41-14.723 30.98 24.911 23.575-34.012-4.43L60.67 301.63l-6.296-33.716-34.012-4.43 30.119-16.408z"
       />
     </svg>
-  )
+  );
 }
 
 export function TM({ title, ...rest }): React.ReactElement {
@@ -4117,7 +3777,7 @@ export function TM({ title, ...rest }): React.ReactElement {
         <circle cx={128} cy={305.887} r={7.421} />
       </g>
     </svg>
-  )
+  );
 }
 
 export function TN({ title, ...rest }): React.ReactElement {
@@ -4131,7 +3791,7 @@ export function TN({ title, ...rest }): React.ReactElement {
         <path d="M277.818 312.724c-31.33 0-56.727-25.397-56.727-56.727s25.397-56.727 56.727-56.727c9.769 0 18.96 2.47 26.985 6.819-12.589-12.31-29.804-19.909-48.803-19.909-38.558 0-69.818 31.259-69.818 69.818s31.26 69.818 69.818 69.818c18.999 0 36.215-7.599 48.803-19.909-8.026 4.347-17.216 6.817-26.985 6.817z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function TO({ title, ...rest }): React.ReactElement {
@@ -4145,7 +3805,7 @@ export function TO({ title, ...rest }): React.ReactElement {
         d="M141.357 157.303V130.59h-26.714v26.713H87.93v26.713h26.713v26.713h26.714v-26.713h26.713v-26.713z"
       />
     </svg>
-  )
+  );
 }
 
 export function TR({ title, ...rest }): React.ReactElement {
@@ -4162,7 +3822,7 @@ export function TR({ title, ...rest }): React.ReactElement {
         d="M240.6 228.6c-43.3 0-78.3-35.1-78.3-78.3S197.4 72 240.6 72c8.1 0 15.8 1.2 23.2 3.5-17.3-15-39.8-24-64.5-24-54.4 0-98.6 44.1-98.6 98.6s44.1 98.6 98.6 98.6c24.2 0 46.3-8.7 63.4-23.1-7 1.9-14.4 3-22.1 3z"
       />
     </svg>
-  )
+  );
 }
 
 export function TT({ title, ...rest }): React.ReactElement {
@@ -4170,13 +3830,10 @@ export function TT({ title, ...rest }): React.ReactElement {
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
       <path fill="#D80027" d="M0 85.337h512v341.326H0z" />
-      <path
-        fill="#FFF"
-        d="M6.066 85.337l207.961 212.636 131.584 128.69h160.323L297.973 214.027 166.389 85.337z"
-      />
+      <path fill="#FFF" d="M6.066 85.337l207.961 212.636 131.584 128.69h160.323L297.973 214.027 166.389 85.337z" />
       <path d="M43.364 85.337L384.69 426.663h83.946L127.31 85.337z" />
     </svg>
-  )
+  );
 }
 
 export function TV({ title, ...rest }): React.ReactElement {
@@ -4193,10 +3850,7 @@ export function TV({ title, ...rest }): React.ReactElement {
         fill="#FFF"
         d="M449.9 0v206.3h-81l81 54V300h-39.7l-129-85.9V300H168.7v-85.9L39.7 300H0v-39.7l81-54H0V93.8h81L0 39.9V0h39.7l129 85.9V0h112.5v85.9L410.2 0z"
       />
-      <path
-        fill="#D80027"
-        d="M253.1 0h-56.3v122H0v56.2h196.8V300h56.3V178.2h196.8V122H253.1z"
-      />
+      <path fill="#D80027" d="M253.1 0h-56.3v122H0v56.2h196.8V300h56.3V178.2h196.8V122H253.1z" />
       <path fill="#2E52B2" d="M449.9 39.9v53.9h-81z" />
       <path
         fill="#D80027"
@@ -4207,7 +3861,7 @@ export function TV({ title, ...rest }): React.ReactElement {
         d="M719.9 131.6l29.4 90.6-77.1-56h95.3l-77.1 56 29.5-90.6zM584 187.7l29.4 90.6-77.1-56h95.3l-77.1 56 29.5-90.6zM614 430.6l29.4 90.6-77.1-56h95.3l-77.1 56 29.5-90.6zM488 332l29.4 90.6-77.1-56h95.3l-77.1 56L488 332zM488 464l29.4 90.6-77.1-56h95.3l-77.1 56L488 464z"
       />
     </svg>
-  )
+  );
 }
 
 export function TW({ title, ...rest }): React.ReactElement {
@@ -4226,7 +3880,7 @@ export function TW({ title, ...rest }): React.ReactElement {
         d="M128 190.06c-10.692 0-19.391-8.7-19.391-19.391 0-10.692 8.7-19.391 19.391-19.391 10.692 0 19.391 8.7 19.391 19.391 0 10.691-8.699 19.391-19.391 19.391z"
       />
     </svg>
-  )
+  );
 }
 
 export function TZ({ title, ...rest }): React.ReactElement {
@@ -4235,13 +3889,10 @@ export function TZ({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#338AF3" d="M0 85.337h512v341.326H0z" />
       <path fill="#6DA544" d="M0 426.663V85.337h512" />
-      <path
-        fill="#FFDA44"
-        d="M512 152.222V85.337H411.67L0 359.778v66.885h100.33z"
-      />
+      <path fill="#FFDA44" d="M512 152.222V85.337H411.67L0 359.778v66.885h100.33z" />
       <path d="M512 85.337v40.125L60.193 426.663H0v-40.125L451.807 85.337z" />
     </svg>
-  )
+  );
 }
 
 export function UA({ title, ...rest }): React.ReactElement {
@@ -4251,7 +3902,7 @@ export function UA({ title, ...rest }): React.ReactElement {
       <path fill="#FFDA44" d="M0 85.337h512v341.326H0z" />
       <path fill="#338AF3" d="M0 85.337h512V256H0z" />
     </svg>
-  )
+  );
 }
 
 export function UG({ title, ...rest }): React.ReactElement {
@@ -4266,7 +3917,7 @@ export function UG({ title, ...rest }): React.ReactElement {
       <circle fill="#FFF" cx={256} cy={170.7} r={80.7} />
       <path d="M234.5 127.5c.9-1.4-19.6-2-19.6-2 1.7-2.5 18.4-10.5 18.4-10.5s-.9-6 2.7-9.8l-4.5-9.8s7-3.4 18.4-3.4 19.9 7 21 13.1l-6.4 3.4c-.1 4.7 1.7 11.6-4.3 17.3-5.9 5.7-8.3 6.9-8.5 18.8 0 3.9 2.3 8.2 8.8 11.7 17.4 9.3 38.6 28.2 44.6 33.9 6.1 5.7 5.1 19.2 2.6 25.2s-12.1 14.3-14.3 13.6c-2.2-.6 1.2-9.2-3.5-11.6 0 0-8.9-7.6-16.8.6s-.2 25.2 3.9 28c4.1 2.8 1.7 5-1.9 5H247c-3.8 0-5.4-2.3-1.9-5 7.6-3.8 12.4-15.3 7.4-20.3-4.9-4.9-18.3 1.5-21.5 6.3-2.8 2.8-8.8 3.6-12.9-1.4s-4.1-10.4-1.1-12.5c7-4.8 0 0 .1-.1 0 0 11.9-8.6 29.9-9 3.9 0 4.8-2.2 2.2-4.8 0 0-30.9-27.4-28.1-44.2 3-18.3 20-26.3 13.4-32.5-1.3-1.8 0 0 0 0z" />
     </svg>
-  )
+  );
 }
 
 export function US({ title, ...rest }): React.ReactElement {
@@ -4282,7 +3933,7 @@ export function US({ title, ...rest }): React.ReactElement {
         <path d="M47.8 141.9l-4-12.8-4.3 12.8H26.3l10.7 7.7-4 12.8 10.8-7.9 10.7 7.9-4.2-12.8 10.9-7.7zM104.2 141.9l-4.1-12.8-4.2 12.8H82.7l10.7 7.7-4.1 12.8 10.8-7.9 10.7 7.9-4-12.8 10.8-7.7zM160.6 141.9l-4.2-12.8-4 12.8h-13.5l10.9 7.7-4.2 12.8 10.8-7.9 10.9 7.9-4.2-12.8 10.8-7.7zM216.9 141.9l-4.1-12.8-4.2 12.8h-13.2l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4.2-12.8 10.9-7.7zM100.1 78.3l-4.2 12.8H82.7L93.4 99l-4.1 12.6 10.8-7.8 10.7 7.8-4-12.6 10.8-7.9h-13.4zM43.8 78.3l-4.3 12.8H26.3L37 99l-4 12.6 10.8-7.8 10.7 7.8L50.3 99l10.9-7.9H47.8zM156.4 78.3l-4 12.8h-13.5l10.9 7.9-4.2 12.6 10.8-7.8 10.9 7.8-4.2-12.6 10.8-7.9h-13.3zM212.8 78.3l-4.2 12.8h-13.2l10.7 7.9-4 12.6 10.7-7.8 10.8 7.8-4.2-12.6 10.9-7.9h-13.4zM43.8 27.7l-4.3 12.6H26.3L37 48.2l-4 12.7L43.8 53l10.7 7.9-4.2-12.7 10.9-7.9H47.8zM100.1 27.7l-4.2 12.6H82.7l10.7 7.9-4.1 12.7 10.8-7.9 10.7 7.9-4-12.7 10.8-7.9h-13.4zM156.4 27.7l-4 12.6h-13.5l10.9 7.9-4.2 12.7 10.8-7.9 10.9 7.9-4.2-12.7 10.8-7.9h-13.3zM212.8 27.7l-4.2 12.6h-13.2l10.7 7.9-4 12.7 10.7-7.9 10.8 7.9-4.2-12.7 10.9-7.9h-13.4z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function UY({ title, ...rest }): React.ReactElement {
@@ -4299,7 +3950,7 @@ export function UY({ title, ...rest }): React.ReactElement {
         d="M192 95l-26.2 12.3 14 25.3-28.4-5.4-3.6 28.7-19.8-21.1-19.8 21.1-3.6-28.7-28.4 5.4 14-25.3L64 95l26.2-12.3-14-25.3 28.4 5.4 3.6-28.7L128 55.2l19.8-21.1 3.6 28.7 28.4-5.4-14 25.3z"
       />
     </svg>
-  )
+  );
 }
 
 export function UZ({ title, ...rest }): React.ReactElement {
@@ -4315,7 +3966,7 @@ export function UZ({ title, ...rest }): React.ReactElement {
         <path d="M188.688 137.589c0-15.984 11.234-29.339 26.236-32.614a33.531 33.531 0 00-7.155-.777c-18.442 0-33.391 14.949-33.391 33.391s14.949 33.391 33.391 33.391c2.458 0 4.85-.273 7.155-.777-15.002-3.275-26.236-16.63-26.236-32.614zM234.658 152.766l2.261 6.957h7.315l-5.918 4.301 2.261 6.956-5.919-4.3-5.918 4.3 2.261-6.956-5.918-4.301h7.315zM258.006 152.766l2.26 6.957h7.315l-5.918 4.301 2.261 6.956-5.918-4.3-5.918 4.3 2.26-6.956-5.917-4.301h7.314zM281.353 152.766l2.26 6.957h7.315l-5.917 4.301 2.26 6.956-5.918-4.3-5.918 4.3 2.26-6.956-5.918-4.301h7.315zM304.7 152.766l2.262 6.957h7.315l-5.919 4.301 2.261 6.956-5.919-4.3-5.918 4.3 2.262-6.956-5.919-4.301h7.314zM328.048 152.766l2.26 6.957h7.315l-5.918 4.301 2.261 6.956-5.918-4.3-5.918 4.3 2.26-6.956-5.917-4.301h7.314zM258.006 128.482l2.26 6.956h7.315l-5.918 4.3 2.261 6.957-5.918-4.299-5.918 4.299 2.26-6.957-5.917-4.3h7.314zM281.353 128.482l2.26 6.956h7.315l-5.917 4.3 2.26 6.957-5.918-4.299-5.918 4.299 2.26-6.957-5.918-4.3h7.315zM304.7 128.482l2.262 6.956h7.315l-5.919 4.3 2.261 6.957-5.919-4.299-5.918 4.299 2.262-6.957-5.919-4.3h7.314zM328.048 128.482l2.26 6.956h7.315l-5.918 4.3 2.261 6.957-5.918-4.299-5.918 4.299 2.26-6.957-5.917-4.3h7.314zM281.353 104.198l2.26 6.956h7.315l-5.917 4.3 2.26 6.957-5.918-4.3-5.918 4.3 2.26-6.957-5.918-4.3h7.315zM304.7 104.198l2.262 6.956h7.315l-5.919 4.3 2.261 6.957-5.919-4.3-5.918 4.3 2.262-6.957-5.919-4.3h7.314zM328.048 104.198l2.26 6.956h7.315l-5.918 4.3 2.261 6.957-5.918-4.3-5.918 4.3 2.26-6.957-5.917-4.3h7.314z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function VA({ title, ...rest }): React.ReactElement {
@@ -4333,7 +3984,7 @@ export function VA({ title, ...rest }): React.ReactElement {
         d="M376.367 247.24l17.899-23.677-17.759-13.424-11.838-8.949-49.988 66.129c-8.74-2.775-18.651.063-24.495 7.795-7.414 9.808-5.473 23.768 4.334 31.182 9.808 7.414 23.768 5.473 31.182-4.335 5.845-7.731 5.871-18.041.817-25.692l32.073-42.43 17.775 13.401zm-62.504 45.771a7.42 7.42 0 11-11.84-8.95 7.42 7.42 0 0111.84 8.95z"
       />
     </svg>
-  )
+  );
 }
 
 export function VC({ title, ...rest }): React.ReactElement {
@@ -4346,7 +3997,7 @@ export function VC({ title, ...rest }): React.ReactElement {
         <path d="M341.337 85.331H512v341.337H341.337zM214.261 283.82l-33.393-50.086 33.392-50.087 33.392 50.087zM297.739 283.82l-33.391-50.086 33.391-50.087 33.393 50.087zM256 350.603l-33.391-50.087L256 250.429l33.391 50.087z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function VE({ title, ...rest }): React.ReactElement {
@@ -4361,7 +4012,7 @@ export function VE({ title, ...rest }): React.ReactElement {
         d="M12.13 5.38l.14.46.45.14-.39.27.01.48-.38-.29-.45.15.15-.44-.28-.38h.47zM10.36 5.38l.27.39h.47l-.28.38.15.45-.45-.16-.38.28.01-.47-.39-.28.45-.13zM13.8 5.94l-.01.48.39.27-.46.14-.14.45-.27-.38h-.48l.29-.38-.15-.45.45.16zM8.69 5.96l.4.27.44-.18-.13.46.3.36-.47.02-.26.4-.16-.44-.46-.12.37-.3zM15.24 7.13l-.2.44.25.4-.47-.05-.31.36-.1-.46-.43-.18.41-.24.03-.47.35.31zM15.43 8.25l.21.43.47.07-.34.33.08.46-.42-.22-.42.22.08-.46-.34-.33.47-.07zM7 8.2l.21.43.47.06-.34.33.08.47L7 9.27l-.42.22.08-.47-.34-.33.47-.06zM7.31 7.05l.45.14.38-.29v.48l.39.26-.45.15-.13.46-.28-.38-.47.01.27-.38z"
       />
     </svg>
-  )
+  );
 }
 
 export function VG({ title, ...rest }): React.ReactElement {
@@ -4399,7 +4050,7 @@ export function VG({ title, ...rest }): React.ReactElement {
         <path d="M346.902 192.92h14.84v14.84h-14.84zM346.902 226.312h14.84v14.84h-14.84zM346.902 259.703h14.84v14.84h-14.84zM406.261 192.92h14.84v14.84h-14.84zM406.261 226.312h14.84v14.84h-14.84zM406.261 259.703h14.84v14.84h-14.84z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function VI({ title, ...rest }): React.ReactElement {
@@ -4442,7 +4093,7 @@ export function VI({ title, ...rest }): React.ReactElement {
         d="M60.1 210.5l-21.9-58.1H15.7l31.8 80.8h25.2l31.5-80.8H81.7zM451.5 151.9h18.9v81.7h-18.9z"
       />
     </svg>
-  )
+  );
 }
 
 export function VN({ title, ...rest }): React.ReactElement {
@@ -4455,7 +4106,7 @@ export function VN({ title, ...rest }): React.ReactElement {
         d="M256 157.279l22.663 69.747H352l-59.332 43.106 22.664 69.749L256 296.774l-59.332 43.107 22.664-69.749L160 227.026h73.337z"
       />
     </svg>
-  )
+  );
 }
 
 export function VU({ title, ...rest }): React.ReactElement {
@@ -4471,7 +4122,7 @@ export function VU({ title, ...rest }): React.ReactElement {
         <path d="M63.718 292.382v-14.295c14.265 0 25.87-11.606 25.87-25.869 0-10.092-8.211-18.303-18.304-18.303-6.875 0-12.469 5.593-12.469 12.469 0 4.397 3.577 7.974 7.974 7.974a4.514 4.514 0 004.508-4.508h14.295c0 10.368-8.435 18.804-18.802 18.804-12.279-.002-22.269-9.993-22.269-22.271 0-14.758 12.006-26.764 26.764-26.764 17.975 0 32.599 14.623 32.599 32.599 0 22.145-18.018 40.164-40.166 40.164z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function WF({ title, ...rest }): React.ReactElement {
@@ -4487,7 +4138,7 @@ export function WF({ title, ...rest }): React.ReactElement {
         d="M108.08 43.29L87.96 23.17h40.25l-20.13 20.12zm-6.7 6.71L81.25 29.88v40.25L101.38 50zm6.7 6.71L87.96 76.83h40.25l-20.13-20.12zm6.71-6.71l20.13-20.13v40.25L114.79 50z"
       />
     </svg>
-  )
+  );
 }
 
 export function WS({ title, ...rest }): React.ReactElement {
@@ -4500,7 +4151,7 @@ export function WS({ title, ...rest }): React.ReactElement {
         <path d="M165.483 181.79l2.764 8.504h8.939l-7.232 5.254 2.763 8.503-7.234-5.255-7.233 5.255 2.763-8.503-7.233-5.254h8.94zM120.579 115.007l4.606 14.173h14.9l-12.055 8.757 4.605 14.171-12.056-8.758-12.054 8.758 4.605-14.171-12.056-8.757h14.901zM165.101 129.848l4.606 14.172h14.9l-12.055 8.757 4.604 14.173-12.055-8.76-12.054 8.76 4.604-14.173-12.055-8.757h14.9zM129.909 189.211l4.606 14.172h14.9l-12.055 8.758 4.604 14.171-12.055-8.759-12.054 8.759 4.604-14.171-12.055-8.758h14.9zM90.899 152.108l4.605 14.173h14.9l-12.055 8.757 4.604 14.173-12.054-8.76-12.055 8.76 4.604-14.173-12.055-8.757h14.9z" />
       </g>
     </svg>
-  )
+  );
 }
 
 export function XK({ title, ...rest }): React.ReactElement {
@@ -4516,7 +4167,7 @@ export function XK({ title, ...rest }): React.ReactElement {
         d="M217.53 259.33l-27.22-13.61-27.22-54.43h27.22l27.22-27.22 13.61-27.22 27.22-13.61 13.61 13.61 27.22 13.61v13.61l13.61 13.61 40.83 27.22L340 245.73l-40.83 40.83-13.61-27.22-40.83 27.22v27.22l-13.61-13.61-13.59-40.84z"
       />
     </svg>
-  )
+  );
 }
 
 export function YE({ title, ...rest }): React.ReactElement {
@@ -4527,7 +4178,7 @@ export function YE({ title, ...rest }): React.ReactElement {
       <path fill="#D80027" d="M0 85.337h512v113.775H0z" />
       <path d="M0 312.888h512v113.775H0z" />
     </svg>
-  )
+  );
 }
 
 export function YT({ title, ...rest }): React.ReactElement {
@@ -4553,7 +4204,7 @@ export function YT({ title, ...rest }): React.ReactElement {
       <circle fill="#FEE05F" cx={39.1} cy={36.5} r={3} />
       <circle fill="#FEE05F" cx={50.9} cy={36.5} r={3} />
     </svg>
-  )
+  );
 }
 
 export function ZA({ title, ...rest }): React.ReactElement {
@@ -4562,24 +4213,15 @@ export function ZA({ title, ...rest }): React.ReactElement {
       {title && <title>{title}</title>}
       <path fill="#FFF" d="M0 85.337h512v341.326H0z" />
       <path d="M114.024 256.001L0 141.926v228.17z" />
-      <path
-        fill="#FFDA44"
-        d="M161.192 256L0 94.7v47.226l114.024 114.075L0 370.096v47.138z"
-      />
+      <path fill="#FFDA44" d="M161.192 256L0 94.7v47.226l114.024 114.075L0 370.096v47.138z" />
       <path
         fill="#6DA544"
         d="M509.833 289.391c.058-.44.804-.878 2.167-1.318v-65.464H222.602L85.33 85.337H0V94.7L161.192 256 0 417.234v9.429h85.33l137.272-137.272h287.231z"
       />
-      <path
-        fill="#0052B4"
-        d="M503.181 322.783H236.433l-103.881 103.88H512v-103.88z"
-      />
-      <path
-        fill="#D80027"
-        d="M503.181 189.217H512V85.337H132.552l103.881 103.88z"
-      />
+      <path fill="#0052B4" d="M503.181 322.783H236.433l-103.881 103.88H512v-103.88z" />
+      <path fill="#D80027" d="M503.181 189.217H512V85.337H132.552l103.881 103.88z" />
     </svg>
-  )
+  );
 }
 
 export function ZM({ title, ...rest }): React.ReactElement {
@@ -4595,7 +4237,7 @@ export function ZM({ title, ...rest }): React.ReactElement {
       <path fill="#FF9811" d="M455.112 255.994H512v170.663h-56.888z" />
       <path d="M398.225 255.994h56.888v170.663h-56.888z" />
     </svg>
-  )
+  );
 }
 
 export function ZW({ title, ...rest }): React.ReactElement {
@@ -4622,7 +4264,7 @@ export function ZW({ title, ...rest }): React.ReactElement {
         d="M138.94 259.335l-34.559-12.243s-2.553-23.955-2.708-24.766c-1.173-6.18-6.603-10.851-13.123-10.851-7.376 0-13.357 5.98-13.357 13.357 0 1.223.178 2.402.486 3.528l-9.689 9.755h17.229c0 17.882-13.344 17.882-13.344 35.691l7.402 17.809h44.522l7.422-17.809h-.004a17.782 17.782 0 001.381-5.231c6.397-2.589 8.342-9.24 8.342-9.24z"
       />
     </svg>
-  )
+  );
 }
 
 export default {
@@ -4876,5 +4518,5 @@ export default {
   YT: YT,
   ZA: ZA,
   ZM: ZM,
-  ZW: ZW
-}
+  ZW: ZW,
+};
