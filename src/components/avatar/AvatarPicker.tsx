@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { IconOperationEditPenNormal } from '@bcmi-labs/react-icons';
 import classnames from 'classnames';
 import { IconNavigationCheckmarkOutlineFilled } from '@bcmi-labs/react-icons';
 import { OverlayProvider } from 'react-aria';
 
 import { Avatar } from './Avatar';
+import { Button } from '../button';
 import { Modal } from '../dialogs/modal/Modal';
 
 import * as Avatars from './default';
@@ -215,23 +215,23 @@ export function AvatarPicker({
   };
 
   return (
-    <Avatar
-      {...getAvatarProps()}
-      size={avatarSize}
-      icon={selected && selected.avatar}
-      className={classnames(style['zh-avatar-picker'], className)}
-    >
-      {!disabled && isEdit && (
-        <span className={classnames(style['zh-avatar-picker__edit'], { [`${className}__edit`]: className })}>
-          <IconOperationEditPenNormal
-            className={classnames(style['zh-avatar-picker__edit-icon'], { [`${className}__edit-icon`]: className })}
-          />
-        </span>
+    <div className={classnames(style['zh-avatar-picker-wrapper'], className)}>
+      <Avatar
+        {...getAvatarProps()}
+        size={avatarSize}
+        icon={selected && selected.avatar}
+        className={classnames(style['zh-avatar-picker'])}
+      >
+        {disabled && (
+          <div className={classnames(style['zh-avatar-picker__disabled'], { [`${className}__disabled`]: className })} />
+        )}
+        {isOpen && renderSelectElement()}
+      </Avatar>
+      {isEdit && !disabled && (
+        <Button variant="tertiary" className={classnames(style['zh-avatar-picker-button'])} onPress={handlerOnClick}>
+          Change Avatar
+        </Button>
       )}
-      {disabled && (
-        <div className={classnames(style['zh-avatar-picker__disabled'], { [`${className}__disabled`]: className })} />
-      )}
-      {isOpen && renderSelectElement()}
-    </Avatar>
+    </div>
   );
 }
