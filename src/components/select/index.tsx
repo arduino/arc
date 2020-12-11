@@ -71,6 +71,7 @@ export function Select({
   placeholder = 'Type to Search',
   size = 'normal',
   id,
+  name,
   options,
   value, // remove value prop as it breaks ReactSelect
   defaultValue,
@@ -154,7 +155,7 @@ export function Select({
         tabSelectsValue={false}
         onChange={selectChanged}
         className={selectClasses}
-        name="ui-selector"
+        name={name || 'ui-selector'}
         classNamePrefix="zh-select"
       />
     </Wrapper>

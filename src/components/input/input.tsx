@@ -28,6 +28,7 @@ export function Input({
   onChange,
   clearable,
   id: fieldId,
+  name,
   label,
   error,
   successMsg,
@@ -118,6 +119,7 @@ export function Input({
         value={inputValue}
         {...restProps}
         id={id}
+        name={name}
         ref={textInput}
         className={inputClasses}
         onChange={changeValue}

@@ -15,6 +15,7 @@ Basic.args = {
   onChange: action('onChange'),
   onBlur: action('onBlur'),
   label: 'A Label',
+  name: 'a-checkbox',
   required: true,
 };
 

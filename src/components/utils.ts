@@ -38,6 +38,11 @@ export interface GenericFieldProps extends WithBemClasses {
   id?: string;
 
   /**
+   * name of the input, required when using event.target.name
+   * */
+  name?: string;
+
+  /**
    *  hides the status element. Has no effect if the field is not using a Wrapper
    */
   withoutStatus?: boolean;

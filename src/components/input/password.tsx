@@ -20,6 +20,7 @@ export function Password({
   value = '',
   onChange,
   id: fieldId,
+  name,
   label,
   error,
   successMsg,
@@ -69,6 +70,7 @@ export function Password({
         value={inputValue}
         {...restProps}
         id={id}
+        name={name}
         className={inputClasses}
         onChange={changeValue}
       />

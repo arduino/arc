@@ -12,15 +12,9 @@ export interface CheckboxProps extends GenericFieldProps, GenericFieldPropsEvent
    * Generally used for checkboxes reflecting the state of nested checkboxes in a parent/child hierarcy
    */
   indeterminate?: boolean;
-
-  /**
-   * The initial state of the checkbox element
-   */
+  /** The initial state of the checkbox element*/
   checked?: boolean;
-
-  /**
-   * The value the checkbox assumes when it's checked
-   */
+  /** The value the checkbox assumes when it's checked */
   value?: string;
 }
 
@@ -32,6 +26,7 @@ export function Checkbox({
   indeterminate = false,
   checked = false,
   value = '',
+  name,
   className = null,
   withoutStatus,
   ...props
@@ -71,6 +66,7 @@ export function Checkbox({
           checked={isChecked}
           required={required}
           value={value}
+          name={name}
           className={inputClasses}
           type="checkbox"
           onChange={(evt): void => {
