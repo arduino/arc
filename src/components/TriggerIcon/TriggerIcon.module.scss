@@ -16,7 +16,8 @@
     height: 24px;
   }
 
-  &:hover:not(.disabled) {
+  &:hover:not(.disabled),
+  &:focus:not(.disabled) {
     background-color: $clouds;
   }
 
@@ -30,7 +31,8 @@
     background-color: $fog;
     color: $jet;
 
-    &:hover {
+    &:hover:not(.disabled),
+    &:focus:not(.disabled) {
       background-color: $jet;
       color: $white;
     }

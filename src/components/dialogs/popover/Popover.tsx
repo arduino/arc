@@ -90,7 +90,7 @@ export function Popover({ isOpen = false, ...otherProps }: PopoverProps): React.
 
   return (
     <OverlayContainer>
-      <FocusScope restoreFocus>
+      <FocusScope restoreFocus autoFocus>
         <OpenTransition in={state.isOpen} appear>
           <PopoverContent {...otherProps} onClose={closeFn} />
         </OpenTransition>

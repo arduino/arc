@@ -5,6 +5,10 @@ import { Popover, PopoverProps } from './Popover';
 
 import style from './popover.module.scss';
 
+function ButtonTrigger({ TriggerElement, setTriggerRef, openButtonProps }) {
+  return React.cloneElement(TriggerElement, { ref: setTriggerRef, ...openButtonProps });
+}
+
 type Placement =
   | 'auto'
   | 'auto-start'
@@ -22,7 +26,7 @@ type Placement =
   | 'left-start'
   | 'left-end';
 
-type PopoverPropsNoStyle = Pick<PopoverProps, 'isOpen' | 'children' | 'isDismissable' | 'onClose' | 'className'>;
+type PopoverPropsNoStyle = Pick<PopoverProps, 'isOpen' | 'children' | 'isDismissable' | 'className'>;
 
 export interface PopoverTriggerProps extends PopoverPropsNoStyle {
   TriggerElement: React.ReactElement;
@@ -61,13 +65,14 @@ export function PopoverTrigger({
   popoverPlacement = 'right',
   popoverStrategy = 'absolute',
   onOpenChange,
+  isOpen,
   ...props
 }: PopoverTriggerProps): React.ReactElement {
-  const [isOpen, setIsOpen] = useState(props.isOpen);
+  const [popoverOpen, setpopoverOpen] = useState(isOpen);
 
   useEffect(() => {
-    setIsOpen(props.isOpen);
-  }, [props.isOpen]);
+    setpopoverOpen(isOpen);
+  }, [isOpen]);
 
   const [triggerRef, setTriggerRef] = useState(null);
   const [popperRef, setPopperRef] = useState(null);
@@ -84,7 +89,7 @@ export function PopoverTrigger({
           newState = !isOpen;
         }
 
-        setIsOpen(newState);
+        setpopoverOpen(newState);
         if (onOpenChange) {
           onOpenChange(newState);
         }
@@ -94,12 +99,9 @@ export function PopoverTrigger({
   );
 
   const onClose = () => {
-    setIsOpen(false);
+    setpopoverOpen(false);
     if (onOpenChange) {
       onOpenChange(false);
-    }
-    if (props.onClose) {
-      props.onClose();
     }
   };
 
@@ -110,15 +112,13 @@ export function PopoverTrigger({
 
   return (
     <>
-      <span {...openButtonProps} ref={setTriggerRef} className={style.triggerwrapper}>
-        {TriggerElement}
-      </span>
-      {isOpen && (
+      <ButtonTrigger TriggerElement={TriggerElement} setTriggerRef={setTriggerRef} openButtonProps={openButtonProps} />
+      {popoverOpen && (
         <Popover
           {...attributes.popper}
           {...props}
           onClose={onClose}
-          isOpen
+          isOpen={popoverOpen}
           popperStyle={styles.popper}
           setRef={setPopperRef}
         >

@@ -121,7 +121,7 @@ function _ModalWindow(
   return (
     <div {...dialogProps} {...modalProps} {...otherProps} className={modalClasses} ref={ref}>
       {(isDismissable || back || title) && ( // show the header when there is something to show inside
-        <div className={classNames(style.heading, { [`${className}__heading`]: className })}>
+        <div className={classNames(style.heading, { [`${className}__heading`]: className, [style.noBorder]: !!intro })}>
           <div className={classNames(style.back, { [`${className}__back`]: className })}>
             {back && (
               <button onClick={onBack}>
@@ -185,6 +185,7 @@ export function Modal({
 
   const state = useOverlayTriggerState({});
 
+  // when isOpen prop changes, reflect it's state to internal state
   useEffect(() => {
     if (!isOpen) {
       state.close();
@@ -242,7 +243,7 @@ export function Modal({
   }
 
   const focusProps = {
-    contain: false,
+    contain: false, // if contain true, can't move inside iframes
     restoreFocus: true,
     autoFocus: true,
   };

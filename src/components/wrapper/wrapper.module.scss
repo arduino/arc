@@ -33,7 +33,7 @@
 
     &:global(.disabled) ~ .label,
     &:disabled ~ .label {
-      opacity: 0.5;
+      opacity: .5;
     }
 
     // Display red asterisk next to label when input is required
@@ -63,7 +63,7 @@
   padding-left: 20px;
   align-items: center;
   color: $dust;
-  transition: color 0.2s ease, font-size 0.2s ease, transform 0.2s ease;
+  transition: color .2s ease, font-size .2s ease, transform .2s ease;
   transform: translateY(0); // Improve perfo when translating later
   z-index: 1;
   box-sizing: border-box;
@@ -83,7 +83,7 @@
     align-items: center;
     font-weight: bold;
   }
-  
+
   .success {
     color: $notifysuccess;
   }

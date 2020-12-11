@@ -4,7 +4,10 @@ import classnames from 'classnames';
 
 import style from './TriggerIcon.module.scss';
 
+type WrapTag = 'button' | 'span' | 'div';
 export interface TriggerIconProps {
+  /** Set the TriggerIcon tag (defaults to span). */
+  tag?: WrapTag;
   /** Pass an icon (svg or img) here. */
   children: React.ReactElement;
   /** extra class to add to the component */
@@ -26,8 +29,8 @@ export interface TriggerIconProps {
  *
  */
 function _TriggerIcon(
-  { className, children, isDisabled = false, tiny = false }: TriggerIconProps,
-  ref: React.RefObject<HTMLButtonElement>
+  { tag: Wrapper = 'span', className, children, isDisabled = false, tiny = false, ...props }: TriggerIconProps,
+  ref: React.RefObject<any>
 ): React.ReactElement {
   const classNames = classnames(style.icon, className, {
     [`${style.disabled}`]: isDisabled,
@@ -35,9 +38,9 @@ function _TriggerIcon(
   });
 
   return (
-    <span className={classNames} ref={ref}>
+    <Wrapper className={classNames} {...props} ref={ref}>
       {children}
-    </span>
+    </Wrapper>
   );
 }
 

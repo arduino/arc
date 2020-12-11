@@ -34,29 +34,13 @@ ControlledOpen.args = {
 export const WithTriggerIcon = Template.bind({});
 WithTriggerIcon.args = {
   TriggerElement: (
-    <TriggerIcon>
+    <TriggerIcon tag="button" className="removeButtonStyle">
       <IconNavigationMenuMoreGrid />
     </TriggerIcon>
   ),
   isDismissable: true,
   children: 'Popover content',
 };
-
-const Template2: Story<PopoverTriggerProps> = () => (
-  <OverlayProvider>
-    <p>
-      <PopoverTrigger TriggerElement={<button>open popover A</button>} isDismissable={true}>
-        Content A
-      </PopoverTrigger>
-    </p>
-    <p>
-      <PopoverTrigger TriggerElement={<button>open popover B</button>} isDismissable={true}>
-        Content B
-      </PopoverTrigger>
-    </p>
-  </OverlayProvider>
-);
-export const TwoTriggers = Template2.bind({});
 
 // export const StartOpen = Template.bind({});
 // StartOpen.args = {
