@@ -2,17 +2,28 @@
 @import '~@bcmi-labs/sass/src/typography';
 @import '~@bcmi-labs/sass/src/buttons';
 
+$borderradius: 32px;
+
 .button {
   align-items: center;
-  display: flex !important;
+  display: flex;
   font-weight: 700;
   justify-content: center;
-
-  @include ardu-store-button($teal3, white);
-
+  background-color: $teal3;
+  border: 1px solid $teal3;
+  color: $white;
+  cursor: pointer;
+  letter-spacing: 1.28px;
+  line-height: normal;
+  outline: none;
+  padding: 9px 18px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
   border-width: 2px;
   border-color: transparent;
-  border-radius: 32px;
+  border-radius: $borderradius;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $teal5;
@@ -20,7 +31,15 @@
 
   &:focus,
   &:active {
-    box-shadow: 0 0 0 2px $teal0;
+    &::after {
+      content: '';
+      display: block;
+      box-shadow: 0 0 0 2px $teal0;
+      position: absolute;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      border-radius: $borderradius;
+    }
   }
 
   &.disabled {

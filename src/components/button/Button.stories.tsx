@@ -16,31 +16,30 @@ Basic.args = {
   full: false,
   className: 'Other Class name',
   loading: false,
-  disabled: false,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   ...Basic.args,
-  version: 'secondary',
+  variant: 'secondary',
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   ...Basic.args,
-  version: 'tertiary',
+  variant: 'tertiary',
 };
 
 export const Ghost = Template.bind({});
 Ghost.args = {
   ...Basic.args,
-  version: 'tertiary',
+  variant: 'ghost',
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   ...Basic.args,
-  version: 'warning',
+  variant: 'warning',
 };
 
 export const Loading = Template.bind({});
@@ -52,5 +51,5 @@ Loading.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...Basic.args,
-  disabled: true,
+  isDisabled: true,
 };
