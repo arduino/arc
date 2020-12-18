@@ -43,19 +43,48 @@ export interface PhoneInputProps extends GenericFieldProps, WrapperProps, PhoneI
    * show a _clear_ button when input has value
    */
   clearable?: boolean;
-
+  /**
+   * on/off phone validation
+   */
   validate?: boolean;
 
+  /**
+   * add specific class name
+   */
   className?: string;
 
+  /**
+   * send event when value has been changes
+   */
   onChange?: (value: string, country: object, formattedValue: string) => void;
+  /**
+   * send event when component clicked
+   */
   onClick?: (value: string, country: object, formattedValue: string) => void;
+  /**
+   * send event when keyboard down
+   */
   onKeyDown?: (e: React.KeyboardEvent) => void;
+  /**
+   * send event when enter has been pressed
+   */
   onEnterKeyPress?: (e: React.KeyboardEvent) => void;
+  /**
+   * send event when we have error
+   */
   onError?: (v: string | null) => void;
+  /**
+   * send event when component blur
+   */
   onBlur?: (e) => void;
 }
 
+/**
+ * Component provides ability to get phone number with select country dial code.
+ *
+ * Design reference on [Figma](https://www.figma.com/file/4Q0ZgRodfKuQ0vpFTUzoni/Contact-Forms?node-id=1%3A2)
+ *
+ */
 export function PhoneInput({
   value = '',
 
@@ -314,7 +343,7 @@ export function PhoneInput({
   };
 
   const handleInputBlur = () => {
-    if (validate) {
+    if (validate && !enableLongNumbers) {
       const errorMsg = validateNumber(formattedNumber);
       setPhoneInputError(errorMsg);
 
