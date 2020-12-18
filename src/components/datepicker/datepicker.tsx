@@ -27,12 +27,23 @@ function checkerDateValue(date: Date | string): Date {
   return null;
 }
 
+/**
+ * 
+ * The component provide datepicker component with simple validation for getting date.
+ *
+ */
 export interface DatePickerProps extends DateInputBaseProps, WrapperProps {
   /**
-   * show a _clear_ button when input has value
+   * show a clear button when input has value
    */
   clearable?: boolean;
+  /**
+   * Set input name
+   */
   name?: string;
+  /**
+   * send event when value has been changes.
+   */
   onChange?: (value: Date) => void;
 }
 
@@ -48,6 +59,7 @@ export function DatePicker({
   required,
   disabled,
   readOnly,
+  format = 'dd/MM/yyyy',
   onChange,
   onError,
   ...restProps
@@ -120,6 +132,7 @@ export function DatePicker({
     <Wrapper {...wrapperProps}>
       <DateInput
         {...restProps}
+        format={format}
         disabled={disabled}
         readOnly={readOnly}
         className={datepickerClasses}
