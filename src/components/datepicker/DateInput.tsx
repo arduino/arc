@@ -293,19 +293,19 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
 
   // get input common props
   get inputCommonPros() {
-    const { className, disabled, maxDate, minDate, required, readOnly } = this.props;
+    const { className, isDisabled, maxDate, minDate, isRequired, isReadOnly } = this.props;
 
     return {
       className,
-      disabled,
-      readOnly,
+      isDisabled,
+      isReadOnly,
       maxDate: maxDate || defaultMaxDate,
       minDate: minDate || defaultMinDate,
       onChange: this.onChange,
       onKeyDown: this.onKeyDown,
       onKeyUp: this.onKeyUp,
       // This is only for showing validity when editing
-      required: required,
+      isRequired,
       itemRef: (ref, name) => {
         // Save a reference to each input field
         this[`${name}Input`] = ref;

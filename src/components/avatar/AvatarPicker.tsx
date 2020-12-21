@@ -51,7 +51,7 @@ export interface AvatarPickerProps {
   avatarList?: AvatarInfo[];
   onSelect?: (avatar: string) => void;
   className?: string;
-  disabled?: boolean;
+  isDisabled?: boolean;
   isEdit?: boolean;
   modal?: React.ReactElement;
   onModalClose?: () => void;
@@ -62,7 +62,7 @@ export interface AvatarPickerProps {
 
 export function AvatarPicker({
   className,
-  disabled,
+  isDisabled,
   isEdit = true,
   modal: ContentModal,
   onModalClose,
@@ -99,7 +99,7 @@ export function AvatarPicker({
   const getAvatarProps = (): object => {
     const props = {};
 
-    if (!disabled && isEdit) {
+    if (!isDisabled && isEdit) {
       props['onClick'] = handlerOnClick;
     }
 
@@ -222,12 +222,12 @@ export function AvatarPicker({
         icon={selected && selected.avatar}
         className={classnames(style['zh-avatar-picker'])}
       >
-        {disabled && (
+        {isDisabled && (
           <div className={classnames(style['zh-avatar-picker__disabled'], { [`${className}__disabled`]: className })} />
         )}
         {isOpen && renderSelectElement()}
       </Avatar>
-      {isEdit && !disabled && (
+      {isEdit && !isDisabled && (
         <Button variant="tertiary" className={classnames(style['zh-avatar-picker-button'])} onPress={handlerOnClick}>
           Change Avatar
         </Button>

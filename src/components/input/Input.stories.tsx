@@ -46,7 +46,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...baseArgs,
   label: 'Disabled input without placeholder',
-  disabled: true,
+  isDisabled: true,
 };
 
 export const ReadOnly = Template.bind({});
@@ -54,7 +54,7 @@ ReadOnly.args = {
   ...baseArgs,
   label: 'Readonly input without placeholder',
   value: 'Readonly Value',
-  readOnly: true,
+  isReadOnly: true,
 };
 
 export const AdditionalButtons = Template.bind({});
@@ -73,7 +73,7 @@ export const Required = Template.bind({});
 Required.args = {
   ...baseArgs,
   label: 'Required input',
-  required: true,
+  isRequired: true,
 };
 
 export const SuccessMessage = Template.bind({});

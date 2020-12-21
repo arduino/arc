@@ -37,7 +37,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...baseArgs,
   label: 'Disabled Password without placeholder',
-  disabled: true,
+  isDisabled: true,
 };
 
 export const ReadOnly = Template.bind({});
@@ -45,14 +45,14 @@ ReadOnly.args = {
   ...baseArgs,
   label: 'Readonly Password without placeholder',
   value: 'Readonly Value',
-  readOnly: true,
+  isReadOnly: true,
 };
 
 export const Required = Template.bind({});
 Required.args = {
   ...baseArgs,
   label: 'Required Password',
-  required: true,
+  isRequired: true,
 };
 
 export const SuccessMessage = Template.bind({});

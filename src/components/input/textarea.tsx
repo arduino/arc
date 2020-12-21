@@ -28,6 +28,9 @@ export function Textarea({
   error,
   successMsg,
   infoMsg,
+  isDisabled,
+  isReadOnly,
+  isRequired,
   ...restProps
 }: TextareaProps): React.ReactElement {
   // Control the component with react
@@ -69,6 +72,9 @@ export function Textarea({
       <TextareaAutosize
         value={inputValue}
         {...restProps}
+        disabled={isDisabled}
+        required={isRequired}
+        readOnly={isReadOnly}
         id={id}
         ref={textInput}
         maxLength={maxLength}

@@ -1,12 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { IconNavigationCheckmarkOutlineFilled, IconStatusAttentionErrorOutlineFilled } from '@bcmi-labs/react-icons';
-
 import { WithBemClasses, WithChildren } from '../utils';
-import { TextWithLink } from '../textWithLink';
 
 import style from './wrapper.module.scss';
+import { WrapperStatusMsg } from './WrapperStatusMsg';
 
 export interface WrapperProps extends WithChildren, WithBemClasses {
   /**
@@ -53,22 +51,6 @@ export function Wrapper({
     [`${className}__field`]: className,
   });
 
-  const errorClasses = classNames(style.error, {
-    [`${className}__error`]: className,
-  });
-
-  const successClasses = classNames(style.success, {
-    [`${className}__success`]: className,
-  });
-
-  const infoClasses = classNames(style.info, {
-    [`${className}__info`]: className,
-  });
-
-  const statusClasses = classNames('wrapper-status', style.statusWrapper, {
-    [`${className}__status`]: className,
-  });
-
   return (
     <div className={wrapperClasses}>
       <div className={fieldClasses}>
@@ -80,26 +62,7 @@ export function Wrapper({
         )}
       </div>
       {!withoutStatus && (
-        <div className={statusClasses}>
-          {/* Display error message */}
-          {error && error.length && (
-            <div className={errorClasses}>
-              <IconStatusAttentionErrorOutlineFilled /> {error}
-            </div>
-          )}
-          {/* Display success message */}
-          {!error && successMsg && successMsg.length && (
-            <div className={successClasses}>
-              <IconNavigationCheckmarkOutlineFilled /> {successMsg}
-            </div>
-          )}
-          {/* Display info message */}
-          {!error && !successMsg && infoMsg && infoMsg.length && (
-            <div className={infoClasses}>
-              <TextWithLink text={infoMsg} />
-            </div>
-          )}
-        </div>
+        <WrapperStatusMsg error={error} successMsg={successMsg} infoMsg={infoMsg} className={className} />
       )}
     </div>
   );

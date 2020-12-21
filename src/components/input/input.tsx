@@ -35,6 +35,9 @@ export function Input({
   infoMsg,
   buttons,
   withoutStatus,
+  isDisabled,
+  isReadOnly,
+  isRequired,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -101,8 +104,8 @@ export function Input({
 
     return (
       <div className={style['input-controls']}>
-        {!restProps.disabled && renderButtons()}
-        {inputValue.length > 0 && clearable && !restProps.disabled && !restProps.readOnly && (
+        {!isDisabled && renderButtons()}
+        {inputValue.length > 0 && clearable && !isDisabled && !isReadOnly && (
           <IconCloseEncapsulated
             className={classNames(style.close, style.inputAction)}
             onClick={resetValue}
@@ -118,6 +121,9 @@ export function Input({
       <input
         value={inputValue}
         {...restProps}
+        disabled={isDisabled}
+        required={isRequired}
+        readOnly={isReadOnly}
         id={id}
         name={name}
         ref={textInput}

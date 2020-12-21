@@ -21,7 +21,7 @@ NotEditable.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  disabled: true,
+  isDisabled: true,
 };
 
 export const CustomModal = Template.bind({});

@@ -12,39 +12,19 @@ export interface WithBemClasses {
 }
 
 export interface GenericFieldProps extends WithBemClasses {
-  /**
-   * placeholder text for the input element
-   */
+  /**  placeholder text for the input element*/
   placeholder?: string;
-
-  /**
-   * if true, the field must contain a value
-   */
-  required?: boolean;
-
-  /**
-   * if true, the field cannot be changed
-   */
-  readOnly?: boolean;
-
-  /**
-   * if true, the field is disabled
-   */
-  disabled?: boolean;
-
-  /**
-   * set a custom id for the field element. If omitted a uniqueId is generated
-   */
+  /**  if true, the field must contain a value */
+  isRequired?: boolean;
+  /** Whether the input can be interacted with but cannot have its state changed. */
+  isReadOnly?: boolean;
+  /** Whether or not the input is disabled */
+  isDisabled?: boolean;
+  /**  set a custom id for the field element. If omitted a uniqueId is generated */
   id?: string;
-
-  /**
-   * name of the input, required when using event.target.name
-   * */
+  /**  name of the input, required when using event.target.name */
   name?: string;
-
-  /**
-   *  hides the status element. Has no effect if the field is not using a Wrapper
-   */
+  /** hides the status element. Has no effect if the field is not using a Wrapper */
   withoutStatus?: boolean;
 }
 

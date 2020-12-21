@@ -100,7 +100,7 @@ LabelWithId.args = {
 export const Required = Template.bind({});
 Required.args = {
   ...Basic.args,
-  required: true,
+  isRequired: true,
 };
 
 export const FieldInfoMessage = Template.bind({});

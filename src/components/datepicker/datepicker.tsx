@@ -28,7 +28,6 @@ function checkerDateValue(date: Date | string): Date {
 }
 
 /**
- * 
  * The component provide datepicker component with simple validation for getting date.
  *
  */
@@ -56,9 +55,9 @@ export function DatePicker({
   successMsg,
   infoMsg,
   name,
-  required,
-  disabled,
-  readOnly,
+  isRequired,
+  isDisabled,
+  isReadOnly,
   format = 'dd/MM/yyyy',
   onChange,
   onError,
@@ -100,7 +99,7 @@ export function DatePicker({
     setFocus(state);
   }, 100);
   const handlerFocus = () => {
-    if (!disabled) {
+    if (!isDisabled) {
       setFocusState(true);
     }
   };
@@ -117,13 +116,13 @@ export function DatePicker({
   };
 
   const datepickerClasses = classNames('hasValue', 'zh-datepicker', style['zh-datepicker'], {
-    required: required,
+    required: isRequired,
     [style['focus']]: isFocused,
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: (error && error.length) || (dateError && dateError.length),
-    [style['disabled']]: disabled,
-    ['disabled']: disabled,
-    [style['readOnly']]: readOnly,
+    [style['disabled']]: isDisabled,
+    ['disabled']: isDisabled,
+    [style['readOnly']]: isReadOnly,
     [style['clearable']]: clearable,
   });
 
@@ -133,19 +132,19 @@ export function DatePicker({
       <DateInput
         {...restProps}
         format={format}
-        disabled={disabled}
-        readOnly={readOnly}
+        isDisabled={isDisabled}
+        isReadOnly={isReadOnly}
         className={datepickerClasses}
         name={name}
         ref={datepicker}
-        required={required}
+        isRequired={isRequired}
         value={date}
         onChange={handlerOnChange}
         onFocus={handlerFocus}
         onBlur={handlerBlur}
         onError={handlerError}
       />
-      {date !== null && clearable && !disabled && !readOnly && (
+      {date !== null && clearable && !isDisabled && !isReadOnly && (
         <IconCloseEncapsulated
           className={classNames(style.close, style.datepickerAction)}
           onClick={resetValue}

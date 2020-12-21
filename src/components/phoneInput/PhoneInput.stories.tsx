@@ -41,7 +41,7 @@ Disabled.args = {
   ...baseArgs,
   label: 'Disabled Phone number',
   value: '+39 000 0000000',
-  disabled: true,
+  isDisabled: true,
 };
 
 export const ReadOnly = Template.bind({});
@@ -49,7 +49,7 @@ ReadOnly.args = {
   ...baseArgs,
   label: 'ReadOnly Phone number',
   value: '+39 000 0000000',
-  readOnly: true,
+  isReadOnly: true,
 };
 
 export const DisabledDropdown = Template.bind({});

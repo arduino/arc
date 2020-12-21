@@ -34,8 +34,8 @@ export interface CountrySelectorProps {
   disableDropdown: boolean;
   options: PhoneInputSettings;
   phoneNumber: string;
-  disabled: boolean;
-  readOnly: boolean;
+  isDisabled: boolean;
+  isReadOnly: boolean;
 
   className?: string;
 
@@ -50,8 +50,8 @@ export function CountrySelector({
   disableDropdown,
   options,
   phoneNumber,
-  disabled,
-  readOnly,
+  isDisabled,
+  isReadOnly,
 
   className,
 
@@ -110,7 +110,7 @@ export function CountrySelector({
 
   const handleFlagDropdownClick = (e) => {
     e.preventDefault();
-    if (!openDropdown && disabled) return;
+    if (!openDropdown && isDisabled) return;
 
     const allCountries = countryData.preferredCountries.concat(countryData.onlyCountries);
 
@@ -145,7 +145,7 @@ export function CountrySelector({
       return e.target.blur();
     }
 
-    if (!openDropdown || disabled) {
+    if (!openDropdown || isDisabled) {
       return;
     }
 
@@ -301,12 +301,12 @@ export function CountrySelector({
   return (
     <div className={flagViewClasses} ref={dropdownContainerRef} onKeyDown={handleKeydown}>
       <div
-        onClick={disableDropdown || disabled || readOnly ? undefined : handleFlagDropdownClick}
+        onClick={disableDropdown || isDisabled || isReadOnly ? undefined : handleFlagDropdownClick}
         className={classNames(style['phone-input__flag-selector'], 'flag-selector', {
           [`${className}__flag-selector`]: className,
         })}
         title={country ? `${country.name}: + ${country.dialCode}` : ''}
-        tabIndex={disableDropdown || disabled || readOnly ? -1 : 0}
+        tabIndex={disableDropdown || isDisabled || isReadOnly ? -1 : 0}
         role="button"
         aria-haspopup="listbox"
         aria-expanded={openDropdown ? true : undefined}
@@ -321,7 +321,7 @@ export function CountrySelector({
         <div
           className={classNames(style['phone-input__flag-selector--arrow'], {
             [`${className}__flag-selector--arrow`]: className,
-            [style['disabled']]: disableDropdown || disabled,
+            [style['disabled']]: disableDropdown || isDisabled,
           })}
         >
           {openDropdown ? <IconNavigationArrowCaretNormalUp /> : <IconNavigationArrowCaretNormalDown />}

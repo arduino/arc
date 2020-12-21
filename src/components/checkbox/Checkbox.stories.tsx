@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Story } from '@storybook/react/types-6-0';
-import { Checkbox, CheckboxProps } from '.';
+import { Checkbox, CheckboxProps } from './Checkbox';
 
 export default {
   title: 'ZeroHeight/Checkbox',
@@ -12,29 +12,31 @@ const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  onChange: action('onChange'),
-  onBlur: action('onBlur'),
+  onChange: (e) => {
+    console.log(e.target.name, e.target.value, e.target.checked);
+  },
   label: 'A Label',
   name: 'a-checkbox',
-  required: true,
+  value: 'a-value',
+  isRequired: true,
 };
 
-export const Checked = Template.bind({});
-Checked.args = {
+export const Checked_Controlled = Template.bind({});
+Checked_Controlled.args = {
   ...Basic.args,
-  checked: true,
+  isSelected: true,
 };
 
-export const Unchecked = Template.bind({});
-Unchecked.args = {
+export const Checked_Uncontrolled = Template.bind({});
+Checked_Uncontrolled.args = {
   ...Basic.args,
-  checked: false,
+  defaultSelected: true,
 };
 
 export const Indeterminate = Template.bind({});
 Indeterminate.args = {
   ...Basic.args,
-  indeterminate: true,
+  isIndeterminate: true,
 };
 
 export const WithLinkInLabel = Template.bind({});

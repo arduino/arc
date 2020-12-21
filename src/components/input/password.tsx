@@ -25,6 +25,9 @@ export function Password({
   error,
   successMsg,
   infoMsg,
+  isDisabled,
+  isReadOnly,
+  isRequired,
   ...restProps
 }: PasswordProps): React.ReactElement {
   // Control the component with react
@@ -69,6 +72,9 @@ export function Password({
         type={inputType}
         value={inputValue}
         {...restProps}
+        disabled={isDisabled}
+        required={isRequired}
+        readOnly={isReadOnly}
         id={id}
         name={name}
         className={inputClasses}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GenericFieldPropsEvents } from '../../utils';
+import { GenericFieldProps, GenericFieldPropsEvents } from '../../utils';
 import updateInputWidth, { getFontShorthand } from 'update-input-width';
 
 import style from '../datepicker.module.scss';
@@ -99,20 +99,17 @@ function valueChecker(value: any): string {
   return value;
 }
 
-export interface InputProps extends GenericFieldPropsEvents<HTMLInputElement> {
+export interface InputProps
+  extends GenericFieldPropsEvents<HTMLInputElement>,
+    Pick<GenericFieldProps, 'isRequired' | 'isDisabled' | 'isReadOnly' | 'placeholder' | 'name'> {
   autoFocus?: boolean;
   ariaLabel?: string;
-  disabled?: boolean;
-  readOnly?: boolean;
   itemRef?: Function;
   max?: number;
   min?: number;
   maxLength?: number;
-  required?: boolean;
   step?: number;
   value?: number;
-  placeholder?: string;
-  name?: string;
   onKeyDown?: (e: React.KeyboardEvent) => void;
   onKeyUp?: (e: React.KeyboardEvent) => void;
 }
@@ -121,14 +118,14 @@ export default function Input({
   name,
   ariaLabel,
   value,
-  disabled,
-  readOnly,
+  isDisabled,
+  isReadOnly,
   max,
   min,
   maxLength,
   placeholder,
   step,
-  required,
+  isRequired,
   itemRef,
   onChange,
   onKeyDown,
@@ -144,8 +141,8 @@ export default function Input({
       autoFocus={false}
       className={style['datepicker-input']}
       data-input="true"
-      disabled={disabled}
-      readOnly={readOnly}
+      disabled={isDisabled}
+      readOnly={isReadOnly}
       max={max}
       min={min}
       maxLength={defaultMaxLength}
@@ -172,7 +169,7 @@ export default function Input({
           itemRef(ref, name);
         }
       }}
-      required={required}
+      required={isRequired}
       step={step}
       type="number"
       value={valueChecker(value)}

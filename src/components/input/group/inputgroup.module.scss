@@ -1,0 +1,20 @@
+@import '../../ui-controls-variables';
+
+.inputGroup {
+  .inputGroupLabel {
+    font-size: 20px;
+    margin-bottom: 13px;
+
+    &.required::after {
+      @extend %red-asterisk;
+    }
+  }
+
+  .inputGroupElements {
+    margin-top: 12px;
+
+    > * {
+      margin-top: 4px;
+    }
+  }
+}

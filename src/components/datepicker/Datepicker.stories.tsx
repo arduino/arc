@@ -31,14 +31,14 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Disabled date picker',
   value: new Date(),
-  disabled: true,
+  isDisabled: true,
 };
 
 export const ReadOnly = Template.bind({});
 ReadOnly.args = {
   label: 'Disabled date picker',
   value: new Date(),
-  readOnly: true,
+  isReadOnly: true,
 };
 
 export const MinMax = Template.bind({});

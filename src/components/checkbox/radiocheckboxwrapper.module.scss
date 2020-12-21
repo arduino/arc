@@ -1,37 +1,40 @@
 @import '~@bcmi-labs/sass/src/variables';
 @import '~@bcmi-labs/sass/src/typography';
 @import '~@bcmi-labs/sass/src/checkbox';
+@import '~@bcmi-labs/sass/src/radiobutton';
 @import '../ui-controls-variables';
-
-$hoverBorder: #7f8c8d;
 
 $border-radius: 3px;
 
-$silver: #bdc7c7;
-
-@mixin with-error {
+%with-error {
   outline: none;
   box-shadow: 0 0 0 3px $notifyerror !important;
   border-color: transparent;
 }
 
-@mixin with-focus {
+%with-focus {
   outline: none;
   box-shadow: 0 0 0 3px $teal0 !important;
   border-color: transparent;
 }
 
-@mixin feedback-icon {
-  margin-left: 1rem;
+%label-text {
+  .labeltext {
+    font-weight: 400;
+    line-height: 23px;
+    // Display red asterisk next to label when input is required
+    &.required::after {
+      @extend %red-asterisk;
+    }
+  }
 }
 
 .checkbox {
   @extend %ardu-checkbox;
   @extend %arduino-typography-x-small;
   @extend %default-link;
+  @extend %label-text;
 
-  font-weight: 400;
-  line-height: 23px;
   display: flex;
   align-items: flex-start;
 
@@ -45,7 +48,7 @@ $silver: #bdc7c7;
   }
 
   .input:focus + .custom-checkbox {
-    @include with-focus;
+    @extend %with-focus;
   }
 
   .input:checked + .custom-checkbox {
@@ -54,16 +57,18 @@ $silver: #bdc7c7;
   }
 
   .input.error + .custom-checkbox {
-    @include with-error;
+    @extend %with-error;
   }
 
   .custom-checkbox {
+    padding: 9px;
     border-color: $silver;
   }
 
   &:hover {
     .custom-checkbox {
-      border-color: $hoverBorder;
+      background-color: rgba($black, .1);
+      border-color: $gris;
     }
   }
 
@@ -76,8 +81,66 @@ $silver: #bdc7c7;
     }
   }
 
+  &.disabled {
+    opacity: .5;
+  }
+
   // Display red asterisk next to label when input is required
   .required::after {
     @extend %red-asterisk;
+  }
+}
+
+.radio {
+  @extend %ardu-radio;
+  @extend %arduino-typography-x-small;
+  @extend %default-link;
+  @extend %label-text;
+
+  input {
+    display: block;
+    position: absolute;
+    opacity: 0;
+  }
+
+  display: flex;
+  align-items: flex-start;
+
+  .input:focus + .custom-radio {
+    @extend %with-focus;
+  }
+
+  .input.error + .custom-radio {
+    @extend %with-error;
+  }
+
+  .input:checked + .custom-radio {
+    border-color: $gris;
+  }
+
+  .custom-radio {
+    @include size(16px);
+
+    border-color: $silver;
+
+    &::before {
+      @include size(10px);
+
+      position: absolute;
+      left: calc(50% - 10px / 2);
+      top: calc(50% - 10px / 2);
+      transition: none;
+    }
+  }
+
+  &:hover {
+    .custom-radio {
+      background-color: rgba($black, .1);
+      border-color: $gris;
+    }
+  }
+
+  &.disabled {
+    opacity: .5;
   }
 }

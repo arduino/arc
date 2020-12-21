@@ -1,7 +1,17 @@
+import { Checkbox } from '.';
 // export base components
-export { Checkbox } from './components/checkbox';
+export {
+  Checkbox,
+  CheckboxProps,
+  CheckboxGroupItem,
+  CheckboxGroupItemProps,
+  RadioGroupItem,
+  RadioGroupItemProps,
+} from './components/checkbox';
 export { Textarea, TextareaProps } from './components/input/textarea';
 export { Input, InputProps } from './components/input/input';
+export { CheckboxGroup, CheckboxGroupProps } from './components/input/group/CheckboxGroup';
+export { RadioGroup, RadioGroupProps } from './components/input/group/RadioGroup';
 export { Password, PasswordProps } from './components/input/password';
 export { Select, SelectProps } from './components/select';
 export { Button } from './components/button';

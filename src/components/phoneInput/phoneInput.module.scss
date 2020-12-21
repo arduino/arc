@@ -10,6 +10,7 @@
   :global(.wrapper-status) {
     position: absolute;
     left: 0;
+    top: 52px;
   }
 }
 
@@ -19,7 +20,7 @@
   border-radius: 3px;
   position: relative;
   height: 52px;
-  margin-bottom: 18px;
+  margin-bottom: 21px;
 
   &:hover {
     @extend %field-hover-shadow;
@@ -116,6 +117,7 @@
     box-sizing: border-box;
     border: none;
     border-radius: 0 3px 3px 0;
+    box-shadow: none;
 
     &:focus {
       border: none;

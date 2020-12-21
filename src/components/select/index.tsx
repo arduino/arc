@@ -19,7 +19,7 @@ export interface SelectOption {
 // Omit placeholder and value from react-select. We use our own.
 type SelecReactSelectType = Omit<React.ComponentProps<typeof ReactSelect>, 'placeholder'>;
 
-export interface SelectProps extends SelecReactSelectType, GenericFieldProps, WrapperProps {
+export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProps, 'isReadOnly'>, WrapperProps {
   defaultValue?: SelectOption | SelectOption[];
   options: SelectOption[];
   hideSelected?: boolean;
@@ -77,11 +77,11 @@ export function Select({
   defaultValue,
   onChange,
   label,
-  disabled,
+  isDisabled,
   successMsg,
   error,
   infoMsg: fieldInfoMsg,
-  required,
+  isRequired,
   ...restProps
 }: SelectProps): React.ReactElement {
   // Control the component with react
@@ -129,7 +129,7 @@ export function Select({
   }, []);
 
   const selectClasses = classNames('zh-select', style['zh-select'], {
-    required: required,
+    required: isRequired,
     hasValue: placeholder || hasValue || hasFocus,
     noLabel: !label,
     small: size === 'small',
@@ -141,7 +141,7 @@ export function Select({
         {...restProps}
         inputId={selectId}
         isClearable={isClearable}
-        isDisabled={disabled}
+        isDisabled={isDisabled}
         isMulti={isMulti}
         options={options}
         defaultValue={defaultValue}

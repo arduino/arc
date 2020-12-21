@@ -96,8 +96,9 @@ export function PhoneInput({
   error,
   successMsg,
   infoMsg,
-  disabled,
-  readOnly,
+  isDisabled,
+  isRequired,
+  isReadOnly,
 
   className,
 
@@ -230,7 +231,7 @@ export function PhoneInput({
 
   // handlers
   const handlerFocus = () => {
-    if (!disabled) {
+    if (!isDisabled) {
       setFocus(true);
     }
   };
@@ -405,7 +406,7 @@ export function PhoneInput({
       return e.target.blur();
     }
 
-    if (!showDropdown || disabled) {
+    if (!showDropdown || isDisabled) {
       return;
     }
 
@@ -452,9 +453,9 @@ export function PhoneInput({
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: (error && error.length) || (phoneInputError && phoneInputError.length),
     [style['dropdown']]: showDropdown,
-    [style['disabled']]: disabled,
-    ['disabled']: disabled,
-    [style['readOnly']]: readOnly,
+    [style['disabled']]: isDisabled,
+    ['disabled']: isDisabled,
+    [style['readOnly']]: isReadOnly,
   });
 
   const inputClasses = classNames(style['phone-input__input'], {
@@ -483,8 +484,8 @@ export function PhoneInput({
         disableDropdown={disableDropdown}
         options={options}
         phoneNumber={formattedNumber}
-        disabled={disabled}
-        readOnly={readOnly}
+        isDisabled={isDisabled}
+        isReadOnly={isReadOnly}
         onSelect={handleSelectedCountry}
         onShow={handleShowDropdown}
       />
@@ -492,8 +493,9 @@ export function PhoneInput({
         <input
           value={formattedNumber}
           {...restProps}
-          readOnly={readOnly}
-          disabled={disabled}
+          readOnly={isReadOnly}
+          disabled={isDisabled}
+          required={isRequired}
           type="tel"
           id={id}
           ref={numberInput}
@@ -504,7 +506,7 @@ export function PhoneInput({
           onKeyDown={handleInputKeyDown}
           onBlur={handleInputBlur}
         />
-        {formattedNumber.length > 0 && clearable && !disabled && !readOnly && resetValue !== formattedNumber && (
+        {formattedNumber.length > 0 && clearable && !isDisabled && !isReadOnly && resetValue !== formattedNumber && (
           <IconCloseEncapsulated
             className={classNames(style.close, { [`${className}__close`]: className })}
             onClick={handleResetValue}
