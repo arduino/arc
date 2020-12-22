@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useButton } from 'react-aria';
 import { usePopper } from 'react-popper';
+import classnames from 'classnames';
 import { Popover, PopoverProps } from './Popover';
 
 import style from './popover.module.scss';
@@ -112,7 +113,11 @@ export function PopoverTrigger({
 
   return (
     <>
-      <ButtonTrigger TriggerElement={TriggerElement} setTriggerRef={setTriggerRef} openButtonProps={openButtonProps} />
+      <ButtonTrigger 
+        TriggerElement={TriggerElement} 
+        setTriggerRef={setTriggerRef} 
+        openButtonProps={openButtonProps} 
+      />
       {popoverOpen && (
         <Popover
           {...attributes.popper}
