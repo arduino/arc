@@ -71,6 +71,7 @@ export function Button({
     {
       children,
       isDisabled,
+      type,
       ...props, // props contains the PressEvents
     },
     ref
@@ -83,7 +84,7 @@ export function Button({
   });
 
   return (
-    <button type={type} className={classNames} {...buttonProps} ref={ref}>
+    <button className={classNames} {...buttonProps} ref={ref}>
       {loading && <Loader tiny />}
       {children}
     </button>
