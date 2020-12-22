@@ -19,15 +19,47 @@ interface AnchorOrigin {
   horizontal: 'center' | 'left' | 'right';
 }
 
+
 interface SnackbarViewProps extends OverlayProps {
+  /**
+   * Add specific action element.
+   */
   ActionElement?: React.ReactElement;
+  /**
+   * The anchor of the Snackbar. Set corner position
+   * { 
+   *   horizontal: 'center' | 'left' | 'right', 
+   *   vertical: 'bottom' | 'top' 
+   * }
+   */
   anchorOrigin?: AnchorOrigin;
+  /**
+   * set time duration of snackbar visible, ms.
+   */
   autoHideDuration?: number;
+  /**
+   * on/off auto close of snackbar.
+   */
   turnOffAutoHide?: boolean;
+  /**
+   * set additional css class for component
+   */
   className?: string;
+  /**
+   * Set message of snackbar.
+   */
   message: React.ReactNode;
+  /**
+   * show/hide close button of snackbar.
+   */
   closeable?: boolean;
+  /**
+   * Set specific theme for the snackbar
+   */
   theme?: 'light' | 'dark' | 'success' | 'error';
+  /**
+   * Get reference to snack bar element.
+   */
   setRef?: (ref: React.Ref<HTMLDivElement>) => void;
 }
 
@@ -139,6 +171,11 @@ function SnackbarView({
 }
 
 export interface SnackbarProps extends OverlayProps, SnackbarViewProps {}
+/**
+ * Snack bar component - provides ability to show message with auto hide and additional actions.
+ * 
+ * Design reference on [Figma](https://www.figma.com/file/euysycI6QhSSbN7Qvguce8/%F0%9F%8E%9BUI-Controls?node-id=995%3A209)
+ */
 export function Snackbar({
   isOpen,
   onClose,
