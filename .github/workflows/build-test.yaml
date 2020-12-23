@@ -1,0 +1,21 @@
+name: Build Test
+
+on:
+  pull_request:
+    paths:
+      - "src/**"
+    branches: [main]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
+      - run: npm run build
