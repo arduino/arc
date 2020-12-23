@@ -25,10 +25,10 @@
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "./packages/**/*.{js,ts,tsx}": [
+    "./src/**/*.{js,ts,tsx}": [
       "eslint --fix --quiet"
     ],
-    "./packages/**/*.scss": [
+    "./src/**/*.scss": [
       "stylelint --syntax scss --fix"
     ]
   },

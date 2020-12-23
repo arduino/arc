@@ -36,7 +36,7 @@ $border-radius: 3px;
   @extend %label-text;
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 
   .input {
     position: absolute;
@@ -69,6 +69,10 @@ $border-radius: 3px;
     .custom-checkbox {
       background-color: rgba($black, .1);
       border-color: $gris;
+    }
+
+    .input:checked + .custom-checkbox {
+      background-color: rgba($gris, .7);
     }
   }
 
@@ -104,7 +108,7 @@ $border-radius: 3px;
   }
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 
   .input:focus + .custom-radio {
     @extend %with-focus;

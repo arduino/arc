@@ -11,8 +11,11 @@ export interface InputGroupWrapperProps
     WithBemClasses,
     Pick<InputGroupGenericInterface<any>, 'isDisabled' | 'isRequired'>,
     WrapperStatusMsgProps {
+  /** generic html properties that will be passed to the group div */
   groupProps: React.HTMLAttributes<HTMLElement>;
+  /** generic html properties that will be passed to the label span */
   labelProps: React.HTMLAttributes<HTMLElement>;
+  /** A react node that will be used as the label of the group */
   label?: React.ReactNode;
 }
 function _InputGroupWrapper({

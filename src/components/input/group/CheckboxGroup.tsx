@@ -5,10 +5,11 @@ import { useCheckboxGroup } from 'react-aria';
 
 import { InputGroupWrapper } from './InputGroupWrapper';
 import { InputGroupGenericInterface } from './InputGroup';
+import { WrapperStatusMsgProps } from '../../wrapper/WrapperStatusMsg';
 
 export const CheckboxGroupContext = React.createContext(null);
 
-export type CheckboxGroupProps = InputGroupGenericInterface<string[]>;
+export interface CheckboxGroupProps extends InputGroupGenericInterface<string[]>, WrapperStatusMsgProps {}
 
 /**
  *
@@ -22,8 +23,8 @@ export type CheckboxGroupProps = InputGroupGenericInterface<string[]>;
  * A good usage example is both here and in the support-form component
  */
 function _CheckboxGroup(props: CheckboxGroupProps): React.ReactElement {
-  const { label, children, className } = props;
-  const [values, setvalues] = useState([]);
+  const { label, children, className, defaultValue } = props;
+  const [values, setvalues] = useState(defaultValue || []);
 
   useEffect(() => {
     props.onChange(values);
@@ -38,6 +39,9 @@ function _CheckboxGroup(props: CheckboxGroupProps): React.ReactElement {
       label={label}
       className={className}
       isRequired={props.isRequired}
+      error={props.error}
+      successMsg={props.successMsg}
+      infoMsg={props.infoMsg}
     >
       <CheckboxGroupContext.Provider value={state}>{children}</CheckboxGroupContext.Provider>
     </InputGroupWrapper>

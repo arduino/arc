@@ -5,10 +5,11 @@ import { useRadioGroup } from 'react-aria';
 
 import { InputGroupWrapper } from './InputGroupWrapper';
 import { InputGroupGenericInterface } from './InputGroup';
+import { WrapperStatusMsgProps } from '../../wrapper/WrapperStatusMsg';
 
 export const RadioGroupContext = React.createContext(null);
 
-export interface RadioGroupProps extends InputGroupGenericInterface<string> {
+export interface RadioGroupProps extends InputGroupGenericInterface<string>, WrapperStatusMsgProps {
   /**
    * The axis the Radio Button(s) should align with.
    * @default 'vertical'
@@ -42,6 +43,9 @@ export function RadioGroup(props: RadioGroupProps): React.ReactElement {
       label={label}
       className={className}
       isRequired={props.isRequired}
+      error={props.error}
+      successMsg={props.successMsg}
+      infoMsg={props.infoMsg}
     >
       <RadioGroupContext.Provider value={state}>{children}</RadioGroupContext.Provider>
     </InputGroupWrapper>

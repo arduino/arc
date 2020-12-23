@@ -25,17 +25,17 @@ export interface DateInputBaseProps extends GenericFieldProps {
    */
   locale?: string;
   /**
-   * Set day input placeholder. 
+   * Set day input placeholder.
    * Default: 'DD'
    */
   dayPlaceholder?: string;
   /**
-   * Set day input placeholder. 
+   * Set day input placeholder.
    * Default: 'MM'
    */
   monthPlaceholder?: string;
   /**
-   * Set year input placeholder. 
+   * Set year input placeholder.
    * Default: 'YYYY'
    */
   yearPlaceholder?: string;

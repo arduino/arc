@@ -76,6 +76,7 @@ export function Select({
   value, // remove value prop as it breaks ReactSelect
   defaultValue,
   onChange,
+  onBlur,
   label,
   isDisabled,
   successMsg,
@@ -146,7 +147,10 @@ export function Select({
         options={options}
         defaultValue={defaultValue}
         onFocus={() => setHasFocus(true)}
-        onBlur={() => setHasFocus(false)}
+        onBlur={(e) => {
+          setHasFocus(false);
+          onBlur(e);
+        }}
         value={valueFromProps}
         isSearchable={isSearchable}
         closeMenuOnSelect={closeMenuOnSelect}

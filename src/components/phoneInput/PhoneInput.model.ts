@@ -102,10 +102,10 @@ export class PhoneInputSettings {
 
   /**
    * Show countries only from specified regions.
-   * Region list: 
-   * 'america', 'europe', 'asia', 'oceania', 
-   * 'africa', 'north-america', 'south-america', 
-   * 'central-america', 'carribean', 'eu-union', 
+   * Region list:
+   * 'america', 'europe', 'asia', 'oceania',
+   * 'africa', 'north-america', 'south-america',
+   * 'central-america', 'carribean', 'eu-union',
    * 'ex-ussr', 'ex-yugos', 'baltic', 'middle-east', 'north-africa',
    */
   regions?: PhoneRegion | PhoneRegion[];
@@ -116,7 +116,7 @@ export class PhoneInputSettings {
    */
   localization?: object;
   /**
-   * Set default mask which will be use for input. 
+   * Set default mask which will be use for input.
    * In case whe county has mask, control will use mask of country
    */
   defaultMask?: string;
@@ -131,17 +131,16 @@ export class PhoneInputSettings {
   masks?: object;
   /**
    * set custom area codes for specific country.
-   * Us eit if you need change code area for specific countries. 
+   * Us eit if you need change code area for specific countries.
    * Example: areaCodes={{gr: ['2694', '2647'], fr: ['369', '463'], us: ['300']}}
    */
   areaCodes?: object;
   /**
-   * Use it for changing countries ordering. 
-   * Example: ['onlyCountries', 'preferredCountries'] 
+   * Use it for changing countries ordering.
+   * Example: ['onlyCountries', 'preferredCountries']
    * List: 'onlyCountries', 'preferredCountries'.
    */
   preserveOrder?: string[];
-
 
   /**
    * Set to change prefix, Default +
@@ -156,9 +155,9 @@ export class PhoneInputSettings {
    */
   priority?: object; // {ca: 0, us: 1, kz: 0, ru: 1}
   /**
-   * If enableAreaCodeStretch is added, 
+   * If enableAreaCodeStretch is added,
    * the part of the mask with the area code will not stretch
-   *  to length of the respective section of phone mask. 
+   *  to length of the respective section of phone mask.
    * Example: +61 (2), +61 (02)
    */
   enableAreaCodeStretch?: boolean;
