@@ -131,6 +131,7 @@ export function Select({
 
   const selectClasses = classNames('zh-select', style['zh-select'], {
     required: isRequired,
+    error: !!error,
     hasValue: placeholder || hasValue || hasFocus,
     noLabel: !label,
     small: size === 'small',

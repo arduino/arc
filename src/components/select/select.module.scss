@@ -26,6 +26,10 @@ $border-radius-medium: 3px;
         @extend %witherror;
 
         box-shadow: 0 0 0 2px $notifyerror !important;
+
+        .zh-select__control {
+          @extend %noborder;
+        }
       }
 
       &.noLabel .zh-select__control .zh-select__value-container {

@@ -30,5 +30,5 @@ export {
   SupportForm,
   FormConfigInterface,
   SupportFormPropsInterface,
-  FormFieldInterface,
+  ConfigFieldInterface,
 } from './components/support-form';
