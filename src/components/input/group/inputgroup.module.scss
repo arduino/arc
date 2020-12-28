@@ -1,12 +1,18 @@
 @import '../../ui-controls-variables';
 
 .inputGroup {
-  .inputGroupLabel {
-    font-size: 20px;
+  .labelWrapper {
+    display: flex;
     margin-bottom: 13px;
+    align-items: center;
 
-    &.required::after {
-      @extend %red-asterisk;
+    .inputGroupLabel {
+      font-size: 20px;
+      margin-right: .5rem;
+
+      &.required::after {
+        @extend %red-asterisk;
+      }
     }
   }
 

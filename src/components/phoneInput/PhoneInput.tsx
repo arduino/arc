@@ -99,6 +99,7 @@ export function PhoneInput({
   isDisabled,
   isRequired,
   isReadOnly,
+  helper,
 
   className,
 
@@ -472,6 +473,7 @@ export function PhoneInput({
     infoMsg,
     htmlFor: id,
     className: 'phone-input-wrapper',
+    helper,
   };
 
   // Render component

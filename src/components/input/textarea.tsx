@@ -31,6 +31,7 @@ export function Textarea({
   isDisabled,
   isReadOnly,
   isRequired,
+  helper,
   ...restProps
 }: TextareaProps): React.ReactElement {
   // Control the component with react
@@ -64,6 +65,7 @@ export function Textarea({
     successMsg,
     infoMsg,
     htmlFor: id,
+    helper,
   };
 
   // Render component

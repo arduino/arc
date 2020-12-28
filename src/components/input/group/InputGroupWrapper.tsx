@@ -5,11 +5,13 @@ import { WithBemClasses, WithChildren } from '../../utils';
 import style from './inputgroup.module.scss';
 import { InputGroupGenericInterface } from './InputGroup';
 import { WrapperStatusMsg, WrapperStatusMsgProps } from '../../wrapper/WrapperStatusMsg';
+import { WrapperProps } from '../../wrapper';
 
 export interface InputGroupWrapperProps
   extends WithChildren,
     WithBemClasses,
     Pick<InputGroupGenericInterface<any>, 'isDisabled' | 'isRequired'>,
+    Pick<WrapperProps, 'helper'>,
     WrapperStatusMsgProps {
   /** generic html properties that will be passed to the group div */
   groupProps: React.HTMLAttributes<HTMLElement>;
@@ -28,6 +30,7 @@ function _InputGroupWrapper({
   error,
   infoMsg,
   successMsg,
+  helper,
 }: InputGroupWrapperProps): React.ReactElement {
   const groupClasses = classNames(style.inputGroup, {
     [`${className}`]: className,
@@ -45,9 +48,12 @@ function _InputGroupWrapper({
 
   return (
     <div {...groupProps} className={groupClasses}>
-      <span {...labelProps} className={labelClasses}>
-        {label}
-      </span>
+      <div className={style.labelWrapper}>
+        <span {...labelProps} className={labelClasses}>
+          {label}
+        </span>
+        {!!helper && helper}
+      </div>
       <div className={elementsClasses}>{children}</div>
       <WrapperStatusMsg error={error} successMsg={successMsg} infoMsg={infoMsg} className={className} />
     </div>

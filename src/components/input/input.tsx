@@ -38,6 +38,7 @@ export function Input({
   isDisabled,
   isReadOnly,
   isRequired,
+  helper,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -80,6 +81,7 @@ export function Input({
     infoMsg,
     htmlFor: id,
     withoutStatus,
+    helper,
   };
 
   const renderButtons = (): React.ReactElement[] => {

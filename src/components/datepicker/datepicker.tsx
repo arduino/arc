@@ -58,6 +58,7 @@ export function DatePicker({
   isRequired,
   isDisabled,
   isReadOnly,
+  helper,
   format = 'dd/MM/yyyy',
   onChange,
   onError,
@@ -78,6 +79,7 @@ export function DatePicker({
     successMsg,
     infoMsg,
     htmlFor: id,
+    helper,
   };
 
   const handlerOnChange = (value) => {

@@ -31,6 +31,10 @@ export interface WrapperProps extends WithChildren, WithBemClasses {
    *  hides the status element. Used when no info messages or errors are wanted
    */
   withoutStatus?: boolean;
+  /**
+   *  round helper to show next to the input. Meant to explain the field
+   */
+  helper?: React.ReactNode;
 }
 
 export function Wrapper({
@@ -41,6 +45,7 @@ export function Wrapper({
   className,
   infoMsg,
   withoutStatus,
+  helper,
   ...props
 }: WrapperProps): React.ReactElement {
   const wrapperClasses = classNames('wrapper', style.wrapper, {
@@ -52,18 +57,21 @@ export function Wrapper({
   });
 
   return (
-    <div className={wrapperClasses}>
-      <div className={fieldClasses}>
-        {props.children}
-        {label && label.length && (
-          <label className={style.label} htmlFor={htmlFor}>
-            {label}
-          </label>
+    <>
+      <div className={wrapperClasses}>
+        <div className={fieldClasses}>
+          {props.children}
+          {label && label.length && (
+            <label className={style.label} htmlFor={htmlFor}>
+              {label}
+            </label>
+          )}
+        </div>
+        {!withoutStatus && (
+          <WrapperStatusMsg error={error} successMsg={successMsg} infoMsg={infoMsg} className={className} />
         )}
+        {!!helper && helper}
       </div>
-      {!withoutStatus && (
-        <WrapperStatusMsg error={error} successMsg={successMsg} infoMsg={infoMsg} className={className} />
-      )}
-    </div>
+    </>
   );
 }

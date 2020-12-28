@@ -6,10 +6,14 @@ import { useCheckboxGroup } from 'react-aria';
 import { InputGroupWrapper } from './InputGroupWrapper';
 import { InputGroupGenericInterface } from './InputGroup';
 import { WrapperStatusMsgProps } from '../../wrapper/WrapperStatusMsg';
+import { WrapperProps } from '../../wrapper';
 
 export const CheckboxGroupContext = React.createContext(null);
 
-export interface CheckboxGroupProps extends InputGroupGenericInterface<string[]>, WrapperStatusMsgProps {}
+export interface CheckboxGroupProps
+  extends InputGroupGenericInterface<string[]>,
+    WrapperStatusMsgProps,
+    Pick<WrapperProps, 'helper'> {}
 
 /**
  *
@@ -42,6 +46,7 @@ function _CheckboxGroup(props: CheckboxGroupProps): React.ReactElement {
       error={props.error}
       successMsg={props.successMsg}
       infoMsg={props.infoMsg}
+      helper={props.helper}
     >
       <CheckboxGroupContext.Provider value={state}>{children}</CheckboxGroupContext.Provider>
     </InputGroupWrapper>

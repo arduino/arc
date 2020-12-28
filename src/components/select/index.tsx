@@ -83,6 +83,7 @@ export function Select({
   error,
   infoMsg: fieldInfoMsg,
   isRequired,
+  helper,
   ...restProps
 }: SelectProps): React.ReactElement {
   // Control the component with react
@@ -108,6 +109,7 @@ export function Select({
     successMsg,
     infoMsg,
     htmlFor: selectId,
+    helper,
   };
 
   const valueFromProps = Array.isArray(value)

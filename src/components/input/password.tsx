@@ -28,6 +28,7 @@ export function Password({
   isDisabled,
   isReadOnly,
   isRequired,
+  helper,
   ...restProps
 }: PasswordProps): React.ReactElement {
   // Control the component with react
@@ -64,6 +65,7 @@ export function Password({
     successMsg,
     infoMsg,
     htmlFor: id,
+    helper,
   };
 
   return (
