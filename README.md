@@ -44,6 +44,13 @@ To download the packages from the private Github Package Registry you must be au
     npm run storybook
     ```
 
+4. to reference a WIP branch from another repo, set the package.json of the other repo to
+    ```json
+    "dependencies": {
+        "@bcmi-labs/react-components": "bcmi-labs/react-components#your-branch",
+        ...
+    ```
+
 ## Versioning
 
 Versions must stick with [semver](https://semver.org/) guidelines:

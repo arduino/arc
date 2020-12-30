@@ -1,6 +1,6 @@
 {
   "name": "@bcmi-labs/react-components",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "react-components",
   "repository": {
     "type": "git",
@@ -45,7 +45,7 @@
     "react-aria": "3.0.0"
   },
   "dependencies": {
-    "@bcmi-labs/react-icons": "^0.0.117",
+    "@bcmi-labs/react-icons": "^0.1.0",
     "@bcmi-labs/sass": "^3.0.1",
     "@popperjs/core": "^2.5.3",
     "classnames": "^2.2.6",

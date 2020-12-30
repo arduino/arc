@@ -8,6 +8,16 @@
   position: relative;
   box-sizing: border-box;
 
+  &:global(.textarea__field)::before {
+    height: 26px;
+    background-color: #fff;
+    position: absolute;
+    left: 5px;
+    right: 17px;
+    content: "";
+    top: 1px;
+  }
+
   input,
   textarea,
   :global(.phone-input__input),

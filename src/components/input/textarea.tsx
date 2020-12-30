@@ -66,6 +66,7 @@ export function Textarea({
     infoMsg,
     htmlFor: id,
     helper,
+    className: 'textarea',
   };
 
   // Render component
