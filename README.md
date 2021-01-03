@@ -53,18 +53,26 @@ To download the packages from the private Github Package Registry you must be au
 
 ## Versioning
 
-Versions must stick with [semver](https://semver.org/) guidelines:
+Versioning is automated, and managed via [semantic-release](https://github.com/semantic-release/)
 
-> Given a version number MAJOR.MINOR.PATCH, increment the:
-> 1. MAJOR version when you make incompatible API changes
-> 2. MINOR version when you add functionality in a backwards compatible manner
-> 3. PATCH version when you make backwards compatible bug fixes.
->
->Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+All the commits that lands to `main` must stick with the Angular Commit Message Conventions (which is **CaseSensitive!**):
 
-Please note that, when major version is `0`, any increment in MINOR is considered a breaking change.
+- feat: A new feature
+- fix: A bug fix
+- docs: Documentation only changes
+- style: Changes that do not affect the meaning of the code (white-space, - formatting, missing semi-colons, etc)
+- refactor: A code change that neither fixes a bug nor adds a feature
+- perf: A code change that improves performance
+- test: Adding missing or correcting existing tests
+- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+Given the form above in the commits, semantic-release will automatically generate the changelog and bump the version of the libs.
+
+**IMPORTANT**
+If you squash merge your commits, only the message in the squashed commit will be read from semantic-release.
+Please stick to the convention above ☝️ when squash-merging your PRs.
+
 
 ## Deployment Process
-
-1. Update the `version` in `package.json`
-2. As soon as a new version is merged in `main`, the CI will build the library and publish it in github package registry
+ 
+Deployment is handled automatically by the CI when your changes are merged into master. Sit back and relax ☺️
