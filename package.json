@@ -1,6 +1,6 @@
 {
   "name": "@bcmi-labs/react-components",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "react-components",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "build": "rollup -c",
     "prepare": "npm run build --production",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o docs-build",
     "semantic-release": "semantic-release"
   },
   "lint-staged": {

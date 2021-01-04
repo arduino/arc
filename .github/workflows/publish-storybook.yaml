@@ -1,0 +1,29 @@
+name: storybook
+
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://npm.pkg.github.com'
+      - run: | 
+          npm ci
+          npm run build-storybook
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: main
+          BRANCH: gh-pages
+          FOLDER: docs-build
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+          TARGET_FOLDER: docs
