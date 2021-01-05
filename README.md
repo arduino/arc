@@ -2,7 +2,23 @@
 
 This library contains a React-based implementation of the [Arduino Component Library](https://www.figma.com/file/euysycI6QhSSbN7Qvguce8/🎛UI-Controls).
 
-Storybook is publicly accessible [here](https://bcmi-labs.github.io/react-components/)
+Storybook is publicly accessible via github pages [here](https://bcmi-labs.github.io/react-components/)
+
+## Pre-Requisites
+
+To download the packages from the private Github Package Registry you must be authenticated with Github:
+- get a valid [access token](https://github.com/settings/tokens/) granting the `repo` AND `read:packages` permissions
+- export the access token to GHPR_TOKEN environment variable
+    ```sh
+    export GHPR_TOKEN=<your github token>
+    ```
+- if you are installing this library from another repository, make sure your `.npmrc` files has the following lines:
+    ```
+    @bcmi-labs:registry=https://npm.pkg.github.com/
+    //npm.pkg.github.com/:_authToken=${GHPR_TOKEN}
+    ```
+
+> Tip: for your convenience, add `export GHPR_TOKEN=<your github token>` to your `.bashrc` or `.zshrc`, in your user directory.
 
 ## Usage
 
@@ -15,17 +31,6 @@ Please note that this package has a peer dependecy on `react`, `react-dom` and `
 ```sh
 npm i react@^16.13.1 react-dom@^16.12.0 react-aria@3.0.0
 ```
-
-## Pre-Requisites
-
-To download the packages from the private Github Package Registry you must be authenticated with Github:
-- get a valid [access token](https://github.com/settings/tokens/) granting the `repo` AND `read:packages` permissions
-- login with `npm login --registry=https://npm.pkg.github.com --scope=@bcmi-labs`
-  - use your GitHub username
-  - use the token you created in the place of the password
-  - if prompted, put insert your public email
-
-> Tip: you might want to put your access token in the global `.npmrc` file, in the form of `//npm.pkg.github.com/:_authToken=<your-token>`
 
 ## Develop
 

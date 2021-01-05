@@ -14,13 +14,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: 'https://npm.pkg.github.com'
-      - run: | 
+      - run: |
           npm ci
           npm run build-storybook
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
-      - name: Deploy 🚀
+          GHPR_TOKEN: ${{ secrets.NPM_SECRET }}
+      - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

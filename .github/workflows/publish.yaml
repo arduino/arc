@@ -14,9 +14,9 @@ jobs:
           node-version: 12
       - run: npm ci
         env:
-          NPM_TOKEN: ${{ secrets.NPM_SECRET }}
-      - name: Release
+          GHPR_TOKEN: ${{ secrets.NPM_SECRET }}
+      - name: Release Package
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_SECRET }}
+          GHPR_TOKEN: ${{ secrets.NPM_SECRET }}
         run: npx semantic-release
