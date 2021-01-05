@@ -2,6 +2,8 @@ name: storybook
 
 on: 
   push:
+    paths:
+      - "src/**"
     branches: [main]
 
 jobs:

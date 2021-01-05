@@ -1,13 +1,14 @@
 {
   "name": "@bcmi-labs/react-components",
-  "version": "0.2.6",
+  "version": "0.0.0",
   "description": "react-components",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/bcmi-labs/react-components"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "source": "src/index.ts",
   "main": "dist/index.js",

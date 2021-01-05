@@ -12,18 +12,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
+          NPM_TOKEN: ${{ secrets.NPM_SECRET }}
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_SECRET }}
         run: npx semantic-release
-      # - uses: JS-DevTools/npm-publish@v1
-      #   with:
-      #     token: ${{ secrets.NPM_SECRET }}
-      #     registry: 'https://npm.pkg.github.com/bcmi-labs'
-      #     access: restricted
-      #     check-version: true
