@@ -49,7 +49,8 @@ export function PopoverContent({
 
   const popoverClasses = classNames(style.popover, {
     [style['is-open']]: isOpen,
-    [`${className}`]: className,
+    [`${className}`]: !!className,
+    [`${className}--open`]: !!className && isOpen,
   });
 
   return (
