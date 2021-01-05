@@ -37,7 +37,7 @@ $border-radius-medium: 3px;
       }
 
       .zh-select__control {
-        padding: 0 13px 0 17px;
+        padding: 0 0 0 17px;
         cursor: pointer;
         border: 1px solid $silver;
         margin-bottom: 0;
@@ -123,7 +123,7 @@ $border-radius-medium: 3px;
       }
 
       .zh-select__dropdown-indicator {
-        padding: 0 !important; // used to force no padding in all states
+        padding: 0 .2rem !important; // used to force no padding in all states
       }
 
       .zh-select__multi-value {
@@ -145,6 +145,7 @@ $border-radius-medium: 3px;
         .custom-close-wrapper {
           border-right: 1px solid $smoke;
           padding-right: .6rem;
+          padding-left: .6rem;
           height: 100%;
           display: flex;
         }
