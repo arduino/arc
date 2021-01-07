@@ -1,3 +1,10 @@
+## [0.2.9](https://github.com/bcmi-labs/react-components/compare/v0.2.8...v0.2.9) (2021-01-07)
+
+
+### Bug Fixes
+
+* support form footer border ([0a415bd](https://github.com/bcmi-labs/react-components/commit/0a415bd3f025067ad87466770fc0c0975355c6ac))
+
 ## [0.2.8](https://github.com/bcmi-labs/react-components/compare/v0.2.7...v0.2.8) (2021-01-07)
 
 
