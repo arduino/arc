@@ -1,3 +1,10 @@
+## [0.2.8](https://github.com/bcmi-labs/react-components/compare/v0.2.7...v0.2.8) (2021-01-07)
+
+
+### Bug Fixes
+
+* use lodash flatten to flat array (ie11 safe) ([b71feec](https://github.com/bcmi-labs/react-components/commit/b71feecafc25073391ff0b2c43e4204fb0ecee16))
+
 ## [0.2.7](https://github.com/bcmi-labs/react-components/compare/v0.2.6...v0.2.7) (2021-01-05)
 
 
