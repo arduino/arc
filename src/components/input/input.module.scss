@@ -23,7 +23,7 @@
     box-sizing: border-box;
 
     &::placeholder {
-      color: transparent;
+      color: #fff;
     }
 
     &:focus:not(.success):not(.error) {

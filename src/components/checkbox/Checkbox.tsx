@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import { useToggleState } from 'react-stately';
 import { useCheckbox } from 'react-aria';
 
@@ -39,7 +39,7 @@ export function Checkbox({
   withoutStatus,
   ...props
 }: CheckboxProps): React.ReactElement {
-  const [id] = useState(props.id || _uniqueId());
+  const [id] = useState(props.id || uniqueId());
 
   const state = useToggleState({ isReadOnly, isDisabled, ...props });
   const ref = React.useRef();

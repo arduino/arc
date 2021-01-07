@@ -8,17 +8,17 @@ Storybook is publicly accessible via github pages [here](https://bcmi-labs.githu
 
 To download the packages from the private Github Package Registry you must be authenticated with Github:
 - get a valid [access token](https://github.com/settings/tokens/) granting the `repo` AND `read:packages` permissions
-- export the access token to GHPR_TOKEN environment variable
+- export the access token to REPO_ACCESS_TOKEN environment variable
     ```sh
-    export GHPR_TOKEN=<your github token>
+    export REPO_ACCESS_TOKEN=<your github token>
     ```
 - if you are installing this library from another repository, make sure your `.npmrc` files has the following lines:
     ```
     @bcmi-labs:registry=https://npm.pkg.github.com/
-    //npm.pkg.github.com/:_authToken=${GHPR_TOKEN}
+    //npm.pkg.github.com/:_authToken=${REPO_ACCESS_TOKEN}
     ```
 
-> Tip: for your convenience, add `export GHPR_TOKEN=<your github token>` to your `.bashrc` or `.zshrc`, in your user directory.
+> Tip: for your convenience, add `export REPO_ACCESS_TOKEN=<your github token>` to your `.bashrc` or `.zshrc`, in your user directory.
 
 ## Usage
 

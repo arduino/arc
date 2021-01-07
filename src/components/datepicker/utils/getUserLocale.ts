@@ -1,4 +1,4 @@
-import once from 'lodash.once';
+import { once } from 'lodash';
 
 function filterDuplicates(arr: string[]): string[] {
   return arr.filter((el, index, self) => self.indexOf(el) === index);

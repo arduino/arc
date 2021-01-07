@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import { IconAccountViewFilled, IconAccountViewOffFilled } from '@bcmi-labs/react-icons';
 
@@ -32,7 +32,7 @@ export function Password({
   ...restProps
 }: PasswordProps): React.ReactElement {
   // Control the component with react
-  const [id] = useState(fieldId || _uniqueId());
+  const [id] = useState(fieldId || uniqueId());
   const [inputValue, setValue] = useState(value || '');
   const [visibility, setVisibility] = useState(false);
   // Compute type of input according to visibility

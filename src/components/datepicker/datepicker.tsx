@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
 
@@ -65,7 +65,7 @@ export function DatePicker({
   ...restProps
 }: DatePickerProps): React.ReactElement {
   // Control the component with react
-  const [id] = useState(fieldId || _uniqueId());
+  const [id] = useState(fieldId || uniqueId());
   const [isFocused, setFocus] = useState(false);
   const [date, setDate] = useState(checkerDateValue(value) || null);
   const [dateError, setDateError] = useState('');

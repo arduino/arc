@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import { useCheckboxGroupItem } from 'react-aria';
 
 import { WrapperProps } from '../wrapper';
@@ -33,7 +33,7 @@ export function CheckboxGroupItem({
   withoutStatus = true,
   ...props
 }: CheckboxGroupItemProps): React.ReactElement {
-  const [id] = useState(props.id || _uniqueId());
+  const [id] = useState(props.id || uniqueId());
 
   const state = React.useContext(CheckboxGroupContext);
 

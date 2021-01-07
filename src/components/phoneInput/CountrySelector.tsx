@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import classNames from 'classnames';
-import startsWith from 'lodash.startswith';
+import { startsWith } from 'lodash';
 
 import {
   IconNavigationArrowCaretNormalDown,

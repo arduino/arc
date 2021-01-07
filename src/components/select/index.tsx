@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ReactSelect, { components, ValueType } from 'react-select';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 
 import { IconCloseEncapsulated, IconNavigationArrowCaretNormalDown } from '@bcmi-labs/react-icons';
@@ -87,7 +87,7 @@ export function Select({
   ...restProps
 }: SelectProps): React.ReactElement {
   // Control the component with react
-  const [selectId] = useState(id || _uniqueId());
+  const [selectId] = useState(id || uniqueId());
 
   const [infoMsg, setInfoMsg] = useState(fieldInfoMsg);
 

@@ -1,5 +1,4 @@
-import reduce from 'lodash.reduce';
-import startsWith from 'lodash.startswith';
+import { reduce, startsWith } from 'lodash';
 
 import { Country, PhoneInputSettings, CountryDataState } from './PhoneInput.model';
 

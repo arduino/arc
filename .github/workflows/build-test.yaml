@@ -16,5 +16,5 @@ jobs:
           node-version: 12
       - run: npm ci
         env:
-          GHPR_TOKEN: ${{ secrets.NPM_SECRET }}
+          REPO_ACCESS_TOKEN: ${{ secrets.NPM_SECRET }}
       - run: npm run build

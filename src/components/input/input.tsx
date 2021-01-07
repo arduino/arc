@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
 
@@ -42,7 +42,7 @@ export function Input({
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
-  const [id] = useState(fieldId || _uniqueId());
+  const [id] = useState(fieldId || uniqueId());
   const [inputValue, setValue] = useState(value || '');
 
   const textInput = useRef(null);

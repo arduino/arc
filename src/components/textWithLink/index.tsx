@@ -1,3 +1,4 @@
+import { flatten } from 'lodash';
 import React from 'react';
 import { WithChildren } from '../utils';
 
@@ -24,12 +25,13 @@ export interface TextWithLinkProps extends WithChildren {
  */
 export function TextWithLink({ text, target = '_blank', children }: TextWithLinkProps): React.ReactElement {
   const input = text || (children && children.toString()) || '';
-  const allMatches = input.matchAll(/\[([^\]]+)\]\(([^)"]+)(?: \"([^\"]+)\")?\)/gi);
 
   let ret: any = [input];
 
+  const regexp = new RegExp(/\[([^\]]+)\]\(([^)"]+)(?: \"([^\"]+)\")?\)/, 'gi');
   // iterate the matches
-  for (const match of allMatches) {
+  let match = null;
+  while ((match = regexp.exec(input)) !== null) {
     const [fullMatch, group1, group2] = match;
 
     // for every match, iterate the array of already-splitted tokens
@@ -51,7 +53,7 @@ export function TextWithLink({ text, target = '_blank', children }: TextWithLink
 
       ret[i] = arr;
       // flatten the resulting array
-      ret = ret.flat();
+      ret = flatten(ret);
     }
   }
   // need to wrap with span to preserve space chars

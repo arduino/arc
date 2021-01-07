@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import { useRadio } from 'react-aria';
 
 import { WrapperProps } from '../wrapper';
@@ -29,7 +29,7 @@ export function RadioGroupItem({
   withoutStatus = true,
   ...props
 }: RadioGroupItemProps): React.ReactElement {
-  const [id] = useState(props.id || _uniqueId());
+  const [id] = useState(props.id || uniqueId());
 
   const state = React.useContext(RadioGroupContext);
 

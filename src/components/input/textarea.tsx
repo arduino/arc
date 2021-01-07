@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import TextareaAutosize from 'react-autosize-textarea';
 
@@ -35,7 +35,7 @@ export function Textarea({
   ...restProps
 }: TextareaProps): React.ReactElement {
   // Control the component with react
-  const [id] = useState(fieldId || _uniqueId());
+  const [id] = useState(fieldId || uniqueId());
   const [inputValue, setValue] = useState(value || '');
 
   const textInput = useRef(null);

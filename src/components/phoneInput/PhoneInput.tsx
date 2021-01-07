@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import _uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
 
@@ -179,7 +179,7 @@ export function PhoneInput({
   };
 
   // Control the component with react
-  const [id] = useState(fieldId || _uniqueId());
+  const [id] = useState(fieldId || uniqueId());
   const [isFocused, setFocus] = useState(false);
 
   const [showDropdown, setShowDropdown] = useState(false);
