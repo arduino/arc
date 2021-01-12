@@ -1,3 +1,10 @@
+## [0.2.10](https://github.com/bcmi-labs/react-components/compare/v0.2.9...v0.2.10) (2021-01-12)
+
+
+### Bug Fixes
+
+* underlay component to support classname ([832edb0](https://github.com/bcmi-labs/react-components/commit/832edb0d7dd596e747b4f94cc03c1b1e5eed552e))
+
 ## [0.2.9](https://github.com/bcmi-labs/react-components/compare/v0.2.8...v0.2.9) (2021-01-07)
 
 
