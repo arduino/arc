@@ -256,7 +256,7 @@ export function Modal({
       >
         <FocusScope {...focusProps}>
           <OpenTransition in={state.isOpen} appear>
-            <Underlay />
+            <Underlay className={props.className} />
             <ModalWindow {...props} isOpen={state.isOpen} closeButtonProps={closeButtonProps} ref={ref} />
           </OpenTransition>
         </FocusScope>
