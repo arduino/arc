@@ -21,7 +21,7 @@ $animation-duration: 130ms;
   @extend %underlay;
 
   opacity: 0;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .8);
   overflow: hidden;
 
   /* Exit animations */
