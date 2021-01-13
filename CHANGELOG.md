@@ -1,3 +1,10 @@
+## [0.2.12](https://github.com/bcmi-labs/react-components/compare/v0.2.11...v0.2.12) (2021-01-13)
+
+
+### Bug Fixes
+
+* underlay to have higher z-index than popover ([3523160](https://github.com/bcmi-labs/react-components/commit/352316072cc341d7606f042f0d034c9bb7e55783))
+
 ## [0.2.11](https://github.com/bcmi-labs/react-components/compare/v0.2.10...v0.2.11) (2021-01-13)
 
 
