@@ -1,3 +1,10 @@
+## [0.2.13](https://github.com/bcmi-labs/react-components/compare/v0.2.12...v0.2.13) (2021-01-13)
+
+
+### Bug Fixes
+
+* modal z-index to stay on top of underlay ([696c3fc](https://github.com/bcmi-labs/react-components/commit/696c3fc2a470465badd0a01f05409d5a4f947582))
+
 ## [0.2.12](https://github.com/bcmi-labs/react-components/compare/v0.2.11...v0.2.12) (2021-01-13)
 
 
