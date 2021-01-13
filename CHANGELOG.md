@@ -1,3 +1,10 @@
+## [0.2.11](https://github.com/bcmi-labs/react-components/compare/v0.2.10...v0.2.11) (2021-01-13)
+
+
+### Bug Fixes
+
+* underlay to have 80% opacity ([394a255](https://github.com/bcmi-labs/react-components/commit/394a2555045e49138c7f0b48701dd061ebda26bb))
+
 ## [0.2.10](https://github.com/bcmi-labs/react-components/compare/v0.2.9...v0.2.10) (2021-01-12)
 
 
