@@ -13,8 +13,10 @@ $animation-duration: 130ms;
   bottom: 0;
   left: 0;
 
-  /* Float above things by default */
-  z-index: 1;
+  /* Float above things by default.
+    Must be higher than popover in order to hide it
+  */
+  z-index: 60;
 }
 
 .underlay {
