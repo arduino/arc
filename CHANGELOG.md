@@ -1,3 +1,10 @@
+## [0.2.14](https://github.com/bcmi-labs/react-components/compare/v0.2.13...v0.2.14) (2021-01-13)
+
+
+### Bug Fixes
+
+* avoid avatar picker max width ([87c26c9](https://github.com/bcmi-labs/react-components/commit/87c26c9fa63b68ae8283b6b2a2fbf30ebf97aa3a))
+
 ## [0.2.13](https://github.com/bcmi-labs/react-components/compare/v0.2.12...v0.2.13) (2021-01-13)
 
 
