@@ -15,7 +15,7 @@
 .modal {
   opacity: 0;
   visibility: visible;
-  z-index: 2;
+  z-index: 65;
   color: $black;
   flex-direction: column;
   align-items: flex-start;
@@ -165,4 +165,3 @@
     border: none;
   }
 }
-
