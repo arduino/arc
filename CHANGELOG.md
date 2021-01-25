@@ -1,3 +1,10 @@
+## [0.2.15](https://github.com/bcmi-labs/react-components/compare/v0.2.14...v0.2.15) (2021-01-25)
+
+
+### Bug Fixes
+
+* removed blue outline in modal boxes ([54d4f35](https://github.com/bcmi-labs/react-components/commit/54d4f35c216f2bf0870cf3c5555f92193e915f06))
+
 ## [0.2.14](https://github.com/bcmi-labs/react-components/compare/v0.2.13...v0.2.14) (2021-01-13)
 
 
