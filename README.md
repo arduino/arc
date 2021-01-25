@@ -7,7 +7,7 @@ Storybook is publicly accessible via github pages [here](https://bcmi-labs.githu
 ## Pre-Requisites
 
 To download the packages from the private Github Package Registry you must be authenticated with Github:
-- get a valid [access token](https://github.com/settings/tokens/) granting the `repo` AND `read:packages` permissions
+- get a valid [access token](https://github.com/settings/tokens/) granting the `repo` AND `read:packages` permissions. Make sure the token is SSO-enabled for arduino and bcmi-labs organizations.
 - export the access token to REPO_ACCESS_TOKEN environment variable
     ```sh
     export REPO_ACCESS_TOKEN=<your github token>
