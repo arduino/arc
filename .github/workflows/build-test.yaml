@@ -14,7 +14,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
+      - run: |
+          npm ci
+          npm run build
         env:
           REPO_ACCESS_TOKEN: ${{ secrets.NPM_SECRET }}
-      - run: npm run build
