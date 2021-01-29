@@ -64,3 +64,35 @@
 .marker-message-content > a {
   font-size: 13px;
 }
+
+/** leaflet markercluster theme */
+.marker-cluster div {
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.marker-cluster-small {
+  background-color: rgba(158, 132, 109, .6);
+}
+
+.marker-cluster-small div {
+  background-color: rgba(158, 132, 109, .6);
+}
+
+.marker-cluster-medium {
+  background-color: rgba(239, 181, 28, .6);
+}
+
+.marker-cluster-medium div {
+  background-color: rgba(239, 181, 28, .6);
+}
+
+.marker-cluster-large {
+  background-color: rgba(218, 91, 74, .6);
+}
+
+.marker-cluster-large div {
+  background-color: rgba(218, 91, 74, .6);
+}
