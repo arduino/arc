@@ -1,3 +1,15 @@
+# [0.3.0](https://github.com/bcmi-labs/react-components/compare/v0.2.15...v0.3.0) (2021-01-29)
+
+
+### Bug Fixes
+
+* SupportForm to use Address & Custom Submit Fn ([b45af59](https://github.com/bcmi-labs/react-components/commit/b45af59c7c91ecd2e8ee8773b616b362fe8b5639))
+
+
+### Features
+
+* address component ([4c2b1eb](https://github.com/bcmi-labs/react-components/commit/4c2b1eb8ccdba5021b4ac7715070157ce33b456b))
+
 ## [0.2.15](https://github.com/bcmi-labs/react-components/compare/v0.2.14...v0.2.15) (2021-01-25)
 
 
