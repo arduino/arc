@@ -41,7 +41,7 @@ export interface DatePickerProps extends DateInputBaseProps, WrapperProps {
    */
   name?: string;
   /**
-   * send event when value has been changes.
+   * send event when value has been changed.
    */
   onChange?: (value: Date) => void;
 }

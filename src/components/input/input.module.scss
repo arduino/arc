@@ -151,3 +151,48 @@
 .input:disabled:hover ~ .inputAction {
   display: none;
 }
+
+.address {
+  &__input {
+    &:focus {
+      box-shadow: $teal0 !important;
+    }
+  }
+
+  &__suggestions {
+    display: none;
+    background-color: $feather;
+    border: 2px solid;
+    border-color: $teal0;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: -2px;
+    width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    box-sizing: content-box;
+    position: absolute;
+
+    &--error {
+      border-color: $notifyerror;
+    }
+  }
+
+  &__input:focus ~ &__suggestions {
+    display: block;
+  }
+
+  &__suggestions-item {
+    padding: 12px 20px;
+    color: $gris;
+    font-size: .875rem;
+
+    &--active {
+      background-color: $fog;
+      color: $black;
+    }
+  }
+}

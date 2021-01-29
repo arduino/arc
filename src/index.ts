@@ -1,4 +1,3 @@
-import { Checkbox } from '.';
 // export base components
 export {
   Checkbox,
@@ -10,6 +9,7 @@ export {
 } from './components/checkbox';
 export { Textarea, TextareaProps } from './components/input/textarea';
 export { Input, InputProps } from './components/input/input';
+export { Address, AddressProps } from './components/input/address';
 export { CheckboxGroup, CheckboxGroupProps } from './components/input/group/CheckboxGroup';
 export { RadioGroup, RadioGroupProps } from './components/input/group/RadioGroup';
 export { Password, PasswordProps } from './components/input/password';
