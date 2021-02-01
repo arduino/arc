@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/bcmi-labs/react-components/compare/v0.4.0...v0.4.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* Map component export ([737f3c7](https://github.com/bcmi-labs/react-components/commit/737f3c7b0a4a906ec54ca7baaf2239eeb1e60aad))
+
 # [0.4.0](https://github.com/bcmi-labs/react-components/compare/v0.3.0...v0.4.0) (2021-02-01)
 
 
