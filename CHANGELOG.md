@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/bcmi-labs/react-components/compare/v0.3.0...v0.4.0) (2021-02-01)
+
+
+### Features
+
+* map component ([431d510](https://github.com/bcmi-labs/react-components/commit/431d5105db22f3f2d6f9ad89c1a67608c829b789))
+
 # [0.3.0](https://github.com/bcmi-labs/react-components/compare/v0.2.15...v0.3.0) (2021-01-29)
 
 
