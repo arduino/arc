@@ -37,24 +37,40 @@ export type Marker = {
   organization_url: string;
   status: string;
 };
-export type MapProps = { height: string; markers: Marker[] };
+export type MapProps = { height: string; markers: Marker[]; scrollWheelZoom: false; minZoom: number };
 
 /**
  * ArduinoDay Map
  */
-export function Map({ height = '450px', markers = [] }: MapProps): React.ReactElement {
+export function Map({
+  height = '450px',
+  markers = [],
+  scrollWheelZoom = false,
+  minZoom = 1,
+}: MapProps): React.ReactElement {
   useEffect(() => {
     // create map
     const map = L.map('map', {
-      minZoom: 1,
+      minZoom,
       layers: [
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
         }),
       ],
+      scrollWheelZoom,
     });
 
     map.setView([0, 0], 1);
+
+    if (!scrollWheelZoom) {
+      map.on('click', function () {
+        if (map.scrollWheelZoom.enabled()) {
+          map.scrollWheelZoom.disable();
+        } else {
+          map.scrollWheelZoom.enable();
+        }
+      });
+    }
 
     // define icons
     const icons = {
