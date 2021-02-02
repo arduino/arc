@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/bcmi-labs/react-components/compare/v0.4.1...v0.4.2) (2021-02-02)
+
+
+### Bug Fixes
+
+* [map component] enable zoom on click on map ([95a2fc2](https://github.com/bcmi-labs/react-components/commit/95a2fc2d6716fba363271f99283dbe1596363ea0))
+
 ## [0.4.1](https://github.com/bcmi-labs/react-components/compare/v0.4.0...v0.4.1) (2021-02-01)
 
 
