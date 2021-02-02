@@ -31,13 +31,37 @@ export type Marker = {
   lat: number;
   lng: number;
   activity_list: string;
-  agenda: string;
+  agenda_link: string;
   phone_number: string;
   organization_name: string;
   organization_url: string;
   status: string;
 };
 export type MapProps = { height: string; markers: Marker[]; scrollWheelZoom: false; minZoom: number };
+
+function addhttp(url) {
+  if (typeof url === 'undefined' || url === null) {
+    return null;
+  }
+
+  // add protocol if missing
+  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+    url = 'http://' + url;
+  }
+
+  // check if the url is a valid and return it
+  if (
+    /(https?:\/\/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9])(:?\d*)\/?([a-z_\/0-9\-#.]*)\??([a-z_\/0-9\-#=&]*)/g.test(
+      url
+    )
+  ) {
+    url = encodeURI(url);
+    return url;
+  }
+
+  // not a valid url, return null
+  return null;
+}
 
 /**
  * ArduinoDay Map
@@ -114,18 +138,21 @@ export function Map({
       // load activities
       const activities = eventItem.activity_list
         .split('|')
-        .map((act) => activitiesMap[act] || 'Unknown Activity')
+        .map((act) => activitiesMap[act] || null)
+        .filter((act) => act !== null)
         .join(', ');
 
       let template = '';
       let icon;
       const eventData = {
         '%organizer%': eventItem.organizer_name,
-        '%formatted_address%': eventItem.location,
-        '%activities%': activities,
-        '%agenda_link%': eventItem.agenda,
-        '%user_organization_link%': eventItem.organization_url || null,
+        '%formatted_address%': eventItem.location || '',
+        '%activities%': activities.length > 0 ? activities : '',
+        '%agenda_link%': addhttp(eventItem.agenda_link) || '#',
+        '%user_organization_link%': addhttp(eventItem.organization_url) || '#',
       };
+
+      console.log(eventItem.organization_url, eventItem.agenda_link);
 
       if (eventItem.organizer_type === 'official') {
         icon = icons.blueIcon;
