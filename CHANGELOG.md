@@ -1,3 +1,10 @@
+## [0.4.3](https://github.com/bcmi-labs/react-components/compare/v0.4.2...v0.4.3) (2021-02-03)
+
+
+### Bug Fixes
+
+* better maps validations ([7bb660f](https://github.com/bcmi-labs/react-components/commit/7bb660f6adc57ba28e9d927352879d9bff762c7b))
+
 ## [0.4.2](https://github.com/bcmi-labs/react-components/compare/v0.4.1...v0.4.2) (2021-02-02)
 
 
