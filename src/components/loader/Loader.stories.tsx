@@ -11,7 +11,7 @@ const Template: Story<LoaderProps> = (args) => <Loader {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  color: '#cccccc',
+  linecolor: '#cccccc',
   bgcolor: '#fff',
 };
 
