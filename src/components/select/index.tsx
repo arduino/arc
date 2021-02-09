@@ -26,6 +26,8 @@ export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProp
   isMulti?: boolean;
   isSearchable?: boolean;
   size?: 'normal' | 'small';
+  className?: string;
+  onBlur?: (e: React.FocusEvent<HTMLElement>) => void;
   onChange?: (values: string | string[]) => void;
 }
 
@@ -77,6 +79,7 @@ export function Select({
   defaultValue,
   onChange,
   onBlur,
+  className,
   label,
   isDisabled,
   successMsg,
@@ -106,6 +109,7 @@ export function Select({
   const wrapperProps: WrapperProps = {
     label,
     error,
+    className,
     successMsg,
     infoMsg,
     htmlFor: selectId,
@@ -132,6 +136,7 @@ export function Select({
   }, []);
 
   const selectClasses = classNames('zh-select', style['zh-select'], {
+    [`${className}__zh-select`]: !!className,
     required: isRequired,
     error: !!error,
     hasValue: placeholder || hasValue || hasFocus,
