@@ -1,3 +1,10 @@
+## [0.4.4](https://github.com/bcmi-labs/react-components/compare/v0.4.3...v0.4.4) (2021-02-09)
+
+
+### Bug Fixes
+
+* Select component className and onBlur props ([#44](https://github.com/bcmi-labs/react-components/issues/44)) ([5e67e97](https://github.com/bcmi-labs/react-components/commit/5e67e972c6b5808c2f486d142899184423175d37))
+
 ## [0.4.3](https://github.com/bcmi-labs/react-components/compare/v0.4.2...v0.4.3) (2021-02-03)
 
 
