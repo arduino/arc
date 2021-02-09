@@ -29,6 +29,7 @@ export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProp
   className?: string;
   onBlur?: (e: React.FocusEvent<HTMLElement>) => void;
   onChange?: (values: string | string[]) => void;
+  value?: string[];
 }
 
 const ClearIndicator = (props) => {
@@ -75,7 +76,7 @@ export function Select({
   id,
   name,
   options,
-  value, // remove value prop as it breaks ReactSelect
+  value,
   defaultValue,
   onChange,
   onBlur,
@@ -97,10 +98,25 @@ export function Select({
   const [hasValue, setHasValue] = useState(!!defaultValue);
   const [hasFocus, setHasFocus] = useState(false);
 
+  const [valueFromProps, setvalueFromProps] = useState<SelectOption | SelectOption[]>();
+
   // on component mount check existing selections on options
   useEffect(() => {
     setInfoMsg(getOptionsInfoMsg(defaultValue) || fieldInfoMsg);
   }, []);
+
+  // on component mount check values and set state accordingly
+  useEffect(() => {
+    const selVal = Array.isArray(value)
+      ? value.map((v) => options.find((opt) => v === opt.value)).filter((v) => v !== null)
+      : [options.find((option) => value === option.value)];
+
+    if (selVal.length > 0) {
+      setvalueFromProps(isMulti ? selVal : selVal[0]);
+    } else {
+      setvalueFromProps(undefined);
+    }
+  }, [value]);
 
   const closeMenuOnSelect = !isMulti;
   const isClearable = isMulti;
@@ -115,10 +131,6 @@ export function Select({
     htmlFor: selectId,
     helper,
   };
-
-  const valueFromProps = Array.isArray(value)
-    ? options.filter((option) => value.includes(option.value))
-    : options.find((option) => value === option.value);
 
   const selectChanged = useCallback((evt: ValueType<SelectOption>): void => {
     setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);

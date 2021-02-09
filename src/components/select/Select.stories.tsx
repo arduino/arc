@@ -6,6 +6,9 @@ import { Select, SelectProps } from '.';
 export default {
   title: 'ZeroHeight/Select',
   component: Select,
+  argTypes: {
+    value: { control: 'array' },
+  },
 };
 
 const Template: Story<SelectProps> = (args) => <Select {...args} />;
