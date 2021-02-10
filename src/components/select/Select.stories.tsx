@@ -85,13 +85,13 @@ CustomPlaceholder.args = {
 export const SelectedOptions = Template.bind({});
 SelectedOptions.args = {
   ...Basic.args,
-  defaultValue: deviceFilterOptions[8],
+  defaultValue: [deviceFilterOptions[8].value],
 };
 
 export const SelectedOptionsMulti = Template.bind({});
 SelectedOptionsMulti.args = {
   ...Multiselect.args,
-  defaultValue: [deviceFilterOptions[4], deviceFilterOptions[7]],
+  defaultValue: [deviceFilterOptions[4].value, deviceFilterOptions[7].value],
 };
 
 export const LabelWithId = Template.bind({});
@@ -121,6 +121,6 @@ export const ValuesInfoMessage = Template.bind({});
 ValuesInfoMessage.args = {
   ...Basic.args,
   options: optionsWithInfoMsg,
-  defaultValue: optionsWithInfoMsg[2],
+  defaultValue: [optionsWithInfoMsg[2].value],
   infoMsg: 'A generic message replaced by selections',
 };
