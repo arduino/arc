@@ -8,6 +8,7 @@ export default {
   component: Select,
   argTypes: {
     value: { control: 'array' },
+    defaultValue: { control: 'array' },
   },
 };
 
@@ -92,6 +93,18 @@ export const SelectedOptionsMulti = Template.bind({});
 SelectedOptionsMulti.args = {
   ...Multiselect.args,
   defaultValue: [deviceFilterOptions[4].value, deviceFilterOptions[7].value],
+};
+
+export const ControlledValue = Template.bind({});
+ControlledValue.args = {
+  ...Basic.args,
+  value: ['Zero'],
+};
+
+export const ControlledValueMulti = Template.bind({});
+ControlledValueMulti.args = {
+  ...Multiselect.args,
+  value: ['Zero', 'Due'],
 };
 
 export const LabelWithId = Template.bind({});

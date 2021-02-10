@@ -77,7 +77,12 @@ const getDefaultInfoMsg = (opts: string[] | null, options: SelectOption[]): stri
     return options.find((o) => o.value === opt);
   });
 
-  return defaultOptions ? defaultOptions.map((defOpt) => defOpt.infoMsg || null).join('; ') : null;
+  return defaultOptions
+    ? defaultOptions
+        .map((defOpt) => defOpt.infoMsg || null)
+        .filter((msg) => !!msg)
+        .join('; ')
+    : null;
 };
 
 export function Select({
@@ -119,9 +124,8 @@ export function Select({
 
   // on component mount check values and set state accordingly
   useEffect(() => {
-    const selVal = Array.isArray(value)
-      ? value.map((v) => options.find((opt) => v === opt.value)).filter((v) => v !== null)
-      : [options.find((option) => value === option.value)];
+    const valArray = Array.isArray(value) ? value : [value];
+    const selVal = valArray.map((v) => options.find((opt) => v === opt.value)).filter((v) => !!v);
 
     if (selVal.length > 0) {
       setvalueFromProps(isMulti ? selVal : selVal[0]);
