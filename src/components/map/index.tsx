@@ -152,8 +152,6 @@ export function Map({
         '%user_organization_link%': addhttp(eventItem.organization_url) || '#',
       };
 
-      console.log(eventItem.organization_url, eventItem.agenda_link);
-
       if (eventItem.organizer_type === 'official') {
         icon = icons.blueIcon;
         template = OFFICIAL_TEMPLATE.replace(/%\w+%/g, function (all) {
