@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import ReactSelect, { components, ValueType } from 'react-select';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
@@ -152,20 +152,25 @@ export function Select({
     helper,
   };
 
-  const selectChanged = useCallback((evt: ValueType<SelectOption>): void => {
-    setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);
+  const selectChanged = useCallback(
+    (evt: ValueType<SelectOption>): void => {
+      setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);
 
-    if (!evt) {
-      setHasValue(false);
-      onChange(null);
-      return;
-    }
+      if (!evt) {
+        setHasValue(false);
+        onChange(null);
+        return;
+      }
 
-    const values = Array.isArray(evt) ? (evt as SelectOption[]).map((item) => item.value) : (evt as SelectOption).value;
+      const values = Array.isArray(evt)
+        ? (evt as SelectOption[]).map((item) => item.value)
+        : (evt as SelectOption).value;
 
-    setHasValue(true);
-    onChange(values);
-  }, []);
+      setHasValue(true);
+      onChange(values);
+    },
+    [onChange]
+  );
 
   const selectClasses = classNames('zh-select', style['zh-select'], {
     [`${className}__zh-select`]: !!className,
