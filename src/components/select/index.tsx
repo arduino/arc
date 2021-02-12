@@ -20,7 +20,7 @@ export interface SelectOption {
 type SelecReactSelectType = Omit<React.ComponentProps<typeof ReactSelect>, 'placeholder'>;
 
 export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProps, 'isReadOnly'>, WrapperProps {
-  defaultValue?: SelectOption | SelectOption[];
+  defaultValue?: string[];
   options: SelectOption[];
   hideSelected?: boolean;
   isMulti?: boolean;
@@ -29,6 +29,7 @@ export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProp
   className?: string;
   onBlur?: (e: React.FocusEvent<HTMLElement>) => void;
   onChange?: (values: string | string[]) => void;
+  value?: string[];
 }
 
 const ClearIndicator = (props) => {
@@ -67,6 +68,23 @@ const getOptionsInfoMsg = (opts: ValueType<SelectOption> | null): string | null 
     : (opts as SelectOption).infoMsg;
 };
 
+const getDefaultInfoMsg = (opts: string[] | null, options: SelectOption[]): string | null => {
+  if (!opts || (Array.isArray(opts) && opts.length === 0)) {
+    return null;
+  }
+
+  const defaultOptions = opts.map((opt) => {
+    return options.find((o) => o.value === opt);
+  });
+
+  return defaultOptions
+    ? defaultOptions
+        .map((defOpt) => defOpt.infoMsg || null)
+        .filter((msg) => !!msg)
+        .join('; ')
+    : null;
+};
+
 export function Select({
   isMulti = false,
   isSearchable = true,
@@ -75,7 +93,7 @@ export function Select({
   id,
   name,
   options,
-  value, // remove value prop as it breaks ReactSelect
+  value,
   defaultValue,
   onChange,
   onBlur,
@@ -97,13 +115,31 @@ export function Select({
   const [hasValue, setHasValue] = useState(!!defaultValue);
   const [hasFocus, setHasFocus] = useState(false);
 
+  const [valueFromProps, setvalueFromProps] = useState<SelectOption | SelectOption[]>();
+
   // on component mount check existing selections on options
   useEffect(() => {
-    setInfoMsg(getOptionsInfoMsg(defaultValue) || fieldInfoMsg);
+    setInfoMsg(getDefaultInfoMsg(defaultValue, options) || fieldInfoMsg);
   }, []);
+
+  // on component mount check values and set state accordingly
+  useEffect(() => {
+    const valArray = Array.isArray(value) ? value : [value];
+    const selVal = valArray.map((v) => options.find((opt) => v === opt.value)).filter((v) => !!v);
+
+    if (selVal.length > 0) {
+      setvalueFromProps(isMulti ? selVal : selVal[0]);
+    } else {
+      setvalueFromProps(undefined);
+    }
+  }, [value]);
 
   const closeMenuOnSelect = !isMulti;
   const isClearable = isMulti;
+
+  const defaultOptions = Array.isArray(defaultValue)
+    ? defaultValue.map((opt) => options.find((o) => o.value === opt))
+    : null;
 
   // prepare wrapper props
   const wrapperProps: WrapperProps = {
@@ -115,10 +151,6 @@ export function Select({
     htmlFor: selectId,
     helper,
   };
-
-  const valueFromProps = Array.isArray(value)
-    ? options.filter((option) => value.includes(option.value))
-    : options.find((option) => value === option.value);
 
   const selectChanged = useCallback((evt: ValueType<SelectOption>): void => {
     setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);
@@ -153,7 +185,7 @@ export function Select({
         isDisabled={isDisabled}
         isMulti={isMulti}
         options={options}
-        defaultValue={defaultValue}
+        defaultValue={defaultOptions}
         onFocus={() => setHasFocus(true)}
         onBlur={(e) => {
           setHasFocus(false);

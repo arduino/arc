@@ -6,6 +6,10 @@ import { Select, SelectProps } from '.';
 export default {
   title: 'ZeroHeight/Select',
   component: Select,
+  argTypes: {
+    value: { control: 'array' },
+    defaultValue: { control: 'array' },
+  },
 };
 
 const Template: Story<SelectProps> = (args) => <Select {...args} />;
@@ -82,13 +86,25 @@ CustomPlaceholder.args = {
 export const SelectedOptions = Template.bind({});
 SelectedOptions.args = {
   ...Basic.args,
-  defaultValue: deviceFilterOptions[8],
+  defaultValue: [deviceFilterOptions[8].value],
 };
 
 export const SelectedOptionsMulti = Template.bind({});
 SelectedOptionsMulti.args = {
   ...Multiselect.args,
-  defaultValue: [deviceFilterOptions[4], deviceFilterOptions[7]],
+  defaultValue: [deviceFilterOptions[4].value, deviceFilterOptions[7].value],
+};
+
+export const ControlledValue = Template.bind({});
+ControlledValue.args = {
+  ...Basic.args,
+  value: ['Zero'],
+};
+
+export const ControlledValueMulti = Template.bind({});
+ControlledValueMulti.args = {
+  ...Multiselect.args,
+  value: ['Zero', 'Due'],
 };
 
 export const LabelWithId = Template.bind({});
@@ -118,6 +134,6 @@ export const ValuesInfoMessage = Template.bind({});
 ValuesInfoMessage.args = {
   ...Basic.args,
   options: optionsWithInfoMsg,
-  defaultValue: optionsWithInfoMsg[2],
+  defaultValue: [optionsWithInfoMsg[2].value],
   infoMsg: 'A generic message replaced by selections',
 };
