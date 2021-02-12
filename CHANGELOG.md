@@ -1,3 +1,10 @@
+## [0.4.5](https://github.com/bcmi-labs/react-components/compare/v0.4.4...v0.4.5) (2021-02-12)
+
+
+### Bug Fixes
+
+* [select comp] enable value prop ([8bb7401](https://github.com/bcmi-labs/react-components/commit/8bb740116b2697b149bb69de269c8c7c31b4d9ac))
+
 ## [0.4.4](https://github.com/bcmi-labs/react-components/compare/v0.4.3...v0.4.4) (2021-02-09)
 
 
