@@ -1,3 +1,10 @@
+## [0.4.8](https://github.com/bcmi-labs/react-components/compare/v0.4.7...v0.4.8) (2021-02-12)
+
+
+### Bug Fixes
+
+* [select comp] add dependecy to selectChanged hook ([2bc60c3](https://github.com/bcmi-labs/react-components/commit/2bc60c3692a7f49f39c82ff2eef3bdbba84d8dd3))
+
 ## [0.4.7](https://github.com/bcmi-labs/react-components/compare/v0.4.6...v0.4.7) (2021-02-12)
 
 
