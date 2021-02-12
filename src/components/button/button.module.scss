@@ -16,7 +16,7 @@ $borderradius: 32px;
   letter-spacing: 1.28px;
   line-height: normal;
   outline: none;
-  padding: 9px 18px;
+  padding: 0 18px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -38,6 +38,8 @@ $borderradius: 32px;
       position: absolute;
       width: calc(100% + 4px);
       height: calc(100% + 4px);
+      top: -2px;
+      left: -2px;
       border-radius: $borderradius;
     }
   }
