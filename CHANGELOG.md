@@ -1,3 +1,10 @@
+## [0.4.6](https://github.com/bcmi-labs/react-components/compare/v0.4.5...v0.4.6) (2021-02-12)
+
+
+### Bug Fixes
+
+* button graphic issue on safari ([2f427ed](https://github.com/bcmi-labs/react-components/commit/2f427ed981ec396e71d15ef479194d266ffd6cda))
+
 ## [0.4.5](https://github.com/bcmi-labs/react-components/compare/v0.4.4...v0.4.5) (2021-02-12)
 
 
