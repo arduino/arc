@@ -1,3 +1,10 @@
+## [0.4.7](https://github.com/bcmi-labs/react-components/compare/v0.4.6...v0.4.7) (2021-02-12)
+
+
+### Bug Fixes
+
+* [support-form / checkbox] use bool default ([8a9c248](https://github.com/bcmi-labs/react-components/commit/8a9c248a3796fc14ff42ee26b847dc8e914aabc2))
+
 ## [0.4.6](https://github.com/bcmi-labs/react-components/compare/v0.4.5...v0.4.6) (2021-02-12)
 
 
