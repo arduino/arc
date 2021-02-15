@@ -1,3 +1,10 @@
+## [0.4.9](https://github.com/bcmi-labs/react-components/compare/v0.4.8...v0.4.9) (2021-02-15)
+
+
+### Bug Fixes
+
+* remove arduino day map ([f834c91](https://github.com/bcmi-labs/react-components/commit/f834c9121a138d61daa80806acdb582264f5e0f2))
+
 ## [0.4.8](https://github.com/bcmi-labs/react-components/compare/v0.4.7...v0.4.8) (2021-02-12)
 
 
