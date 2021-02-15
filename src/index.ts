@@ -23,7 +23,6 @@ export { Snackbar, SnackbarProps } from './components/snackbar';
 export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from './components/avatar';
 export { PhoneInput, PhoneInputProps, PhoneRegion } from './components/phoneInput';
 export { Wrapper } from './components/wrapper';
-export { Map } from './components/map';
 // export derived components
 
 export {
