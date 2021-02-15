@@ -113,11 +113,7 @@ export function PopoverTrigger({
 
   return (
     <>
-      <ButtonTrigger 
-        TriggerElement={TriggerElement} 
-        setTriggerRef={setTriggerRef} 
-        openButtonProps={openButtonProps} 
-      />
+      <ButtonTrigger TriggerElement={TriggerElement} setTriggerRef={setTriggerRef} openButtonProps={openButtonProps} />
       {popoverOpen && (
         <Popover
           {...attributes.popper}

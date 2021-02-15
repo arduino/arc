@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import { Story } from '@storybook/react/types-6-0';
 import { ModalTrigger, ModalTriggerProps } from './ModalTrigger';
 import { OverlayProvider } from 'react-aria';

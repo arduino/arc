@@ -13,12 +13,12 @@ import { OverlayProps } from '../utils';
 import { OpenTransition } from '../OpenTransition';
 
 import style from './snackbar.module.scss';
+import { SnackbarActionBtn } from './SnackbarActionBtn';
 
 interface AnchorOrigin {
   vertical: 'bottom' | 'top';
   horizontal: 'center' | 'left' | 'right';
 }
-
 
 interface SnackbarViewProps extends OverlayProps {
   /**
@@ -27,9 +27,9 @@ interface SnackbarViewProps extends OverlayProps {
   ActionElement?: React.ReactElement;
   /**
    * The anchor of the Snackbar. Set corner position
-   * { 
-   *   horizontal: 'center' | 'left' | 'right', 
-   *   vertical: 'bottom' | 'top' 
+   * {
+   *   horizontal: 'center' | 'left' | 'right',
+   *   vertical: 'bottom' | 'top'
    * }
    */
   anchorOrigin?: AnchorOrigin;
@@ -112,31 +112,6 @@ function SnackbarView({
     innerRef
   );
 
-  const renderAction = (): React.ReactElement => {
-    // extract children and other props from trigger element
-    const { children: actionChildren, className, onClick: actionOnClick, ...otherActionProps } = ActionElement.props;
-
-    const { pressProps } = usePress({
-      onPress: (): void => {
-        if (actionOnClick) {
-          actionOnClick();
-        }
-        otherProps.onClose();
-      },
-    });
-
-    return (
-      <ActionElement.type
-        {...otherActionProps}
-        {...pressProps}
-        className={classNames(style['snackbar-action'], className)}
-        tabIndex={1}
-      >
-        {actionChildren}
-      </ActionElement.type>
-    );
-  };
-
   const { pressProps } = usePress({
     onPress: (): void => {
       otherProps.onClose();
@@ -159,7 +134,7 @@ function SnackbarView({
         <span>{message}</span>
       </div>
       <div className={style['snackbar-actions']}>
-        {ActionElement && renderAction()}
+        {ActionElement && <SnackbarActionBtn ActionElement={ActionElement} onClose={otherProps.onClose} />}
         {closeable && (
           <span tabIndex={1} {...pressProps} className={classNames(style['close-button'])}>
             <IconNavigationCloseNormal className={classNames(style.close)}></IconNavigationCloseNormal>
@@ -173,7 +148,7 @@ function SnackbarView({
 export interface SnackbarProps extends OverlayProps, SnackbarViewProps {}
 /**
  * Snack bar component - provides ability to show message with auto hide and additional actions.
- * 
+ *
  * Design reference on [Figma](https://www.figma.com/file/euysycI6QhSSbN7Qvguce8/%F0%9F%8E%9BUI-Controls?node-id=995%3A209)
  */
 export function Snackbar({

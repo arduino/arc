@@ -1,6 +1,10 @@
 import React from 'react';
 
-export function AC({ title, ...rest }): React.ReactElement {
+interface flagIcon extends React.SVGProps<SVGSVGElement> {
+  title: string;
+}
+
+export function AC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -59,7 +63,7 @@ export function AC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AD({ title, ...rest }): React.ReactElement {
+export function AD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -77,7 +81,7 @@ export function AD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AE({ title, ...rest }): React.ReactElement {
+export function AE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -89,7 +93,7 @@ export function AE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AF({ title, ...rest }): React.ReactElement {
+export function AF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -105,7 +109,7 @@ export function AF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AG({ title, ...rest }): React.ReactElement {
+export function AG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -127,7 +131,7 @@ export function AG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AI({ title, ...rest }): React.ReactElement {
+export function AI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -162,7 +166,7 @@ export function AI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AL({ title, ...rest }): React.ReactElement {
+export function AL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 90 60" {...rest}>
       {title && <title>{title}</title>}
@@ -182,7 +186,7 @@ export function AL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AM({ title, ...rest }): React.ReactElement {
+export function AM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -193,7 +197,7 @@ export function AM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AO({ title, ...rest }): React.ReactElement {
+export function AO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -207,7 +211,7 @@ export function AO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AQ({ title, ...rest }): React.ReactElement {
+export function AQ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 744 496" {...rest}>
       {title && <title>{title}</title>}
@@ -220,7 +224,7 @@ export function AQ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AR({ title, ...rest }): React.ReactElement {
+export function AR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -231,7 +235,7 @@ export function AR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AS({ title, ...rest }): React.ReactElement {
+export function AS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -252,7 +256,7 @@ export function AS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AT({ title, ...rest }): React.ReactElement {
+export function AT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -262,7 +266,7 @@ export function AT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AU({ title, ...rest }): React.ReactElement {
+export function AU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -286,7 +290,7 @@ export function AU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AW({ title, ...rest }): React.ReactElement {
+export function AW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 363 242" {...rest}>
       {title && <title>{title}</title>}
@@ -300,7 +304,7 @@ export function AW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AX({ title, ...rest }): React.ReactElement {
+export function AX({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -311,7 +315,7 @@ export function AX({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function AZ({ title, ...rest }): React.ReactElement {
+export function AZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -326,7 +330,7 @@ export function AZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BA({ title, ...rest }): React.ReactElement {
+export function BA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -350,7 +354,7 @@ export function BA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BB({ title, ...rest }): React.ReactElement {
+export function BB({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.33" {...rest}>
       {title && <title>{title}</title>}
@@ -363,7 +367,7 @@ export function BB({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BD({ title, ...rest }): React.ReactElement {
+export function BD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -373,7 +377,7 @@ export function BD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BE({ title, ...rest }): React.ReactElement {
+export function BE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -384,7 +388,7 @@ export function BE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BF({ title, ...rest }): React.ReactElement {
+export function BF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -395,7 +399,7 @@ export function BF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BG({ title, ...rest }): React.ReactElement {
+export function BG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -406,7 +410,7 @@ export function BG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BH({ title, ...rest }): React.ReactElement {
+export function BH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -419,7 +423,7 @@ export function BH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BI({ title, ...rest }): React.ReactElement {
+export function BI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -443,7 +447,7 @@ export function BI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BJ({ title, ...rest }): React.ReactElement {
+export function BJ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -454,7 +458,7 @@ export function BJ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BL({ title, ...rest }): React.ReactElement {
+export function BL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.33" {...rest}>
       {title && <title>{title}</title>}
@@ -497,7 +501,7 @@ export function BL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BM({ title, ...rest }): React.ReactElement {
+export function BM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.33" {...rest}>
       {title && <title>{title}</title>}
@@ -524,7 +528,7 @@ export function BM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BN({ title, ...rest }): React.ReactElement {
+export function BN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.33" {...rest}>
       {title && <title>{title}</title>}
@@ -539,7 +543,7 @@ export function BN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BO({ title, ...rest }): React.ReactElement {
+export function BO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -550,7 +554,7 @@ export function BO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BQ({ title, ...rest }): React.ReactElement {
+export function BQ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -566,7 +570,7 @@ export function BQ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BR({ title, ...rest }): React.ReactElement {
+export function BR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -580,7 +584,7 @@ export function BR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BS({ title, ...rest }): React.ReactElement {
+export function BS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -593,7 +597,7 @@ export function BS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BT({ title, ...rest }): React.ReactElement {
+export function BT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -610,7 +614,7 @@ export function BT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BV({ title, ...rest }): React.ReactElement {
+export function BV({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 33.333 1100 733.333" {...rest}>
       {title && <title>{title}</title>}
@@ -623,7 +627,7 @@ export function BV({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BW({ title, ...rest }): React.ReactElement {
+export function BW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -636,7 +640,7 @@ export function BW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BY({ title, ...rest }): React.ReactElement {
+export function BY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -651,7 +655,7 @@ export function BY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function BZ({ title, ...rest }): React.ReactElement {
+export function BZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -672,7 +676,7 @@ export function BZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CA({ title, ...rest }): React.ReactElement {
+export function CA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -684,7 +688,7 @@ export function CA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CC({ title, ...rest }): React.ReactElement {
+export function CC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -701,7 +705,7 @@ export function CC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CD({ title, ...rest }): React.ReactElement {
+export function CD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -716,7 +720,7 @@ export function CD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CF({ title, ...rest }): React.ReactElement {
+export function CF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -735,7 +739,7 @@ export function CF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CG({ title, ...rest }): React.ReactElement {
+export function CG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -746,7 +750,7 @@ export function CG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CH({ title, ...rest }): React.ReactElement {
+export function CH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -759,7 +763,7 @@ export function CH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CI({ title, ...rest }): React.ReactElement {
+export function CI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -770,7 +774,7 @@ export function CI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CK({ title, ...rest }): React.ReactElement {
+export function CK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -786,7 +790,7 @@ export function CK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CL({ title, ...rest }): React.ReactElement {
+export function CL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -801,7 +805,7 @@ export function CL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CM({ title, ...rest }): React.ReactElement {
+export function CM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -814,7 +818,7 @@ export function CM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CN({ title, ...rest }): React.ReactElement {
+export function CN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -830,7 +834,7 @@ export function CN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CO({ title, ...rest }): React.ReactElement {
+export function CO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -841,7 +845,7 @@ export function CO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CR({ title, ...rest }): React.ReactElement {
+export function CR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -854,7 +858,7 @@ export function CR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CU({ title, ...rest }): React.ReactElement {
+export function CU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -869,7 +873,7 @@ export function CU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CV({ title, ...rest }): React.ReactElement {
+export function CV({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -883,7 +887,7 @@ export function CV({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CW({ title, ...rest }): React.ReactElement {
+export function CW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -896,7 +900,7 @@ export function CW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CX({ title, ...rest }): React.ReactElement {
+export function CX({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -918,7 +922,7 @@ export function CX({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CY({ title, ...rest }): React.ReactElement {
+export function CY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -935,7 +939,7 @@ export function CY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function CZ({ title, ...rest }): React.ReactElement {
+export function CZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -946,7 +950,7 @@ export function CZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function DE({ title, ...rest }): React.ReactElement {
+export function DE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -957,7 +961,7 @@ export function DE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function DJ({ title, ...rest }): React.ReactElement {
+export function DJ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -969,7 +973,7 @@ export function DJ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function DK({ title, ...rest }): React.ReactElement {
+export function DK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -979,7 +983,7 @@ export function DK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function DM({ title, ...rest }): React.ReactElement {
+export function DM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1002,7 +1006,7 @@ export function DM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function DO({ title, ...rest }): React.ReactElement {
+export function DO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1021,7 +1025,7 @@ export function DO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function DZ({ title, ...rest }): React.ReactElement {
+export function DZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1035,7 +1039,7 @@ export function DZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function EC({ title, ...rest }): React.ReactElement {
+export function EC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1053,7 +1057,7 @@ export function EC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function EE({ title, ...rest }): React.ReactElement {
+export function EE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1064,7 +1068,7 @@ export function EE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function EG({ title, ...rest }): React.ReactElement {
+export function EG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1079,7 +1083,7 @@ export function EG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function EH({ title, ...rest }): React.ReactElement {
+export function EH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1094,7 +1098,7 @@ export function EH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ER({ title, ...rest }): React.ReactElement {
+export function ER({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1115,7 +1119,7 @@ export function ER({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ES({ title, ...rest }): React.ReactElement {
+export function ES({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1127,7 +1131,7 @@ export function ES({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ET({ title, ...rest }): React.ReactElement {
+export function ET({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 22.5 15" {...rest}>
       {title && <title>{title}</title>}
@@ -1143,7 +1147,7 @@ export function ET({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function FI({ title, ...rest }): React.ReactElement {
+export function FI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1153,7 +1157,7 @@ export function FI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function FJ({ title, ...rest }): React.ReactElement {
+export function FJ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1176,7 +1180,7 @@ export function FJ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function FK({ title, ...rest }): React.ReactElement {
+export function FK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1216,7 +1220,7 @@ export function FK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function FM({ title, ...rest }): React.ReactElement {
+export function FM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1228,7 +1232,7 @@ export function FM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function FO({ title, ...rest }): React.ReactElement {
+export function FO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1239,7 +1243,7 @@ export function FO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function FR({ title, ...rest }): React.ReactElement {
+export function FR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1250,7 +1254,7 @@ export function FR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GA({ title, ...rest }): React.ReactElement {
+export function GA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1261,7 +1265,7 @@ export function GA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GB({ title, ...rest }): React.ReactElement {
+export function GB({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1289,7 +1293,7 @@ export function GB({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GD({ title, ...rest }): React.ReactElement {
+export function GD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1312,7 +1316,7 @@ export function GD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GE({ title, ...rest }): React.ReactElement {
+export function GE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 22.5 15" {...rest}>
       {title && <title>{title}</title>}
@@ -1326,7 +1330,7 @@ export function GE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GF({ title, ...rest }): React.ReactElement {
+export function GF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 90 60" {...rest}>
       {title && <title>{title}</title>}
@@ -1342,7 +1346,7 @@ export function GF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GG({ title, ...rest }): React.ReactElement {
+export function GG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1356,7 +1360,7 @@ export function GG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GH({ title, ...rest }): React.ReactElement {
+export function GH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1368,7 +1372,7 @@ export function GH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GI({ title, ...rest }): React.ReactElement {
+export function GI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1392,7 +1396,7 @@ export function GI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GL({ title, ...rest }): React.ReactElement {
+export function GL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1404,7 +1408,7 @@ export function GL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GM({ title, ...rest }): React.ReactElement {
+export function GM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1416,7 +1420,7 @@ export function GM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GN({ title, ...rest }): React.ReactElement {
+export function GN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1427,7 +1431,7 @@ export function GN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GP({ title, ...rest }): React.ReactElement {
+export function GP({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1438,7 +1442,7 @@ export function GP({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GQ({ title, ...rest }): React.ReactElement {
+export function GQ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1464,7 +1468,7 @@ export function GQ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GR({ title, ...rest }): React.ReactElement {
+export function GR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1481,7 +1485,7 @@ export function GR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GS({ title, ...rest }): React.ReactElement {
+export function GS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -1518,7 +1522,7 @@ export function GS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GT({ title, ...rest }): React.ReactElement {
+export function GT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1535,7 +1539,7 @@ export function GT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GU({ title, ...rest }): React.ReactElement {
+export function GU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1570,7 +1574,7 @@ export function GU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GW({ title, ...rest }): React.ReactElement {
+export function GW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1582,7 +1586,7 @@ export function GW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function GY({ title, ...rest }): React.ReactElement {
+export function GY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 900 600" {...rest}>
       {title && <title>{title}</title>}
@@ -1595,7 +1599,7 @@ export function GY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function HK({ title, ...rest }): React.ReactElement {
+export function HK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1607,7 +1611,7 @@ export function HK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function HM({ title, ...rest }): React.ReactElement {
+export function HM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1631,7 +1635,7 @@ export function HM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function HN({ title, ...rest }): React.ReactElement {
+export function HN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1643,7 +1647,7 @@ export function HN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function HR({ title, ...rest }): React.ReactElement {
+export function HR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1668,7 +1672,7 @@ export function HR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function HT({ title, ...rest }): React.ReactElement {
+export function HT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1684,7 +1688,7 @@ export function HT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function HU({ title, ...rest }): React.ReactElement {
+export function HU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1695,7 +1699,7 @@ export function HU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ID({ title, ...rest }): React.ReactElement {
+export function ID({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1705,7 +1709,7 @@ export function ID({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IE({ title, ...rest }): React.ReactElement {
+export function IE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1716,7 +1720,7 @@ export function IE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IL({ title, ...rest }): React.ReactElement {
+export function IL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1728,7 +1732,7 @@ export function IL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IM({ title, ...rest }): React.ReactElement {
+export function IM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1745,7 +1749,7 @@ export function IM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IN({ title, ...rest }): React.ReactElement {
+export function IN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1763,7 +1767,7 @@ export function IN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IO({ title, ...rest }): React.ReactElement {
+export function IO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1801,7 +1805,7 @@ export function IO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IQ({ title, ...rest }): React.ReactElement {
+export function IQ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1815,7 +1819,7 @@ export function IQ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IR({ title, ...rest }): React.ReactElement {
+export function IR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1831,7 +1835,7 @@ export function IR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IS({ title, ...rest }): React.ReactElement {
+export function IS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1848,7 +1852,7 @@ export function IS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function IT({ title, ...rest }): React.ReactElement {
+export function IT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1859,7 +1863,7 @@ export function IT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function JE({ title, ...rest }): React.ReactElement {
+export function JE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1877,7 +1881,7 @@ export function JE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function JM({ title, ...rest }): React.ReactElement {
+export function JM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1895,7 +1899,7 @@ export function JM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function JO({ title, ...rest }): React.ReactElement {
+export function JO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1911,7 +1915,7 @@ export function JO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function JP({ title, ...rest }): React.ReactElement {
+export function JP({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1921,7 +1925,7 @@ export function JP({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KE({ title, ...rest }): React.ReactElement {
+export function KE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1941,7 +1945,7 @@ export function KE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KG({ title, ...rest }): React.ReactElement {
+export function KG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 342" {...rest}>
       {title && <title>{title}</title>}
@@ -1961,7 +1965,7 @@ export function KG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KH({ title, ...rest }): React.ReactElement {
+export function KH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -1977,7 +1981,7 @@ export function KH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KI({ title, ...rest }): React.ReactElement {
+export function KI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 450 300" {...rest}>
       {title && <title>{title}</title>}
@@ -2001,7 +2005,7 @@ export function KI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KM({ title, ...rest }): React.ReactElement {
+export function KM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2018,7 +2022,7 @@ export function KM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KN({ title, ...rest }): React.ReactElement {
+export function KN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2033,7 +2037,7 @@ export function KN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KP({ title, ...rest }): React.ReactElement {
+export function KP({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2052,7 +2056,7 @@ export function KP({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KR({ title, ...rest }): React.ReactElement {
+export function KR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2067,7 +2071,7 @@ export function KR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KW({ title, ...rest }): React.ReactElement {
+export function KW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2079,7 +2083,7 @@ export function KW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KY({ title, ...rest }): React.ReactElement {
+export function KY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2111,7 +2115,7 @@ export function KY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function KZ({ title, ...rest }): React.ReactElement {
+export function KZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2125,7 +2129,7 @@ export function KZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LA({ title, ...rest }): React.ReactElement {
+export function LA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2138,7 +2142,7 @@ export function LA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LB({ title, ...rest }): React.ReactElement {
+export function LB({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2155,7 +2159,7 @@ export function LB({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LC({ title, ...rest }): React.ReactElement {
+export function LC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2167,7 +2171,7 @@ export function LC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LI({ title, ...rest }): React.ReactElement {
+export function LI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2181,7 +2185,7 @@ export function LI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LK({ title, ...rest }): React.ReactElement {
+export function LK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2199,7 +2203,7 @@ export function LK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LR({ title, ...rest }): React.ReactElement {
+export function LR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2216,7 +2220,7 @@ export function LR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LS({ title, ...rest }): React.ReactElement {
+export function LS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2229,7 +2233,7 @@ export function LS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LT({ title, ...rest }): React.ReactElement {
+export function LT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2240,7 +2244,7 @@ export function LT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LU({ title, ...rest }): React.ReactElement {
+export function LU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2251,7 +2255,7 @@ export function LU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LV({ title, ...rest }): React.ReactElement {
+export function LV({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2263,7 +2267,7 @@ export function LV({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function LY({ title, ...rest }): React.ReactElement {
+export function LY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2278,7 +2282,7 @@ export function LY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MA({ title, ...rest }): React.ReactElement {
+export function MA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2291,7 +2295,7 @@ export function MA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MC({ title, ...rest }): React.ReactElement {
+export function MC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2301,7 +2305,7 @@ export function MC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MD({ title, ...rest }): React.ReactElement {
+export function MD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -2316,7 +2320,7 @@ export function MD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ME({ title, ...rest }): React.ReactElement {
+export function ME({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2331,7 +2335,7 @@ export function ME({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MF({ title, ...rest }): React.ReactElement {
+export function MF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 108 72" {...rest}>
       {title && <title>{title}</title>}
@@ -2344,7 +2348,7 @@ export function MF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MG({ title, ...rest }): React.ReactElement {
+export function MG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2355,7 +2359,7 @@ export function MG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MH({ title, ...rest }): React.ReactElement {
+export function MH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2368,7 +2372,7 @@ export function MH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MK({ title, ...rest }): React.ReactElement {
+export function MK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2382,7 +2386,7 @@ export function MK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ML({ title, ...rest }): React.ReactElement {
+export function ML({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2393,7 +2397,7 @@ export function ML({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MM({ title, ...rest }): React.ReactElement {
+export function MM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2408,7 +2412,7 @@ export function MM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MN({ title, ...rest }): React.ReactElement {
+export function MN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2426,7 +2430,7 @@ export function MN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MO({ title, ...rest }): React.ReactElement {
+export function MO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2445,7 +2449,7 @@ export function MO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MP({ title, ...rest }): React.ReactElement {
+export function MP({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 750 500" {...rest}>
       {title && <title>{title}</title>}
@@ -2471,7 +2475,7 @@ export function MP({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MQ({ title, ...rest }): React.ReactElement {
+export function MQ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2484,7 +2488,7 @@ export function MQ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MR({ title, ...rest }): React.ReactElement {
+export function MR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2497,7 +2501,7 @@ export function MR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MS({ title, ...rest }): React.ReactElement {
+export function MS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2530,7 +2534,7 @@ export function MS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MT({ title, ...rest }): React.ReactElement {
+export function MT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2544,7 +2548,7 @@ export function MT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MU({ title, ...rest }): React.ReactElement {
+export function MU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2556,7 +2560,7 @@ export function MU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MV({ title, ...rest }): React.ReactElement {
+export function MV({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2570,7 +2574,7 @@ export function MV({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MW({ title, ...rest }): React.ReactElement {
+export function MW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2585,7 +2589,7 @@ export function MW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MX({ title, ...rest }): React.ReactElement {
+export function MX({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2601,7 +2605,7 @@ export function MX({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MY({ title, ...rest }): React.ReactElement {
+export function MY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -2618,7 +2622,7 @@ export function MY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function MZ({ title, ...rest }): React.ReactElement {
+export function MZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2637,7 +2641,7 @@ export function MZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NA({ title, ...rest }): React.ReactElement {
+export function NA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2653,7 +2657,7 @@ export function NA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NC({ title, ...rest }): React.ReactElement {
+export function NC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 640 426.7" {...rest}>
       {title && <title>{title}</title>}
@@ -2671,7 +2675,7 @@ export function NC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NE({ title, ...rest }): React.ReactElement {
+export function NE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2683,7 +2687,7 @@ export function NE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NF({ title, ...rest }): React.ReactElement {
+export function NF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2695,7 +2699,7 @@ export function NF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NG({ title, ...rest }): React.ReactElement {
+export function NG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2707,7 +2711,7 @@ export function NG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NI({ title, ...rest }): React.ReactElement {
+export function NI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2726,7 +2730,7 @@ export function NI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NL({ title, ...rest }): React.ReactElement {
+export function NL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2737,7 +2741,7 @@ export function NL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NO({ title, ...rest }): React.ReactElement {
+export function NO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2754,7 +2758,7 @@ export function NO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NP({ title, ...rest }): React.ReactElement {
+export function NP({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2769,7 +2773,7 @@ export function NP({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NR({ title, ...rest }): React.ReactElement {
+export function NR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2783,7 +2787,7 @@ export function NR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NU({ title, ...rest }): React.ReactElement {
+export function NU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2824,7 +2828,7 @@ export function NU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function NZ({ title, ...rest }): React.ReactElement {
+export function NZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2851,7 +2855,7 @@ export function NZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function OM({ title, ...rest }): React.ReactElement {
+export function OM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2867,7 +2871,7 @@ export function OM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PA({ title, ...rest }): React.ReactElement {
+export function PA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2886,7 +2890,7 @@ export function PA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PE({ title, ...rest }): React.ReactElement {
+export function PE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2898,7 +2902,7 @@ export function PE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PF({ title, ...rest }): React.ReactElement {
+export function PF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2918,7 +2922,7 @@ export function PF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PG({ title, ...rest }): React.ReactElement {
+export function PG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2935,7 +2939,7 @@ export function PG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PH({ title, ...rest }): React.ReactElement {
+export function PH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2949,7 +2953,7 @@ export function PH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PK({ title, ...rest }): React.ReactElement {
+export function PK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2965,7 +2969,7 @@ export function PK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PL({ title, ...rest }): React.ReactElement {
+export function PL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -2978,7 +2982,7 @@ export function PL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PM({ title, ...rest }): React.ReactElement {
+export function PM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 26.666 640 426.666" {...rest}>
       {title && <title>{title}</title>}
@@ -2991,7 +2995,7 @@ export function PM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PN({ title, ...rest }): React.ReactElement {
+export function PN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3031,7 +3035,7 @@ export function PN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PR({ title, ...rest }): React.ReactElement {
+export function PR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3048,7 +3052,7 @@ export function PR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PS({ title, ...rest }): React.ReactElement {
+export function PS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3060,7 +3064,7 @@ export function PS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PT({ title, ...rest }): React.ReactElement {
+export function PT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3073,7 +3077,7 @@ export function PT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PW({ title, ...rest }): React.ReactElement {
+export function PW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3083,7 +3087,7 @@ export function PW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function PY({ title, ...rest }): React.ReactElement {
+export function PY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3102,7 +3106,7 @@ export function PY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function QA({ title, ...rest }): React.ReactElement {
+export function QA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3115,7 +3119,7 @@ export function QA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function RE({ title, ...rest }): React.ReactElement {
+export function RE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 26.666 640 426.666" {...rest}>
       {title && <title>{title}</title>}
@@ -3128,7 +3132,7 @@ export function RE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function RO({ title, ...rest }): React.ReactElement {
+export function RO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3139,7 +3143,7 @@ export function RO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function RS({ title, ...rest }): React.ReactElement {
+export function RS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3161,7 +3165,7 @@ export function RS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function RU({ title, ...rest }): React.ReactElement {
+export function RU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3173,7 +3177,7 @@ export function RU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function RW({ title, ...rest }): React.ReactElement {
+export function RW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3188,7 +3192,7 @@ export function RW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SA({ title, ...rest }): React.ReactElement {
+export function SA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3202,7 +3206,7 @@ export function SA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SB({ title, ...rest }): React.ReactElement {
+export function SB({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3216,7 +3220,7 @@ export function SB({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SC({ title, ...rest }): React.ReactElement {
+export function SC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3229,7 +3233,7 @@ export function SC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SD({ title, ...rest }): React.ReactElement {
+export function SD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3241,7 +3245,7 @@ export function SD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SE({ title, ...rest }): React.ReactElement {
+export function SE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3251,7 +3255,7 @@ export function SE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SG({ title, ...rest }): React.ReactElement {
+export function SG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3265,7 +3269,7 @@ export function SG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SH({ title, ...rest }): React.ReactElement {
+export function SH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -3300,7 +3304,7 @@ export function SH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SI({ title, ...rest }): React.ReactElement {
+export function SI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3323,7 +3327,7 @@ export function SI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SJ({ title, ...rest }): React.ReactElement {
+export function SJ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3340,7 +3344,7 @@ export function SJ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SK({ title, ...rest }): React.ReactElement {
+export function SK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3367,7 +3371,7 @@ export function SK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SL({ title, ...rest }): React.ReactElement {
+export function SL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3378,7 +3382,7 @@ export function SL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SM({ title, ...rest }): React.ReactElement {
+export function SM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3408,7 +3412,7 @@ export function SM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SN({ title, ...rest }): React.ReactElement {
+export function SN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3421,7 +3425,7 @@ export function SN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SO({ title, ...rest }): React.ReactElement {
+export function SO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3434,7 +3438,7 @@ export function SO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SR({ title, ...rest }): React.ReactElement {
+export function SR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3451,7 +3455,7 @@ export function SR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SS({ title, ...rest }): React.ReactElement {
+export function SS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3468,7 +3472,7 @@ export function SS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ST({ title, ...rest }): React.ReactElement {
+export function ST({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3482,7 +3486,7 @@ export function ST({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SV({ title, ...rest }): React.ReactElement {
+export function SV({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3500,7 +3504,7 @@ export function SV({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SX({ title, ...rest }): React.ReactElement {
+export function SX({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3527,7 +3531,7 @@ export function SX({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SY({ title, ...rest }): React.ReactElement {
+export function SY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3541,7 +3545,7 @@ export function SY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function SZ({ title, ...rest }): React.ReactElement {
+export function SZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 900 600" {...rest}>
       {title && <title>{title}</title>}
@@ -3556,7 +3560,7 @@ export function SZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TA({ title, ...rest }): React.ReactElement {
+export function TA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -3598,7 +3602,7 @@ export function TA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TC({ title, ...rest }): React.ReactElement {
+export function TC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3642,7 +3646,7 @@ export function TC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TD({ title, ...rest }): React.ReactElement {
+export function TD({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3653,7 +3657,7 @@ export function TD({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TF({ title, ...rest }): React.ReactElement {
+export function TF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 22.5 15" {...rest}>
       {title && <title>{title}</title>}
@@ -3670,7 +3674,7 @@ export function TF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TG({ title, ...rest }): React.ReactElement {
+export function TG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3687,7 +3691,7 @@ export function TG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TH({ title, ...rest }): React.ReactElement {
+export function TH({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3700,7 +3704,7 @@ export function TH({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TJ({ title, ...rest }): React.ReactElement {
+export function TJ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3714,7 +3718,7 @@ export function TJ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TK({ title, ...rest }): React.ReactElement {
+export function TK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3729,7 +3733,7 @@ export function TK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TL({ title, ...rest }): React.ReactElement {
+export function TL({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3744,7 +3748,7 @@ export function TL({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TM({ title, ...rest }): React.ReactElement {
+export function TM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3780,7 +3784,7 @@ export function TM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TN({ title, ...rest }): React.ReactElement {
+export function TN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3794,7 +3798,7 @@ export function TN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TO({ title, ...rest }): React.ReactElement {
+export function TO({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3808,7 +3812,7 @@ export function TO({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TR({ title, ...rest }): React.ReactElement {
+export function TR({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 450 300" {...rest}>
       {title && <title>{title}</title>}
@@ -3825,7 +3829,7 @@ export function TR({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TT({ title, ...rest }): React.ReactElement {
+export function TT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3836,7 +3840,7 @@ export function TT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TV({ title, ...rest }): React.ReactElement {
+export function TV({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 900 600" {...rest}>
       {title && <title>{title}</title>}
@@ -3864,7 +3868,7 @@ export function TV({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TW({ title, ...rest }): React.ReactElement {
+export function TW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3883,7 +3887,7 @@ export function TW({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function TZ({ title, ...rest }): React.ReactElement {
+export function TZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3895,7 +3899,7 @@ export function TZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function UA({ title, ...rest }): React.ReactElement {
+export function UA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3905,7 +3909,7 @@ export function UA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function UG({ title, ...rest }): React.ReactElement {
+export function UG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -3920,7 +3924,7 @@ export function UG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function US({ title, ...rest }): React.ReactElement {
+export function US({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -3936,7 +3940,7 @@ export function US({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function UY({ title, ...rest }): React.ReactElement {
+export function UY({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 513 342" {...rest}>
       {title && <title>{title}</title>}
@@ -3953,7 +3957,7 @@ export function UY({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function UZ({ title, ...rest }): React.ReactElement {
+export function UZ({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3969,7 +3973,7 @@ export function UZ({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VA({ title, ...rest }): React.ReactElement {
+export function VA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -3987,7 +3991,7 @@ export function VA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VC({ title, ...rest }): React.ReactElement {
+export function VC({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4000,7 +4004,7 @@ export function VC({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VE({ title, ...rest }): React.ReactElement {
+export function VE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 22.5 15" {...rest}>
       {title && <title>{title}</title>}
@@ -4015,7 +4019,7 @@ export function VE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VG({ title, ...rest }): React.ReactElement {
+export function VG({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4053,7 +4057,7 @@ export function VG({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VI({ title, ...rest }): React.ReactElement {
+export function VI({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.3" {...rest}>
       {title && <title>{title}</title>}
@@ -4096,7 +4100,7 @@ export function VI({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VN({ title, ...rest }): React.ReactElement {
+export function VN({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4109,7 +4113,7 @@ export function VN({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function VU({ title, ...rest }): React.ReactElement {
+export function VU({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4125,7 +4129,7 @@ export function VU({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function WF({ title, ...rest }): React.ReactElement {
+export function WF({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 150 100" {...rest}>
       {title && <title>{title}</title>}
@@ -4141,7 +4145,7 @@ export function WF({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function WS({ title, ...rest }): React.ReactElement {
+export function WS({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4154,7 +4158,7 @@ export function WS({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function XK({ title, ...rest }): React.ReactElement {
+export function XK({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 512 341.33" {...rest}>
       {title && <title>{title}</title>}
@@ -4170,7 +4174,7 @@ export function XK({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function YE({ title, ...rest }): React.ReactElement {
+export function YE({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4181,7 +4185,7 @@ export function YE({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function YT({ title, ...rest }): React.ReactElement {
+export function YT({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 90 60" {...rest}>
       {title && <title>{title}</title>}
@@ -4207,7 +4211,7 @@ export function YT({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ZA({ title, ...rest }): React.ReactElement {
+export function ZA({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4224,7 +4228,7 @@ export function ZA({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ZM({ title, ...rest }): React.ReactElement {
+export function ZM({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}
@@ -4240,7 +4244,7 @@ export function ZM({ title, ...rest }): React.ReactElement {
   );
 }
 
-export function ZW({ title, ...rest }): React.ReactElement {
+export function ZW({ title, ...rest }: flagIcon): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 85.333 512 341.333" {...rest}>
       {title && <title>{title}</title>}

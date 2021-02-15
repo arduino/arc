@@ -120,7 +120,7 @@ export function Select({
   // on component mount check existing selections on options
   useEffect(() => {
     setInfoMsg(getDefaultInfoMsg(defaultValue, options) || fieldInfoMsg);
-  }, []);
+  }, [defaultValue, fieldInfoMsg, options]);
 
   // on component mount check values and set state accordingly
   useEffect(() => {
@@ -132,7 +132,7 @@ export function Select({
     } else {
       setvalueFromProps(undefined);
     }
-  }, [value]);
+  }, [isMulti, options, value]);
 
   const closeMenuOnSelect = !isMulti;
   const isClearable = isMulti;
@@ -169,7 +169,7 @@ export function Select({
       setHasValue(true);
       onChange(values);
     },
-    [onChange]
+    [fieldInfoMsg, onChange]
   );
 
   const selectClasses = classNames('zh-select', style['zh-select'], {

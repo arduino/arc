@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import TextareaAutosize from 'react-autosize-textarea';
 
-import { GenericFieldProps, GenericFieldPropsEvents } from '../utils';
+import { GenericFieldProps } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';
 
 // Import css styles and bind the class names
