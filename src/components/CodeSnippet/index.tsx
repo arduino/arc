@@ -24,6 +24,13 @@ export interface CodeSnippetProps extends WithChildren {
   lineNumbers?: boolean;
   /** light or dark theme */
   theme?: 'dark' | 'light';
+  /** first line to print */
+  start?: number;
+  /** last line to print. If unset, or smaller then start, the component will
+   * print until the last line
+   */
+  end?: number;
+  inline?: boolean;
   /** the language syntax to use for the highlight */
   className:
     | 'arduino'
@@ -73,6 +80,9 @@ export function CodeSnippet({
   className = 'arduino',
   lineNumbers = true,
   theme = 'dark',
+  start = 0,
+  end = 0,
+  inline = false,
 }: CodeSnippetProps): React.ReactElement {
   const language = className.replace(/language-/, '') as Language;
   return (
@@ -83,17 +93,26 @@ export function CodeSnippet({
       theme={theme === 'dark' ? darkTheme : lightTheme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={classNames(className, lineStyles.pre)} style={{ ...style, padding: '20px' }}>
-          {tokens.map((line, i) => (
-            <code key={i} {...getLineProps({ line, key: i })}>
-              {lineNumbers && <span className={lineStyles.lineNo}>{i + 1}</span>}
-              <span className={lineStyles.lineContent} key={i} {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
-              </span>
-            </code>
-          ))}
+        <pre
+          className={classNames(className, { [lineStyles.pre]: !inline, [lineStyles.inlinecode]: inline })}
+          style={{ ...style }}
+        >
+          {tokens.map((line, i) => {
+            if (i < start || (end > start && i > end)) {
+              return null;
+            }
+
+            return (
+              <code key={i} {...getLineProps({ line, key: i })}>
+                {!inline && lineNumbers && <span className={lineStyles.lineNo}>{i + 1}</span>}
+                <span className={lineStyles.lineContent} key={i} {...getLineProps({ line, key: i })}>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </span>
+              </code>
+            );
+          })}
         </pre>
       )}
     </Highlight>

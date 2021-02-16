@@ -1,7 +1,7 @@
 .pre {
   text-align: left;
   margin: 1em 0;
-  padding: .5em;
+  padding: .8em;
   overflow: scroll;
 
   & :global(.token-line) {
@@ -26,6 +26,21 @@
 
     .lineContent {
       display: table-cell;
+    }
+  }
+}
+
+.inlinecode {
+  display: inline-block;
+  padding: 0 .4rem;
+  border-radius: .3rem;
+  margin: 0;
+
+  & :global(.token-line) {
+    font-size: .95rem;
+
+    * {
+      font-family: monospace !important;
     }
   }
 }

@@ -37,3 +37,22 @@ NoLineNumbers.args = {
   className: 'jsx',
   theme: 'light',
 };
+
+export const Partial = Template.bind({});
+Partial.args = {
+  className: 'jsx',
+  start: 2,
+  end: 6,
+};
+
+const InlineTemplate: Story<CodeSnippetProps> = (args) => (
+  <>
+    {' '}
+    Test <CodeSnippet {...args}>Inline Code</CodeSnippet>{' '}
+  </>
+);
+export const Inline = InlineTemplate.bind({});
+Inline.args = {
+  className: 'jsx',
+  inline: true,
+};
