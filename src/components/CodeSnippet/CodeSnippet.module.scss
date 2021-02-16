@@ -32,13 +32,11 @@
 
 .inlinecode {
   display: inline-block;
-  padding: 0 .4rem;
-  border-radius: .3rem;
+  padding: .1rem .4rem;
+  border-radius: .2rem;
   margin: 0;
 
   & :global(.token-line) {
-    font-size: .95rem;
-
     * {
       font-family: monospace !important;
     }

@@ -91,6 +91,7 @@ export function CodeSnippet({
       code={children as string}
       language={language}
       theme={theme === 'dark' ? darkTheme : lightTheme}
+      Prism={Prism}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
