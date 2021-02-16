@@ -7,6 +7,7 @@ export {
   RadioGroupItem,
   RadioGroupItemProps,
 } from './components/checkbox';
+export { CodeSnippet, CodeSnippetProps } from './components/CodeSnippet';
 export { Textarea, TextareaProps } from './components/input/textarea';
 export { Input, InputProps } from './components/input/input';
 export { Address, AddressProps } from './components/input/address';

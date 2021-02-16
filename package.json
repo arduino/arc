@@ -53,6 +53,7 @@
     "classnames": "^2.2.6",
     "formik": "^2.1.4",
     "lodash": "^4.17.20",
+    "prism-react-renderer": "^1.1.1",
     "react-autosize-textarea": "^7.0.0",
     "react-google-recaptcha-v3": "^1.5.2",
     "react-places-autocomplete": "^7.3.0",

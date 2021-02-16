@@ -1,0 +1,31 @@
+.pre {
+  text-align: left;
+  margin: 1em 0;
+  padding: .5em;
+  overflow: scroll;
+
+  & :global(.token-line) {
+    line-height: 1.1em;
+    height: 1.1em;
+
+    * {
+      font-family: monospace !important;
+    }
+  }
+
+  code {
+    display: table-row;
+
+    .lineNo {
+      display: table-cell;
+      text-align: right;
+      padding-right: 1em;
+      user-select: none;
+      opacity: .5;
+    }
+
+    .lineContent {
+      display: table-cell;
+    }
+  }
+}
