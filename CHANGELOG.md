@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/bcmi-labs/react-components/compare/v0.5.1...v0.5.2) (2021-02-16)
+
+
+### Bug Fixes
+
+* add arduino syntax highlight ([64f3bc1](https://github.com/bcmi-labs/react-components/commit/64f3bc18ddcfbcfb2af9ea37efa94d4755f06808))
+
 ## [0.5.1](https://github.com/bcmi-labs/react-components/compare/v0.5.0...v0.5.1) (2021-02-16)
 
 
