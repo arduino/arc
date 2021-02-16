@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/bcmi-labs/react-components/compare/v0.5.0...v0.5.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* CodeSnippet start/end and inline ([2cfa76e](https://github.com/bcmi-labs/react-components/commit/2cfa76e0f8f854d04708381f2c08b06def341c31))
+
 # [0.5.0](https://github.com/bcmi-labs/react-components/compare/v0.4.9...v0.5.0) (2021-02-16)
 
 
