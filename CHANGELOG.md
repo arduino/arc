@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/bcmi-labs/react-components/compare/v0.4.9...v0.5.0) (2021-02-16)
+
+
+### Features
+
+* CodeSnippet component ([2db8007](https://github.com/bcmi-labs/react-components/commit/2db8007fd3ce5804cdd00e668383d5ff6fde939a))
+
 ## [0.4.9](https://github.com/bcmi-labs/react-components/compare/v0.4.8...v0.4.9) (2021-02-15)
 
 
