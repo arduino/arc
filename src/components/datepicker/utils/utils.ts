@@ -13,7 +13,7 @@ export function getFormatter(options: DateOptions): (l: string, d: Date) => stri
  * @param {*} min Minimum return value.
  * @param {*} max Maximum return value.
  */
-export function between(value: any, min: any, max: any): any {
+export function between<T>(value: T, min: T, max: T): T {
   if (min && min > value) {
     return min;
   }

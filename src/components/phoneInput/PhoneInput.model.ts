@@ -128,13 +128,13 @@ export class PhoneInputSettings {
    * Set custom masks for countries. Us eit if you want to set specific input mask for country.
    * Example: {fr: '(...) ..-..-..', at: '(....) ...-....'}
    */
-  masks?: object;
+  masks?: Record<string, unknown>;
   /**
    * set custom area codes for specific country.
    * Us eit if you need change code area for specific countries.
    * Example: areaCodes={{gr: ['2694', '2647'], fr: ['369', '463'], us: ['300']}}
    */
-  areaCodes?: object;
+  areaCodes?: Record<string, unknown>;
   /**
    * Use it for changing countries ordering.
    * Example: ['onlyCountries', 'preferredCountries']
@@ -153,7 +153,7 @@ export class PhoneInputSettings {
   /**
    * Set custom country priority, Use it if you need change priority.
    */
-  priority?: object; // {ca: 0, us: 1, kz: 0, ru: 1}
+  priority?: Record<string, unknown>; // {ca: 0, us: 1, kz: 0, ru: 1}
   /**
    * If enableAreaCodeStretch is added,
    * the part of the mask with the area code will not stretch

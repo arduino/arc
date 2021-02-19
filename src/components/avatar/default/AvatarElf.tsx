@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export function AvatarElf(props): React.ReactElement {
+export function AvatarElf(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>): React.ReactElement {
   return (
     <svg width="1em" height="1em" viewBox="0 0 300 300" {...props}>
       <defs>

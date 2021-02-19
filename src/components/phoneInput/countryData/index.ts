@@ -1,4 +1,4 @@
-import { Country, PhoneInputSettings, PhoneRegion } from '../PhoneInput.model';
+import { Country, PhoneInputSettings } from '../PhoneInput.model';
 import _rawCountries from './rawCountries';
 import _rawTerritories from './rawTerritories';
 
@@ -42,7 +42,7 @@ function initCountries(
       const areaItems = [];
 
       country[6] &&
-        country[6].map((areaCode) => {
+        country[6].map((areaCode: string | any[]) => {
           const areaItem = { ...countryItem };
           areaItem.dialCode = country[3] + areaCode;
           areaItem.isAreaCode = true;
@@ -70,7 +70,7 @@ function initCountries(
 function extendUserContent(
   userContent: any[][],
   contentItemIndex: number,
-  extendingObject: object | null | undefined,
+  extendingObject: Record<string, unknown> | null | undefined,
   firstExtension = false
 ): void {
   if (extendingObject === null || extendingObject === undefined) {
@@ -98,9 +98,9 @@ function extendUserContent(
 }
 
 function initUserContent(
-  masks: object | null | undefined,
-  priority: object | null | undefined,
-  areaCodes: object | null | undefined
+  masks: Record<string, unknown> | null | undefined,
+  priority: Record<string, unknown> | null | undefined,
+  areaCodes: Record<string, unknown> | null | undefined
 ): [] {
   const userContent: [] = [];
   extendUserContent(userContent, 1, masks, true);
@@ -217,11 +217,11 @@ export default class CountryData {
     );
   }
 
-  filterRegions = (regions, countries) => {
+  filterRegions = (regions: string | any[], countries: any[]): any[] => {
     if (typeof regions === 'string') {
       const region = regions;
       return countries.filter((country) => {
-        return country.regions.some((element) => {
+        return country.regions.some((element: string) => {
           return element === region;
         });
       });
@@ -229,7 +229,7 @@ export default class CountryData {
 
     return countries.filter((country) => {
       const matches = regions.map((region) => {
-        return country.regions.some((element) => {
+        return country.regions.some((element: any) => {
           return element === region;
         });
       });
@@ -237,7 +237,7 @@ export default class CountryData {
     });
   };
 
-  sortTerritories = (initializedTerritories, initializedCountries) => {
+  sortTerritories = (initializedTerritories: any[], initializedCountries: any[]): any[] => {
     const fullCountryList = [...initializedTerritories, ...initializedCountries];
     fullCountryList.sort(function (a, b) {
       if (a.name < b.name) {
@@ -251,22 +251,22 @@ export default class CountryData {
     return fullCountryList;
   };
 
-  getFilteredCountryList = (countryCodes, sourceCountryList, preserveOrder) => {
+  getFilteredCountryList = (countryCodes: any[], sourceCountryList: any[], preserveOrder: boolean | string[]): any => {
     if (countryCodes.length === 0) return sourceCountryList;
 
-    let filteredCountries;
+    let filteredCountries: any;
     if (preserveOrder) {
       // filter using iso2 user-defined order
       filteredCountries = countryCodes
-        .map((countryCode) => {
-          const country = sourceCountryList.find((country) => country.iso2 === countryCode);
+        .map((countryCode: any) => {
+          const country = sourceCountryList.find((country: { iso2: any }) => country.iso2 === countryCode);
           if (country) return country;
         })
-        .filter((country) => country); // remove any not found
+        .filter((country: any) => country); // remove any not found
     } else {
       // filter using alphabetical order
-      filteredCountries = sourceCountryList.filter((country) => {
-        return countryCodes.some((element) => {
+      filteredCountries = sourceCountryList.filter((country: { iso2: any }) => {
+        return countryCodes.some((element: any) => {
           return element === country.iso2;
         });
       });
@@ -275,7 +275,7 @@ export default class CountryData {
     return filteredCountries;
   };
 
-  localizeCountries = (countries, localization, preserveOrder) => {
+  localizeCountries = (countries: any[], localization: object, preserveOrder: boolean) => {
     for (let i = 0; i < countries.length; i++) {
       if (localization[countries[i].iso2] !== undefined) {
         countries[i].localName = localization[countries[i].iso2];
@@ -284,7 +284,7 @@ export default class CountryData {
       }
     }
     if (!preserveOrder) {
-      countries.sort(function (a, b) {
+      countries.sort(function (a: { localName: number }, b: { localName: number }) {
         if (a.localName < b.localName) {
           return -1;
         }
@@ -297,7 +297,7 @@ export default class CountryData {
     return countries;
   };
 
-  getCustomAreas = (country, areaCodes) => {
+  getCustomAreas = (country: any, areaCodes: string | any[]): any[] => {
     const customAreas = [];
     for (let i = 0; i < areaCodes.length; i++) {
       const newCountry = JSON.parse(JSON.stringify(country));
@@ -307,11 +307,11 @@ export default class CountryData {
     return customAreas;
   };
 
-  excludeCountries = (onlyCountries, excludedCountries) => {
+  excludeCountries = (onlyCountries: any[], excludedCountries: string | any[]): any[] => {
     if (excludedCountries.length === 0) {
       return onlyCountries;
     }
-    return onlyCountries.filter((country) => {
+    return onlyCountries.filter((country: { iso2: any }) => {
       return !excludedCountries.includes(country.iso2);
     });
   };
