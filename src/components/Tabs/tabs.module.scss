@@ -1,0 +1,42 @@
+@import '~@bcmi-labs/sass/src/variables';
+
+.tablist {
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #c9d2d2;
+
+  .tab {
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 6px 15px;
+    list-style: none;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $clouds;
+    }
+
+    &.tabselected {
+      color: $teal3;
+      font-weight: bold;
+      border-bottom: 4px solid $teal3;
+    }
+
+    .icon {
+      margin-right: .5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.panel {
+  display: none;
+
+  &.panelselected {
+    display: block;
+  }
+}
