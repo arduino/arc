@@ -3,12 +3,24 @@
 @import '~@bcmi-labs/sass/src/buttons';
 @import '../ui-controls-variables';
 
-.button {
+%buttonstyle {
   @extend %button-base;
+
+  box-sizing: border-box;
+  display: inline-flex;
+}
+
+.link {
 
   // VARIANTS
 
+  &.primary {
+    @extend %buttonstyle;
+  }
+
   &.secondary {
+    @extend %buttonstyle;
+
     color: $teal3;
     background-color: transparent;
     border-color: $teal3;
@@ -19,6 +31,8 @@
   }
 
   &.tertiary {
+    @extend %buttonstyle;
+
     color: $teal3;
     background-color: transparent;
     border-color: transparent;
@@ -30,6 +44,8 @@
   }
 
   &.ghost {
+    @extend %buttonstyle;
+
     color: $black;
     background-color: transparent;
     border-color: $black;
@@ -40,6 +56,8 @@
   }
 
   &.warning {
+    @extend %buttonstyle;
+
     color: $white;
     background-color: $notifyerror;
     border-color: transparent;

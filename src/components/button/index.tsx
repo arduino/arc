@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import classnames from 'classnames';
 import { useButton } from 'react-aria';
-import { FocusableDOMProps, FocusableProps, PressEvent } from '@react-types/shared';
+import { PressEvent } from '@react-types/shared';
 import { AriaButtonProps } from '@react-types/button';
 
 import style from './button.module.scss';
@@ -77,10 +77,16 @@ export function Button({
     ref
   );
 
-  const classNames = classnames(style.button, className, style[size], style[variant], {
+  const classNames = classnames(style.button, style[size], style[variant], {
     [`${style.full}`]: full,
     [`${style.disabled}`]: isDisabled,
     [`${style.loading}`]: loading,
+    [`${className}__button`]: !!className,
+    [`${className}__button--${size}`]: !!className,
+    [`${className}__button--${variant}`]: !!className,
+    [`${className}__button--full`]: !!className && full,
+    [`${className}__button--disabled`]: !!className && isDisabled,
+    [`${className}__button--loading`]: !!className && loading,
   });
 
   return (
