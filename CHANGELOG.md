@@ -1,3 +1,11 @@
+# [0.6.0](https://github.com/bcmi-labs/react-components/compare/v0.5.2...v0.6.0) (2021-02-26)
+
+
+### Features
+
+* [Link Component] add link component ([8a168b8](https://github.com/bcmi-labs/react-components/commit/8a168b8e57f9ba5994d6917d56bc9f11b6e37a71))
+* [Tab Component] adding the tab component ([9eb7326](https://github.com/bcmi-labs/react-components/commit/9eb73264194ce85af396c9180748e407a8b9cb89))
+
 ## [0.5.2](https://github.com/bcmi-labs/react-components/compare/v0.5.1...v0.5.2) (2021-02-16)
 
 
