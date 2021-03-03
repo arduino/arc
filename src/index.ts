@@ -26,6 +26,7 @@ export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from '.
 export { PhoneInput, PhoneInputProps, PhoneRegion } from './components/phoneInput';
 export { Wrapper } from './components/wrapper';
 export * from './components/Tabs';
+export * from './components/Accordion';
 // export derived components
 
 export {

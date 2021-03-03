@@ -1,0 +1,84 @@
+@import '~@bcmi-labs/sass/src/variables';
+
+.accordionlist {
+  padding: 0;
+  width: 100%;
+
+  .accordion {
+    margin: 0;
+    border-bottom: 1px solid $smoke;
+
+    &:first-of-type {
+      border-top: 1px solid $smoke;
+    }
+
+    .accordionbtn {
+      background: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      outline: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      list-style: none;
+      width: 100%;
+      text-align: left;
+      height: 64px;
+      color: $teal3;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 0 20px;
+
+      &.iconright {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .accordionicon {
+          margin-right: 15px;
+        }
+      }
+
+      &.accordionbtndisabled {
+        color: rgba($teal3, .5);
+      }
+
+      &:hover:not(.accordionbtndisabled) {
+        background-color: $clouds;
+        color: $teal5;
+      }
+
+      .accordionlabel {
+        margin-left: 20px;
+      }
+
+      .accordionicon {
+        transition: transform .1s ease-in-out;
+        transform: rotate(-90deg);
+        display: flex;
+        align-content: center;
+        margin-left: -10px;
+        margin-right: -9px;
+
+        svg {
+          height: 18px;
+          width: 18px;
+        }
+
+        &.accordioniconexpanded {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+}
+
+.panel {
+  padding: 20px 20px 20px 40px;
+  display: none;
+  font-size: 14px;
+
+  &.panelexpanded {
+    display: block;
+  }
+}
