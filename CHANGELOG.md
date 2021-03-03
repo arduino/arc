@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/bcmi-labs/react-components/compare/v0.6.0...v0.7.0) (2021-03-03)
+
+
+### Features
+
+* [Accordion] add accordion component ([#51](https://github.com/bcmi-labs/react-components/issues/51)) ([a81a8c1](https://github.com/bcmi-labs/react-components/commit/a81a8c1c51c7c5c3419d6bd440f37c6dcf701376))
+
 # [0.6.0](https://github.com/bcmi-labs/react-components/compare/v0.5.2...v0.6.0) (2021-02-26)
 
 
