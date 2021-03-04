@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Story } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react';
 import { Select, SelectProps } from '.';
 
 export default {

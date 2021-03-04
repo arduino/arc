@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react';
 import { TriggerIcon, TriggerIconProps } from '.';
 import { IconNavigationMenuMoreGrid, IconStatusInformationNormal } from '@bcmi-labs/react-icons';
 

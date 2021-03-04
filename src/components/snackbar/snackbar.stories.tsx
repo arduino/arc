@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Story } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Snackbar, SnackbarProps } from './Snackbar';
 
