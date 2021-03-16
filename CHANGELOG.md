@@ -1,3 +1,10 @@
+## [0.7.1](https://github.com/bcmi-labs/react-components/compare/v0.7.0...v0.7.1) (2021-03-16)
+
+
+### Bug Fixes
+
+* bump version of prism-react-renderer ([0fb1d2a](https://github.com/bcmi-labs/react-components/commit/0fb1d2a65df4ab1fc25f09bdb16f6921173f3017))
+
 # [0.7.0](https://github.com/bcmi-labs/react-components/compare/v0.6.0...v0.7.0) (2021-03-03)
 
 
