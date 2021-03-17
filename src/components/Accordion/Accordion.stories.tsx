@@ -27,7 +27,7 @@ const baseArgs = {
         setContentHook(<>Accordion Two Content</>);
       },
     },
-
+    null,
     {
       label: 'Accordion Three',
       id: 'acc3',

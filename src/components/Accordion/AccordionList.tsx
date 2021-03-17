@@ -16,6 +16,9 @@ export interface AccordionListProps extends WithBemClasses {
 export function AccordionList({ accordions, className }: AccordionListProps): React.ReactElement {
   const AccordionListClasses = classnames(style.accordionlist, { [`${className}__accordionlist`]: !!className });
 
+  // Remove null elements
+  accordions = accordions.filter((element) => !!element);
+
   return (
     <div className={AccordionListClasses}>
       {accordions.map((accordion) => {
