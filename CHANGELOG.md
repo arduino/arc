@@ -1,3 +1,10 @@
+## [0.7.2](https://github.com/bcmi-labs/react-components/compare/v0.7.1...v0.7.2) (2021-03-17)
+
+
+### Bug Fixes
+
+* remove null accordions from accordionlist ([d9a2b8f](https://github.com/bcmi-labs/react-components/commit/d9a2b8f043c11334637774f68627484e054d294d))
+
 ## [0.7.1](https://github.com/bcmi-labs/react-components/compare/v0.7.0...v0.7.1) (2021-03-16)
 
 
