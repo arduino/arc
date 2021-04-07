@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/bcmi-labs/react-components/compare/v0.7.2...v0.8.0) (2021-04-07)
+
+
+### Features
+
+* [SupportForm] Add onSuccess callback ([09ae998](https://github.com/bcmi-labs/react-components/commit/09ae998060ca0425076735d985f32c9f4ce29c0c))
+
 ## [0.7.2](https://github.com/bcmi-labs/react-components/compare/v0.7.1...v0.7.2) (2021-03-17)
 
 
