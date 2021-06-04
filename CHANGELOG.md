@@ -1,3 +1,10 @@
+## [0.8.1](https://github.com/bcmi-labs/react-components/compare/v0.8.0...v0.8.1) (2021-06-04)
+
+
+### Bug Fixes
+
+* onBlur call if `onBlur` props doesn't exist ([9c27744](https://github.com/bcmi-labs/react-components/commit/9c27744d915590b9b35d52a639516b3c7ab5087d))
+
 # [0.8.0](https://github.com/bcmi-labs/react-components/compare/v0.7.2...v0.8.0) (2021-04-07)
 
 
