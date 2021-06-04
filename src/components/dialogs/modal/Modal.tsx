@@ -9,20 +9,23 @@ import { IconNavigationArrowLeft, IconNavigationCloseNormal } from '@bcmi-labs/r
 import { Underlay } from '../underlay/Underlay';
 import { OpenTransition } from '../../OpenTransition';
 import style from './modal.module.scss';
-import { Button } from '../../button';
+import { Button, ButtonProps } from '../../button';
 import { WithBemClasses, OverlayProps } from '../../utils';
 
-interface ModalButtonProps {
+interface ModalButtonProps extends Omit<ButtonProps, 'children'> {
   label: string;
   closeModalOnClick: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   closeFn?: () => void;
 }
+
 export function ModalButton({
   label = null,
   closeModalOnClick,
   onClick,
   closeFn,
+  variant = 'primary',
+  ...rest
 }: ModalButtonProps): React.ReactElement {
   if (!label) {
     return null;
@@ -30,12 +33,15 @@ export function ModalButton({
 
   return (
     <Button
+      variant={variant}
       onPress={(): void => {
-        onClick();
+        typeof onClick === 'function' && onClick();
         if (closeModalOnClick && typeof closeFn === 'function') {
+          console.log('close fn');
           closeFn();
         }
       }}
+      {...rest}
     >
       {label}
     </Button>
@@ -60,8 +66,14 @@ export interface ModalWindowProps extends AriaDialogProps, WithBemClasses {
 
   primaryButton?: ModalButtonProps;
   secondaryButton?: ModalButtonProps;
+  // TODO this should be buttons array
 
   onBack?: (e: React.MouseEvent) => void;
+
+  /** hide header to allow compact view of Modal */
+  compactView?: boolean;
+
+  buttonsPosition?: 'start' | 'end' | 'center';
 }
 
 function _ModalWindow(
@@ -76,7 +88,9 @@ function _ModalWindow(
     primaryButton = null,
     secondaryButton = null,
     isDismissable = true,
+    compactView = false,
     className,
+    buttonsPosition = 'end',
     onBack,
     ...otherProps
   }: ModalWindowProps,
@@ -101,7 +115,7 @@ function _ModalWindow(
     return function removeEventListener(): void {
       window.removeEventListener('message', handleIframeSize, false);
     };
-  }, []);
+  }, [handleIframeSize]);
 
   // Get props for the dialog and its title
   // enforce a role of type dialog if the modal is dismissable or alertdialog if it's not
@@ -120,27 +134,30 @@ function _ModalWindow(
 
   return (
     <div {...dialogProps} {...modalProps} {...otherProps} className={modalClasses} ref={ref}>
-      {(isDismissable || back || title) && ( // show the header when there is something to show inside
-        <div className={classNames(style.heading, { [`${className}__heading`]: className, [style.noBorder]: !!intro })}>
-          <div className={classNames(style.back, { [`${className}__back`]: className })}>
-            {back && (
-              <button onClick={onBack}>
-                <IconNavigationArrowLeft />
-              </button>
-            )}
+      {(isDismissable || back || title) &&
+        !compactView && ( // show the header when there is something to show inside
+          <div
+            className={classNames(style.heading, { [`${className}__heading`]: className, [style.noBorder]: !!intro })}
+          >
+            <div className={classNames(style.back, { [`${className}__back`]: className })}>
+              {back && (
+                <button onClick={onBack}>
+                  <IconNavigationArrowLeft />
+                </button>
+              )}
+            </div>
+            <h3 {...titleProps} className={classNames(style.title, { [`${className}__title`]: className })}>
+              {title}
+            </h3>
+            <div className={classNames(style.close, { [`${className}__close`]: className })}>
+              {isDismissable && (
+                <button {...closeButtonProps}>
+                  <IconNavigationCloseNormal />
+                </button>
+              )}
+            </div>
           </div>
-          <h3 {...titleProps} className={classNames(style.title, { [`${className}__title`]: className })}>
-            {title}
-          </h3>
-          <div className={classNames(style.close, { [`${className}__close`]: className })}>
-            {isDismissable && (
-              <button {...closeButtonProps}>
-                <IconNavigationCloseNormal />
-              </button>
-            )}
-          </div>
-        </div>
-      )}
+        )}
       {intro && <div className={classNames(style.intro, { [`${className}__intro`]: className })}>{intro}</div>}
       {children && (
         <div
@@ -154,7 +171,12 @@ function _ModalWindow(
         >
           {children}
           {integratedButtons && (
-            <div className={classNames(style.buttonsWrapper, { [`${className}__buttonswrapper`]: className })}>
+            <div
+              className={classNames(style.buttonsWrapper, {
+                [`${className}__buttonsWrapper`]: className,
+                [style[`buttonsWrapper--${buttonsPosition}`]]: buttonsPosition,
+              })}
+            >
               <ModalButton {...secondaryButton} />
               <ModalButton {...primaryButton} />
             </div>
@@ -192,7 +214,7 @@ export function Modal({
     } else {
       state.open();
     }
-  }, [isOpen]);
+  }, [isOpen, state]);
 
   const closeFn = otherProps.onClose
     ? () => {
@@ -236,7 +258,7 @@ export function Modal({
 
   // Prevent scrolling while the modal is open, and hide content
   // outside the modal from screen readers.
-  usePreventScroll();
+  usePreventScroll({ isDisabled: !state.isOpen });
 
   if (!state.isOpen) {
     return null;

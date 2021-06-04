@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useButton } from 'react-aria';
 import { usePopper } from 'react-popper';
-import classnames from 'classnames';
 import { Popover, PopoverProps } from './Popover';
-
-import style from './popover.module.scss';
 
 function ButtonTrigger({ TriggerElement, setTriggerRef, openButtonProps }) {
   return React.cloneElement(TriggerElement, { ref: setTriggerRef, ...openButtonProps });

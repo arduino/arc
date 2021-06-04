@@ -1,18 +1,9 @@
 {
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "tests/**/*.ts",
-  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "tests/**/*.ts"],
   "compilerOptions": {
     "importHelpers": true,
-    "lib": [
-      "dom",
-      "es2019",
-      "es2020.string"
-    ],
+    "lib": ["dom", "es2019", "es2020.string"],
     "downlevelIteration": true,
     "outDir": "./dist",
     "declaration": true,
@@ -24,9 +15,6 @@
     "emitDecoratorMetadata": true,
     "module": "ES2015",
     "moduleResolution": "node",
-    "types": [
-      "node",
-      "mocha"
-    ]
+    "types": ["node", "mocha"]
   }
 }

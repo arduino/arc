@@ -31,7 +31,7 @@ CustomModal.args = {
 
 export const CustomAvatarRender = Template.bind({});
 CustomAvatarRender.args = {
-  avatarView: (avatar: AvatarInfo, isSelected: boolean) => {
+  avatarView: function avatarView(avatar: AvatarInfo, isSelected: boolean) {
     return (
       <Avatar key={`${avatar.name}`} icon={avatar.avatar}>
         {isSelected && (

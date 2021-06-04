@@ -89,7 +89,7 @@ export function DatePicker({
     }
   };
 
-  const resetValue = (e) => {
+  const resetValue = () => {
     handlerOnChange(null);
     if (datepicker) {
       datepicker.current.click();

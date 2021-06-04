@@ -67,9 +67,7 @@
     transform: translateY(0);
 
     /* Entry animations */
-    transition:
-      opacity .25s cubic-bezier(0, 0, .4, 1) .16s,
-      transform .25s cubic-bezier(0, 0, .4, 1) .16s;
+    transition: opacity .25s cubic-bezier(0, 0, .4, 1) .16s, transform .25s cubic-bezier(0, 0, .4, 1) .16s;
     transition-delay: 0ms;
   }
 
@@ -132,7 +130,7 @@
   }
 
   .content {
-    padding: 30px 130px 0;
+    padding: 30px 90px 0;
     margin: 0 auto;
 
     h1,
@@ -151,7 +149,18 @@
     .buttonsWrapper {
       margin-top: 45px;
       display: flex;
-      justify-content: flex-end;
+
+      &--end {
+        justify-content: flex-end;
+      }
+
+      &--start {
+        justify-content: flex-start;
+      }
+
+      &--center {
+        justify-content: center;
+      }
 
       button:first-child {
         margin-right: 15px;

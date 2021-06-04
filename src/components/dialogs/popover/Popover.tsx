@@ -76,7 +76,7 @@ export function Popover({ isOpen = false, ...otherProps }: PopoverProps): React.
     } else {
       state.open();
     }
-  }, [isOpen]);
+  }, [isOpen, state]);
 
   const closeFn = otherProps.onClose
     ? (): void => {

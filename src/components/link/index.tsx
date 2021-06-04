@@ -61,13 +61,7 @@ export function Link({
 }: LinkProps): React.ReactElement {
   const ref = useRef();
 
-  const { linkProps } = useLink(
-    {
-      children,
-      ...props, // props contains the PressEvents
-    },
-    ref
-  );
+  const { linkProps } = useLink(props, ref);
 
   const classNames = classnames(style.link, style[size], style[variant], {
     [`${className}__link`]: !!className,

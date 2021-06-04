@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { getYear, getMonthHuman } from '../utils/date-utils';
 
 import Input, { InputProps } from './Input';
@@ -11,7 +11,7 @@ export interface MonthInputProps extends InputProps {
   year: number;
 }
 
-export default function MonthInput({ maxDate, minDate, year, ...otherProps }: MonthInputProps) {
+export default function MonthInput({ maxDate, minDate, year, ...otherProps }: MonthInputProps): ReactElement {
   function isSameYear(date) {
     return date && year === getYear(date);
   }

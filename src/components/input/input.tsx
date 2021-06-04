@@ -39,6 +39,7 @@ export function Input({
   isReadOnly,
   isRequired,
   helper,
+  className,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -47,14 +48,17 @@ export function Input({
 
   const textInput = useRef(null);
 
-  const changeValue = useCallback((e) => {
-    setValue(e.currentTarget.value);
+  const changeValue = useCallback(
+    (e) => {
+      setValue(e.currentTarget.value);
 
-    // Bubble up event
-    if (onChange) {
-      onChange(e);
-    }
-  }, []);
+      // Bubble up event
+      if (onChange) {
+        onChange(e);
+      }
+    },
+    [onChange]
+  );
 
   // Listen for value changes and act accordingly
   useEffect(() => {
@@ -71,6 +75,7 @@ export function Input({
     ['hasValue']: inputValue && inputValue.length > 0,
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
+    [`${className}__input`]: className,
   });
 
   // prepare wrapper props
@@ -82,6 +87,7 @@ export function Input({
     htmlFor: id,
     withoutStatus,
     helper,
+    className,
   };
 
   const renderButtons = (): React.ReactElement[] => {

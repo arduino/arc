@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import { useTooltip } from 'react-aria';
 import { mergeProps } from '@react-aria/utils';
-
+import { AriaTooltipProps } from '@react-types/tooltip';
 import { WithBemClasses } from '../../utils';
 import style from './tooltip.module.scss';
 
-export interface TooltipProps extends WithBemClasses {
+export interface TooltipProps extends WithBemClasses, AriaTooltipProps {
   children: React.ReactNode;
   popperStyle: React.CSSProperties;
   popover?: boolean;

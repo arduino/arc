@@ -27,12 +27,12 @@ export interface CheckboxGroupProps
  * A good usage example is both here and in the support-form component
  */
 function _CheckboxGroup(props: CheckboxGroupProps): React.ReactElement {
-  const { label, children, className, defaultValue } = props;
+  const { label, children, className, defaultValue, onChange } = props;
   const [values, setvalues] = useState(defaultValue || []);
 
   useEffect(() => {
-    props.onChange(values);
-  }, [values]);
+    onChange(values);
+  }, [onChange, values]);
 
   const state = useCheckboxGroupState({ ...props, onChange: (e) => setvalues(e) });
   const { groupProps, labelProps } = useCheckboxGroup(props, state);

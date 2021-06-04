@@ -31,6 +31,5 @@ ComplexSubstitution.args = {
 
 export const MultiSubstitution = Template.bind({});
 MultiSubstitution.args = {
-  text:
-    'Start with [Arduino Tutorials](https://www.arduino.cc/en/Tutorial/HomePage), then look at the [Reference](https://www.arduino.cc/reference/en)',
+  text: 'Start with [Arduino Tutorials](https://www.arduino.cc/en/Tutorial/HomePage), then look at the [Reference](https://www.arduino.cc/reference/en)',
 };

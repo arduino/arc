@@ -38,14 +38,17 @@ export function Password({
   // Compute type of input according to visibility
   const inputType = visibility ? 'text' : 'password';
 
-  const changeValue = useCallback((e) => {
-    setValue(e.currentTarget.value);
+  const changeValue = useCallback(
+    (e) => {
+      setValue(e.currentTarget.value);
 
-    // Bubble up event
-    if (onChange) {
-      onChange(e);
-    }
-  }, []);
+      // Bubble up event
+      if (onChange) {
+        onChange(e);
+      }
+    },
+    [onChange]
+  );
 
   // Compute css classes
   const inputClasses = classNames(style.input, {

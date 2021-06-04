@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useButton } from '@react-aria/button';
 import { Modal, ModalWindowProps } from './Modal';
 
@@ -15,8 +15,10 @@ export interface ModalTriggerProps extends Omit<ModalWindowProps, 'onClose'> {
  *
  * Parent state is updated from inside of the ModalTrigger, in order to be in sync with the real status of the Modal
  */
-export function ModalTrigger({ TriggerElement, isOpen, setIsOpen, ...props }: ModalTriggerProps): React.ReactElement {
+export function ModalTrigger({ TriggerElement, ...props }: ModalTriggerProps): React.ReactElement {
   const ref = useRef();
+
+  const [isOpen, setIsOpen] = useState(props.isOpen);
 
   // extract children and other props from trigger element
   // this way we can add openButtonProps and ref
@@ -40,7 +42,7 @@ export function ModalTrigger({ TriggerElement, isOpen, setIsOpen, ...props }: Mo
 
   const closeFn = useCallback(() => {
     setIsOpen(false);
-  }, []);
+  }, [setIsOpen]);
 
   return (
     <>

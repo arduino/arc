@@ -30,9 +30,10 @@ export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProp
   onBlur?: (e: React.FocusEvent<HTMLElement>) => void;
   onChange?: (values: string | string[]) => void;
   value?: string[];
+  placeholder?: string | null;
 }
 
-const ClearIndicator = (props) => {
+const ClearIndicator = (props: { innerProps: Record<string, any> }) => {
   const {
     innerProps: { ref, ...restInnerProps },
   } = props;
@@ -55,7 +56,7 @@ const DropdownIndicator = (props) => {
   );
 };
 
-const getOptionsInfoMsg = (opts: ValueType<SelectOption> | null): string | null => {
+const getOptionsInfoMsg = (opts: ValueType<SelectOption, any> | null): string | null => {
   if (!opts || (Array.isArray(opts) && opts.length === 0)) {
     return null;
   }
@@ -153,7 +154,7 @@ export function Select({
   };
 
   const selectChanged = useCallback(
-    (evt: ValueType<SelectOption>): void => {
+    (evt: ValueType<SelectOption, any>): void => {
       setInfoMsg(getOptionsInfoMsg(evt) || fieldInfoMsg);
 
       if (!evt) {
@@ -194,7 +195,7 @@ export function Select({
         onFocus={() => setHasFocus(true)}
         onBlur={(e) => {
           setHasFocus(false);
-          onBlur(e);
+          typeof onBlur === 'function' && onBlur(e);
         }}
         value={valueFromProps}
         isSearchable={isSearchable}

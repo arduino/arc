@@ -114,7 +114,7 @@ export class PhoneInputSettings {
    * Predefined localization. Here you get put json with localization information.
    * Example: {de: 'Deutschland', es: 'España'}
    */
-  localization?: object;
+  localization?: Record<string, any>;
   /**
    * Set default mask which will be use for input.
    * In case whe county has mask, control will use mask of country

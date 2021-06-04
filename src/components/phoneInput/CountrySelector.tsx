@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback, ReactElement } from 'react';
 import classNames from 'classnames';
 import { startsWith } from 'lodash';
 
@@ -33,7 +33,6 @@ export interface CountrySelectorProps {
   country: Country;
   disableDropdown: boolean;
   options: PhoneInputSettings;
-  phoneNumber: string;
   isDisabled: boolean;
   isReadOnly: boolean;
 
@@ -49,7 +48,6 @@ export function CountrySelector({
   country,
   disableDropdown,
   options,
-  phoneNumber,
   isDisabled,
   isReadOnly,
 
@@ -57,7 +55,7 @@ export function CountrySelector({
 
   onSelect,
   onShow,
-}: CountrySelectorProps) {
+}: CountrySelectorProps): ReactElement {
   const [highlightCountryIndex, setHighlightCountryIndex] = useState(initHighlightCountryIndex(country, countryData));
   const [queryString, setQueryString] = useState('');
 
@@ -94,7 +92,7 @@ export function CountrySelector({
       });
       return probableCountries[0];
     },
-    [queryString]
+    [countryData.onlyCountries]
   );
 
   const countrySearch: () => void = debounce(() => {
@@ -122,15 +120,21 @@ export function CountrySelector({
     onShow(!openDropdown);
   };
 
-  const handleFlagItemClick = (country, e) => {
-    onSelect(country);
-  };
+  const handleFlagItemClick = useCallback(
+    (country) => {
+      onSelect(country);
+    },
+    [onSelect]
+  );
 
-  const handleClickOutside = (e) => {
-    if (dropdownRef.current && dropdownContainerRef.current && !dropdownContainerRef.current.contains(e.target)) {
-      onShow(false);
-    }
-  };
+  const handleClickOutside = useCallback(
+    (e) => {
+      if (dropdownRef.current && dropdownContainerRef.current && !dropdownContainerRef.current.contains(e.target)) {
+        onShow(false);
+      }
+    },
+    [onShow]
+  );
 
   const handleKeydown = (e) => {
     const {
@@ -179,10 +183,7 @@ export function CountrySelector({
         break;
       case KeyBoardKeys.ENTER:
         preventDefault();
-        handleFlagItemClick(
-          [...countryData.preferredCountries, ...countryData.onlyCountries][highlightCountryIndex],
-          e
-        );
+        handleFlagItemClick([...countryData.preferredCountries, ...countryData.onlyCountries][highlightCountryIndex]);
         break;
       default:
         if ((e.which >= KeyBoardKeys.A && e.which <= KeyBoardKeys.Z) || e.which === KeyBoardKeys.SPACE) {
@@ -201,27 +202,27 @@ export function CountrySelector({
         document.removeEventListener('mousedown', handleClickOutside);
       }
     };
-  }, []);
+  }, [handleClickOutside]);
 
   // find and show country in the list
   useEffect(() => {
     if (openDropdown) {
       scrollTo(getCountryElement(highlightCountryIndex), dropdownRef.current);
     }
-  }, [openDropdown]);
+  }, [highlightCountryIndex, openDropdown]);
 
   useEffect(() => {
     if (queryString) {
       countrySearch();
     }
-  }, [queryString]);
+  }, [countrySearch, queryString]);
 
   // find and show country in the list
   useEffect(() => {
     if (openDropdown) {
       scrollTo(getCountryElement(highlightCountryIndex), dropdownRef.current);
     }
-  }, [openDropdown]);
+  }, [highlightCountryIndex, openDropdown]);
 
   // Render flags
   const renderCountryFlags = useCallback(() => {
@@ -245,7 +246,7 @@ export function CountrySelector({
           data-dial-code="1"
           tabIndex={disableDropdown ? -1 : 0}
           data-country-code={country.iso2}
-          onClick={(e) => handleFlagItemClick(country, e)}
+          onClick={() => handleFlagItemClick(country)}
           role="option"
           {...(highlight ? { 'aria-selected': true } : {})}
         >
@@ -289,7 +290,7 @@ export function CountrySelector({
         {countryDropdownList}
       </div>
     );
-  }, [countryData, highlightCountryIndex, disableDropdown, phoneNumber]);
+  }, [countryData, className, highlightCountryIndex, disableDropdown, options, handleFlagItemClick]);
 
   const flagViewClasses = classNames(style['phone-input__flags'], {
     [`${className}__flags`]: className,

@@ -275,7 +275,7 @@ export default class CountryData {
     return filteredCountries;
   };
 
-  localizeCountries = (countries: any[], localization: object, preserveOrder: boolean) => {
+  localizeCountries = (countries: any[], localization: Record<string, any>, preserveOrder: boolean): any[] => {
     for (let i = 0; i < countries.length; i++) {
       if (localization[countries[i].iso2] !== undefined) {
         countries[i].localName = localization[countries[i].iso2];
@@ -297,7 +297,7 @@ export default class CountryData {
     return countries;
   };
 
-  getCustomAreas = (country: any, areaCodes: string | any[]): any[] => {
+  getCustomAreas = (country: string, areaCodes: string | any[]): any[] => {
     const customAreas = [];
     for (let i = 0; i < areaCodes.length; i++) {
       const newCountry = JSON.parse(JSON.stringify(country));

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Story } from '@storybook/react';
 import { Modal, ModalProps } from './Modal';
 import { OverlayProvider } from 'react-aria';
@@ -8,15 +8,19 @@ export default {
   component: Modal,
 };
 
-const Template: Story<ModalProps> = (args) => (
-  <OverlayProvider>
-    <Modal {...args} />
-  </OverlayProvider>
-);
+const Template: Story<ModalProps> = (args) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <OverlayProvider>
+      <button onClick={() => setIsOpen(true)}>toggle modal</button>
+      <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </OverlayProvider>
+  );
+};
 
-const isOpen = true;
 const defaultProps = {
-  isOpen,
+  isOpen: false,
+
   isDismissable: true,
   title: 'A modal',
   children: (
@@ -30,6 +34,7 @@ const defaultProps = {
     </>
   ),
 };
+
 const defaultActionProps = {
   onClose: { action: 'onClose' },
 };
@@ -63,22 +68,22 @@ withIntro.argTypes = {
 export const compactAlert = Template.bind({});
 compactAlert.args = {
   ...defaultProps,
-  isDismissable: false,
+  compactView: true,
   title: null,
 };
 compactAlert.argTypes = {
   ...defaultActionProps,
 };
 
-export const withPrimaryButton = Template.bind({});
-withPrimaryButton.args = {
+export const withOneButton = Template.bind({});
+withOneButton.args = {
   ...defaultProps,
   primaryButton: {
     label: 'primary',
     closeModalOnClick: true,
   },
 };
-withPrimaryButton.argTypes = {
+withOneButton.argTypes = {
   ...defaultActionProps,
 };
 
@@ -94,6 +99,7 @@ withTwoButtons.args = {
   },
   secondaryButton: {
     label: 'secondary',
+    variant: 'secondary',
     closeModalOnClick: true,
     onClick: () => {
       alert('secondary button pressed');
@@ -101,5 +107,18 @@ withTwoButtons.args = {
   },
 };
 withTwoButtons.argTypes = {
+  ...defaultActionProps,
+};
+
+export const withCustomButtonsPositions = Template.bind({});
+withCustomButtonsPositions.args = {
+  ...defaultProps,
+  buttonsPosition: 'center',
+  primaryButton: {
+    label: 'primary',
+    closeModalOnClick: true,
+  },
+};
+withCustomButtonsPositions.argTypes = {
   ...defaultActionProps,
 };
