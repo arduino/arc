@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/bcmi-labs/react-components/compare/v0.8.0...v0.9.0) (2021-06-04)
+
+
+### Features
+
+* Modal buttons added `variant` option ([61c290b](https://github.com/bcmi-labs/react-components/commit/61c290b7bafd7ca05daa931b5e232502368be5b9))
+
 # [0.8.0](https://github.com/bcmi-labs/react-components/compare/v0.7.2...v0.8.0) (2021-04-07)
 
 
