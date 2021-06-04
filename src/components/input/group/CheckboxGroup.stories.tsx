@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import { Story } from '@storybook/react';
 import { CheckboxGroup, CheckboxGroupProps } from './CheckboxGroup';
 import { CheckboxGroupItem } from '../../checkbox/CheckboxGroupItem';

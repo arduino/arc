@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { getYear, getMonthHuman, getDate, getDaysInMonth } from '../utils/date-utils';
 
 import Input, { InputProps } from './Input';
@@ -11,7 +11,7 @@ export interface DayInputProps extends InputProps {
   year: number;
 }
 
-export default function DayInput({ maxDate, minDate, month, year, value, ...otherProps }: DayInputProps) {
+export default function DayInput({ maxDate, minDate, month, year, value, ...otherProps }: DayInputProps): ReactElement {
   const currentMonthMaxDays = (() => {
     if (!month) {
       return 31;

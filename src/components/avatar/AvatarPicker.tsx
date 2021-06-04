@@ -96,7 +96,7 @@ export function AvatarPicker({
     handlerOnClose();
   };
 
-  const getAvatarProps = (): object => {
+  const getAvatarProps = (): Record<string, any> => {
     const props = {};
 
     if (!isDisabled && isEdit) {
@@ -169,6 +169,7 @@ export function AvatarPicker({
         </Avatar>
       );
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [avatarList, selected, avatarSize]);
 
   const renderSelectElement = (): React.ReactElement => {

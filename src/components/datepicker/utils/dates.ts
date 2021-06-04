@@ -17,7 +17,7 @@ import {
  * @param {String} rangeType Range type (e.g. 'day')
  * @param {Date} date Date.
  */
-export function getBegin(rangeType: string, date: Date) {
+export function getBegin(rangeType: string, date: Date): Date {
   switch (rangeType) {
     case 'century':
       return getCenturyStart(date);
@@ -40,7 +40,7 @@ export function getBegin(rangeType: string, date: Date) {
  * @param {String} rangeType Range type (e.g. 'day')
  * @param {Date} date Date.
  */
-export function getEnd(rangeType: string, date: Date) {
+export function getEnd(rangeType: string, date: Date): Date {
   switch (rangeType) {
     case 'century':
       return getCenturyEnd(date);

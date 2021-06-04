@@ -27,10 +27,10 @@ function isValidNumber(num: any): boolean {
   return num !== null && num !== false && !Number.isNaN(Number(num));
 }
 
-export function safeMin(...args: any): number {
+export function safeMin(...args: any[]): number {
   return Math.min(...args.filter(isValidNumber));
 }
 
-export function safeMax(...args: any): number {
+export function safeMax(...args: any[]): number {
   return Math.max(...args.filter(isValidNumber));
 }

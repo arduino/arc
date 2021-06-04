@@ -28,7 +28,7 @@ interface FontFaceSet {
   readonly ready: Promise<FontFaceSet>;
   check(font: string, text?: string): boolean;
   load(font: string, text?: string): Promise<FontFace[]>;
-  addEventListener(event: string, fn: Function);
+  addEventListener(event: string, fn: () => void);
 }
 
 declare global {
@@ -104,7 +104,7 @@ export interface InputProps
     Pick<GenericFieldProps, 'isRequired' | 'isDisabled' | 'isReadOnly' | 'placeholder' | 'name'> {
   autoFocus?: boolean;
   ariaLabel?: string;
-  itemRef?: Function;
+  itemRef?: (ref: any, name: any) => void;
   max?: number;
   min?: number;
   maxLength?: number;

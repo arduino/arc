@@ -19,7 +19,11 @@ const OPEN_STATES = {
  * **note** hitting esc bypasses exit animation for anyone testing.
  */
 
-export function OpenTransition(props): React.ReactElement {
+export function OpenTransition(props: {
+  children: React.ReactElement | React.ReactElement[];
+  in?: boolean;
+  appear?: boolean;
+}): React.ReactElement {
   return (
     <Transition timeout={{ enter: 0, exit: 350 }} {...props}>
       {(state): React.ReactNodeArray => {

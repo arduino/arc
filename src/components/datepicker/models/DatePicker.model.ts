@@ -2,9 +2,9 @@ import { GenericFieldProps } from '../../utils';
 
 export interface DateOptions {
   useGrouping?: boolean;
-  year?: string;
-  month?: string;
-  day?: string;
+  year?: 'numeric' | '2-digit';
+  month?: 'numeric' | '2-digit' | 'long' | 'short' | 'narrow';
+  day?: 'numeric' | '2-digit';
 }
 
 export type ValueType = 'century' | 'decade' | 'year' | 'month' | 'day';

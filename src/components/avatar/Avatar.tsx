@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 import { usePress } from '@react-aria/interactions';
 import { IconUserProfileOutline } from '@bcmi-labs/react-icons';
@@ -37,7 +37,7 @@ export function Avatar({
     setIsImgExist(false);
   };
 
-  const setScaleParam = (): void => {
+  const setScaleParam = useCallback((): void => {
     if (!avatarChildrenRef.current || !avatarNodeRef.current) {
       return;
     }
@@ -49,7 +49,8 @@ export function Avatar({
         setScale(nodeWidth - gap * 2 < childrenWidth ? (nodeWidth - gap * 2) / childrenWidth : 1);
       }
     }
-  };
+  }, [gap]);
+
   const isString = typeof children === 'string';
 
   useEffect(() => {
@@ -59,7 +60,7 @@ export function Avatar({
 
   useEffect(() => {
     setScaleParam();
-  }, [gap]);
+  }, [gap, setScaleParam]);
 
   const renderChildren = (): React.ReactNode => {
     // if children is string make view as string
@@ -173,7 +174,7 @@ export function Avatar({
     },
   });
 
-  const generateProps = (): object => {
+  const generateProps = (): Record<string, any> => {
     if (!otherProps.onClick) {
       return {};
     }

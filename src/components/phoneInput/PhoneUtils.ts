@@ -218,7 +218,7 @@ export function initHighlightCountryIndex(countryGuess: Country, countryData: Co
   return highlightCountryIndex;
 }
 
-export function validateNumber(number: string) {
+export function validateNumber(number: string): string | null {
   const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,9}$/im;
 
   return regex.test(number.replace(/[^0-9]+/g, '')) ? null : 'The phone number is invalid';

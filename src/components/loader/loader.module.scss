@@ -15,7 +15,7 @@
   .loader--spinner {
     background-color: inherit;
 
-    @include spinner( $teal3, inherit, 64px);
+    @include spinner($teal3, inherit, 64px);
   }
 }
 
@@ -25,7 +25,7 @@
   .loader--spinner {
     background-color: inherit;
 
-    @include spinner( white, inherit, 21px);
+    @include spinner(white, inherit, 21px);
 
     margin: 0 9px 0 -5px;
   }

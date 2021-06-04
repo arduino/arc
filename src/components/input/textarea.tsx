@@ -40,14 +40,17 @@ export function Textarea({
 
   const textInput = useRef(null);
 
-  const changeValue = useCallback((e) => {
-    setValue((e.target as HTMLTextAreaElement).value);
+  const changeValue = useCallback(
+    (e) => {
+      setValue((e.target as HTMLTextAreaElement).value);
 
-    // Bubble up event
-    if (onChange) {
-      onChange(e);
-    }
-  }, []);
+      // Bubble up event
+      if (onChange) {
+        onChange(e);
+      }
+    },
+    [onChange]
+  );
 
   // Compute css classes
   const textareaClasses = classNames(style.textarea, {

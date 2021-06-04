@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent, KeyboardEvent, ReactElement } from 'react';
 
 import { DateOptions, ValueType, DateInputBaseProps } from './models/DatePicker.model';
 
@@ -96,7 +96,11 @@ const getDetailValueArray = (args: DateCalculation): Date[] => {
 };
 
 // rendering input by format template
-function renderCustomInputs(placeholder: string, elementFunctions: Record<string, any>, allowMultipleInstances) {
+function renderCustomInputs(
+  placeholder: string,
+  elementFunctions: Record<string, any>,
+  allowMultipleInstances: boolean
+) {
   const usedFunctions = [];
   const pattern = new RegExp(
     Object.keys(elementFunctions)
@@ -150,6 +154,24 @@ export interface DateInputProps extends DateInputBaseProps {
   onBlur?: (e: React.FocusEvent) => void;
 }
 
+interface InputCommonProps {
+  className: string;
+  isDisabled: boolean;
+  isReadOnly: boolean;
+  maxDate: Date;
+  minDate: Date;
+  onChange: (event: {
+    target: {
+      name: any;
+      value: any;
+    };
+  }) => void;
+  onKeyDown: (event: KeyboardEvent) => void;
+  onKeyUp: (event: KeyboardEvent) => void;
+  isRequired: boolean;
+  itemRef: (ref: any, name: any) => void;
+}
+
 export default class DateInput extends React.PureComponent<DateInputProps, DateInputState> {
   public static defaultProps = {
     dayPlaceholder: 'DD',
@@ -165,7 +187,10 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
   monthInput: HTMLInputElement;
   yearInput: HTMLInputElement;
 
-  static getDerivedStateFromProps(nextProps, prevState) {
+  static getDerivedStateFromProps(
+    nextProps: { value?: any; minDate?: any; maxDate?: any; maxDetail?: any },
+    prevState: { value: any; isError: any }
+  ): DateInputState {
     const { minDate, maxDate, maxDetail } = nextProps;
 
     const nextState: DateInputState = {};
@@ -250,7 +275,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
     const datePieces = ['year', 'month', 'day'];
     const datePieceReplacements = ['y', 'M', 'd'];
 
-    function formatDatePiece(name, dateToFormat) {
+    function formatDatePiece(name: string, dateToFormat: Date) {
       return getFormatter({ useGrouping: false, [name]: 'numeric' })(locale, dateToFormat).match(/\d{1,}/);
     }
 
@@ -292,7 +317,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
   }
 
   // get input common props
-  get inputCommonPros() {
+  get inputCommonPros(): InputCommonProps {
     const { className, isDisabled, maxDate, minDate, isRequired, isReadOnly } = this.props;
 
     return {
@@ -306,7 +331,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
       onKeyUp: this.onKeyUp,
       // This is only for showing validity when editing
       isRequired,
-      itemRef: (ref, name) => {
+      itemRef: (ref: any, name: any) => {
         // Save a reference to each input field
         this[`${name}Input`] = ref;
       },
@@ -340,7 +365,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
     });
   }
 
-  click = () => {
+  click = (): any => {
     if (this.dayInput) {
       this.dayInput.focus();
     }
@@ -350,18 +375,18 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
    * handlers
    */
   // handler for component click
-  onClick = (event) => {
+  onClick = (event: React.MouseEvent<HTMLElement>): void => {
     if (event.target === event.currentTarget) {
+      const target = event.target as HTMLElement;
       // Wrapper was directly clicked
-      const firstInput = event.target.children[0];
-      focus(firstInput);
+      focus(target.children[0] as HTMLElement);
     }
   };
 
   /**
    * Called when date input is changed.
    */
-  onChange = (event) => {
+  onChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
 
     let correctValue = null;
@@ -376,7 +401,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
    * Called after internal onChange. Checks input validity. If all fields are valid,
    * calls props.onChange.
    */
-  onChangeExternal = () => {
+  onChangeExternal = (): void => {
     const { onChange } = this.props;
 
     if (!onChange) {
@@ -420,7 +445,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
     }
   };
 
-  onErrorExternal = () => {
+  onErrorExternal = (): void => {
     const { isError } = this.state;
     const { onError } = this.props;
 
@@ -429,7 +454,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
     }
   };
 
-  onKeyDown = (event) => {
+  onKeyDown = (event: KeyboardEvent<HTMLElement>): void => {
     switch (event.key) {
       case 'ArrowLeft':
       case 'ArrowRight':
@@ -438,7 +463,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
 
         const { target: input } = event;
         const property = event.key === 'ArrowLeft' ? 'previousElementSibling' : 'nextElementSibling';
-        const nextInput = findInput(input, property);
+        const nextInput = findInput(input as HTMLElement, property);
         focus(nextInput);
         break;
       }
@@ -446,7 +471,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
     }
   };
 
-  onKeyUp = (event) => {
+  onKeyUp = (event: { key: any; target: any }): void => {
     const { key, target: input } = event;
 
     const isNumberKey = !isNaN(parseInt(key, 10));
@@ -475,7 +500,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
    * renders functions
    */
   // render day input
-  renderDay(currentMatch, index: number) {
+  renderDay(currentMatch: string | any[], index: number): ReactElement {
     const { autoFocus, dayAriaLabel, dayPlaceholder } = this.props;
     const { day, month, year } = this.state;
 
@@ -498,8 +523,8 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
   }
 
   // render month
-  renderMonth = (currentMatch, index) => {
-    const { autoFocus, locale, monthAriaLabel, monthPlaceholder } = this.props;
+  renderMonth = (currentMatch: string | any[], index: number): ReactElement => {
+    const { autoFocus, monthAriaLabel, monthPlaceholder } = this.props;
     const { month, year } = this.state;
 
     if (currentMatch && currentMatch.length > 4) {
@@ -520,7 +545,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
   };
 
   // render year
-  renderYear = (_, index) => {
+  renderYear = (_: unknown, index: number): ReactElement => {
     const { autoFocus, yearAriaLabel, yearPlaceholder } = this.props;
     const { year } = this.state;
 
@@ -539,7 +564,7 @@ export default class DateInput extends React.PureComponent<DateInputProps, DateI
   };
 
   // main render
-  render() {
+  render(): ReactElement {
     const { className, format, onFocus, onBlur } = this.props;
 
     const elementFunctions = {

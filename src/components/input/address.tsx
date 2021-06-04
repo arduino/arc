@@ -49,7 +49,6 @@ export interface AddressProps extends GenericFieldProps, WrapperProps {
  */
 export function Address({
   value = '',
-  latLng,
   clearable = true,
   onChange,
   onBlur,

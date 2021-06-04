@@ -56,11 +56,11 @@ export interface PhoneInputProps extends GenericFieldProps, WrapperProps, PhoneI
   /**
    * send event when value has been changes
    */
-  onChange?: (value: string, country: object, formattedValue: string) => void;
+  onChange?: (value: string, country: Record<string, any>, formattedValue: string) => void;
   /**
    * send event when component clicked
    */
-  onClick?: (value: string, country: object, formattedValue: string) => void;
+  onClick?: (value: string, country: Record<string, any>, formattedValue: string) => void;
   /**
    * send event when keyboard down
    */
@@ -443,6 +443,7 @@ export function PhoneInput({
 
   useEffect(() => {
     setResetValue(getFormattedNumber('', selectedCountry, options));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCountry]);
 
   const hasValue = formattedNumber && formattedNumber.length > 0;
@@ -485,7 +486,6 @@ export function PhoneInput({
         country={selectedCountry}
         disableDropdown={disableDropdown}
         options={options}
-        phoneNumber={formattedNumber}
         isDisabled={isDisabled}
         isReadOnly={isReadOnly}
         onSelect={handleSelectedCountry}

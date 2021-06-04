@@ -14,7 +14,7 @@ export interface CheckboxGroupItemProps extends Omit<GenericFieldProps, 'placeho
    */
   isIndeterminate?: boolean;
   /** The value the checkbox assumes when it's checked */
-  value?: string;
+  value: string;
 }
 
 /**

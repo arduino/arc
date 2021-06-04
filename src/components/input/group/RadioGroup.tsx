@@ -34,10 +34,6 @@ export function RadioGroup(props: RadioGroupProps): React.ReactElement {
   const { label, children, className } = props;
   const state = useRadioGroupState(props);
 
-  // add disabled/readonly to state in order to use them in the radioElements
-  state['isDisabled'] = props.isDisabled || false;
-  state['isReadOnly'] = props.isReadOnly || false;
-
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
   return (

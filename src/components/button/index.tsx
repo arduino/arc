@@ -11,7 +11,7 @@ export interface ButtonProps extends AriaButtonProps<'button'> {
   /** Graphical variant of the button. Use accordingly to UX specs */
   variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'warning';
   /** The children of a button corresponds to its label */
-  children: React.ReactChild;
+  children: React.ReactNode;
   /** Sets the width of the button to 100% */
   full?: boolean;
   /** Vertical and font size of the button. Use accordingly to UX specs */
@@ -66,7 +66,7 @@ export function Button({
   children,
   ...props
 }: ButtonProps): React.ReactElement {
-  const ref = useRef();
+  const ref = useRef<any>();
   const { buttonProps } = useButton(
     {
       children,
