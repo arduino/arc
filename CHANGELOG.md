@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/bcmi-labs/react-components/compare/v0.9.0...v0.10.0) (2021-10-13)
+
+
+### Features
+
+* publish next packages ([1089017](https://github.com/bcmi-labs/react-components/commit/108901782afe78c8b45de88bd348592f20de8059))
+
 # [0.9.0](https://github.com/bcmi-labs/react-components/compare/v0.8.0...v0.9.0) (2021-06-04)
 
 
