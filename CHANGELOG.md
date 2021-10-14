@@ -1,3 +1,10 @@
+## [0.9.1-beta.1](https://github.com/bcmi-labs/react-components/compare/v0.9.0...v0.9.1-beta.1) (2021-10-14)
+
+
+### Bug Fixes
+
+* test beta release ([b087344](https://github.com/bcmi-labs/react-components/commit/b087344b9d85c22519d1d0e94c6b0f68e18a3355))
+
 # [0.10.0](https://github.com/bcmi-labs/react-components/compare/v0.9.0...v0.10.0) (2021-10-13)
 
 
