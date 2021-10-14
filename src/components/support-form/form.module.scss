@@ -1,0 +1,142 @@
+@import '../ui-controls-variables.scss';
+@import '~@bcmi-labs/sass/src/breakpoints';
+
+$breakpoint-sm: 480;
+$border-radius: 6px;
+
+.submissionMessage {
+  margin: 2rem;
+  text-align: center;
+
+  p {
+    margin: 1rem;
+  }
+
+  .backButtonWrapper {
+    display: inline-block;
+    max-width: 400px;
+    margin-top: 1rem;
+  }
+}
+
+.submissionError {
+  color: $notifyerror;
+  margin: 0 1rem 1rem;
+  text-align: right;
+}
+
+.supportForm {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 750px;
+  background: #fff;
+  border: 1px solid #dae3e3;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+  border-radius: $border-radius;
+
+  .formTitle {
+    @extend %arduino-typography-large;
+
+    padding: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #dae3e3;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 0;
+    font-weight: 400;
+  }
+
+  > form {
+    margin: 0 1rem;
+  }
+
+  .formFooter {
+    @extend %arduino-typography-x-small;
+
+    padding: 1rem;
+    border-top: 1px solid #dae3e3;
+    margin-top: .8rem;
+    margin-bottom: 0;
+  }
+
+  .supportRow {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($breakpoint-sm) {
+      display: block;
+    }
+
+    .contactFormRow {
+      @include breakpoint($breakpoint-sm, 'min') {
+        width: 48%;
+      }
+    }
+
+    .field {
+      margin: .7rem 1rem 0;
+      flex: 1;
+      position: relative;
+
+      .fieldConfirmLabel {
+        color: $gris;
+        font-size: 20px;
+      }
+
+      .fieldConfirmValue {
+        margin-left: .5rem;
+        font-size: 20px;
+      }
+
+      &.submitButton {
+        text-align: right;
+        flex: 0;
+        flex-basis: 20%;
+        justify-content: flex-end;
+        display: flex;
+      }
+
+      &.confirmButtons {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .help-button-trigger {
+      &--absolute {
+        position: absolute;
+        top: 25%;
+        right: -23px;
+      }
+    }
+  }
+
+  .form-hr {
+    border-top: 1px solid $smoke;
+    height: 1px;
+    margin: .7rem 0 1.35rem;
+    flex: 1;
+  }
+  // handle modifiers for confirm phase
+  .confirm {
+    .supportRow {
+      margin: .7rem 0;
+    }
+
+    .form-hr {
+      margin: .7rem 0;
+    }
+  }
+}
+
+.recaptchaTerms {
+  @extend %arduino-typography-xx-small;
+
+  @include linked-text($teal3, $teal5, normal);
+
+  margin: 1rem;
+  color: $concrete;
+}
+:global(.grecaptcha-badge) { visibility: hidden; }
