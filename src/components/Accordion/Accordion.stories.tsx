@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { AccordionList, AccordionListProps } from './AccordionList';
-import { IconCommerceShoppingTagNormal } from '@bcmi-labs/react-icons';
+import { IconCommerceShoppingTagNormal } from '@arduino/react-icons';
 
 export default {
   title: 'ZeroHeight/AccordionList',

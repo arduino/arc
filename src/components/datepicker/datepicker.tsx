@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
-import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
+import { IconCloseEncapsulated } from '@arduino/react-icons';
 
 import DateInput from './DateInput';
 

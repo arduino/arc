@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 import { TriggerIcon, TriggerIconProps } from '.';
-import { IconNavigationMenuMoreGrid, IconStatusInformationNormal } from '@bcmi-labs/react-icons';
+import { IconNavigationMenuMoreGrid, IconStatusInformationNormal } from '@arduino/react-icons';
 
 export default {
   title: 'ZeroHeight/TriggerIcon',

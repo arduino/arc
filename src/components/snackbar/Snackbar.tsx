@@ -4,7 +4,7 @@ import {
   IconNavigationCloseNormal,
   IconNavigationCheckmarkOutlineFilled,
   IconStatusAttentionErrorOutlineFilled,
-} from '@bcmi-labs/react-icons';
+} from '@arduino/react-icons';
 
 import { useOverlayTriggerState } from 'react-stately';
 import { useDialog, usePress, useOverlay, FocusScope, OverlayContainer } from 'react-aria';

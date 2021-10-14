@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { IconNavigationCheckmarkOutlineFilled, IconStatusAttentionErrorOutlineFilled } from '@bcmi-labs/react-icons';
+import { IconNavigationCheckmarkOutlineFilled, IconStatusAttentionErrorOutlineFilled } from '@arduino/react-icons';
 
 import { TextWithLink } from '../textWithLink';
 import { WrapperProps } from './index';

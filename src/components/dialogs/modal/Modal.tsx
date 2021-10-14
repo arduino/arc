@@ -4,7 +4,7 @@ import { useOverlay, usePreventScroll, useModal, useDialog, OverlayContainer, Fo
 import { AriaDialogProps } from '@react-types/dialog';
 import { useOverlayTriggerState } from 'react-stately';
 
-import { IconNavigationArrowLeft, IconNavigationCloseNormal } from '@bcmi-labs/react-icons';
+import { IconNavigationArrowLeft, IconNavigationCloseNormal } from '@arduino/react-icons';
 
 import { Underlay } from '../underlay/Underlay';
 import { OpenTransition } from '../../OpenTransition';

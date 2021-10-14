@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
-import { IconCloseEncapsulated } from '@bcmi-labs/react-icons';
+import { IconCloseEncapsulated } from '@arduino/react-icons';
 
 import { GenericFieldProps } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';

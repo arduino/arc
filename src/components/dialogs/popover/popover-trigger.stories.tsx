@@ -2,7 +2,7 @@ import React from 'react';
 import { Story } from '@storybook/react';
 import { PopoverTrigger, PopoverTriggerProps } from './PopoverTrigger';
 import { OverlayProvider } from 'react-aria';
-import { IconNavigationMenuMoreGrid } from '@bcmi-labs/react-icons';
+import { IconNavigationMenuMoreGrid } from '@arduino/react-icons';
 import { TriggerIcon } from '../../TriggerIcon';
 
 export default {

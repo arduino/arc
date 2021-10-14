@@ -16,13 +16,24 @@
         ]
       }
     ],
-    ["@semantic-release/npm", {
-      "npmPublish": true
-    }]
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true
+      }
+    ]
   ],
   "branches": [
     "main",
-    "next",
-    "beta"
+    {
+      "name": "next",
+      "channel": "next",
+      "prerelease": "next"
+    },
+    {
+      "name": "beta",
+      "channel": "beta",
+      "prerelease": "beta"
+    }
   ]
 }

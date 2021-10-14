@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { TabList, TabListProps } from './TabList';
-import { IconOperationListNormal, IconFileFileNormal, IconCommerceShoppingTagNormal } from '@bcmi-labs/react-icons';
+import { IconOperationListNormal, IconFileFileNormal, IconCommerceShoppingTagNormal } from '@arduino/react-icons';
 
 export default {
   title: 'ZeroHeight/Tabs',

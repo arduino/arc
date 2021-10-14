@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
-import { IconAccountViewFilled, IconAccountViewOffFilled } from '@bcmi-labs/react-icons';
+import { IconAccountViewFilled, IconAccountViewOffFilled } from '@arduino/react-icons';
 
 import { GenericFieldProps, GenericFieldPropsEvents } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';

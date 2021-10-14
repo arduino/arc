@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Input, InputProps } from './input';
-import { IconOperationReloadArrow } from '@bcmi-labs/react-icons';
+import { IconOperationReloadArrow } from '@arduino/react-icons';
 
 export default {
   title: 'ZeroHeight/Input',

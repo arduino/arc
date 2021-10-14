@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Avatar, AvatarProps } from './Avatar';
-import { IconUserFaceFilledLove } from '@bcmi-labs/react-icons';
+import { IconUserFaceFilledLove } from '@arduino/react-icons';
 
 import avatarImage from './example/wizard-01.svg';
 

@@ -17,12 +17,9 @@ jobs:
       - run: |
           npm ci
           npm run build-storybook
-        env:
-          REPO_ACCESS_TOKEN: ${{ secrets.NPM_SECRET }}
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_BRANCH: main
           BRANCH: gh-pages
           FOLDER: docs-build

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 import { usePress } from '@react-aria/interactions';
-import { IconUserProfileOutline } from '@bcmi-labs/react-icons';
+import { IconUserProfileOutline } from '@arduino/react-icons';
 
 import style from './avatar.module.scss';
 

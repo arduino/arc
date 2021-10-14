@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
-import { IconNavigationCheckmarkOutlineFilled } from '@bcmi-labs/react-icons';
+import { IconNavigationCheckmarkOutlineFilled } from '@arduino/react-icons';
 import { OverlayProvider } from 'react-aria';
 
 import { Avatar } from './Avatar';

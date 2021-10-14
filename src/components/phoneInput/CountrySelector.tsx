@@ -6,7 +6,7 @@ import {
   IconNavigationArrowCaretNormalDown,
   IconNavigationArrowCaretNormalUp,
   IconTravelWorldWebsiteFilled,
-} from '@bcmi-labs/react-icons';
+} from '@arduino/react-icons';
 
 import { Country, CountryDataState, PhoneInputSettings } from './PhoneInput.model';
 import { formatNumber, initHighlightCountryIndex, scrollTo } from './PhoneUtils';

@@ -3,7 +3,7 @@ import ReactSelect, { components, ValueType } from 'react-select';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 
-import { IconCloseEncapsulated, IconNavigationArrowCaretNormalDown } from '@bcmi-labs/react-icons';
+import { IconCloseEncapsulated, IconNavigationArrowCaretNormalDown } from '@arduino/react-icons';
 
 import { GenericFieldProps } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';

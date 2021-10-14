@@ -13,10 +13,5 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-        env:
-          REPO_ACCESS_TOKEN: ${{ secrets.NPM_SECRET }}
       - name: Release Package
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_ACCESS_TOKEN: ${{ secrets.NPM_SECRET }}
         run: npx semantic-release
