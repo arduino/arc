@@ -19,6 +19,9 @@ Basic.args = {
     <>
       <RadioGroupItem label="checkbox 1" name="cb1" value="cb1-val" />
       <RadioGroupItem label="checkbox 2" name="cb2" value="cb2-val" />
+      <RadioGroupItem name="cb3" value="cb3-val">
+        <img src="https://via.placeholder.com/15" />
+      </RadioGroupItem>
     </>
   ),
 };

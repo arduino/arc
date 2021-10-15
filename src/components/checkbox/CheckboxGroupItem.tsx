@@ -74,6 +74,7 @@ export function CheckboxGroupItem({
     <RadioCheckboxWrapper {...CheckboxWrapperProps}>
       <input {...inputProps} className={inputClasses} ref={ref} />
       <span className={checkboxClasses}></span>
+      {props.children}
     </RadioCheckboxWrapper>
   );
 }
