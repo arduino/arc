@@ -1,3 +1,10 @@
+## [0.9.1-beta.2](https://github.com/bcmi-labs/react-components/compare/v0.9.1-beta.1...v0.9.1-beta.2) (2021-10-15)
+
+
+### Bug Fixes
+
+* add props.children to the radio/checkbox group ([865bae9](https://github.com/bcmi-labs/react-components/commit/865bae9310bf78cff36457902cdf4e3f934b089a))
+
 ## [0.9.1-beta.1](https://github.com/bcmi-labs/react-components/compare/v0.9.0...v0.9.1-beta.1) (2021-10-14)
 
 
