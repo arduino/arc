@@ -1,5 +1,6 @@
 @import '~arduino-sass/src/variables';
 @import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/spacing';
 @import '../ui-controls-variables';
 
 $border-radius-medium: 3px;
@@ -80,6 +81,7 @@ $border-radius-medium: 3px;
         z-index: 2;
         box-shadow: none;
         box-sizing: content-box;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
       }
 
       .zh-select__menu-list {
@@ -123,7 +125,7 @@ $border-radius-medium: 3px;
       }
 
       .zh-select__dropdown-indicator {
-        padding: 0 .2rem !important; // used to force no padding in all states
+        padding: 0 0.2rem !important; // used to force no padding in all states
       }
 
       .zh-select__multi-value {
@@ -142,10 +144,14 @@ $border-radius-medium: 3px;
       .zh-select__indicators {
         margin: 0;
 
+        svg {
+          color: $gris;
+        }
+
         .custom-close-wrapper {
           border-right: 1px solid $smoke;
-          padding-right: .6rem;
-          padding-left: .6rem;
+          padding-right: 0.6rem;
+          padding-left: 0.6rem;
           height: 100%;
           display: flex;
         }
@@ -162,7 +168,26 @@ $border-radius-medium: 3px;
 
       &.small {
         .zh-select__control {
-          min-height: 33px;
+          min-height: 38px;
+        }
+      }
+
+      &.rounded {
+        .zh-select__control {
+          border-radius: $space-x-large;
+        }
+
+        .zh-select__menu {
+          border-top: 2px solid $teal0;
+          border-radius: $border-radius-medium;
+          margin: 15px 0 0;
+        }
+      }
+
+      &.light {
+        .zh-select__control {
+          border-color: transparent;
+          box-shadow: none;
         }
       }
 

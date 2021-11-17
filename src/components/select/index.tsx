@@ -3,7 +3,11 @@ import ReactSelect, { components, ValueType } from 'react-select';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 
-import { IconCloseEncapsulated, IconNavigationArrowCaretNormalDown } from '@arduino/react-icons';
+import {
+  IconCloseEncapsulated,
+  IconNavigationArrowChevronNormalDown,
+  IconNavigationArrowCaretNormalDown,
+} from '@arduino/react-icons';
 
 import { GenericFieldProps } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';
@@ -25,12 +29,14 @@ export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProp
   hideSelected?: boolean;
   isMulti?: boolean;
   isSearchable?: boolean;
-  size?: 'normal' | 'small';
   className?: string;
   onBlur?: (e: React.FocusEvent<HTMLElement>) => void;
   onChange?: (values: string | string[]) => void;
   value?: string[];
   placeholder?: string | null;
+  isRounded?: boolean;
+  isLight?: boolean;
+  isSmall?: boolean;
 }
 
 const ClearIndicator = (props: { innerProps: Record<string, any> }) => {
@@ -48,10 +54,15 @@ const ClearIndicator = (props: { innerProps: Record<string, any> }) => {
   );
 };
 
-const DropdownIndicator = (props) => {
+const DropdownIndicator = (props: any) => {
+  console.log(props);
   return (
     <components.DropdownIndicator {...props}>
-      <IconNavigationArrowCaretNormalDown width="2em" height="2em" />
+      {props.isLight ? (
+        <IconNavigationArrowChevronNormalDown width="2em" height="2em" />
+      ) : (
+        <IconNavigationArrowCaretNormalDown width="2em" height="2em" />
+      )}
     </components.DropdownIndicator>
   );
 };
@@ -90,7 +101,6 @@ export function Select({
   isMulti = false,
   isSearchable = true,
   placeholder = 'Type to Search',
-  size = 'normal',
   id,
   name,
   options,
@@ -106,6 +116,9 @@ export function Select({
   infoMsg: fieldInfoMsg,
   isRequired,
   helper,
+  isRounded,
+  isLight,
+  isSmall,
   ...restProps
 }: SelectProps): React.ReactElement {
   // Control the component with react
@@ -116,7 +129,7 @@ export function Select({
   const [hasValue, setHasValue] = useState(!!defaultValue);
   const [hasFocus, setHasFocus] = useState(false);
 
-  const [valueFromProps, setvalueFromProps] = useState<SelectOption | SelectOption[]>();
+  const [valueFromProps, setValueFromProps] = useState<SelectOption | SelectOption[]>();
 
   // on component mount check existing selections on options
   useEffect(() => {
@@ -129,9 +142,9 @@ export function Select({
     const selVal = valArray.map((v) => options.find((opt) => v === opt.value)).filter((v) => !!v);
 
     if (selVal.length > 0) {
-      setvalueFromProps(isMulti ? selVal : selVal[0]);
+      setValueFromProps(isMulti ? selVal : selVal[0]);
     } else {
-      setvalueFromProps(undefined);
+      setValueFromProps(undefined);
     }
   }, [isMulti, options, value]);
 
@@ -179,7 +192,9 @@ export function Select({
     error: !!error,
     hasValue: placeholder || hasValue || hasFocus,
     noLabel: !label,
-    small: size === 'small',
+    rounded: isRounded,
+    light: isLight,
+    small: isSmall,
   });
 
   return (
@@ -201,7 +216,10 @@ export function Select({
         isSearchable={isSearchable}
         closeMenuOnSelect={closeMenuOnSelect}
         placeholder={placeholder || null}
-        components={{ ClearIndicator, DropdownIndicator }}
+        components={{
+          ClearIndicator,
+          DropdownIndicator: (props) => <DropdownIndicator {...props} isLight={isLight} />,
+        }}
         tabSelectsValue={false}
         onChange={selectChanged}
         className={selectClasses}
