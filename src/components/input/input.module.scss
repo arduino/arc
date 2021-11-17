@@ -40,7 +40,7 @@
     }
 
     &:disabled {
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &:disabled,
@@ -67,8 +67,31 @@
     }
   }
 
+  .without-label {
+    &::placeholder {
+      color: $concrete;
+      opacity: 1;
+    }
+  }
+
   .input {
     height: 52px;
+  }
+
+  .small {
+    padding: 5px 15px;
+    height: 38px;
+
+    + label {
+      top: 7px;
+    }
+
+    &:focus {
+      + label {
+        font-size: 0.6rem;
+        transform: translateY(-8px);
+      }
+    }
   }
 
   .textarea {
@@ -188,7 +211,7 @@
   &__suggestions-item {
     padding: 12px 20px;
     color: $gris;
-    font-size: .875rem;
+    font-size: 0.875rem;
 
     &--active {
       background-color: $fog;

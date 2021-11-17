@@ -35,11 +35,20 @@ Clearable.args = {
   label: 'Clearable input',
   value: 'Clearable text',
   clearable: true,
+  onChange: (event) => {
+    console.log({ value: event.target.value });
+  },
 };
 
 export const NoPlaceholder = Template.bind({});
 NoPlaceholder.args = {
   label: 'Input without placeholder',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  placeholder: 'Input without placeholder',
+  isSmall: true,
 };
 
 export const Disabled = Template.bind({});

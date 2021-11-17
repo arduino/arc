@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, InputHTMLAttributes } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@arduino/react-icons';
@@ -9,7 +9,11 @@ import { Wrapper, WrapperProps } from '../wrapper';
 // Import css styles and bind the class names
 import style from './input.module.scss';
 
-export interface InputProps extends GenericFieldProps, GenericFieldPropsEvents<HTMLInputElement>, WrapperProps {
+export interface InputProps
+  extends GenericFieldProps,
+    GenericFieldPropsEvents<HTMLInputElement>,
+    WrapperProps,
+    InputHTMLAttributes<HTMLInputElement> {
   /**
    * contains the initial value of the input
    */
@@ -21,6 +25,8 @@ export interface InputProps extends GenericFieldProps, GenericFieldPropsEvents<H
   clearable?: boolean;
 
   buttons?: React.ReactElement[];
+
+  isSmall?: boolean;
 }
 
 export function Input({
@@ -40,6 +46,7 @@ export function Input({
   isRequired,
   helper,
   className,
+  isSmall,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -67,6 +74,13 @@ export function Input({
 
   const resetValue = (): void => {
     setValue('');
+
+    // some magic to fake onChange without correct event
+    const target = document.createElement('input');
+    const event = new Event('change', { bubbles: true });
+    Object.defineProperty(event, 'target', { writable: false, value: target });
+    Object.defineProperty(event, 'currentTarget', { writable: false, value: target });
+    changeValue(event);
     textInput.current.focus();
   };
 
@@ -76,6 +90,8 @@ export function Input({
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
     [`${className}__input`]: className,
+    [style['small']]: isSmall,
+    [style['without-label']]: !label,
   });
 
   // prepare wrapper props
@@ -128,7 +144,6 @@ export function Input({
     <Wrapper {...wrapperProps}>
       <input
         value={inputValue}
-        {...restProps}
         disabled={isDisabled}
         required={isRequired}
         readOnly={isReadOnly}
@@ -137,6 +152,7 @@ export function Input({
         ref={textInput}
         className={inputClasses}
         onChange={changeValue}
+        {...restProps}
       />
       {renderControls()}
     </Wrapper>
