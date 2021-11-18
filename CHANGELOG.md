@@ -1,3 +1,10 @@
+## [0.9.1](https://github.com/arduino/arc/compare/v0.9.0...v0.9.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* updated changelog ([4787ada](https://github.com/arduino/arc/commit/4787adac5655bdd81d08f3921f6751f8c063c5a9))
+
 # [0.10.0](https://github.com/arduino/arc/compare/v0.9.0...v0.10.0) (2021-10-13)
 
 
