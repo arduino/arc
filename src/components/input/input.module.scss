@@ -67,7 +67,23 @@
     }
   }
 
+  .rounded {
+    border-radius: $space-x-large;
+  }
+
+  .light {
+    border-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      border-color: $smoke;
+    }
+  }
+
   .without-label {
+    padding: 10px 20px;
+    font-size: inherit;
+
     &::placeholder {
       color: $concrete;
       opacity: 1;

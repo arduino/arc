@@ -45,10 +45,29 @@ NoPlaceholder.args = {
   label: 'Input without placeholder',
 };
 
+export const NoLabel = Template.bind({});
+NoLabel.args = {
+  placeholder: 'Input without label',
+};
+
 export const Small = Template.bind({});
 Small.args = {
-  placeholder: 'Input without placeholder',
+  placeholder: 'Input with small height',
   isSmall: true,
+};
+
+export const Rounded = Template.bind({});
+Rounded.args = {
+  label: 'Input with rounded corners',
+  placeholder: 'Input with rounded corners',
+  isRounded: true,
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  label: 'Light style',
+  placeholder: 'Light style',
+  isLight: true,
 };
 
 export const Disabled = Template.bind({});

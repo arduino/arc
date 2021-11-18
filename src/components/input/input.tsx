@@ -25,7 +25,8 @@ export interface InputProps
   clearable?: boolean;
 
   buttons?: React.ReactElement[];
-
+  isRounded?: boolean;
+  isLight?: boolean;
   isSmall?: boolean;
 }
 
@@ -47,6 +48,8 @@ export function Input({
   helper,
   className,
   isSmall,
+  isRounded,
+  isLight,
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -91,6 +94,8 @@ export function Input({
     [style['error']]: error && error.length,
     [`${className}__input`]: className,
     [style['small']]: isSmall,
+    [style['rounded']]: isRounded,
+    [style['light']]: isLight,
     [style['without-label']]: !label,
   });
 

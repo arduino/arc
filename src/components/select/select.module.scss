@@ -185,6 +185,11 @@ $border-radius-medium: 3px;
       }
 
       &.light {
+        &:hover {
+          .zh-select__control {
+            border-color: $smoke;
+          }
+        }
         .zh-select__control {
           border-color: transparent;
           box-shadow: none;
