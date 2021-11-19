@@ -32,6 +32,10 @@
       transform: translateY(-14px);
     }
 
+    &:global(.zh-select--small) ~ .label {
+      transform: translateY(-16px);
+    }
+
     &:-webkit-autofill ~ .label,
     &:-webkit-autofill:hover ~ .label,
     &:-webkit-autofill:focus ~ .label {
@@ -69,7 +73,7 @@
 
 .label {
   position: absolute;
-  top: 17px;
+  top: 15px;
   padding-left: 20px;
   align-items: center;
   color: $dust;

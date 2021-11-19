@@ -23,6 +23,8 @@ export interface SelectOption {
 // Omit placeholder and value from react-select. We use our own.
 type SelecReactSelectType = Omit<React.ComponentProps<typeof ReactSelect>, 'placeholder'>;
 
+export type SelectVariants = 'normal' | 'light' | 'transparent' | 'small' | 'rounded' | 'transparent';
+
 export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProps, 'isReadOnly'>, WrapperProps {
   defaultValue?: string[];
   options: SelectOption[];
@@ -34,9 +36,7 @@ export interface SelectProps extends SelecReactSelectType, Omit<GenericFieldProp
   onChange?: (values: string | string[]) => void;
   value?: string[];
   placeholder?: string | null;
-  isRounded?: boolean;
-  isLight?: boolean;
-  isSmall?: boolean;
+  variants?: SelectVariants[];
 }
 
 const ClearIndicator = (props: { innerProps: Record<string, any> }) => {
@@ -59,9 +59,9 @@ const DropdownIndicator = (props: any) => {
   return (
     <components.DropdownIndicator {...props}>
       {props.isLight ? (
-        <IconNavigationArrowChevronNormalDown width="2em" height="2em" />
+        <IconNavigationArrowChevronNormalDown width="1.5rem" height="1.5rem" />
       ) : (
-        <IconNavigationArrowCaretNormalDown width="2em" height="2em" />
+        <IconNavigationArrowCaretNormalDown width="1.6rem" height="1.6rem" />
       )}
     </components.DropdownIndicator>
   );
@@ -116,9 +116,7 @@ export function Select({
   infoMsg: fieldInfoMsg,
   isRequired,
   helper,
-  isRounded,
-  isLight,
-  isSmall,
+  variants = ['normal'],
   ...restProps
 }: SelectProps): React.ReactElement {
   // Control the component with react
@@ -186,15 +184,14 @@ export function Select({
     [fieldInfoMsg, onChange]
   );
 
-  const selectClasses = classNames('zh-select', style['zh-select'], {
+  const variantsClasses = [''].concat(variants).join(' zh-select--');
+
+  const selectClasses = classNames(`zh-select ${variantsClasses}`, style['zh-select'], {
     [`${className}__zh-select`]: !!className,
     required: isRequired,
     error: !!error,
     hasValue: placeholder || hasValue || hasFocus,
     noLabel: !label,
-    rounded: isRounded,
-    light: isLight,
-    small: isSmall,
   });
 
   return (
@@ -218,7 +215,8 @@ export function Select({
         placeholder={placeholder || null}
         components={{
           ClearIndicator,
-          DropdownIndicator: (props) => <DropdownIndicator {...props} isLight={isLight} />,
+          // eslint-disable-next-line react/display-name
+          DropdownIndicator: (props) => <DropdownIndicator {...props} isLight={variants.includes('light')} />,
         }}
         tabSelectsValue={false}
         onChange={selectChanged}

@@ -9,6 +9,7 @@ import { Wrapper, WrapperProps } from '../wrapper';
 // Import css styles and bind the class names
 import style from './input.module.scss';
 
+export type InputVariants = 'normal' | 'light' | 'transparent' | 'small' | 'rounded';
 export interface InputProps
   extends GenericFieldProps,
     GenericFieldPropsEvents<HTMLInputElement>,
@@ -25,9 +26,7 @@ export interface InputProps
   clearable?: boolean;
 
   buttons?: React.ReactElement[];
-  isRounded?: boolean;
-  isLight?: boolean;
-  isSmall?: boolean;
+  variants?: InputVariants[];
 }
 
 export function Input({
@@ -47,9 +46,7 @@ export function Input({
   isRequired,
   helper,
   className,
-  isSmall,
-  isRounded,
-  isLight,
+  variants = ['normal'],
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -88,14 +85,17 @@ export function Input({
   };
 
   // Compute css classes
-  const inputClasses = classNames(style.input, {
+  const variantsClasses = variants
+    .map((name) => {
+      return style[name];
+    })
+    .join(' ');
+  console.log(variantsClasses);
+  const inputClasses = classNames(`${style.input} ${variantsClasses}`, {
     ['hasValue']: inputValue && inputValue.length > 0,
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
     [`${className}__input`]: className,
-    [style['small']]: isSmall,
-    [style['rounded']]: isRounded,
-    [style['light']]: isLight,
     [style['without-label']]: !label,
   });
 

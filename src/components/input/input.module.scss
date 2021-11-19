@@ -23,7 +23,7 @@
     box-sizing: border-box;
 
     &::placeholder {
-      color: #fff;
+      color: transparent;
     }
 
     &:focus:not(.success):not(.error) {
@@ -67,19 +67,6 @@
     }
   }
 
-  .rounded {
-    border-radius: $space-x-large;
-  }
-
-  .light {
-    border-color: transparent;
-    box-shadow: none;
-
-    &:hover {
-      border-color: $smoke;
-    }
-  }
-
   .without-label {
     padding: 10px 20px;
     font-size: inherit;
@@ -92,22 +79,6 @@
 
   .input {
     height: 52px;
-  }
-
-  .small {
-    padding: 5px 15px;
-    height: 38px;
-
-    + label {
-      top: 7px;
-    }
-
-    &:focus {
-      + label {
-        font-size: 0.6rem;
-        transform: translateY(-8px);
-      }
-    }
   }
 
   .textarea {
@@ -130,6 +101,40 @@
 
     .counter {
       color: $black;
+    }
+  }
+
+  .rounded {
+    border-radius: $space-x-large;
+  }
+
+  .light {
+    border-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      border-color: $smoke;
+    }
+  }
+
+  .small {
+    padding: 15px 20px 6px 20px;
+    height: 38px;
+    font-size: 0.875rem;
+
+    &.without-label {
+      padding: 6px 20px;
+    }
+
+    + label {
+      top: 7px;
+    }
+
+    &:focus {
+      + label {
+        font-size: 0.75rem;
+        transform: translateY(-8px);
+      }
     }
   }
 }

@@ -53,21 +53,35 @@ NoLabel.args = {
 export const Small = Template.bind({});
 Small.args = {
   placeholder: 'Input with small height',
-  isSmall: true,
+  variants: ['small'],
 };
 
 export const Rounded = Template.bind({});
 Rounded.args = {
   label: 'Input with rounded corners',
   placeholder: 'Input with rounded corners',
-  isRounded: true,
+  variants: ['rounded'],
 };
 
 export const Light = Template.bind({});
 Light.args = {
   label: 'Light style',
   placeholder: 'Light style',
-  isLight: true,
+  variants: ['light'],
+};
+
+export const Transparent = Template.bind({});
+Transparent.args = {
+  label: 'Transparent input',
+  placeholder: 'Transparent input',
+  variants: ['transparent'],
+};
+
+export const ComposedVariants = Template.bind({});
+ComposedVariants.args = {
+  label: 'Composed variant',
+  placeholder: 'Composed variant',
+  variants: ['rounded', 'small'],
 };
 
 export const Disabled = Template.bind({});
