@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, InputHTMLAttributes } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import { IconCloseEncapsulated } from '@arduino/react-icons';
@@ -9,7 +9,12 @@ import { Wrapper, WrapperProps } from '../wrapper';
 // Import css styles and bind the class names
 import style from './input.module.scss';
 
-export interface InputProps extends GenericFieldProps, GenericFieldPropsEvents<HTMLInputElement>, WrapperProps {
+export type InputVariants = 'normal' | 'light' | 'transparent' | 'small' | 'rounded';
+export interface InputProps
+  extends GenericFieldProps,
+    GenericFieldPropsEvents<HTMLInputElement>,
+    WrapperProps,
+    InputHTMLAttributes<HTMLInputElement> {
   /**
    * contains the initial value of the input
    */
@@ -21,6 +26,7 @@ export interface InputProps extends GenericFieldProps, GenericFieldPropsEvents<H
   clearable?: boolean;
 
   buttons?: React.ReactElement[];
+  variants?: InputVariants[];
 }
 
 export function Input({
@@ -40,6 +46,7 @@ export function Input({
   isRequired,
   helper,
   className,
+  variants = ['normal'],
   ...restProps
 }: InputProps): React.ReactElement {
   // Control the component with react
@@ -67,15 +74,29 @@ export function Input({
 
   const resetValue = (): void => {
     setValue('');
+
+    // some magic to fake onChange without correct event
+    const target = document.createElement('input');
+    const event = new Event('change', { bubbles: true });
+    Object.defineProperty(event, 'target', { writable: false, value: target });
+    Object.defineProperty(event, 'currentTarget', { writable: false, value: target });
+    changeValue(event);
     textInput.current.focus();
   };
 
   // Compute css classes
-  const inputClasses = classNames(style.input, {
+  const variantsClasses = variants
+    .map((name) => {
+      return style[name];
+    })
+    .join(' ');
+  console.log(variantsClasses);
+  const inputClasses = classNames(`${style.input} ${variantsClasses}`, {
     ['hasValue']: inputValue && inputValue.length > 0,
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
     [`${className}__input`]: className,
+    [style['without-label']]: !label,
   });
 
   // prepare wrapper props
@@ -128,7 +149,6 @@ export function Input({
     <Wrapper {...wrapperProps}>
       <input
         value={inputValue}
-        {...restProps}
         disabled={isDisabled}
         required={isRequired}
         readOnly={isReadOnly}
@@ -137,6 +157,7 @@ export function Input({
         ref={textInput}
         className={inputClasses}
         onChange={changeValue}
+        {...restProps}
       />
       {renderControls()}
     </Wrapper>

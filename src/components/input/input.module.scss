@@ -23,7 +23,7 @@
     box-sizing: border-box;
 
     &::placeholder {
-      color: #fff;
+      color: transparent;
     }
 
     &:focus:not(.success):not(.error) {
@@ -40,7 +40,7 @@
     }
 
     &:disabled {
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &:disabled,
@@ -64,6 +64,16 @@
       @extend %witherror;
 
       box-shadow: 0 0 0 2px $notifyerror !important;
+    }
+  }
+
+  .without-label {
+    padding: 10px 20px;
+    font-size: inherit;
+
+    &::placeholder {
+      color: $concrete;
+      opacity: 1;
     }
   }
 
@@ -91,6 +101,40 @@
 
     .counter {
       color: $black;
+    }
+  }
+
+  .rounded {
+    border-radius: $space-x-large;
+  }
+
+  .light {
+    border-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      border-color: $smoke;
+    }
+  }
+
+  .small {
+    padding: 15px 20px 6px 20px;
+    height: 38px;
+    font-size: 0.875rem;
+
+    &.without-label {
+      padding: 6px 20px;
+    }
+
+    + label {
+      top: 7px;
+    }
+
+    &:focus {
+      + label {
+        font-size: 0.75rem;
+        transform: translateY(-8px);
+      }
     }
   }
 }
@@ -188,7 +232,7 @@
   &__suggestions-item {
     padding: 12px 20px;
     color: $gris;
-    font-size: .875rem;
+    font-size: 0.875rem;
 
     &--active {
       background-color: $fog;

@@ -52,8 +52,8 @@ $border-radius: 3px;
   }
 
   .input:checked + .custom-checkbox {
-    border-color: $jet;
-    background-color: $gris;
+    border-color: $teal3;
+    background-color: $teal3;
   }
 
   .input.error + .custom-checkbox {
@@ -62,17 +62,18 @@ $border-radius: 3px;
 
   .custom-checkbox {
     padding: 9px;
-    border-color: $silver;
+    border-color: $asbestos;
   }
 
   &:hover {
     .custom-checkbox {
-      background-color: rgba($black, .1);
-      border-color: $gris;
+      background-color: rgba($black, 0.1);
+      border-color: $asbestos;
     }
 
     .input:checked + .custom-checkbox {
-      background-color: rgba($gris, .7);
+      background-color: rgba($teal3, 0.7);
+      border-color: rgba($teal3, 0.7);
     }
   }
 
@@ -81,12 +82,13 @@ $border-radius: 3px;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='3' viewBox='0 0 12 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 1.5H12H0Z' stroke='white' stroke-width='1.5'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
       background-position: center;
-      background-color: $gris;
+      background-color: $teal3;
+      border-color: $teal3;
     }
   }
 
   &.disabled {
-    opacity: .5;
+    opacity: 0.5;
   }
 
   // Display red asterisk next to label when input is required
@@ -112,6 +114,7 @@ $border-radius: 3px;
 
   .input:focus + .custom-radio {
     @extend %with-focus;
+    border-color: $teal3;
   }
 
   .input.error + .custom-radio {
@@ -119,7 +122,7 @@ $border-radius: 3px;
   }
 
   .input:checked + .custom-radio {
-    border-color: $gris;
+    border-color: $teal3;
   }
 
   .custom-radio {
@@ -139,12 +142,12 @@ $border-radius: 3px;
 
   &:hover {
     .custom-radio {
-      background-color: rgba($black, .1);
-      border-color: $gris;
+      background-color: rgba($black, 0.1);
+      border-color: $teal3;
     }
   }
 
   &.disabled {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
