@@ -24,6 +24,7 @@ export { DatePicker, DatePickerProps } from './components/datepicker/datepicker'
 export { Snackbar, SnackbarProps } from './components/snackbar';
 export { Avatar, AvatarProps, AvatarPicker, AvatarPickerProps, Avatars } from './components/avatar';
 export { PhoneInput, PhoneInputProps, PhoneRegion } from './components/phoneInput';
+export { Toggle, ToggleProps } from './components/toggle';
 export { Wrapper } from './components/wrapper';
 export * from './components/Tabs';
 export * from './components/Accordion';
