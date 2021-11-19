@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import Switch from 'react-switch';
-import { GenericFieldProps, GenericFieldPropsEvents } from '../utils';
+import { GenericFieldProps } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';
 
 // Import css styles and bind the class names
@@ -14,6 +14,42 @@ export interface ToggleProps extends GenericFieldProps, WrapperProps {
    */
   value?: boolean;
 
+  /**
+   * The switch will take on this color when it is **not** checked. Only accepts 3 or 6 digit hex colors, e.g., #888, #45abcd.
+   *
+   * Defaults to #C9D2D2.
+   */
+  offColor?: string;
+
+  /** The switch will take on this color when it is checked. Only accepts 3 or 6 digit hex colors, e.g., #080, #45abcd.
+   *
+   * Defaults to #008184.
+   */
+  onColor?: string;
+
+  /**
+   * The color of the handle of the switch when **not** checked. Only accepts 3 or 6 digit hex colors, e.g., #fff, #45abcd.
+   *
+   * Defaults to #fff.
+   */
+  offHandleColor?: string;
+
+  /**
+   * The color of the handle of the switch when checked. Only accepts 3 or 6 digit hex colors, e.g., #fff, #45abcd.
+   *
+   * Defaults to #fff.
+   */
+  onHandleColor?: string;
+  /**
+   * The color of the handle of the switch when checked. Only accepts 3 or 6 digit hex colors, e.g., #fff, #45abcd.
+   *
+   * Defaults to #fff.
+   */
+  activeLabel?: string;
+
+  width?: number;
+  height?: number;
+
   onChange?: (value: boolean) => void;
   onBlur?: (value: boolean) => void;
 }
@@ -24,6 +60,7 @@ export function Toggle({
   id: fieldId,
   name,
   label,
+  activeLabel,
   error,
   successMsg,
   infoMsg,
@@ -31,6 +68,10 @@ export function Toggle({
   isReadOnly,
   isRequired,
   helper,
+  offColor = '#c9d2d2',
+  onColor = '#008184',
+  width = 38,
+  height = 20,
   ...restProps
 }: ToggleProps): React.ReactElement {
   // Control the component with react
@@ -50,9 +91,10 @@ export function Toggle({
   );
 
   // Compute css classes
-  const toggleClasses = classNames(style.toggle, {
+  const toggleClasses = classNames(`${style.toggle} zh-toggle`, {
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
+    active: toggleValue,
   });
 
   // prepare wrapper props
@@ -63,19 +105,22 @@ export function Toggle({
     infoMsg,
     htmlFor: id,
     helper,
+    className: 'zh-toggle',
   };
 
+  console.log(restProps);
+  console.log(offColor, onColor);
   return (
-    <Wrapper {...wrapperProps}>
+    <Wrapper {...wrapperProps} label={activeLabel ? (toggleValue ? activeLabel : label) : label}>
       <Switch
         id={id}
         checkedIcon={false}
         uncheckedIcon={false}
-        height={20}
-        width={37}
-        handleDiameter={14}
-        offColor="#C9D2D2"
-        onColor="#008184"
+        height={height}
+        width={width}
+        handleDiameter={Math.ceil(height / 1.33)}
+        offColor={offColor}
+        onColor={onColor}
         {...restProps}
         onChange={changeValue}
         checked={toggleValue}

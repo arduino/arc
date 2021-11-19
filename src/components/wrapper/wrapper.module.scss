@@ -18,6 +18,18 @@
     top: 1px;
   }
 
+  &:global(.zh-toggle__field) {
+    display: flex;
+    align-items: center;
+  }
+
+  :global(.zh-toggle) {
+    ~ .label {
+      position: relative;
+      top: 0;
+    }
+  }
+
   input,
   textarea,
   :global(.phone-input__input),
