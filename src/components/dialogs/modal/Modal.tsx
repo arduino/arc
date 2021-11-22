@@ -37,7 +37,6 @@ export function ModalButton({
       onPress={(): void => {
         typeof onClick === 'function' && onClick();
         if (closeModalOnClick && typeof closeFn === 'function') {
-          console.log('close fn');
           closeFn();
         }
       }}

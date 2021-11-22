@@ -108,8 +108,6 @@ export function Toggle({
     className: 'zh-toggle',
   };
 
-  console.log(restProps);
-  console.log(offColor, onColor);
   return (
     <Wrapper {...wrapperProps} label={activeLabel ? (toggleValue ? activeLabel : label) : label}>
       <Switch

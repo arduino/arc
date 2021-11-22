@@ -90,7 +90,7 @@ export function Input({
       return style[name];
     })
     .join(' ');
-  console.log(variantsClasses);
+
   const inputClasses = classNames(`${style.input} ${variantsClasses}`, {
     ['hasValue']: inputValue && inputValue.length > 0,
     [style['success']]: successMsg && successMsg.length,

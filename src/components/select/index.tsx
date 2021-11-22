@@ -55,7 +55,6 @@ const ClearIndicator = (props: { innerProps: Record<string, any> }) => {
 };
 
 const DropdownIndicator = (props: any) => {
-  console.log(props);
   return (
     <components.DropdownIndicator {...props}>
       {props.isLight ? (

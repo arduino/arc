@@ -56,7 +56,6 @@ export function Wrapper({
     [`${className}__field`]: className,
   });
 
-  console.log(label);
   return (
     <>
       <div className={wrapperClasses}>

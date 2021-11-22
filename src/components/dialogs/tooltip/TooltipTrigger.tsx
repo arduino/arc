@@ -7,7 +7,7 @@ import { Tooltip } from './Tooltip';
 import { OpenTransition } from '../../OpenTransition';
 import { WithBemClasses } from '../../utils';
 
-type Placement =
+export type TooltipPlacement =
   | 'auto'
   | 'auto-start'
   | 'auto-end'
@@ -33,7 +33,7 @@ export interface TooltipTriggerProps extends RaTooltipTriggerProps, WithBemClass
   /**
    * the placement of the tooltip
    */
-  tooltipPlacement?: Placement;
+  tooltipPlacement?: TooltipPlacement;
 
   /**
    * strategy of the tooltip positioning
