@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
 import Switch from 'react-switch';
@@ -55,7 +55,7 @@ export interface ToggleProps extends GenericFieldProps, WrapperProps {
 }
 
 export function Toggle({
-  value = false,
+  value,
   onChange,
   id: fieldId,
   name,
@@ -77,6 +77,10 @@ export function Toggle({
   // Control the component with react
   const [id] = useState(fieldId || uniqueId());
   const [toggleValue, setValue] = useState(value || false);
+
+  useEffect(() => {
+    setValue(value);
+  }, [value]);
 
   const changeValue = useCallback(
     (val: boolean) => {
