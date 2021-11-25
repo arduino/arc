@@ -50,7 +50,7 @@ export interface ToggleProps extends GenericFieldProps, WrapperProps {
   width?: number;
   height?: number;
 
-  onChange?: (value: boolean) => void;
+  onChange?: ((value: boolean) => void) & (() => boolean);
   onBlur?: (value: boolean) => void;
 }
 
@@ -84,12 +84,14 @@ export function Toggle({
 
   const changeValue = useCallback(
     (val: boolean) => {
-      setValue(val);
-
       // Bubble up event
       if (onChange) {
-        onChange(val);
+        const res = onChange(val);
+        if (typeof res === 'boolean') {
+          return setValue(res);
+        }
       }
+      setValue(val);
     },
     [onChange]
   );
