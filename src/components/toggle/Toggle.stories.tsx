@@ -21,9 +21,10 @@ Basic.args = {
 export const CustomColor = Template.bind({});
 CustomColor.args = {
   label: 'Custom colors',
-  colors: { on: '#f1c40f', off: '#f39c12' },
   offHandleColor: '#c11f09',
   onHandleColor: '#3f65b6',
+  offColor: '#f39c12',
+  onColor: '#f1c40f',
 };
 
 export const Controlled = Template.bind({});

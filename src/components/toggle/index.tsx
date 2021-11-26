@@ -50,17 +50,18 @@ export interface ToggleProps extends GenericFieldProps, WrapperProps {
   width?: number;
   height?: number;
 
-  onChange?: ((value: boolean) => void) & (() => boolean);
+  onChange?: ((value: boolean) => void) | (() => boolean);
   onBlur?: (value: boolean) => void;
 }
 
 export function Toggle({
-  value,
+  value = false,
   onChange,
   id: fieldId,
   name,
   label,
   activeLabel,
+  withoutStatus,
   error,
   successMsg,
   infoMsg,
@@ -87,6 +88,7 @@ export function Toggle({
       // Bubble up event
       if (onChange) {
         const res = onChange(val);
+        // checking if onChange return some result
         if (typeof res === 'boolean') {
           return setValue(res);
         }
@@ -111,6 +113,7 @@ export function Toggle({
     infoMsg,
     htmlFor: id,
     helper,
+    withoutStatus,
     className: 'zh-toggle',
   };
 
