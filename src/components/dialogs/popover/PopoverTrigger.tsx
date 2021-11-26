@@ -7,7 +7,7 @@ function ButtonTrigger({ TriggerElement, setTriggerRef, openButtonProps }) {
   return React.cloneElement(TriggerElement, { ref: setTriggerRef, ...openButtonProps });
 }
 
-type Placement =
+export type PopoverTriggerPlacement =
   | 'auto'
   | 'auto-start'
   | 'auto-end'
@@ -32,7 +32,7 @@ export interface PopoverTriggerProps extends PopoverPropsNoStyle {
   /**
    * the placement of the popover
    */
-  popoverPlacement?: Placement;
+  popoverPlacement?: PopoverTriggerPlacement;
 
   /**
    * strategy of the popover positioning
@@ -66,10 +66,10 @@ export function PopoverTrigger({
   isOpen,
   ...props
 }: PopoverTriggerProps): React.ReactElement {
-  const [popoverOpen, setpopoverOpen] = useState(isOpen);
+  const [popoverOpen, setPopoverOpen] = useState(isOpen);
 
   useEffect(() => {
-    setpopoverOpen(isOpen);
+    setPopoverOpen(isOpen);
   }, [isOpen]);
 
   const [triggerRef, setTriggerRef] = useState(null);
@@ -87,7 +87,7 @@ export function PopoverTrigger({
           newState = !isOpen;
         }
 
-        setpopoverOpen(newState);
+        setPopoverOpen(newState);
         if (onOpenChange) {
           onOpenChange(newState);
         }
@@ -97,7 +97,7 @@ export function PopoverTrigger({
   );
 
   const onClose = () => {
-    setpopoverOpen(false);
+    setPopoverOpen(false);
     if (onOpenChange) {
       onOpenChange(false);
     }
