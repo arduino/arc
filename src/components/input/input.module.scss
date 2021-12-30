@@ -4,9 +4,9 @@
 @import '../ui-controls-variables';
 
 :global(.wrapper) {
-  &:hover {
-    .input,
-    .textarea {
+  .input,
+  .textarea {
+    &:hover {
       @extend %field-hover-shadow;
     }
   }
