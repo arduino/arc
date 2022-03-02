@@ -7,7 +7,7 @@ Storybook is publicly accessible via github pages [here](https://arduino.github.
 ## Usage
 
 ```sh
-npm i @arduino/arc`
+npm i @arduino/arc
 ```
 
 Please note that this package has a peer dependecy on `react`, `react-dom` and `react-aria`, you might need to install.
