@@ -102,7 +102,7 @@ export const buildValidationShape = (fieldsFlatArray: ConfigFieldInterface[]): Y
       }
     }
     if (curr.type === 'address') {
-      yupType = Yup.object({ lat: Yup.string(), lng: Yup.string(), address: Yup.string() });
+      yupType = Yup.object({ lat: Yup.string().nullable(), lng: Yup.string().nullable(), address: Yup.string() });
     }
 
     if (typeof curr.minLen !== 'undefined') {
