@@ -31,6 +31,7 @@ export function CheckboxGroupItem({
   className = null,
   error,
   withoutStatus = true,
+  children,
   ...props
 }: CheckboxGroupItemProps): React.ReactElement {
   const [id] = useState(props.id || uniqueId());
@@ -74,7 +75,7 @@ export function CheckboxGroupItem({
     <RadioCheckboxWrapper {...CheckboxWrapperProps}>
       <input {...inputProps} className={inputClasses} ref={ref} />
       <span className={checkboxClasses}></span>
-      {props.children}
+      {children}
     </RadioCheckboxWrapper>
   );
 }
