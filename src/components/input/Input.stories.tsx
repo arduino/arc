@@ -35,11 +35,53 @@ Clearable.args = {
   label: 'Clearable input',
   value: 'Clearable text',
   clearable: true,
+  onChange: (event) => {
+    console.log({ value: event.target.value });
+  },
 };
 
 export const NoPlaceholder = Template.bind({});
 NoPlaceholder.args = {
   label: 'Input without placeholder',
+};
+
+export const NoLabel = Template.bind({});
+NoLabel.args = {
+  placeholder: 'Input without label',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  placeholder: 'Input with small height',
+  variants: ['small'],
+};
+
+export const Rounded = Template.bind({});
+Rounded.args = {
+  label: 'Input with rounded corners',
+  placeholder: 'Input with rounded corners',
+  variants: ['rounded'],
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  label: 'Light style',
+  placeholder: 'Light style',
+  variants: ['light'],
+};
+
+export const Transparent = Template.bind({});
+Transparent.args = {
+  label: 'Transparent input',
+  placeholder: 'Transparent input',
+  variants: ['transparent'],
+};
+
+export const ComposedVariants = Template.bind({});
+ComposedVariants.args = {
+  label: 'Composed variant',
+  placeholder: 'Composed variant',
+  variants: ['rounded', 'small'],
 };
 
 export const Disabled = Template.bind({});

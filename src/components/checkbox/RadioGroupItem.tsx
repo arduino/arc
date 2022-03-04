@@ -27,6 +27,7 @@ export function RadioGroupItem({
   className = null,
   error,
   withoutStatus = true,
+  children,
   ...props
 }: RadioGroupItemProps): React.ReactElement {
   const [id] = useState(props.id || uniqueId());
@@ -68,6 +69,7 @@ export function RadioGroupItem({
     <RadioCheckboxWrapper {...CheckboxWrapperProps}>
       <input {...inputProps} className={inputClasses} ref={ref} />
       <span className={radioClasses}></span>
+      {children}
     </RadioCheckboxWrapper>
   );
 }

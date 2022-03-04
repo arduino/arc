@@ -13,7 +13,7 @@ npm i @arduino/arc
 Please note that this package has a peer dependecy on `react`, `react-dom` and `react-aria`, you might need to install.
 
 ```sh
-npm i react@^16.13.1 react-dom@^16.12.0 react-aria@3.0.0
+npm i react@^17.0.2 react-dom@^17.0.2 react-aria@3.6.0
 ```
 
 ## Develop
@@ -39,7 +39,7 @@ npm i react@^16.13.1 react-dom@^16.12.0 react-aria@3.0.0
 4. to reference a WIP branch from another repo, set the package.json of the other repo to
    ```json
    "dependencies": {
-       "@arduino/arc": "arduino/arc#your-branch",
+       "@arduino/arc": "github:arduino/arc#your-branch",
        ...
    ```
 

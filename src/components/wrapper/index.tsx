@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 
 import { WithBemClasses, WithChildren } from '../utils';
@@ -61,7 +61,7 @@ export function Wrapper({
       <div className={wrapperClasses}>
         <div className={fieldClasses}>
           {props.children}
-          {label && label.length && (
+          {label && (
             <label className={style.label} htmlFor={htmlFor}>
               {label}
             </label>

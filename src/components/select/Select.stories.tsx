@@ -49,6 +49,61 @@ Basic.args = {
   defaultValue: null,
 };
 
+export const Rounded = Template.bind({});
+Rounded.args = {
+  onChange: action('onChange'),
+  onBlur: action('onBlur'),
+  label: 'Products',
+  className: 'device-filter',
+  options: deviceFilterOptions,
+  defaultValue: null,
+  variants: ['rounded'],
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  onChange: action('onChange'),
+  onBlur: action('onBlur'),
+  label: 'Select without borders',
+  className: 'device-filter',
+  options: deviceFilterOptions,
+  placeholder: null,
+  defaultValue: null,
+  variants: ['light'],
+};
+
+export const Transparent = Template.bind({});
+Transparent.args = {
+  onChange: action('onChange'),
+  onBlur: action('onBlur'),
+  label: 'Select without background',
+  className: 'device-filter',
+  options: deviceFilterOptions,
+  placeholder: null,
+  defaultValue: null,
+  variants: ['transparent'],
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  ...Basic.args,
+  placeholder: 'Select a product',
+  label: null,
+  variants: ['small'],
+};
+
+export const ComposeVariants = Template.bind({});
+ComposeVariants.args = {
+  onChange: action('onChange'),
+  onBlur: action('onBlur'),
+  label: 'Products',
+  className: 'device-filter',
+  options: deviceFilterOptions,
+  placeholder: 'Select a product',
+  defaultValue: null,
+  variants: ['small', 'rounded'],
+};
+
 export const NoPlaceholder = Template.bind({});
 NoPlaceholder.args = {
   ...Basic.args,
@@ -60,14 +115,6 @@ NoLabel.args = {
   ...Basic.args,
   placeholder: 'Select a product',
   label: null,
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  ...Basic.args,
-  placeholder: 'Select a product',
-  label: null,
-  size: 'small',
 };
 
 export const Multiselect = Template.bind({});

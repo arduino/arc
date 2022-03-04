@@ -97,6 +97,12 @@ export const buildValidationShape = (fieldsFlatArray: ConfigFieldInterface[]): Y
 
     if (curr.type === 'select') {
       yupType = yupType.nullable();
+      if (curr.isMulti) {
+        yupType = Yup.array(Yup.string()).nullable();
+      }
+    }
+    if (curr.type === 'address') {
+      yupType = Yup.object({ lat: Yup.string().nullable(), lng: Yup.string().nullable(), address: Yup.string() });
     }
 
     if (typeof curr.minLen !== 'undefined') {

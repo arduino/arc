@@ -14,8 +14,20 @@
     position: absolute;
     left: 5px;
     right: 17px;
-    content: "";
+    content: '';
     top: 1px;
+  }
+
+  &:global(.zh-toggle__field) {
+    display: flex;
+    align-items: center;
+  }
+
+  :global(.zh-toggle) {
+    ~ .label {
+      position: relative;
+      top: 0;
+    }
   }
 
   input,
@@ -32,6 +44,10 @@
       transform: translateY(-14px);
     }
 
+    &:global(.zh-select--small) ~ .label {
+      transform: translateY(-16px);
+    }
+
     &:-webkit-autofill ~ .label,
     &:-webkit-autofill:hover ~ .label,
     &:-webkit-autofill:focus ~ .label {
@@ -43,7 +59,7 @@
 
     &:global(.disabled) ~ .label,
     &:disabled ~ .label {
-      opacity: .5;
+      opacity: 0.5;
     }
 
     // Display red asterisk next to label when input is required
@@ -69,15 +85,16 @@
 
 .label {
   position: absolute;
-  top: 17px;
+  top: 15px;
   padding-left: 20px;
   align-items: center;
   color: $dust;
-  transition: color .2s ease, font-size .2s ease, transform .2s ease;
+  transition: color 0.2s ease, font-size 0.2s ease, transform 0.2s ease;
   transform: translateY(0); // Improve perfo when translating later
   z-index: 1;
   box-sizing: border-box;
   display: inline-block;
+  pointer-events: none;
 }
 
 .statusWrapper {
