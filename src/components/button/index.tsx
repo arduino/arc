@@ -15,7 +15,7 @@ export interface ButtonProps extends AriaButtonProps<'button'> {
   /** Sets the width of the button to 100% */
   full?: boolean;
   /** Vertical and font size of the button. Use accordingly to UX specs */
-  size?: 'big' | 'normal' | 'small';
+  size?: 'big' | 'normal' | 'small' | 'desktop';
   /** Additional classnames to add to the button. Use to customize the look */
   className?: string;
   /** The behavior of the button when used in an HTML form. */
@@ -28,6 +28,8 @@ export interface ButtonProps extends AriaButtonProps<'button'> {
    * This flag also sets the style accordingly
    */
   isDisabled?: boolean;
+  /** Changes the theme of the button. Use accordingly to UX specs */
+  mode?: 'light' | 'dark';
   /** Handler that is called when the press is released over the target. */
   onPress?: (e: PressEvent) => void;
   /** Handler that is called when a press interaction starts. */
@@ -62,6 +64,7 @@ export function Button({
   loading = false,
   size = 'normal',
   type = 'button',
+  mode = 'light',
   className,
   children,
   ...props
@@ -77,7 +80,7 @@ export function Button({
     ref
   );
 
-  const classNames = classnames(style.button, style[size], style[variant], {
+  const classNames = classnames(style.button, style[size], style[variant], style[mode], {
     [`${style.full}`]: full,
     [`${style.disabled}`]: isDisabled,
     [`${style.loading}`]: loading,

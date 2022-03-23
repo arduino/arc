@@ -8,6 +8,29 @@
 
   // VARIANTS
 
+  &.primary {
+
+    &.dark {
+      color: $onyx;
+      background-color: $teal1;
+      border: 2px solid $teal1;
+      border-color: transparent;
+
+      &:hover {
+        background-color: $teal0;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $teal1;
+
+        &::after {
+          box-shadow: 0 0 0 2px $fog;
+        }
+      }
+    }
+  }
+
   &.secondary {
     color: $teal3;
     background-color: transparent;
@@ -15,6 +38,26 @@
 
     &:hover {
       background-color: transparentize($teal5, 0.9);
+    }
+
+    &.dark {
+      color: $fog;
+      border: 1.5px solid $fog;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &:focus,
+      &:active {
+        &::after {
+          width: calc(100% + 3px);
+          height: calc(100% + 3px);
+          top: -1.5px;
+          left: -1.5px;
+          box-shadow: 0 0 0 2px $teal0;
+        }
+      }
     }
   }
 
@@ -26,6 +69,24 @@
     &:hover {
       background-color: $white;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    &.dark {
+      color: $teal1;
+
+      &:hover {
+        color: $teal0;
+        background-color: transparent;
+      }
+
+      &:focus,
+      &:active {
+        color: $teal0;
+        
+        &::after {
+          box-shadow: 0 0 0 2px $teal0;
+        }
+      }
     }
   }
 
