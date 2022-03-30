@@ -5,19 +5,16 @@ import { PressEvent } from '@react-types/shared';
 import { AriaButtonProps } from '@react-types/button';
 
 import style from './button.module.scss';
-import { Loader } from '../loader';
+import '../../themes/index.scss';
 
-export interface ButtonProps extends AriaButtonProps<'button'> {
+import { Loader } from '../loader';
+import { WithChildren, WithFlavour, WithBemClasses } from '../utils';
+
+export interface ButtonProps extends AriaButtonProps<'button'>, WithFlavour, WithBemClasses, WithChildren {
   /** Graphical variant of the button. Use accordingly to UX specs */
   variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'warning';
-  /** The children of a button corresponds to its label */
-  children: React.ReactNode;
   /** Sets the width of the button to 100% */
   full?: boolean;
-  /** Vertical and font size of the button. Use accordingly to UX specs */
-  size?: 'big' | 'normal' | 'small' | 'desktop';
-  /** Additional classnames to add to the button. Use to customize the look */
-  className?: string;
   /** The behavior of the button when used in an HTML form. */
   type?: 'button' | 'submit' | 'reset';
   /** Shows a loading indicator inside the button */
@@ -28,8 +25,6 @@ export interface ButtonProps extends AriaButtonProps<'button'> {
    * This flag also sets the style accordingly
    */
   isDisabled?: boolean;
-  /** Changes the theme of the button. Use accordingly to UX specs */
-  mode?: 'light' | 'dark';
   /** Handler that is called when the press is released over the target. */
   onPress?: (e: PressEvent) => void;
   /** Handler that is called when a press interaction starts. */
@@ -64,7 +59,7 @@ export function Button({
   loading = false,
   size = 'normal',
   type = 'button',
-  mode = 'light',
+  theme = 'light',
   className,
   children,
   ...props
@@ -80,7 +75,7 @@ export function Button({
     ref
   );
 
-  const classNames = classnames(style.button, style[size], style[variant], style[mode], {
+  const classNames = classnames(style.button, style[size], style[variant], style[theme], {
     [`${style.full}`]: full,
     [`${style.disabled}`]: isDisabled,
     [`${style.loading}`]: loading,
