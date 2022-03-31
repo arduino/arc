@@ -5,7 +5,7 @@ import { PressEvent } from '@react-types/shared';
 import { AriaButtonProps } from '@react-types/button';
 
 import style from './button.module.scss';
-import '../../themes/index.scss';
+import '../../themes/themes.scss';
 
 import { Loader } from '../loader';
 import { WithChildren, WithFlavour, WithBemClasses } from '../utils';
@@ -79,6 +79,7 @@ export function Button({
     [`${style.full}`]: full,
     [`${style.disabled}`]: isDisabled,
     [`${style.loading}`]: loading,
+    [`arc-dark`]: theme === 'dark',
     [`${className}__button`]: !!className,
     [`${className}__button--${size}`]: !!className,
     [`${className}__button--${variant}`]: !!className,
