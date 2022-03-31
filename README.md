@@ -16,6 +16,9 @@ Please note that this package has a peer dependecy on `react`, `react-dom` and `
 npm i react@^17.0.2 react-dom@^17.0.2 react-aria@3.6.0
 ```
 
+### Themes Usage
+This package also offers arduino color themes, provided in the `themes/themes.css` file.
+
 ## Develop
 
 1. Install dependencies with

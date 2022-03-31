@@ -3,16 +3,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import image from '@rollup/plugin-image';
 import postcss from 'rollup-plugin-postcss';
-import scss from 'rollup-plugin-scss';
 import autoprefixer from 'autoprefixer';
-import styles from "rollup-plugin-styles";
 
 import pkg from './package.json';
-import path from "path";
+import path from 'path';
 
-export default [{
+export default [
+  // generate components exports (JS + CSS)
+  {
     input: pkg.source,
-
     output: [
       {
         file: pkg.main,
@@ -27,16 +26,12 @@ export default [{
     ],
     external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
     plugins: [
-      // scss({
-      //   include: ["/**/themes/index.scss"],
-      //   output: `${pkg.files}/themes/style.css` ,
-      // }),
       postcss({
         plugins: [autoprefixer],
         minimize: true,
         sourceMap: true,
-        extract: true,
-        preserve: true,
+        extract: false,
+        preserve: false,
       }),
       image(),
       resolve(),
@@ -44,37 +39,19 @@ export default [{
       commonjs(),
     ],
   },
+  // Generate standalone themes.css file (CSS only)
   {
-    input: path.resolve(__dirname, 'src/themes', 'themes.js'),
+    input: path.resolve(__dirname, 'src/themes', 'themes.scss'),
     output: {
-      file: path.resolve(__dirname, 'dist/themes', 'themes.js'),
+      file: path.resolve(__dirname, 'dist/themes', 'themes.css'),
       format: 'es'
     },
-    plugins: [ // rollup plugins
-      styles ({
-        plugins: [autoprefixer({/* your options */})], // postcss plugins
+    plugins: [
+      postcss({
+        plugins: [autoprefixer],
+        extract: true,
+        preserve: true,
       }),
     ],
   }
-  
-  // {
-  //   input: path.resolve(__dirname, 'src/themes', 'themes.scss'),
-  //   // output: {
-  //     // file: path.resolve(__dirname, 'dist/themes', 'themes'),
-  //     // format: 'es'
-  //   // },
-  //   plugins: [
-  //     scss(
-  //       {
-  //         include: ["/**/themes/themes.scss"],
-  //         output: `dist/themes/themes.css`,
-  //         //processor: () => postcss([autoprefixer()]),
-  //         includePaths: [
-  //           path.join(__dirname, '../../node_modules/'),
-  //           'node_modules/'
-  //         ]
-  //       }
-  //     )
-  //   ]
-  // }
 ];

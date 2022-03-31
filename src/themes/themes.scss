@@ -1,29 +1,29 @@
 @import '~arduino-sass/src/variables';
 
 :root {
-  --button-primary-background: $teal3;
+  --button-primary-background: #{$teal3};
   --button-primary-foreground: white;
-  --button-primary-hoverBackground: $teal5;
+  --button-primary-hoverBackground: #{$teal5};
 
   --button-secondary-background: transparent;             
-  --button-secondary-foreground: $teal3;
-  --button-secondary-hoverBackground: transparentize($teal5, 0.8);
+  --button-secondary-foreground: #{$teal3};
+  --button-secondary-hoverBackground: transparentize(#{$teal5}, 0.8);
   
   --button-tertiary-background: transparent;
-  --button-tertiary-foreground: $teal3;                       
+  --button-tertiary-foreground: #{$teal3};                       
   --button-tertiary-hoverBackground: white;                       
   
   .arc-dark {
-    --button-primary-background: $teal1;                           
-    --button-primary-foreground: $onyx;
-    --button-primary-hoverBackground: $teal0;
+    --button-primary-background: #{$teal1};                           
+    --button-primary-foreground: #{$onyx};
+    --button-primary-hoverBackground: #{$teal0};
 
     --button-secondary-background: transparent;
-    --button-secondary-foreground: $fog;
+    --button-secondary-foreground: #{$fog};
     --button-secondary-hoverBackground: rgba(255, 255, 255, 0.1);
     
     --button-tertiary-background: transparent;
-    --button-tertiary-foreground: $teal1;                          
+    --button-tertiary-foreground: #{$teal1};                          
     --button-tertiary-hoverBackground: transparent;                  
   }
 }
