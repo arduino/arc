@@ -4,26 +4,66 @@
   --button-primary-background: #{$teal3};
   --button-primary-foreground: white;
   --button-primary-hoverBackground: #{$teal5};
+  --button-primary-hoverForeground: white;
+  --button-primary-activeBackground: #{$teal3};
+  --button-primary-activeForeground: white;
+  --button-primary-activeBoxShadow: #{$teal0};
+  --button-primary-borderColor: transparent;
+  --button-primary-border: #{$teal3};
 
-  --button-secondary-background: transparent;             
+  --button-secondary-background: transparent;
   --button-secondary-foreground: #{$teal3};
-  --button-secondary-hoverBackground: transparentize(#{$teal5}, 0.8);
-  
+  --button-secondary-hoverBackground: rgba(0, 92, 95, 0.1);
+  --button-secondary-activeBoxShadow: #{$teal0};
+  --button-secondary-borderColor: #{$teal3};
+  --button-secondary-border: transparent;
+
   --button-tertiary-background: transparent;
-  --button-tertiary-foreground: #{$teal3};                       
-  --button-tertiary-hoverBackground: white;                       
+  --button-tertiary-foreground: #{$teal3};
+  --button-tertiary-hoverBackground: white;
+  --button-tertiary-hoverForeground: #{$teal1};
+  --button-tertiary-hoverBoxShadow: rgba(0, 0, 0, 0.08);
+  --button-tertiary-activeBackground: transparent;
+  --button-tertiary-activeForeground: #{$teal0};
+  --button-tertiary-activeBoxShadow: #{$teal0};
+  --button-tertiary-borderColor: transparent;
   
+  --button-ghost-background: transparent;
+  --button-ghost-foreground: #{$black};
+  --button-ghost-hoverBackground: rgba(0, 0, 0, 0.08);
+  --button-ghost-borderColor: #{$black};
+
+  --button-warning-background: #{$notifyerror};
+  --button-warning-foreground: white;
+  --button-warning-hoverBackground: rgba(200, 60, 41, 1);
+  --button-warning-borderColor: transparent;
+
   .arc-dark {
-    --button-primary-background: #{$teal1};                           
+    --button-primary-background: #{$teal1};
     --button-primary-foreground: #{$onyx};
     --button-primary-hoverBackground: #{$teal0};
+    --button-primary-hoverForeground: #{$onyx};
+    --button-primary-activeBackground: #{$teal1};
+    --button-primary-activeForeground: #{$onyx};
+    --button-primary-activeBoxShadow: #{$fog};
+    --button-primary-borderColor: transparent;
+    --button-primary-border: #{$teal1};
 
     --button-secondary-background: transparent;
     --button-secondary-foreground: #{$fog};
     --button-secondary-hoverBackground: rgba(255, 255, 255, 0.1);
-    
+    --button-secondary-activeBoxShadow: #{$teal0};
+    --button-secondary-borderColor: #{$fog};
+    --button-secondary-border: #{$fog};
+
     --button-tertiary-background: transparent;
-    --button-tertiary-foreground: #{$teal1};                          
-    --button-tertiary-hoverBackground: transparent;                  
+    --button-tertiary-foreground: #{$teal1};
+    --button-tertiary-hoverBackground: transparent;
+    --button-tertiary-hoverForeground: #{$teal1};
+    --button-tertiary-hoverBoxShadow: rgba(0, 0, 0, 0.08);
+    --button-tertiary-activeBackground: transparent;
+    --button-tertiary-activeForeground: #{$teal0};
+    --button-tertiary-activeBoxShadow: #{$teal0};
+    --button-tertiary-borderColor: transparent;
   }
 }

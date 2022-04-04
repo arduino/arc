@@ -11,22 +11,19 @@
   &.primary {
     background-color: var(--button-primary-background);
     color: var(--button-primary-foreground);
+    border: 2px solid var(--button-primary-border);
+    border-color: var(--button-primary-borderColor);
 
     &:hover {
       background-color: var(--button-primary-hoverBackground);
     }
+    
+    &:focus,
+    &:active {
+      background-color: var(--button-primary-activeBackground);
 
-    &.dark {
-      border: 2px solid $teal1;
-      border-color: transparent;
-
-      &:focus,
-      &:active {
-        background-color: $teal1;
-
-        &::after {
-          box-shadow: 0 0 0 2px $fog;
-        }
+      &::after {
+        box-shadow: 0 0 0 2px var(--button-primary-activeBoxShadow);
       }
     }
   }
@@ -34,26 +31,24 @@
   &.secondary {
     color: var(--button-secondary-foreground);
     background-color: var(--button-secondary-background);
-    border-color: $teal3;
+    border: 1.5px solid var(--button-secondary-border);
+    border-color: var(--button-secondary-borderColor);
 
     &:hover {
       background-color: var(--button-secondary-hoverBackground);
     }
 
-    &.dark {
-      border: 1.5px solid $fog;
-
-      &:focus,
-      &:active {
-        &::after {
-          width: calc(100% + 3px);
-          height: calc(100% + 3px);
-          top: -1.5px;
-          left: -1.5px;
-          box-shadow: 0 0 0 2px $teal0;
-        }
+    &:focus,
+    &:active {
+      &::after {
+        width: calc(100% + 3px);
+        height: calc(100% + 3px);
+        top: -1.5px;
+        left: -1.5px;
+        box-shadow: 0 0 0 2px var(--button-secondary-activeBoxShadow);
       }
     }
+
   }
 
   &.tertiary {
@@ -63,39 +58,37 @@
 
     &:hover {
       background-color: var(--button-tertiary-hoverBackground);
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      box-shadow: var(--button-tertiary-hoverBoxShadow);
     }
 
-    &.dark {
+    &:focus,
+    &:active {
+      color: var(--button-tertiary-activeForeground);
 
-      &:focus,
-      &:active {
-        color: $teal0;
-
-        &::after {
-          box-shadow: 0 0 0 2px $teal0;
-        }
+      &::after {
+        box-shadow: 0 0 0 2px var(--button-tertiary-activeBoxShadow);
       }
     }
+
   }
 
   &.ghost {
-    color: $black;
-    background-color: transparent;
-    border-color: $black;
+    color: var(--button-ghost-foreground);
+    background-color: var(--button-ghost-background);
+    border-color: var(--button-ghost-borderColor);
 
     &:hover {
-      background-color: transparentize($black, 0.8);
+      background-color: var(--button-ghost-hoverBackground);
     }
   }
 
   &.warning {
-    color: $white;
-    background-color: $notifyerror;
-    border-color: transparent;
+    color: var(--button-warning-foreground);
+    background-color: var(--button-warning-background);
+    border-color: var(--button-warning-borderColor);
 
     &:hover {
-      background-color: darken($notifyerror, 10);
+      background-color: var(--button-warning-hoverBackground);
     }
   }
 
