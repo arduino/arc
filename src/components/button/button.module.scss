@@ -9,33 +9,33 @@
   // VARIANTS
 
   &.primary {
-    background-color: var(--button-primary-background);
-    color: var(--button-primary-foreground);
-    border: 2px solid var(--button-primary-border);
-    border-color: var(--button-primary-borderColor);
+    background-color: var(--arduino-button-primary-background);
+    color: var(--arduino-button-primary-foreground);
+    border: 2px solid var(--arduino-button-primary-border);
+    border-color: var(--arduino-button-primary-borderColor);
 
     &:hover {
-      background-color: var(--button-primary-hoverBackground);
+      background-color: var(--arduino-button-primary-hoverBackground);
     }
     
     &:focus,
     &:active {
-      background-color: var(--button-primary-activeBackground);
+      background-color: var(--arduino-button-primary-activeBackground);
 
       &::after {
-        box-shadow: 0 0 0 2px var(--button-primary-activeBoxShadow);
+        box-shadow: 0 0 0 2px var(--arduino-button-primary-activeBoxShadow);
       }
     }
   }
 
   &.secondary {
-    color: var(--button-secondary-foreground);
-    background-color: var(--button-secondary-background);
-    border: 1.5px solid var(--button-secondary-border);
-    border-color: var(--button-secondary-borderColor);
+    color: var(--arduino-button-secondary-foreground);
+    background-color: var(--arduino-button-secondary-background);
+    border: 1.5px solid var(--arduino-button-secondary-border);
+    border-color: var(--arduino-button-secondary-borderColor);
 
     &:hover {
-      background-color: var(--button-secondary-hoverBackground);
+      background-color: var(--arduino-button-secondary-hoverBackground);
     }
 
     &:focus,
@@ -45,50 +45,50 @@
         height: calc(100% + 3px);
         top: -1.5px;
         left: -1.5px;
-        box-shadow: 0 0 0 2px var(--button-secondary-activeBoxShadow);
+        box-shadow: 0 0 0 2px var(--arduino-button-secondary-activeBoxShadow);
       }
     }
 
   }
 
   &.tertiary {
-    color: var(--button-tertiary-foreground);
-    background-color: var(--button-tertiary-background);
+    color: var(--arduino-button-tertiary-foreground);
+    background-color: var(--arduino-button-tertiary-background);
     border-color: transparent;
 
     &:hover {
-      background-color: var(--button-tertiary-hoverBackground);
-      box-shadow: var(--button-tertiary-hoverBoxShadow);
+      background-color: var(--arduino-button-tertiary-hoverBackground);
+      box-shadow: var(--arduino-button-tertiary-hoverBoxShadow);
     }
 
     &:focus,
     &:active {
-      color: var(--button-tertiary-activeForeground);
+      color: var(--arduino-button-tertiary-activeForeground);
 
       &::after {
-        box-shadow: 0 0 0 2px var(--button-tertiary-activeBoxShadow);
+        box-shadow: 0 0 0 2px var(--arduino-button-tertiary-activeBoxShadow);
       }
     }
 
   }
 
   &.ghost {
-    color: var(--button-ghost-foreground);
-    background-color: var(--button-ghost-background);
-    border-color: var(--button-ghost-borderColor);
+    color: var(--arduino-button-ghost-foreground);
+    background-color: var(--arduino-button-ghost-background);
+    border-color: var(--arduino-button-ghost-borderColor);
 
     &:hover {
-      background-color: var(--button-ghost-hoverBackground);
+      background-color: var(--arduino-button-ghost-hoverBackground);
     }
   }
 
   &.warning {
-    color: var(--button-warning-foreground);
-    background-color: var(--button-warning-background);
-    border-color: var(--button-warning-borderColor);
+    color: var(--arduino-button-warning-foreground);
+    background-color: var(--arduino-button-warning-background);
+    border-color: var(--arduino-button-warning-borderColor);
 
     &:hover {
-      background-color: var(--button-warning-hoverBackground);
+      background-color: var(--arduino-button-warning-hoverBackground);
     }
   }
 

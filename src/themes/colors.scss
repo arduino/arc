@@ -1,0 +1,131 @@
+@import '~arduino-sass/src/variables';
+
+$themes: (
+  --arduino-button-primary-background: (
+    default: #{$teal3},
+    dark: #{$teal1},
+  ),
+
+  --arduino-button-primary-foreground: (
+    default: #{$white},
+    dark: #{$onyx},
+  ),
+
+  --arduino-button-primary-border: (
+    default: #{$teal3},
+    dark: #{$teal1},
+  ),
+
+  --arduino-button-primary-borderColor: (
+    default: transparent,
+    dark: transparent,
+  ),
+
+  --arduino-button-primary-hoverBackground: (
+    default: #{$teal5},
+    dark: #{$teal0},
+  ),
+
+  --arduino-button-primary-activeBackground: (
+    default: #{$teal3},
+    dark: #{$teal1},
+  ),
+
+  --arduino-button-primary-activeBoxShadow: (
+    default: #{$teal0},
+    dark: #{$fog},
+  ),
+
+  --arduino-button-secondary-foreground: (
+    default: #{$teal3},
+    dark: #{$fog},
+  ),
+
+  --arduino-button-secondary-background: (
+    default: transparent,
+    dark: transparent,
+  ),
+
+  --arduino-button-secondary-border: (
+    default: transparent,
+    dark: #{$fog},
+  ),
+
+  --arduino-button-secondary-borderColor: (
+    default: #{$teal3},
+    dark: #{$fog},
+  ),
+
+  --arduino-button-secondary-hoverBackground: (
+    default: rgba(0, 92, 95, 0.1),
+    dark: rgba(255, 255, 255, 0.1),
+  ),
+
+  --arduino-button-secondary-activeBoxShadow: (
+    default: #{$teal0},
+    dark: #{$teal0},
+  ),
+
+  --arduino-button-tertiary-foreground: (
+    default: #{$teal3},
+    dark: #{$teal1},
+  ),
+
+  --arduino-button-tertiary-background: (
+    default: transparent,
+    dark: transparent,
+  ),
+
+  --arduino-button-tertiary-hoverBackground: (
+    default: #{$white},
+    dark: transparent,
+  ),
+
+  --arduino-button-tertiary-hoverBoxShadow: (
+    default: rgba(0, 0, 0, 0.08),
+    dark: rgba(0, 0, 0, 0.08),
+  ),
+
+  --arduino-button-tertiary-activeForeground: (
+    default: #{$teal0},
+    dark: #{$teal0},
+  ),
+
+  --arduino-button-tertiary-activeBoxShadow: (
+    default: #{$teal0},
+    dark: #{$teal0},
+  ),
+
+  --arduino-button-ghost-foreground: (
+    default:  #{$black},
+  ),
+
+  --arduino-button-ghost-background: (
+    default: transparent,
+  ),
+
+  --arduino-button-ghost-borderColor: (
+    default:  #{$black},
+  ),
+
+  --arduino-button-ghost-hoverBackground: (
+    default: rgba(0, 0, 0, 0.08),
+  ),
+
+  --arduino-button-warning-foreground: (
+    default: #{$notifyerror},
+  ),
+
+  --arduino-button-warning-background: (
+    default: #{$white},
+  ),
+
+  --arduino-button-warning-borderColor: (
+    default: transparent,
+  ),
+
+  --arduino-button-warning-hoverBackground: (
+    default: rgba(200, 60, 41, 1),
+  )
+
+);
