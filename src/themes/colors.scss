@@ -97,7 +97,7 @@ $themes: (
   ),
 
   --arduino-button-ghost-foreground: (
-    default:  #{$black},
+    default: #{$black},
   ),
 
   --arduino-button-ghost-background: (
@@ -105,7 +105,7 @@ $themes: (
   ),
 
   --arduino-button-ghost-borderColor: (
-    default:  #{$black},
+    default: #{$black},
   ),
 
   --arduino-button-ghost-hoverBackground: (
@@ -113,11 +113,11 @@ $themes: (
   ),
 
   --arduino-button-warning-foreground: (
-    default: #{$notifyerror},
+    default: #{$white},
   ),
 
   --arduino-button-warning-background: (
-    default: #{$white},
+    default: #{$notifyerror},
   ),
 
   --arduino-button-warning-borderColor: (
