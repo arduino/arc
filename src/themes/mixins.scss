@@ -6,6 +6,10 @@
 @mixin generateThemeMappings($themeVar, $themeRules) {
 
   @each $key, $value in $themeRules {
+    
+    @if not index($themeNames, $key) {
+      $themeNames: append($themeNames, $key) !global;
+    }
 
     //adds new themeKey if doesn't exist
     @if not map-has-key($themeValues, $key) {

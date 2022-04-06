@@ -8,20 +8,16 @@ $defaultTheme: 'default';
 :root {
   @each $themeVar, $themeRules in $themes {
     @include generateThemeMappings($themeVar, $themeRules);
-
-    @each $key, $value in $themeRules {
-      @if not index($themeNames, $key) {
-        $themeNames: append($themeNames, $key) !global;
-        
-        @if ($key != $defaultTheme) {
-          .arc-#{$key} {
-            @include generateThemeVariables($key);
-          }
-        }
+  }
+  
+  @each $name in $themeNames {
+    @if ($name != $defaultTheme) {
+      .arc-#{$name} {
+        @include generateThemeVariables($name);
       }
     }
   }
 
   @include generateThemeVariables($defaultTheme);
-
+  
 }
