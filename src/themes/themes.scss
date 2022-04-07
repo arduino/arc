@@ -18,6 +18,15 @@ $defaultTheme: 'default';
     }
   }
 
+  @each $themeVar, $themeRules in $themes {
+    @each $name in $themeNames {
+      @if not map-get($themeRules, $name) {
+        @error "Theme #{$name} doesn't exist in #{$themeVar}";
+      }
+    }
+  }
+
+  // generating default theme
   @include generateThemeVariables($defaultTheme);
   
 }
