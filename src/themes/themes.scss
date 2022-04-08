@@ -2,25 +2,34 @@
 @import './colors.scss';
 
 $themeValues: ();
+$themeKeys: ();
 $defaultTheme: 'default';
 
 :root {
   @each $themeVar, $themeRules in $themes {
+
+    // storing keys of the first variable in $themeKeys
+    @if (length($themeValues) == 0) {
+      $themeKeys: map-keys($themeRules) !global;
+    }
+
     @include generateThemeMappings($themeVar, $themeRules);
+
+    @each $themeName, $value in $themeValues {
+
+      // check that all themes exist in all variables
+      @if not index($themeKeys, $themeName) or not map-get($themeRules, $themeName) {
+        @error "Theme #{$themeName} doesn't exist in some variables";
+      } 
+    }
   }
+
+  @debug $themeKeys;
   
   @each $themeName, $value in $themeValues {
     @if ($themeName != $defaultTheme) {
       .arc-#{$themeName} {
         @include generateThemeVariables($themeName);
-      }
-    }
-  }
-
-  @each $themeVar, $themeRules in $themes {
-    @each $themeName, $value in $themeValues {
-      @if not map-get($themeRules, $themeName) {
-        @error "Theme #{$themeName} doesn't exist in #{$themeVar}";
       }
     }
   }
