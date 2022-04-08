@@ -2,7 +2,6 @@
 @import './colors.scss';
 
 $themeValues: ();
-$themeNames: ();
 $defaultTheme: 'default';
 
 :root {
@@ -10,18 +9,18 @@ $defaultTheme: 'default';
     @include generateThemeMappings($themeVar, $themeRules);
   }
   
-  @each $name in $themeNames {
-    @if ($name != $defaultTheme) {
-      .arc-#{$name} {
-        @include generateThemeVariables($name);
+  @each $themeName, $value in $themeValues {
+    @if ($themeName != $defaultTheme) {
+      .arc-#{$themeName} {
+        @include generateThemeVariables($themeName);
       }
     }
   }
 
   @each $themeVar, $themeRules in $themes {
-    @each $name in $themeNames {
-      @if not map-get($themeRules, $name) {
-        @error "Theme #{$name} doesn't exist in #{$themeVar}";
+    @each $themeName, $value in $themeValues {
+      @if not map-get($themeRules, $themeName) {
+        @error "Theme #{$themeName} doesn't exist in #{$themeVar}";
       }
     }
   }

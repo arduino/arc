@@ -1,15 +1,11 @@
 /*
-  @mixin generateThemeMappings(themeVar: string, themeRule: map)
+  @mixin generateThemeMappings(themeVar: string, themeRules: map)
   helper function for generating list of theme variables and adding to existing map.
   This will add a new theme to the themes array and the theme color list.
 */
 @mixin generateThemeMappings($themeVar, $themeRules) {
 
   @each $key, $value in $themeRules {
-    
-    @if not index($themeNames, $key) {
-      $themeNames: append($themeNames, $key) !global;
-    }
 
     //adds new themeKey if doesn't exist
     @if not map-has-key($themeValues, $key) {
@@ -34,7 +30,6 @@
   Auto-generates the entire list of theme variables for use in var() statements.
 */
 @mixin generateThemeVariables($currentTheme) {
-  // @debug $themeValues;
 
   @each $theme, $style in $themeValues {
     @if ($theme == $currentTheme) {

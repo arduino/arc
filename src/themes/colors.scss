@@ -96,36 +96,4 @@ $themes: (
     dark: #{$teal0},
   ),
 
-  --arduino-button-ghost-foreground: (
-    default: #{$black},
-  ),
-
-  --arduino-button-ghost-background: (
-    default: transparent,
-  ),
-
-  --arduino-button-ghost-borderColor: (
-    default: #{$black},
-  ),
-
-  --arduino-button-ghost-hoverBackground: (
-    default: rgba(0, 0, 0, 0.08),
-  ),
-
-  --arduino-button-warning-foreground: (
-    default: #{$white},
-  ),
-
-  --arduino-button-warning-background: (
-    default: #{$notifyerror},
-  ),
-
-  --arduino-button-warning-borderColor: (
-    default: transparent,
-  ),
-
-  --arduino-button-warning-hoverBackground: (
-    default: rgba(200, 60, 41, 1),
-  )
-
 );
