@@ -1,0 +1,38 @@
+name: figma-style-weekly-pull
+
+on:
+  schedule:
+    # run every monday at 5AM
+    - cron: '0 5 * * 1'
+  
+  workflow_dispatch:
+
+jobs:
+  pull-from-figma:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run update-json-themes script
+        run: npm run update-json-themes
+        env:
+          FIGMA_API_ACCESS_TOKEN: ${{ secrets.FIGMA_API_ACCESS_TOKEN }}
+          FIGMA_THEME_FILE_ID: ${{ secrets.FIGMA_THEME_FILE_ID }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Updated theme files
+          title: Update theme files
+          branch: style/theme-update
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
