@@ -19,11 +19,13 @@
   "scripts": {
     "lint": "eslint 'src/**/*.{js,ts,tsx,jsx}' --fix ",
     "clean": "rm -rf ./dist",
-    "build": "rollup -c",
+    "build": " npm run gen-theme-scss && rollup -c",
     "postinstall": "npm run build --production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs-build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "update-json-themes": "node scripts/themes-generator.js",
+    "gen-theme-scss": "json-to-scss src/themes/colors-library.json --fk && json-to-scss src/themes/design-tokens.json"
   },
   "lint-staged": {
     "./src/**/*.{js,ts,tsx}": [
@@ -50,6 +52,7 @@
     "@popperjs/core": "^2.9.2",
     "arduino-sass": "^3.0.1",
     "classnames": "^2.3.1",
+    "figma-api": "^1.10.1",
     "formik": "^2.2.8",
     "lodash": "^4.17.21",
     "postcss": "^8.3.0",
@@ -98,6 +101,7 @@
     "expect.js": "~0.3.1",
     "husky": "^6.0.0",
     "ignore-styles": "^5.0.1",
+    "json-to-scss": "^1.6.2",
     "lint-staged": "^11.0.0",
     "mocha": "^8.4.0",
     "prettier": "^2.3.0",

@@ -1,34 +1,37 @@
 @import './mixins.scss';
-@import './colors.scss';
+@import './colors-library.scss';
+@import './design-tokens.scss';
 
 $themeValues: ();
 $themeKeys: ();
 $defaultTheme: 'default';
 
 :root {
-  @each $themeVar, $themeRules in $themes {
+  // for each variable in $ design-tokens a mapping is created between the variable name and the colors of each theme
+  @each $themeVar, $themeRules in $design-tokens {
 
     // storing keys of the first variable in $themeKeys
     @if (length($themeValues) == 0) {
       $themeKeys: map-keys($themeRules) !global;
     }
 
+    // @mixin generateThemeMappings(themeVar: string, themeRules: map)
+    // helper function for generating lists of themes and for each of these all the variable-color pairs are defined
     @include generateThemeMappings($themeVar, $themeRules);
 
     @each $themeName, $value in $themeValues {
-
       // check that all themes exist in all variables
       @if not index($themeKeys, $themeName) or not map-get($themeRules, $themeName) {
         @error "Theme #{$themeName} doesn't exist in some variables";
-      } 
+      }
     }
   }
 
-  @debug $themeKeys;
-  
+  // for each theme different from default a specific class with the corresponding variables for that theme is created
   @each $themeName, $value in $themeValues {
     @if ($themeName != $defaultTheme) {
       .arc-#{$themeName} {
+        // @mixin generateThemeVariables generates the entire list of theme variables for use in var() statements.
         @include generateThemeVariables($themeName);
       }
     }
@@ -36,5 +39,4 @@ $defaultTheme: 'default';
 
   // generating default theme
   @include generateThemeVariables($defaultTheme);
-  
 }
