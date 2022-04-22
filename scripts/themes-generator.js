@@ -15,14 +15,10 @@
 const Figma = require('figma-api');
 const fs = require('fs');
 
-// Environment variables 
+// Environment variables
 // Must be exported with: 'export FIGMA_API_ACCESS_TOKEN=xxxxxx && export FIGMA_THEME_FILE_ID=c9ZP7fwbfB5GWwr2hWXzwe'
 const FIGMA_API_ACCESS_TOKEN = process.env.FIGMA_API_ACCESS_TOKEN;
 const FIGMA_THEME_FILE_ID = process.env.FIGMA_THEME_FILE_ID;
-
-const semanticColorsLibrary = {};
-const colorsLibrary = {};
-const designTokens = {};
 
 const main = async () => {
   const api = new Figma.Api({
@@ -31,7 +27,7 @@ const main = async () => {
   const file = await api.getFile(FIGMA_THEME_FILE_ID, { plugin_data: '843461159747178978,shared' }); // Figma tokens plugin id = '843461159747178978'
   const values = JSON.parse(file.document.sharedPluginData.tokens.values);
 
-  generateThemes(values);
+  const [designTokens, colorsLibrary] = generateThemes(values);
 
   // Write colorsLibrary in the corresponding json file
   fs.writeFile('./src/themes/colors-library.json', JSON.stringify(colorsLibrary), (err) => {
@@ -54,7 +50,7 @@ const main = async () => {
 
 // Parse values fetched from Figma by populating designTokens with css variables
 // each variable is associated with all the available themes and each theme is associated with a color defined in the ColorLibrary
-function generateDesignTokens(tokens, theme) {
+function generateDesignTokens(tokens, theme, semanticColorsLibrary, designTokens) {
   const themeClass = theme.split('-').pop().toLowerCase();
 
   for (const token in tokens) {
@@ -67,13 +63,16 @@ function generateDesignTokens(tokens, theme) {
         designTokens['--arduino-' + name] = {};
       }
       const value = tokens[token].value.substring(1);
-      designTokens['--arduino-' + name][themeClass] = semanticColorsLibrary[value].toLowerCase().replace(/[.\s+]/g, '-');
+      const colorName = semanticColorsLibrary[value].split('.').pop();
+      designTokens['--arduino-' + name][themeClass] = '$'+colorName.toLowerCase().replace(/[.\s+]/g, '-');
     }
   }
+  return designTokens;
 }
 
 // Generate a mapping between the colors defined for each token and the semantic value
 function generateSemanticColorsLibrary(semanticColors) {
+  const semanticColorsLibrary = {};
   for (semanticColor in semanticColors) {
     const type = semanticColors[semanticColor].name.split('.')[0];
     if (type === 'ide-semantic') {
@@ -81,26 +80,32 @@ function generateSemanticColorsLibrary(semanticColors) {
       semanticColorsLibrary[colorName] = semanticColors[semanticColor].value;
     }
   }
+  return semanticColorsLibrary;
 }
 
 // Parse values fetched from Figma by generating a list of colors associated with the related hex value
-function generateColorsLibrary(colors) {
+function generateColorsLibrary(colors, colorsLibrary) {
   for (color in colors) {
-    const colorName = colors[color].name.toLowerCase().replace(/[.\s+]/g, '-');
+    const colorName = colors[color].name.split('.').pop().toLowerCase().replace(/[.\s+]/g, '-');
     colorsLibrary[colorName] = colors[color].value;
   }
+  return colorsLibrary;
 }
 
 // Generate semanticColorsLibrary, designTokens and colorsLibrary
 function generateThemes(values) {
-  for (const value in values) {
-    if (value !== 'core') {
-      generateSemanticColorsLibrary(values[value]);
-      generateDesignTokens(values[value], value);
-    } else {
-      generateColorsLibrary(values[value]);
-    }
+  let designTokens = {};
+  let colorsLibrary = {};
+
+  const { core, ...rest } = values;
+  colorsLibrary = generateColorsLibrary(core, colorsLibrary);
+
+  for (const value in rest) {
+    const semanticLibrary = generateSemanticColorsLibrary(values[value]);
+    designTokens = {...designTokens, ...(generateDesignTokens(values[value], value, semanticLibrary, designTokens))};
   }
+
+  return [designTokens, colorsLibrary];
 }
 
 main();
