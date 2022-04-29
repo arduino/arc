@@ -1,4 +1,6 @@
-const { generateDesignTokens, generateSemanticColorsLibrary, generateColorsLibrary, generateThemes } = require('./utils');
+import { describe, expect } from '@jest/globals';
+
+import { generateDesignTokens, generateSemanticColorsLibrary, generateColorsLibrary, generateThemes } from './utils';
 
 const values = {
   core: [

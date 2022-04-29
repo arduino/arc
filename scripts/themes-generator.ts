@@ -13,7 +13,8 @@
 // "The Figma API supports read access and interactions with Figma files. This gives you the ability to view and extract any objects or layers, and their properties."
 const Figma = require('figma-api');
 const fs = require('fs');
-const { generateThemes } = require('./utils');
+
+import { generateThemes } from './utils';
 
 // Environment variables
 // Must be exported with: 'export FIGMA_API_ACCESS_TOKEN=xxxxxx && export FIGMA_THEME_FILE_ID=c9ZP7fwbfB5GWwr2hWXzwe'
@@ -26,12 +27,12 @@ const main = async () => {
   });
 
   const file = await api.getFile(FIGMA_THEME_FILE_ID, { plugin_data: '843461159747178978,shared' }); // Figma tokens plugin id = '843461159747178978'
-  const values = await JSON.parse(file.document.sharedPluginData.tokens.values);
+  const values = JSON.parse(file.document.sharedPluginData.tokens.values);
 
-  const [designTokens, colorsLibrary] = await generateThemes(values);
+  const [designTokens, colorsLibrary] = generateThemes(values);
 
   // Write colorsLibrary in the corresponding json file
-  fs.writeFile('./src/themes/colors-library.json', JSON.stringify(colorsLibrary), (err) => {
+  fs.writeFile('./src/themes/colors-library.json', JSON.stringify(colorsLibrary), (err: Error) => {
     if (err) {
       console.error(err);
       return;
@@ -40,7 +41,7 @@ const main = async () => {
   });
 
   // Write designTokens in the corresponding json file
-  fs.writeFile('./src/themes/design-tokens.json', JSON.stringify(designTokens), (err) => {
+  fs.writeFile('./src/themes/design-tokens.json', JSON.stringify(designTokens), (err: Error) => {
     if (err) {
       console.error(err);
       return;
