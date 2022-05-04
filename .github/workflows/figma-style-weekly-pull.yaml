@@ -37,3 +37,4 @@ jobs:
           title: Update theme files
           branch: style/theme-update
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          base: ${{ github.head_ref }}
