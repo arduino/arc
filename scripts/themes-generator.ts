@@ -21,12 +21,15 @@ import { generateThemes } from './utils';
 const FIGMA_API_ACCESS_TOKEN = process.env.FIGMA_API_ACCESS_TOKEN;
 const FIGMA_THEME_FILE_ID = process.env.FIGMA_THEME_FILE_ID;
 
+// Figma Tokens plugin ID
+const FIGMA_TOKENS_PLUGIN_DATA = '843461159747178978';
+
 const main = async () => {
   const api = new Figma.Api({
     personalAccessToken: FIGMA_API_ACCESS_TOKEN,
   });
 
-  const file = await api.getFile(FIGMA_THEME_FILE_ID, { plugin_data: '843461159747178978,shared' }); // Figma tokens plugin id = '843461159747178978'
+  const file = await api.getFile(FIGMA_THEME_FILE_ID, { plugin_data: `${FIGMA_TOKENS_PLUGIN_DATA},shared` });
   const values = JSON.parse(file.document.sharedPluginData.tokens.values);
 
   const [designTokens, colorsLibrary] = generateThemes(values);

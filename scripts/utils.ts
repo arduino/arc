@@ -30,7 +30,7 @@ export function generateDesignTokens(
       }
       const value = tokens[token].value.substring(1);
       const colorName = semanticColorsLibrary[value].split('.').pop();
-      designTokens[name][themeClass] = '$' + colorName.toLowerCase().replace(/[.\s+]/g, '-');
+      designTokens[name][themeClass] = `$${colorName.toLowerCase().replace(/[.\s+]/g, '-')}`;
     }
   }
 
