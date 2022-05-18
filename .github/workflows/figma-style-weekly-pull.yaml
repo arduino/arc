@@ -6,19 +6,21 @@ on:
     - cron: '0 5 * * 1'
   
   workflow_dispatch:
-  pull_request:
+
+env:
+  NODE_VERSION: 14.x
 
 jobs:
   pull-from-figma:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Install Node.js 14.x
-        uses: actions/setup-node@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version:  ${{ env.NODE_VERSION }}
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
@@ -31,10 +33,9 @@ jobs:
           FIGMA_THEME_FILE_ID: ${{ secrets.FIGMA_THEME_FILE_ID }}
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Updated theme files
           title: Update theme files
           branch: style/theme-update
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          base: ${{ github.head_ref }}
