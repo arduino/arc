@@ -22,23 +22,25 @@ export function generateDesignTokens(
   for (const token in tokens) {
     const tokenName = tokens[token].name.split('.');
     const type = tokenName[0];
-    const name = tokenName.pop();
+    const name = `--arduino-${tokenName.pop()}`;
 
     if (type !== 'ide-semantic') {
-      if (!designTokens['--arduino-' + name]) {
-        designTokens['--arduino-' + name] = {};
+      if (!designTokens[name]) {
+        designTokens[name] = {};
       }
       const value = tokens[token].value.substring(1);
       const colorName = semanticColorsLibrary[value].split('.').pop();
-      designTokens['--arduino-' + name][themeClass] = '$' + colorName.toLowerCase().replace(/[.\s+]/g, '-');
+      designTokens[name][themeClass] = '$' + colorName.toLowerCase().replace(/[.\s+]/g, '-');
     }
   }
+
   return designTokens;
 }
 
 // Generate a mapping between the colors defined for each token and the semantic value
 export function generateSemanticColorsLibrary(semanticColors: Color[]): ColorsLibrary {
   const semanticColorsLibrary = {};
+
   for (const semanticColor in semanticColors) {
     const type = semanticColors[semanticColor].name.split('.')[0];
     if (type === 'ide-semantic') {
@@ -46,11 +48,14 @@ export function generateSemanticColorsLibrary(semanticColors: Color[]): ColorsLi
       semanticColorsLibrary[colorName] = semanticColors[semanticColor].value;
     }
   }
+
   return semanticColorsLibrary;
 }
 
 // Parse values fetched from Figma by generating a list of colors associated with the related hex value
-export function generateColorsLibrary(colors: Color[], colorsLibrary: ColorsLibrary): ColorsLibrary {
+export function generateColorsLibrary(colors: Color[]): ColorsLibrary {
+  let colorsLibrary = {};
+
   for (const color in colors) {
     const colorName = colors[color].name
       .split('.')
@@ -59,16 +64,15 @@ export function generateColorsLibrary(colors: Color[], colorsLibrary: ColorsLibr
       .replace(/[.\s+]/g, '-');
     colorsLibrary[colorName] = colors[color].value;
   }
+
   return colorsLibrary;
 }
 
 // Generate semanticColorsLibrary, designTokens and colorsLibrary
 export function generateThemes(values: Values): [DesignTokens, ColorsLibrary] {
   let designTokens = {};
-  let colorsLibrary = {};
-
   const { core, ...rest } = values;
-  colorsLibrary = generateColorsLibrary(core, colorsLibrary);
+  const colorsLibrary = generateColorsLibrary(core);
 
   for (const value in rest) {
     const semanticLibrary = generateSemanticColorsLibrary(values[value]);

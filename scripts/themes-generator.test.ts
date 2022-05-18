@@ -125,8 +125,7 @@ describe('Fetch data from Figma and generate styles', () => {
   });
 
   it('should generate the ColorsLibrary', () => {
-    const colorsLibrary = {};
-    expect(generateColorsLibrary(values['core'], colorsLibrary)).toEqual(colorsLibraryExpected);
+    expect(generateColorsLibrary(values['core'])).toEqual(colorsLibraryExpected);
   });
 
   it('should generate themes', () => {
