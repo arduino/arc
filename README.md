@@ -17,7 +17,8 @@ npm i react@^17.0.2 react-dom@^17.0.2 react-aria@3.6.0
 ```
 
 ### Themes Usage
-This package also offers arduino color themes, provided in the `themes/themes.css` file.
+This package also offers Arduino color themes, provided in the `themes/themes.css` file.
+
 
 Themes are directly pulled from Figma using the Figma API. As reported on the [website](https://www.figma.com/developers/api) "The Figma API supports read access and interactions with Figma files. This gives you the ability to view and extract any objects or layers, and their properties."
 
