@@ -10,6 +10,12 @@ export interface WithBemClasses {
    */
   className?: string;
 }
+export interface WithFlavour {
+  /** Vertical and font size of the button. Use accordingly to UX specs */
+  size?: 'big' | 'normal' | 'small';
+  /** Changes the theme of the button. Use accordingly to UX specs */
+  theme?: 'light' | 'dark';
+}
 
 export interface GenericFieldProps extends WithBemClasses {
   /**  placeholder text for the input element*/

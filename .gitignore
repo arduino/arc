@@ -25,3 +25,7 @@ yarn-error.log*
 # ide
 .idea/
 .vscode/
+dist
+.env
+src/themes/colors-library.scss
+src/themes/design-tokens.scss

@@ -16,5 +16,10 @@
     "module": "ES2015",
     "moduleResolution": "node",
     "types": ["node", "mocha"]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   }
 }

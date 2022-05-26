@@ -1,0 +1,33 @@
+
+@mixin generateThemeMappings($themeVar, $themeRules) {
+
+  @each $key, $value in $themeRules {
+
+    //adds new themeKey if doesn't exist
+    @if not map-has-key($themeValues, $key) {
+      $themeValues: map-merge($themeValues, ($key: ( $themeVar: $value ))) !global;
+    }
+
+    //adds to existing key map
+    @else {
+      $existingKeyMap: map-get($themeValues, $key);
+
+      //if theme variable doesn't exist, add it
+      @if not map-get($existingKeyMap, $themeVar) {
+        $newKeyMap: map-merge($existingKeyMap, ( $themeVar: $value ));
+        $themeValues: map-merge($themeValues, ( $key: $newKeyMap )) !global;
+      }
+    }
+  }
+}
+
+@mixin generateThemeVariables($currentTheme) {
+
+  @each $theme, $style in $themeValues {
+    @if ($theme == $currentTheme) {
+      @each $key, $val in $style {
+        #{$key}: #{$val};
+      }
+    }  
+  }
+}
