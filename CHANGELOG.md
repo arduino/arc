@@ -1,3 +1,10 @@
+# [0.11.0](https://github.com/arduino/arc/compare/v0.10.0...v0.11.0) (2022-05-26)
+
+
+### Features
+
+* automate theming process from Figma ([#5](https://github.com/arduino/arc/issues/5)) ([aa8d3d7](https://github.com/arduino/arc/commit/aa8d3d7b1759c34b00310b80f9015b9b8211ed8d))
+
 # [0.10.0](https://github.com/arduino/arc/compare/v0.9.1...v0.10.0) (2022-03-04)
 
 
