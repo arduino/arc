@@ -21,7 +21,7 @@ const main = async () => {
   const [designTokens, colorsLibrary] = generateThemes(values);
 
   // Write colorsLibrary in the corresponding json file
-  fs.writeFile('./src/themes/colors-library.json', JSON.stringify(colorsLibrary), (err: Error) => {
+  fs.writeFile('./dist/themes/colors-library.json', JSON.stringify(colorsLibrary), (err: Error) => {
     if (err) {
       console.error(err);
       return;
@@ -30,7 +30,7 @@ const main = async () => {
   });
 
   // Write designTokens in the corresponding json file
-  fs.writeFile('./src/themes/design-tokens.json', JSON.stringify(designTokens), (err: Error) => {
+  fs.writeFile('./dist/themes/design-tokens.json', JSON.stringify(designTokens), (err: Error) => {
     if (err) {
       console.error(err);
       return;
