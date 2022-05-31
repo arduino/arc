@@ -1,6 +1,6 @@
 @import './mixins.scss';
-@import '../../dist/themes/colors-library.scss';
-@import '../../dist/themes/design-tokens.scss';
+@import './colors-library.scss';
+@import './design-tokens.scss';
 
 $themeValues: ();
 $themeKeys: ();
