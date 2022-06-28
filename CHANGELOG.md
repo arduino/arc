@@ -1,3 +1,10 @@
+## [0.11.1](https://github.com/arduino/arc/compare/v0.11.0...v0.11.1) (2022-06-28)
+
+
+### Bug Fixes
+
+* use theme variables for buttons ([#13](https://github.com/arduino/arc/issues/13)) ([9a96022](https://github.com/arduino/arc/commit/9a960226d8925c3c4d578aa070946007a3c91b8f))
+
 # [0.11.0](https://github.com/arduino/arc/compare/v0.10.0...v0.11.0) (2022-05-26)
 
 
