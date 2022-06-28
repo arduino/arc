@@ -24,7 +24,6 @@
   }
 
   &.secondary {
-    background-color: transparent;
     color: var(--arduino-button-secondary-label);
     border: 1.5px solid var(--arduino-button-secondary-border);
 
@@ -44,11 +43,9 @@
   }
 
   &.tertiary {
-    background-color: transparent;
     color: var(--arduino-button-tertiary-label);
 
     &:hover {
-      background-color: transparent;
       color: var(--arduino-button-tertiary-label-hover);
     }
 
@@ -61,7 +58,6 @@
 
   &.ghost {
     color: $black;
-    background-color: transparent;
     border-color: $black;
 
     &:hover {
@@ -102,4 +98,8 @@
   &.full {
     width: 100%;
   }
+}
+
+.button, .button:hover {
+  background-color: transparent;
 }
