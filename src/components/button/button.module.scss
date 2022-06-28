@@ -2,7 +2,7 @@
 @import '~arduino-sass/src/typography';
 @import '~arduino-sass/src/buttons';
 @import '../ui-controls-variables';
-@import '../../../dist/themes/themes.css';
+@import '../../themes/themes.scss';
 
 .button {
   @extend %button-base;
