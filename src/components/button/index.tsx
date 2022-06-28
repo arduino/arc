@@ -5,7 +5,6 @@ import { PressEvent } from '@react-types/shared';
 import { AriaButtonProps } from '@react-types/button';
 
 import style from './button.module.scss';
-import '../../themes/themes.scss';
 
 import { Loader } from '../loader';
 import { WithChildren, WithFlavour, WithBemClasses } from '../utils';
