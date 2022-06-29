@@ -1,3 +1,10 @@
+## [0.11.2](https://github.com/arduino/arc/compare/v0.11.1...v0.11.2) (2022-06-29)
+
+
+### Bug Fixes
+
+* add missing themes import ([#14](https://github.com/arduino/arc/issues/14)) ([24d9f16](https://github.com/arduino/arc/commit/24d9f16dbc3af0f522ac9768010f9150745b58ff))
+
 ## [0.11.1](https://github.com/arduino/arc/compare/v0.11.0...v0.11.1) (2022-06-28)
 
 
