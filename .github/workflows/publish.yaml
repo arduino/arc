@@ -12,7 +12,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      
       - run: npm ci
+
+      - name: Remove postinstall
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq 'del(.scripts.postinstall) package.json'
+
       - name: Release Package
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
