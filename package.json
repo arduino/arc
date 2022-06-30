@@ -13,7 +13,13 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "scripts",
+    "package-lock.json",
+    "rollup.config.js",
+    "tsconfig.json",
+    "LICENSE"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
@@ -25,7 +31,7 @@
     "build-storybook": "build-storybook -o docs-build",
     "semantic-release": "semantic-release",
     "update-json-themes": "ts-node scripts/themes-generator.ts",
-    "gen-theme-scss": "json-to-scss src/themes/colors-library.json --fk && json-to-scss src/themes/design-tokens.json",
+    "gen-theme-scss": "json-to-scss ./src/themes/colors-library.json --fk && json-to-scss ./src/themes/design-tokens.json",
     "test": "jest"
   },
   "lint-staged": {
