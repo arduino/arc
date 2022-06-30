@@ -26,7 +26,7 @@
     "lint": "eslint 'src/**/*.{js,ts,tsx,jsx}' --fix ",
     "clean": "rm -rf ./dist",
     "build": " npm run gen-theme-scss && rollup -c",
-    "postinstall": "npm run build --production",
+    "postinstall": "npm install && npm run build --production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs-build",
     "semantic-release": "semantic-release",
