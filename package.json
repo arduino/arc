@@ -19,6 +19,7 @@
     "package-lock.json",
     "rollup.config.js",
     "tsconfig.json",
+    "tsconfig.commonjs.json",
     "LICENSE"
   ],
   "types": "dist/index.d.ts",
