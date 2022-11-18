@@ -6,6 +6,7 @@ import {
   SupportSelect,
   SupportCheckbox,
   SupportInput,
+  SupportFile,
   SupportTextarea,
   Empty,
   SupportPhoneInput,
@@ -43,7 +44,8 @@ export interface ConfigFieldInterface {
     | 'address'
     | 'empty'
     | 'phone'
-    | 'hr-line';
+    | 'hr-line'
+    | 'file';
   label?: string;
   generateFn?: (from: FormikValues) => string;
   placeholder?: string;
@@ -126,6 +128,10 @@ function _SupportField(props: SupportFieldProps): React.ReactElement {
 
     case 'hr-line':
       component = HLine;
+      break;
+
+    case 'file':
+      component = SupportFile;
       break;
 
     default:

@@ -247,6 +247,31 @@ export function SupportInput({
   return <Input {...inputProps} />;
 }
 
+// TODO - Support File to upload file
+export function SupportFile({
+  field,
+  fieldConfig,
+  touched,
+  error,
+  initialValue,
+}: CommonFieldInterface): React.ReactElement {
+  const configProps = { ...useConfigFieldProps({ fieldConfig, error, touched }) };
+
+  let value = initialValue || '';
+  if (field.value) {
+    value = field.value;
+  }
+
+  const inputProps: InputProps = {
+    ...configProps,
+    value,
+    onChange: field.onChange,
+    onBlur: field.onBlur,
+  };
+
+  return <Input {...inputProps} />;
+}
+
 export function SupportPhoneInput({
   field,
   fieldConfig,
