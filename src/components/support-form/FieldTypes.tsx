@@ -6,6 +6,7 @@ import { IconStatusInformationItalicNormal } from '@arduino/react-icons';
 import { Select, SelectProps } from '../select';
 import { Input, InputProps } from '../input/input';
 import { PhoneInput, PhoneInputProps } from '../phoneInput/PhoneInput';
+import { UploadInput, UploadInputProps } from '../uploadInput/UploadInput';
 import { Textarea, TextareaProps } from '../input/textarea';
 import { Checkbox, CheckboxProps } from '../checkbox/Checkbox';
 import { CheckboxGroupItem } from '../checkbox/CheckboxGroupItem';
@@ -248,7 +249,7 @@ export function SupportInput({
 }
 
 // TODO - Support File to upload file
-export function SupportFile({
+export function SupportUploadInput({
   field,
   fieldConfig,
   touched,
@@ -262,15 +263,16 @@ export function SupportFile({
     value = field.value;
   }
 
-  const inputProps: InputProps = {
+  const inputProps: UploadInputProps = {
     ...configProps,
     value,
     onChange: field.onChange,
     onBlur: field.onBlur,
   };
 
-  return <Input {...inputProps} />;
+  return <UploadInput {...inputProps} />;
 }
+// END TODO -
 
 export function SupportPhoneInput({
   field,

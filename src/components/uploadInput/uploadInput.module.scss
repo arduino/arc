@@ -1,0 +1,242 @@
+@import '~arduino-sass/src/variables';
+@import '~arduino-sass/src/typography';
+@import '~arduino-sass/src/spacing';
+@import '../ui-controls-variables';
+
+:global(.wrapper) {
+  .input,
+  .textarea {
+    &:hover {
+      @extend %field-hover-shadow;
+    }
+  }
+
+  .input,
+  .textarea {
+    @extend %arduino-typography-x-small;
+
+    display: flex;
+    width: 100%;
+    border: 1px solid $smoke;
+    border-radius: 3px;
+    padding: 25px 20px 6px 20px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus:not(.success):not(.error) {
+      @extend %withfocus;
+    }
+
+    &:focus {
+      @extend %noborder;
+
+      &::placeholder {
+        color: $concrete;
+        opacity: 1;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:disabled,
+    &:read-only {
+      border: 1px solid $smoke;
+      box-shadow: none;
+    }
+
+    &:read-only {
+      background: $clouds;
+    }
+
+    // Color input when success or error
+    &.success {
+      @extend %withfocus;
+
+      box-shadow: 0 0 0 2px $notifysuccess !important;
+    }
+
+    &.error {
+      @extend %witherror;
+
+      box-shadow: 0 0 0 2px $notifyerror !important;
+    }
+  }
+
+  .without-label {
+    padding: 10px 20px;
+    font-size: inherit;
+
+    &::placeholder {
+      color: $concrete;
+      opacity: 1;
+    }
+  }
+
+  .input {
+    height: 52px;
+  }
+
+  .textarea {
+    min-height: 92px;
+    resize: none;
+
+    &.withCounter {
+      padding-bottom: 1.3rem;
+    }
+  }
+
+  .textareaCounter {
+    @extend %arduino-typography-xx-small;
+
+    color: $gris;
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    margin-right: 1rem;
+
+    .counter {
+      color: $black;
+    }
+  }
+
+  .rounded {
+    border-radius: $space-x-large;
+  }
+
+  .light {
+    border-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      border-color: $smoke;
+    }
+  }
+
+  .small {
+    padding: 15px 20px 6px 20px;
+    height: 38px;
+    font-size: 0.875rem;
+
+    &.without-label {
+      padding: 6px 20px;
+    }
+
+    + label {
+      top: 7px;
+    }
+
+    &:focus {
+      + label {
+        font-size: 0.75rem;
+        transform: translateY(-8px);
+      }
+    }
+  }
+}
+
+.input-controls {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: $space-medium;
+
+  > * {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: $space-x-small;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.close {
+  @extend %close;
+
+  position: relative;
+  right: 0;
+}
+
+.toggleVisibility {
+  @extend %arduino-typography-medium;
+
+  position: absolute;
+  display: none;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  right: 18.5px;
+  cursor: pointer;
+
+  &.show {
+    display: block;
+  }
+
+  path {
+    fill: $concrete;
+  }
+}
+
+.inputAction {
+  display: flex;
+}
+
+.input:read-only:hover ~ .inputAction,
+.input:disabled:hover ~ .inputAction {
+  display: none;
+}
+
+.address {
+  &__input {
+    &:focus {
+      box-shadow: $teal0 !important;
+    }
+  }
+
+  &__suggestions {
+    display: none;
+    background-color: $feather;
+    border: 2px solid;
+    border-color: $teal0;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: -2px;
+    width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    box-sizing: content-box;
+    position: absolute;
+
+    &--error {
+      border-color: $notifyerror;
+    }
+  }
+
+  &__input:focus ~ &__suggestions {
+    display: block;
+  }
+
+  &__suggestions-item {
+    padding: 12px 20px;
+    color: $gris;
+    font-size: 0.875rem;
+
+    &--active {
+      background-color: $fog;
+      color: $black;
+    }
+  }
+}

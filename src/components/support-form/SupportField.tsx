@@ -6,7 +6,7 @@ import {
   SupportSelect,
   SupportCheckbox,
   SupportInput,
-  SupportFile,
+  SupportUploadInput,
   SupportTextarea,
   Empty,
   SupportPhoneInput,
@@ -130,9 +130,9 @@ function _SupportField(props: SupportFieldProps): React.ReactElement {
       component = HLine;
       break;
 
-    case 'file':
-      component = SupportFile;
-      break;
+    // case 'file':
+    //   component = SupportUploadInput;
+    //   break;
 
     default:
       break;

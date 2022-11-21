@@ -32,7 +32,7 @@ export interface FormConfigInterface {
 }
 
 export interface SupportFormPropsInterface extends WithBemClasses {
-  /** form configuration. Read SupportForm.mdx file for additional documentation  */
+  /** form configuration. Read SupportForm.mdx file for additional documentation */
   config: FormConfigInterface;
 }
 
