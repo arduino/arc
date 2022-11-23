@@ -248,7 +248,6 @@ export function SupportInput({
   return <Input {...inputProps} />;
 }
 
-// TODO - Support File to upload file
 export function SupportUploadInput({
   field,
   fieldConfig,
@@ -272,7 +271,6 @@ export function SupportUploadInput({
 
   return <UploadInput {...inputProps} />;
 }
-// END TODO -
 
 export function SupportPhoneInput({
   field,

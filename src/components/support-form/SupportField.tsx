@@ -130,9 +130,9 @@ function _SupportField(props: SupportFieldProps): React.ReactElement {
       component = HLine;
       break;
 
-    // case 'file':
-    //   component = SupportUploadInput;
-    //   break;
+    case 'file':
+      component = SupportUploadInput;
+      break;
 
     default:
       break;

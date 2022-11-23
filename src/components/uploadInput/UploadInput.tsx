@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, InputHTMLAttributes } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
-import { IconCloseEncapsulated } from '@arduino/react-icons';
+import { IconNavigationCloseNormal, IconNavigationAddPlusNormal } from '@arduino/react-icons';
 
 import { GenericFieldProps, GenericFieldPropsEvents } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';
@@ -9,7 +9,6 @@ import { Wrapper, WrapperProps } from '../wrapper';
 // Import css styles and bind the class names
 import style from './uploadInput.module.scss';
 
-export type InputVariants = 'normal' | 'light' | 'transparent' | 'small' | 'rounded';
 export interface UploadInputProps
   extends GenericFieldProps,
     GenericFieldPropsEvents<HTMLInputElement>,
@@ -26,32 +25,28 @@ export interface UploadInputProps
   clearable?: boolean;
 
   buttons?: React.ReactElement[];
-  variants?: InputVariants[];
 }
 
 export function UploadInput({
   value = '',
   onChange,
-  clearable,
   id: fieldId,
   name,
-  label,
   error,
   successMsg,
   infoMsg,
-  buttons,
   withoutStatus,
   isDisabled,
   isReadOnly,
   isRequired,
   helper,
   className,
-  variants = ['normal'],
   ...restProps
 }: UploadInputProps): React.ReactElement {
   // Control the component with react
   const [id] = useState(fieldId || uniqueId());
   const [inputValue, setValue] = useState(value || '');
+  const [fileName, setFileName] = useState(null);
 
   const textInput = useRef(null);
 
@@ -69,11 +64,13 @@ export function UploadInput({
 
   // Listen for value changes and act accordingly
   useEffect(() => {
+    setFileName(value.replace(/.*[\/\\]/, ''));
     setValue(value);
   }, [value]);
 
   const resetValue = (): void => {
     setValue('');
+    setFileName(null);
 
     // some magic to fake onChange without correct event
     const target = document.createElement('input');
@@ -84,82 +81,59 @@ export function UploadInput({
     textInput.current.focus();
   };
 
-  // Compute css classes
-  const variantsClasses = variants
-    .map((name) => {
-      return style[name];
-    })
-    .join(' ');
-
-  const inputClasses = classNames(`${style.input} ${variantsClasses}`, {
+  //Upload input have a single css variant: normal
+  const inputClasses = classNames(`${style.fileUpload} normal`, {
     ['hasValue']: inputValue && inputValue.length > 0,
     [style['success']]: successMsg && successMsg.length,
     [style['error']]: error && error.length,
     [`${className}__input`]: className,
-    [style['without-label']]: !label,
+    [style['without-label']]: true,
   });
 
   // prepare wrapper props
   const wrapperProps: WrapperProps = {
-    label,
     error,
     successMsg,
     infoMsg,
     htmlFor: id,
     withoutStatus,
     helper,
-    className,
+    className: 'fileUpload',
   };
 
-  const renderButtons = (): React.ReactElement[] => {
-    if (!buttons) {
-      return null;
-    }
-
-    return buttons.map((Button: React.ReactElement) => {
-      const { children, ...props } = Button.props;
-      return (
-        <Button.type key={Button.key} {...props}>
-          {children}
-        </Button.type>
-      );
-    });
-  };
-
-  const renderControls = (): React.ReactElement => {
-    if (!buttons && !(inputValue && inputValue.length > 0 && clearable)) {
-      return null;
-    }
-
-    return (
-      <div className={style['input-controls']}>
-        {!isDisabled && renderButtons()}
-        {inputValue.length > 0 && clearable && !isDisabled && !isReadOnly && (
-          <IconCloseEncapsulated
-            className={classNames(style.close, style.inputAction)}
-            onClick={resetValue}
-          ></IconCloseEncapsulated>
-        )}
-      </div>
-    );
-  };
-
-  // Render component
   return (
     <Wrapper {...wrapperProps}>
+      <label htmlFor={id} className={inputClasses} onClick={resetValue}>
+        {fileName ? (
+          <div>
+            <span className={classNames(style.iconAdd)}>
+              <IconNavigationCloseNormal />
+            </span>
+            {fileName}
+          </div>
+        ) : (
+          <div>
+            <span className={classNames(style.iconAdd)}>
+              <IconNavigationAddPlusNormal />
+            </span>
+            {restProps.placeholder} {isRequired && <span className={classNames(style.required)}>*</span>}
+          </div>
+        )}
+      </label>
       <input
+        style={{ opacity: 0, zIndex: -1, position: 'absolute' }}
         value={inputValue}
         disabled={isDisabled}
+        type="file"
         required={isRequired}
         readOnly={isReadOnly}
         id={id}
         name={name}
         ref={textInput}
-        className={inputClasses}
+        className={classNames(inputClasses, style.inputHided)}
         onChange={changeValue}
         {...restProps}
       />
-      {renderControls()}
     </Wrapper>
   );
 }

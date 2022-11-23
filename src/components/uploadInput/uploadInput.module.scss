@@ -5,22 +5,38 @@
 
 :global(.wrapper) {
   .input,
-  .textarea {
+  .textarea,
+  .fileUpload {
     &:hover {
       @extend %field-hover-shadow;
+
+      cursor: pointer;
+      border: 1px solid #4e5b61 !important;
+      box-shadow: 0 3px 6px rgb(0 0 0 / 10%) !important;
     }
   }
 
   .input,
-  .textarea {
-    @extend %arduino-typography-x-small;
+  .textarea,
+  .fileUpload {
+    //@extend %arduino-typography-x-small;
 
     display: flex;
     width: 100%;
-    border: 1px solid $smoke;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 25px 20px 6px 20px;
+    padding: 0 auto;
     box-sizing: border-box;
+
+    border: 1px dashed #bdc7c7 !important;
+    background-color: transparent !important;
+    color: $teal3;
+    font-weight: 700;
+    font-size: 20px !important;
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    justify-content: center;
+    align-items: center;
 
     &::placeholder {
       color: transparent;
@@ -60,6 +76,10 @@
       box-shadow: 0 0 0 2px $notifysuccess !important;
     }
 
+    .required {
+      color: #da5b4a;
+    }
+
     &.error {
       @extend %witherror;
 
@@ -82,12 +102,16 @@
   }
 
   .textarea {
-    min-height: 92px;
+    min-height: 92px !important;
     resize: none;
 
     &.withCounter {
       padding-bottom: 1.3rem;
     }
+  }
+
+  .fileUpload {
+    min-height: 75px;
   }
 
   .textareaCounter {
@@ -196,47 +220,9 @@
   display: none;
 }
 
-.address {
-  &__input {
-    &:focus {
-      box-shadow: $teal0 !important;
-    }
-  }
-
-  &__suggestions {
-    display: none;
-    background-color: $feather;
-    border: 2px solid;
-    border-color: $teal0;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    margin: 0;
-    margin-left: -2px;
-    margin-right: -2px;
-    margin-top: -2px;
-    width: 100%;
-    z-index: 2;
-    box-shadow: none;
-    box-sizing: content-box;
-    position: absolute;
-
-    &--error {
-      border-color: $notifyerror;
-    }
-  }
-
-  &__input:focus ~ &__suggestions {
-    display: block;
-  }
-
-  &__suggestions-item {
-    padding: 12px 20px;
-    color: $gris;
-    font-size: 0.875rem;
-
-    &--active {
-      background-color: $fog;
-      color: $black;
-    }
-  }
+.iconAdd {
+  margin-right: 8px;
+  margin-top: 4px;
+  vertical-align: text-top;
+  z-index: 999;
 }

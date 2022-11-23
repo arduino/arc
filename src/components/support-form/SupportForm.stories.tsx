@@ -34,17 +34,27 @@ const config: FormConfigInterface = {
   reCaptchaKey: '**REMOVED**',
   fields: [
     [{ id: 'hr1', type: 'hr-line' }],
-    // [
-    //   {
-    //     id: 'step1',
-    //     type: 'empty',
-    //     children: (
-    //       <span>
-    //         Part 1 of 4: <strong>Tell us more about yourself</strong>
-    //       </span>
-    //     ),
-    //   },
-    // ],
+    [
+      {
+        id: 'step1',
+        type: 'empty',
+        children: (
+          <span>
+            Part 1 of 4: <strong>Tell us more about yourself</strong>
+          </span>
+        ),
+      },
+    ],
+    [
+      {
+        id: 'file',
+        type: 'file',
+        placeholder: ' ADD RESUME / CV',
+        attachToBody: true,
+        required: true,
+        infoMsg: 'File types: pdf, doc, docx, txt, rtf (max 5MB)',
+      },
+    ],
     [
       {
         id: 'phone',
@@ -54,6 +64,7 @@ const config: FormConfigInterface = {
         attachToBody: true,
         required: true,
         helperText: 'Help Text',
+        infoMsg: 'File types: pdf, doc, docx, txt, rtf (max 5MB)',
       },
     ],
     [
@@ -82,6 +93,7 @@ const config: FormConfigInterface = {
         required: true,
       },
     ],
+
     [
       {
         id: 'product',
@@ -153,7 +165,6 @@ const config: FormConfigInterface = {
         ],
       },
     ],
-
     [
       {
         id: 'multiple-parents',
@@ -189,20 +200,20 @@ const config: FormConfigInterface = {
         required: true,
       },
     ],
-    [
-      {
-        id: 'checkbox-group',
-        label: 'Checkbox Group',
-        type: 'checkboxgroup',
-        helperText: 'Help Text',
-        values: [
-          { value: 'cb1', label: 'cb1', tags: ['cb1'] },
-          { value: 'cb2', label: 'cb2', tags: ['cb2'] },
-          { value: 'cb3', label: 'cb3', tags: ['cb3'] },
-        ],
-        required: true,
-      },
 
+    [
+      // {
+      //   id: 'checkbox-group',
+      //   label: 'Checkbox Group',
+      //   type: 'checkboxgroup',
+      //   helperText: 'Help Text',
+      //   values: [
+      //     { value: 'cb1', label: 'cb1', tags: ['cb1'] },
+      //     { value: 'cb2', label: 'cb2', tags: ['cb2'] },
+      //     { value: 'cb3', label: 'cb3', tags: ['cb3'] },
+      //   ],
+      //   required: true,
+      // },
       {
         id: 'radio-group',
         label: 'Radio Group',
@@ -214,6 +225,7 @@ const config: FormConfigInterface = {
         required: true,
       },
     ],
+
     [
       {
         id: 'tos',
