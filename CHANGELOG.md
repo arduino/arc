@@ -1,3 +1,7 @@
+## [0.11.3](PR LINK) (2022-11-21)
+
+* Add SupportUploadInput component to upload file in form.
+
 ## [0.9.1](https://github.com/arduino/arc/compare/v0.9.0...v0.9.1) (2021-11-18)
 
 
