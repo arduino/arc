@@ -25,6 +25,9 @@
 ### Features
 
 * changes and updates according new design of some components ([#3](https://github.com/arduino/arc/issues/3)) ([6820fd3](https://github.com/arduino/arc/commit/6820fd31d0f0c0724899d839a19be15757a485f2))
+## [0.11.3]
+
+* Add SupportUploadInput component to upload file in form.
 
 ## [0.9.1](https://github.com/arduino/arc/compare/v0.9.0...v0.9.1) (2021-11-18)
 
