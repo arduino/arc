@@ -1,4 +1,4 @@
-## [0.11.3](PR LINK) (2022-11-21)
+## [0.9.2](PR LINK) (2022-11-21)
 
 * Add SupportUploadInput component to upload file in form.
 
