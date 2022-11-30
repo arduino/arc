@@ -1,16 +1,13 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { uniqueId } from 'lodash';
 import classNames from 'classnames';
-import TextareaAutosize from 'react-autosize-textarea';
+import TextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize';
 
 import { GenericFieldProps } from '../utils';
 import { Wrapper, WrapperProps } from '../wrapper';
 
 // Import css styles and bind the class names
 import style from './input.module.scss';
-
-// Omit placeholder and value from react-select. We use our own.
-type TextareaAutosizeProps = Omit<TextareaAutosize.RequiredProps, 'label'>;
 
 export interface TextareaProps extends TextareaAutosizeProps, GenericFieldProps, WrapperProps {
   /**
