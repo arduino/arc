@@ -125,6 +125,7 @@ export function UploadInput({
         value={inputValue}
         disabled={isDisabled}
         type="file"
+        accept=".pdf,.doc,.docx,.txt,.rtf"
         required={isRequired}
         readOnly={isReadOnly}
         id={id}
